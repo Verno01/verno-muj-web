@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Nabídka',
-  description: 'Pět typů prezentačních webů — od jednoduché vizitky po firemní prezentaci. Ceny od 11 900 Kč, vždy konkrétně a písemně předem.',
+  description: 'Pět typů prezentačních webů - od jednoduché vizitky po firemní prezentaci. Ceny od 11 900 Kč, vždy konkrétně a písemně předem.',
 }
 
 const packages = [
@@ -13,9 +13,9 @@ const packages = [
     items: [
       'Jednostránkový web rozdělený do přehledných sekcí (úvod, služby, o vás, kontakt)',
       'Funguje stejně dobře na mobilu jako na počítači',
-      'Kontaktní formulář — zprávy chodí přímo do vašeho e-mailu',
+      'Kontaktní formulář - zprávy chodí přímo do vašeho e-mailu',
       'Základní nastavení pro vyhledávače (titulek, popis, struktura)',
-      'Přihlášení do Google Search Console — indexace',
+      'Přihlášení do Google Search Console - indexace',
       'Spuštění na vaší doméně',
     ],
   },
@@ -23,14 +23,14 @@ const packages = [
     id: 'maly-web', num: '02', name: 'Malý web', price: 'od 18 900 Kč',
     for: 'Pro živnostníky a menší firmy, které potřebují více prostoru pro své služby, reference, portfolio nebo tým. Nejčastěji volená varianta.',
     items: [
-      'Stránky — nejčastěji úvod, služby, o vás, reference, kontakt',
+      'Stránky - nejčastěji úvod, služby, o vás, reference, kontakt',
       'Vše z webové vizitky (mobilní verze, formulář, základ pro vyhledávače, spuštění)',
       'Struktura a propojení stránek, které návštěvníka přirozeně vedou ke kontaktu nebo poptávce',
     ],
   },
   {
     id: 'landing-page', num: '03', name: 'Landing page', price: 'od 14 900 Kč',
-    for: 'Tato stránka je navržená tak, aby návštěvníka vedla k jedné konkrétní akci — například objednávce, registraci nebo poptávce.',
+    for: 'Tato stránka je navržená tak, aby návštěvníka vedla k jedné konkrétní akci - například objednávce, registraci nebo poptávce.',
     items: [
       'Přehlednou strukturu, která návštěvníka přirozeně vede k akci',
       'Jasně vystavěný obsah: problém → řešení → důvěra → výzva ke kontaktu nebo objednávce',
@@ -44,7 +44,7 @@ const packages = [
     id: 'akce-spolek', num: '04', name: 'Web pro akci nebo spolek', price: 'od 15 900 Kč',
     for: 'Pro spolky, festivaly, kulturní a komunitní akce, školy, menší obce nebo projekty, kde je důležité rychle a přehledně předat návštěvníkům všechny důležité informace.',
     items: [
-      'Přehledný web, obvykle 3–4 stránky podle rozsahu',
+      'Přehledný web, obvykle 3-4 stránky podle rozsahu',
       'Sekce například pro program, informace o akci nebo spolku, přihlášení, vstupenky nebo kontakt',
       'Jednoduchou orientaci, aby návštěvník rychle našel to důležité',
       'Funkční zobrazení pro mobil i počítač',
@@ -118,7 +118,7 @@ export default function Nabidka() {
           <div className="reveal" style={{ padding: 'clamp(48px,6vw,80px) 0', borderBottom: '1px solid var(--line)' }}>
             <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 800, letterSpacing: '-.04em', color: 'var(--ink)', margin: '0 0 24px' }}>Doplňkové služby</h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: '0 0 16px' }}>K libovolnému balíčku se dá přidat:</p>
-            {['Anglická (nebo jiná jazyková) verze webu', 'Pozdější úpravy hotového webu — hodinově, vždy po domluvě'].map((item, i) => (
+            {['Anglická (nebo jiná jazyková) verze webu', 'Pozdější úpravy hotového webu - hodinově, vždy po domluvě'].map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
                 <span style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(168,125,184,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
                   <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--orchid)', display: 'block' }} />
@@ -132,7 +132,7 @@ export default function Nabidka() {
           <div className="reveal" style={{ padding: 'clamp(48px,6vw,80px) 0' }}>
             <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 800, letterSpacing: '-.04em', color: 'var(--ink)', margin: '0 0 20px' }}>Jak to funguje s placením</h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 620, margin: 0 }}>
-              Polovina ceny při zahájení, druhá polovina až při předání hotového webu. Cenu domlouváme předem a písemně — co je v ní zahrnuto a co ne. Když se v průběhu rozsah změní, řekneme si to dřív, než to udělám, ne až na faktuře.
+              Polovina ceny při zahájení, druhá polovina až při předání hotového webu. Cenu domlouváme předem a písemně - co je v ní zahrnuto a co ne. Když se v průběhu rozsah změní, řekneme si to dřív, než to udělám, ne až na faktuře.
             </p>
           </div>
         </div>
