@@ -78,7 +78,7 @@ export default function ProcTakhle() {
             Ceny webů se dnes pohybují od pár tisíc korun za šablonu, kterou si vyplníte sami, po statisíce u agentur. Agentura má svou cenu z velké části složenou z režie - tým, kanceláře, account manažeři, kteří přeposílají vaše zprávy dál.
           </p>
           <p className="reveal d3" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 36px' }}>
-            Pracuji napřímo, od návrhu až po samotnou realizaci komunikujete přímo se mnou. Díky tomu se pohybuji mezi levnou šablonou a velkou agenturou, s osobním přístupem a přímou komunikací.
+            Pracuji napřímo, od návrhu, až po samotnou realizaci komunikujete přímo se mnou. Díky tomu se pohybuji mezi levnou šablonou a velkou agenturou, s osobním přístupem a přímou komunikací.
           </p>
           <Link href="/nabidka" className="btn btn-ink reveal d4">Podívat se na nabídku →</Link>
         </div>
