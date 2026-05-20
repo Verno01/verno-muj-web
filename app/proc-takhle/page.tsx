@@ -78,7 +78,7 @@ export default function ProcTakhle() {
             Ceny webů se dnes pohybují od pár tisíc korun za šablonu, kterou si vyplníte sami, po statisíce u agentur. Agentura má svou cenu z velké části složenou z režie - tým, kanceláře, account manažeři, kteří přeposílají vaše zprávy dál.
           </p>
           <p className="reveal d3" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 36px' }}>
-            Pracuji napřímo - od návrhu až po samotnou realizaci komunikujete přímo se mnou. Díky tomu se pohybuji mezi levnou šablonou a velkou agenturou — s osobním přístupem a přímou komunikací.
+            Pracuji napřímo, od návrhu až po samotnou realizaci komunikujete přímo se mnou. Díky tomu se pohybuji mezi levnou šablonou a velkou agenturou, s osobním přístupem a přímou komunikací.
           </p>
           <Link href="/nabidka" className="btn btn-ink reveal d4">Podívat se na nabídku →</Link>
         </div>
@@ -107,7 +107,7 @@ function FaqList() {
     { q: 'Co když budete nedostupná nebo s vámi přestaneme spolupracovat?', a: 'Hotový web je váš včetně všech zdrojových souborů. Není zamčený u mě. Když byste potřebovali pokračovat s někým jiným, předám vše potřebné.' },
     { q: 'Děláte e-shopy?', a: 'Ne. Soustředím se na prezentační weby - vizitky, firemní weby, landing pages. E-shop je jiná disciplína (sklady, platby, objednávky) a dělat ho napůl by nikomu neposloužilo. Když potřebujete e-shop, ráda doporučím směr, kterým se vydat.' },
     { q: 'Kde bude web hostovaný a co to stojí?', a: 'Na síti Cloudflare, kde je provoz u webů, které stavím, obvykle zdarma. Platíte jen za doménu - řádově stovky korun ročně, přímo registrátorovi.' },
-    { q: 'Co Google a vyhledávání?', a: 'Každý web dostane základní nastavení pro vyhledávače - správné titulky, popisy a strukturu — a přihlásím vás do Google Search Console, aby vás Google našel a zobrazoval. Negarantuji první místo ve vyhledávání, to nikdo seriózní slíbit nemůže. Garantuji, že web bude technicky připravený, aby vás Google našel.' },
+    { q: 'Co Google a vyhledávání?', a: 'Každý web dostane základní nastavení pro vyhledávače - správné titulky, popisy a strukturu. Přihlásím vás do Google Search Console, aby vás Google našel a zobrazoval. Negarantuji první místo ve vyhledávání, to nikdo seriózní slíbit nemůže. Garantuji, že web bude technicky připravený, aby vás Google našel.' },
     { q: 'Můžu mít web ve více jazycích?', a: 'Ano. Vícejazyčný web udělat umím. Řekněte to na začátku. Překlad buď dodáte vy, nebo ho zajistím za příplatek.' },
     { q: 'Jak probíhá platba?', a: 'Polovina při zahájení, druhá polovina při předání hotového webu. Vše domluveno písemně předem.' },
   ]
