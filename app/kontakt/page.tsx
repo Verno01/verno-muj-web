@@ -54,7 +54,7 @@ export default function Kontakt() {
                 </div>
                 <div>
                   <p style={{ fontSize: 10.5, fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--dim)', margin: '0 0 6px' }}>Fakturační údaje</p>
-                  <p style={{ fontSize: 14.5, lineHeight: 1.7, color: 'var(--ink-s)', margin: 0 }}>Hana Fraňková<br />IČ: 23526629<br />Lišov</p>
+                  <p style={{ fontSize: 14.5, lineHeight: 1.7, color: 'var(--ink-s)', margin: 0 }}>Hana Fraňková<br />IČ: 23526629<br />Lomnice nad Lužnicí</p>
                 </div>
               </div>
 
