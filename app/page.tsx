@@ -119,7 +119,7 @@ export default function Home() {
             Pomáhám lidem, kteří odvádějí dobrou práci, aby to bylo vidět i online.
           </h2>
           <div className="reveal d2" style={{ maxWidth: 520 }}>
-            <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>Spousta živnostníků a malých firem má slabý nebo žádný web — ne proto, že by jejich práce za to nestála, ale protože na to nebyl čas, rozpočet nebo někdo, kdo to zařídí.</p>
+            <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>Spousta živnostníků a malých firem má slabý nebo žádný web - ne proto, že by jejich práce za to nestála, ale protože na to nebyl čas, rozpočet nebo někdo, kdo to zařídí.</p>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: 0 }}>Tady přicházím já. Web nepostavím jen „aby byl". Promyslím strukturu, texty, to, koho má oslovit a co má návštěvník udělat. Vy dodáte informace. Zbytek je na mně.</p>
           </div>
         </div>
