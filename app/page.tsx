@@ -18,7 +18,7 @@ const steps = [
   { n: '04', title: 'Předám',       desc: 'Hotový web spustím na vaší doméně a předám i s přihlášením do Googlu.' },
 ]
 
-const marquee = ['prezentační weby', 'živnostníci', 'malé firmy', 'hosting zdarma', 'moderní technologie', 'přímá komunikace', 'žádné e-shopy', 'Lišov · ČR']
+const marquee = ['prezentační weby', 'živnostníci', 'malé firmy', 'hosting zdarma', 'moderní technologie', 'přímá komunikace', 'žádné e-shopy', 'Třeboň · ČR']
 
 export default function Home() {
   const glowRef = useRef<HTMLDivElement>(null)
@@ -46,12 +46,12 @@ export default function Home() {
 
           {/* Left text */}
           <div style={{ flex: '0 0 52%', maxWidth: '52%', position: 'relative', zIndex: 2 }} className="hero-left-col">
-            <p className="eyebrow" style={{ marginBottom: 18, opacity: 0, animation: 'fadeUp .8s .06s cubic-bezier(.16,1,.3,1) forwards' }}>Tvorba webů — Hana Fraňková</p>
+            <p className="eyebrow" style={{ marginBottom: 18, opacity: 0, animation: 'fadeUp .8s .06s cubic-bezier(.16,1,.3,1) forwards' }}>Tvorba webů - Hana Fraňková</p>
             <h1 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.8rem,5.8vw,5.6rem)', fontWeight: 800, lineHeight: .92, letterSpacing: '-.05em', color: 'var(--ink)', margin: '0 0 22px', opacity: 0, animation: 'fadeUp .9s .14s cubic-bezier(.16,1,.3,1) forwards' }}>
               Weby,<br />kterých<br />si lidé<br /><span className="grad-text">všimnou.</span>
             </h1>
             <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 400, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Navrhuji a stavím prezentační weby pro živnostníky, řemeslníky a malé firmy. Sama&nbsp;— od prvního kontaktu po předání hotového webu.
+              Navrhuji a stavím prezentační weby pro živnostníky, řemeslníky a malé firmy. Sama&nbsp;- od prvního kontaktu po předání hotového webu.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 26, opacity: 0, animation: 'fadeUp .9s .32s cubic-bezier(.16,1,.3,1) forwards' }}>
               <Link href="/nabidka" className="btn btn-ink">Co nabízím →</Link>
@@ -131,7 +131,7 @@ export default function Home() {
         <div className="inner">
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>Nabídka</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--ink)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 680 }}>
-            Pět typů webů. Každý pro jiný záměr —{' '}
+            Pět typů webů. Každý pro jiný záměr {' '}
             <span style={{ color: 'var(--dim)', fontWeight: 400, fontSize: '.82em' }}>od jednoduché vizitky po firemní prezentaci.</span>
           </h2>
           {services.map((s, i) => (
@@ -186,7 +186,7 @@ export default function Home() {
         <div className="inner-wide" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 24 }}>Reference</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)' }}>
-            Ukázka webů, které tvořím.
+            Ukázka z tvorby.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }} className="refs-grid">
             {[
@@ -230,7 +230,7 @@ export default function Home() {
             <div className="reveal d2">
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>Weby tvořím sama, od první zprávy až po předání mluvíte se mnou, ne s někým z týmu, kdo „to vyřídí".</p>
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>Kromě webů se věnuji malbě a grafice. I díky tomu vidím barvu, kompozici a to, jak na člověka stránka působí dřív, než si vůbec něco přečte.</p>
-              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 28px' }}>Pracuji volněji a pořádně než rychle a odbytě. Nejde mi o počet webů, ale o to, aby každý, který odevzdám, dělal své práci čest — té vaší i té mojí.</p>
+              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 28px' }}>Pracuji volněji a pořádně než rychle a odbytě. Nejde mi o počet webů, ale o to, aby každý, který odevzdám, dělal své práci čest - té vaší i té mojí.</p>
             </div>
           </div>
         </div>
@@ -242,12 +242,12 @@ export default function Home() {
         <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: -30, fontFamily: "'Syne',sans-serif", fontSize: 'clamp(8rem,18vw,18rem)', fontWeight: 800, letterSpacing: '-.06em', color: 'rgba(25,23,20,.025)', pointerEvents: 'none', userSelect: 'none', whiteSpace: 'nowrap' }} aria-hidden>VERNO</div>
         <div className="inner-narrow" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.4rem,5vw,4.4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.02, color: 'var(--ink)', margin: '0 0 18px' }}>
-            Máte něco na mysli?<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>Napište mi.</em>
+            Máte nápad?<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>Napište mi.</em>
           </h2>
           <p className="reveal d1" style={{ fontSize: '1.01rem', lineHeight: 1.76, color: 'var(--dim)', margin: '0 0 34px' }}>
-            Stačí pár vět — co děláte a co od webu čekáte. Ozvu se a domluvíme se na postupu. Nezávazně.
+            Stačí pár vět - co děláte a co od webu čekáte. Ozvu se a domluvíme se na postupu.
           </p>
-          <Link href="/kontakt" className="btn btn-ink reveal d2">Napsat mi →</Link>
+          <Link href="/kontakt" className="btn btn-ink reveal d2">Napište mi →</Link>
         </div>
       </section>
 
