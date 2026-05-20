@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   keywords: ['tvorba webů', 'prezentační web', 'web pro živnostníka', 'webdesign', 'Hana Fraňková', 'VERNO'],
   authors: [{ name: 'Hana Fraňková', url: 'https://www.verno.cz' }],
   icons: {
-    icon: [{ url: '/favicon-32.png', type: 'image/png', sizes: '32x32' }],
-    apple: '/favicon-180.png',
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
   },
   openGraph: {
     type: 'website', locale: 'cs_CZ', url: 'https://www.verno.cz',
