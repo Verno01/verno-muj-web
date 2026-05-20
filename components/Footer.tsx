@@ -18,7 +18,7 @@ export default function Footer() {
           <p style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.8rem,6.5vw,5.6rem)', fontWeight: 800, lineHeight: .94, letterSpacing: '-.045em', color: 'var(--cloud)', margin: '0 0 32px', maxWidth: 760 }}>
             Pojďme vašemu<br />webu dát tvar.
           </p>
-          <Link href="/kontakt" className="btn btn-lt">Napsat mi ↗</Link>
+          <Link href="/kontakt" className="btn btn-lt">Napište mi ↗</Link>
         </div>
 
         {/* Grid */}
