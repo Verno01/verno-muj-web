@@ -30,7 +30,7 @@ export default function Kontakt() {
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Kontakt</p>
           <h1 className="page-hero-title">Máte něco<br />na mysli?</h1>
           <p className="page-hero-sub">
-            Stačí pár vět — co děláte a co od webu čekáte. Ozvu se do dvou pracovních dnů.
+            Stačí pár vět o tom, co děláte a co od webu čekáte. Ozvu se do dvou pracovních dnů.
           </p>
         </div>
       </div>
