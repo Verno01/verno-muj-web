@@ -53,7 +53,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Styly pro plynulé zesvětlení odkazů bez JavaScriptu */}
       <style>{`
         .footer-link {
           display: block;
