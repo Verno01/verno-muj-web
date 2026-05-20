@@ -12,13 +12,30 @@ export default function Kontakt() {
   const [sending, setSending] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setSending(true)
-    // Simulate send — replace with actual form handler (Formspree, Resend, etc.)
-    await new Promise(r => setTimeout(r, 800))
+  e.preventDefault()
+  setSending(true)
+
+  try {
+    const response = await fetch("https://formspree.io/f/xbdbjayr", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(Object.fromEntries(new FormData(e.currentTarget)))
+    })
+
+    if (response.ok) {
+      setSent(true)
+    } else {
+      alert("Něco se nepovedlo, zkuste to prosím znovu nebo mi napište napřímo.")
+    }
+  } catch (error) {
+    alert("Chyba při odesílání. Zkontrolujte prosím připojení k internetu.")
+  } finally {
     setSending(false)
-    setSent(true)
   }
+}
 
   return (
     <>
