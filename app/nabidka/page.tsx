@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Nabídka | Weby na míru — VERNO',
-  description: 'Pět typů prezentačních webů pro živnostníky i firmy. Každý web stavím na míru - rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
+  description: 'Pět typů prezentačních webů pro živnostníky i firmy. Každý web stavím na míru rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
 }
 
 const packages = [
@@ -97,7 +97,7 @@ export default function Nabidka() {
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nabídka</p>
           <h1 className="page-hero-title">Pět typů webů.<br />Každý pro jiný záměr.</h1>
           <p className="page-hero-sub">
-            Každý web stavím na míru - rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
+            Každý web stavím na míru rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
           </p>
         </div>
       </div>
@@ -160,7 +160,7 @@ export default function Nabidka() {
               Jak je to s cenou?
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 14px' }}>
-              Neuvádím tu pevný ceník, protože každý web je stavěn na míru rozsahu, obsahu, cílům. Mé projekty se pohybují nejčastěji mezi{' '}
+              Neuvádím pevný ceník, protože každý web je stavěn na míru rozsahu, obsahu, cílům. Mé projekty se pohybují nejčastěji mezi{' '}
               <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>12 000 a 60 000 Kč</strong>.
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 36px' }}>
