@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import RevealObserver from '@/components/RevealObserver'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -47,15 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <main>{children}</main>
         <Footer />
-        <script dangerouslySetInnerHTML={{ __html: `
-(function(){
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-  },{threshold:.05,rootMargin:'0px 0px -30px 0px'});
-  function bind(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){io.observe(el);});}
-  bind(); window.addEventListener('load',bind);
-})();
-        `}} />
+        <RevealObserver />
       </body>
     </html>
   )
