@@ -4,11 +4,11 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 const services = [
-  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Jednostránkový web s tím nejdůležitějším.',      price: 'od 11 900 Kč' },
-  { id: 'maly-web',        name: 'Malý web',                 short: 'Více prostoru pro služby, reference a tým.',     price: 'od 18 900 Kč' },
-  { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka vedená k jediné akci.',            price: 'od 14 900 Kč' },
-  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Přehledně předané informace, rychle.',           price: 'od 15 900 Kč' },
-  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web jako důležitá součást značky.',              price: 'od 34 900 Kč' },
+  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Jednostránkový web s tím nejdůležitějším.' },
+  { id: 'maly-web',        name: 'Malý web',                 short: 'Více prostoru pro služby, reference a tým.' },
+  { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka vedená k jediné akci.' },
+  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Přehledně předané informace, rychle.' },
+  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web jako důležitá součást značky.' },
 ]
 
 const steps = [
@@ -51,7 +51,8 @@ export default function Home() {
               Weby,<br />kterých<br />si lidé<br /><span className="grad-text">všimnou.</span>
             </h1>
             <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 400, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Navrhuji a stavím prezentační weby pro živnostníky, řemeslníky a malé firmy. Sama&nbsp;- od prvního kontaktu po předání hotového webu.
+              Navrhuji a stavím prezentační weby pro živnostníky, řemeslníky a malé firmy.
+              Sama&nbsp;- od prvního kontaktu po předání hotového webu.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 26, opacity: 0, animation: 'fadeUp .9s .32s cubic-bezier(.16,1,.3,1) forwards' }}>
               <Link href="/nabidka" className="btn btn-ink">Co nabízím →</Link>
@@ -107,7 +108,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CO DĚLÁM — tmavá ──────────────────────────────────────── */}
+      {/* ── CO DĚLÁM ───────────────────────────────────────────────── */}
       <section style={{ background: 'var(--deep)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle,rgba(168,125,184,.14),transparent 70%)', right: -80, top: -100, filter: 'blur(70px)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle,rgba(0,154,196,.1),transparent 70%)', left: -60, bottom: -60, filter: 'blur(60px)', pointerEvents: 'none' }} />
@@ -131,12 +132,12 @@ export default function Home() {
         <div className="inner">
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>Nabídka</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--ink)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 680 }}>
-            Pět typů webů. Každý pro jiný záměr {' '}
-            <span style={{ color: 'var(--dim)', fontWeight: 400, fontSize: '.82em' }}>od jednoduché vizitky po firemní prezentaci.</span>
+            Pět typů webů.{' '}
+            <span style={{ color: 'var(--dim)', fontWeight: 400, fontSize: '.82em' }}>Každý pro jiný záměr.</span>
           </h2>
           {services.map((s, i) => (
             <Link key={s.id} href={`/nabidka#${s.id}`} className={`reveal d${i + 1}`}
-              style={{ display: 'grid', gridTemplateColumns: '2.2rem 1fr auto', gap: '0 24px', alignItems: 'center', padding: 'clamp(18px,2.2vw,26px) 0', borderBottom: '1px solid var(--line)', textDecoration: 'none', color: 'inherit', transition: 'padding-left .3s cubic-bezier(.16,1,.3,1),background .25s', borderRadius: 2 }}
+              style={{ display: 'grid', gridTemplateColumns: '2.2rem 1fr', gap: '0 24px', alignItems: 'center', padding: 'clamp(18px,2.2vw,26px) 0', borderBottom: '1px solid var(--line)', textDecoration: 'none', color: 'inherit', transition: 'padding-left .3s cubic-bezier(.16,1,.3,1),background .25s', borderRadius: 2 }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.paddingLeft = '18px'; (e.currentTarget as HTMLElement).style.background = 'rgba(168,125,184,.05)' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.paddingLeft = '0'; (e.currentTarget as HTMLElement).style.background = '' }}
             >
@@ -145,7 +146,6 @@ export default function Home() {
                 <p style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1rem,1.6vw,1.28rem)', fontWeight: 700, color: 'var(--ink)', margin: '0 0 3px', letterSpacing: '-.02em' }}>{s.name}</p>
                 <p style={{ fontSize: 13, color: 'var(--dim)', margin: 0 }}>{s.short}</p>
               </div>
-              <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink)', whiteSpace: 'nowrap', opacity: .6, fontFamily: "'Syne',sans-serif" }}>{s.price}</span>
             </Link>
           ))}
           <div className="reveal" style={{ marginTop: 44 }}>
@@ -215,7 +215,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── O MNĚ ──────────────────────────────────────────────────── */}
+      {/* ── O MNĚ ────────────────────────────────────────────────── */}
       <section style={{ background: 'var(--cloud)', padding: 0, overflow: 'hidden' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 600 }} className="about-grid">
           <div className="reveal" style={{ position: 'relative', overflow: 'hidden', background: 'var(--cloud-2)' }}>
