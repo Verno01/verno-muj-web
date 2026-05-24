@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           founder: { '@type': 'Person', name: 'Hana Fraňková' },
           areaServed: { '@type': 'Country', name: 'Česká republika' },
           address: { '@type': 'PostalAddress', addressLocality: 'Lišov', addressCountry: 'CZ' },
-          priceRange: 'od 11 900 Kč', knowsLanguage: ['cs', 'en', 'de'],
+          priceRange: '12 000 – 60 000 Kč', knowsLanguage: ['cs', 'en', 'de'],
         }) }} />
         <Navigation />
         <main>{children}</main>
