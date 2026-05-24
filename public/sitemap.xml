@@ -3,31 +3,25 @@
   <url>
     <loc>https://verno.cz/</loc>
     <priority>1.0</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://verno.cz/nabidka</loc>
     <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://verno.cz/jak-pracuji</loc>
     <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://verno.cz/proc-takhle</loc>
     <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://verno.cz/kontakt</loc>
     <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://verno.cz/kalkulacka</loc>
     <priority>0.9</priority>
-    <changefreq>yearly</changefreq>
   </url>
 </urlset>
