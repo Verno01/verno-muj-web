@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Nabídka | Weby na míru — VERNO',
-  description: 'Pět typů prezentačních webů pro živnostníky i firmy. Každý web stavím na míru — rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
+  description: 'Pět typů prezentačních webů pro živnostníky i firmy. Každý web stavím na míru - rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
 }
 
 const packages = [
@@ -36,7 +36,7 @@ const packages = [
       'Jasně vystavěný obsah: problém → řešení → důvěra → výzva ke kontaktu nebo objednávce',
       'Důraz na jednoduchost, přehlednost a čitelnost i na mobilu',
       'Kontaktní formulář nebo propojení na objednávku',
-      'Základní nastavení pro vyhledávání ve Googlu',
+      'Základní nastavení pro vyhledávání v Googlu',
       'Spuštění webu na vaší doméně',
     ],
   },
@@ -49,7 +49,7 @@ const packages = [
       'Jednoduchou orientaci, aby návštěvník rychle našel to důležité',
       'Funkční zobrazení pro mobil i počítač',
       'Kontaktní formulář nebo propojení na registraci',
-      'Základní nastavení pro vyhledávání ve Googlu',
+      'Základní nastavení pro vyhledávání v Googlu',
       'Spuštění webu na vaší doméně',
     ],
   },
@@ -74,7 +74,7 @@ const priceFactors = [
   },
   {
     label: 'Stav textů',
-    desc: 'Zda dodáte materiál, ze kterého lze vyjít, nebo začínáme od nuly — a to je v pořádku v obou případech.',
+    desc: 'Zda dodáte materiál, ze kterého lze vyjít, nebo začínáme od nuly (a to je v pořádku v obou případech).',
   },
   {
     label: 'Struktura informací',
@@ -97,7 +97,7 @@ export default function Nabidka() {
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nabídka</p>
           <h1 className="page-hero-title">Pět typů webů.<br />Každý pro jiný záměr.</h1>
           <p className="page-hero-sub">
-            Každý web stavím na míru — rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
+            Každý web stavím na míru - rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
           </p>
         </div>
       </div>
@@ -150,7 +150,7 @@ export default function Nabidka() {
           <div className="reveal" style={{ padding: 'clamp(48px,6vw,80px) 0', borderBottom: '1px solid var(--line)' }}>
             <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 800, letterSpacing: '-.04em', color: 'var(--ink)', margin: '0 0 20px' }}>Jak to funguje s placením</h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 620, margin: 0 }}>
-              Polovina ceny při zahájení, druhá polovina až při předání hotového webu. Cenu domlouváme předem a písemně — co je v ní zahrnuto a co ne. Když se v průběhu rozsah změní, řekneme si to dřív, než to udělám, ne až na faktuře.
+              Polovina ceny při zahájení, druhá polovina před předáním hotového webu. Cenu domlouváme předem. Když se v průběhu rozsah změní, řekneme si to dřív, než to udělám, ne až na faktuře.
             </p>
           </div>
 
@@ -160,7 +160,7 @@ export default function Nabidka() {
               Jak je to s cenou?
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 14px' }}>
-              Neuvádím tu pevný ceník, protože každý web je stavěn na míru — rozsahu, obsahu, cílům. Mé projekty se pohybují nejčastěji mezi{' '}
+              Neuvádím tu pevný ceník, protože každý web je stavěn na míru rozsahu, obsahu, cílům. Mé projekty se pohybují nejčastěji mezi{' '}
               <strong style={{ color: 'var(--ink)', fontWeight: 600 }}>12 000 a 60 000 Kč</strong>.
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 36px' }}>
@@ -206,7 +206,7 @@ export default function Nabidka() {
             Nejste si jistí, který web je pro vás?
           </h2>
           <p className="reveal d1" style={{ fontSize: '1rem', lineHeight: 1.78, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
-            Napište mi pár vět o tom, co děláte. Společně to rozlouskneme.
+            Napište mi pár vět o tom co děláte.
           </p>
           <Link href="/kontakt" className="btn btn-lt reveal d2">Napsat mi →</Link>
         </div>
