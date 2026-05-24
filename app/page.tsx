@@ -154,6 +154,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── KALKULAČKA PROMO ────────────────────────────────────────── */}
+      <section style={{ background: 'var(--deep)', padding: 'clamp(48px,7vw,80px) 0', position: 'relative', overflow: 'hidden', borderTop: '1px solid rgba(255,255,255,.05)' }}>
+        <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle,rgba(168,125,184,.1),transparent 70%)', left: -80, bottom: -80, filter: 'blur(60px)', pointerEvents: 'none' }} />
+        <div className="noise" />
+        <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="reveal" style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 'clamp(24px,4vw,60px)', alignItems: 'center' }}>
+            <div>
+              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '.22em', textTransform: 'uppercase', color: 'rgba(240,237,232,.35)', margin: '0 0 12px' }}>Nástroj zdarma · OSVČ · Model 2026</p>
+              <h2 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 'clamp(1.4rem,3vw,2.2rem)', letterSpacing: '-.04em', lineHeight: 1.04, color: 'var(--cloud)', margin: '0 0 12px' }}>
+                Víte, kolik byste si měli<br />reálně účtovat za hodinu?
+              </h2>
+              <p style={{ fontSize: '1rem', lineHeight: 1.75, color: 'rgba(240,237,232,.45)', margin: '0 0 22px', maxWidth: 440 }}>
+                Kalkulačka hodinové sazby OSVČ — zadejte výdaje a čas, systém dopočítá daně i odvody a ukáže minimální, doporučenou i rozvojovou sazbu.
+              </p>
+              <Link href="/kalkulacka" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 24px', background: 'rgba(168,125,184,.15)', border: '1px solid rgba(168,125,184,.35)', borderRadius: 3, fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 14, color: '#d4a8e8', textDecoration: 'none', transition: 'background .2s' }}>
+                Spočítat svoji sazbu →
+              </Link>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 8, minWidth: 140 }} className="kalk-promo-stats">
+              {[
+                { label: 'Daňový model', val: '2026' },
+                { label: 'Výsledky', val: 'okamžitě' },
+                { label: 'Cena', val: 'zdarma' },
+              ].map(s => (
+                <div key={s.label} style={{ textAlign: 'center', padding: '12px 16px', background: 'rgba(255,255,255,.05)', borderRadius: 5, border: '1px solid rgba(255,255,255,.06)' }}>
+                  <p style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 'clamp(1rem,2vw,1.3rem)', color: 'var(--cloud)', margin: '0 0 2px', letterSpacing: '-.03em' }}>{s.val}</p>
+                  <p style={{ fontSize: 10.5, color: 'rgba(240,237,232,.35)', margin: 0, letterSpacing: '.06em', textTransform: 'uppercase' }}>{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── JAK PRACUJI ────────────────────────────────────────────── */}
       <section style={{ background: 'var(--cloud-1)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden', borderTop: '1px solid var(--line-s)' }}>
         <div className="noise" />
@@ -261,6 +295,7 @@ export default function Home() {
           .steps-grid{grid-template-columns:1fr 1fr !important}
           .refs-grid{grid-template-columns:1fr !important}
           .about-grid{grid-template-columns:1fr !important;min-height:auto !important}
+          .kalk-promo-stats{display:none !important}
         }
         @media(max-width:540px){
           .steps-grid{grid-template-columns:1fr !important}
