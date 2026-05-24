@@ -53,34 +53,39 @@ export default function ProcTakhle() {
       <section style={{ background: 'var(--cloud)', padding: 'clamp(60px,9vw,120px) 0' }}>
         <div className="inner">
           {reasons.map((r, i) => (
-            <div key={i} className="reveal" style={{ padding: 'clamp(48px,6vw,80px) 0', borderBottom: '1px solid var(--line)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,72px)', alignItems: 'start' }}>
+            <div key={i} className="reveal" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,72px)', padding: 'clamp(48px,6vw,80px) 0', borderBottom: '1px solid var(--line)', alignItems: 'start' }}>
               <div>
-                <div style={{ width: 32, height: 3, background: r.accent, marginBottom: 24, borderRadius: 1 }} />
-                <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.5rem,2.8vw,2.2rem)', fontWeight: 800, letterSpacing: '-.04em', color: 'var(--ink)', margin: '0 0 20px' }}>{r.title}</h2>
-                <p style={{ fontSize: '1.05rem', lineHeight: 1.78, color: 'var(--ink)', fontWeight: 500, margin: 0 }}>{r.text}</p>
+                <div style={{ width: 3, height: 32, background: r.accent, marginBottom: 20, borderRadius: 2 }} />
+                <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 800, letterSpacing: '-.04em', color: 'var(--ink)', margin: '0 0 16px' }}>{r.title}</h2>
+                <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: 0 }}>{r.text}</p>
               </div>
               <div>
-                <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: 0 }}>{r.detail}</p>
+                <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: 0 }}>{r.detail}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Ceny v oboru */}
-      <section style={{ background: 'var(--cloud-1)', padding: 'clamp(60px,9vw,120px) 0', borderTop: '1px solid var(--line-s)' }}>
-        <div className="inner">
-          <p className="eyebrow reveal" style={{ marginBottom: 24 }}>Jak to sedí cenově</p>
-          <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--ink)', margin: '0 0 28px', maxWidth: 680 }}>
-            Pár slov o cenách v oboru.
+      {/* Srovnání */}
+      <section style={{ background: 'var(--deep)', padding: 'clamp(60px,9vw,120px) 0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle,rgba(168,125,184,.1),transparent 70%)', left: -100, top: -100, filter: 'blur(70px)', pointerEvents: 'none' }} />
+        <div className="noise" />
+        <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
+          <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 24 }}>Kde jsem</p>
+          <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 680 }}>
+            Nejsem levná šablona ani velká agentura.
           </h2>
-          <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 16px' }}>
-            Ceny webů se dnes pohybují od pár tisíc korun za šablonu, kterou si vyplníte sami, po statisíce u agentur. Agentura má svou cenu z velké části složenou z režie - tým, kanceláře, account manažeři, kteří přeposílají vaše zprávy dál.
+          <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', maxWidth: 640, margin: '0 0 20px' }}>
+            Šablona je rychlá a levná, ale vypadá jako šablona. Neudrží krok s tím, co vaše podnikání potřebuje, a technicky bývá pomalá a nestabilní.
           </p>
           <p className="reveal d3" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 36px' }}>
+            Agentura má svou cenu z velké části složenou z režie - tým, kanceláře, account manažeři, kteří přeposílají vaše zprávy dál.
+          </p>
+          <p className="reveal d3" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', maxWidth: 640, margin: '0 0 36px' }}>
             Pracuji napřímo, od návrhu, až po samotnou realizaci komunikujete přímo se mnou. Díky tomu se pohybuji mezi levnou šablonou a velkou agenturou, s osobním přístupem a komunikací.
           </p>
-          <Link href="/nabidka" className="btn btn-ink reveal d4">Podívat se na nabídku →</Link>
+          <Link href="/nabidka" className="btn btn-lt reveal d4">Podívat se na nabídku →</Link>
         </div>
       </section>
 
@@ -100,7 +105,7 @@ export default function ProcTakhle() {
 
 function FaqList() {
   const faqs = [
-    { q: 'Kolik to bude přesně stát?', a: 'Ceny u balíčků jsou uvedené jako „od", protože každý web je jinak velký. Konkrétní cenu vám dám po rozhovoru o tom, co potřebujete, vždy písemně a předem, než cokoliv začnu. Žádné neviditelné položky, se kterými byste nepočítali.' },
+    { q: 'Kolik to bude přesně stát?', a: 'Každý web je jinak velký, takže pevný ceník neuvádím. Moje projekty se pohybují mezi 12 000 a 60 000 Kč — konkrétní číslo dostanete vždy písemně před zahájením práce, po tom co si e-mailem ujasníme rozsah. Žádné neviditelné položky, se kterými byste nepočítali.' },
     { q: 'Jak dlouho tvorba trvá?', a: 'Závisí na rozsahu webu a hlavně na tom, jak rychle se sejdou podklady (texty, fotky). Nedávám konkrétní datum, protože bych ho dávala naslepo. Po celou dobu ale zasílám průběžně rozpracovanou verzi, takže budete vědět, v jaké fázi to je. Když máte pevný termín, řekněte mi to hned na začátku.' },
     { q: 'Co musím připravit já?', a: 'Informace o tom, co děláte, fotografie (ideálně vlastní) a logo, pokud ho máte. Nemusí to být dokonalé - texty obvykle píšu já podle vašich podkladů a dodané fotky umím upravit. Podrobně je to rozepsané na stránce Jak pracuji.' },
     { q: 'Budu si web moct sám upravovat?', a: 'Web není postavený na systému, kde si sami klikáte do administrace - to je záměr, protože právě ta administrace bývá zdroj problémů. Menší změny (text, fotka, údaj) za vás udělám rychle za hodinovou sazbu. Větší úpravy se domluví zvlášť. Nejste na mně trvale závislí, můžete kdykoliv přejít jinam, web je váš.' },
