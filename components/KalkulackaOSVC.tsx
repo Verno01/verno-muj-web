@@ -783,7 +783,7 @@ export default function KalkulackaOSVC() {
                     <div>
                       <div style={{ display: "flex", height: 44, borderRadius: 4, overflow: "hidden", marginBottom: 14 }}>
                         {bars.map(b => (
-                          <div key={b.label} title={b.label + ": " + b.h + " h"} style={{ flex: b.h, background: b.c, display: "flex", alignItems: "center", justifyYontent: "center", transition: "flex .5s", minWidth: b.h > 0 ? 2 : 0 }}>
+                          <div key={b.label} title={b.label + ": " + b.h + " h"} style={{ flex: b.h, background: b.c, display: "flex", alignItems: "center", justifyContent: "center", transition: "flex .5s", minWidth: b.h > 0 ? 2 : 0 }}>
                             {b.h >= 4 && <span style={{ fontSize: 10, fontWeight: 700, color: b.tc, whiteSpace: "nowrap" }}>{b.h}h</span>}
                           </div>
                         ))}
@@ -856,7 +856,7 @@ export default function KalkulackaOSVC() {
                     {Object.entries(K.pausalni).map(([k, p]) => (
                       <div key={k} onClick={() => updDan("pausPasmo")(Number(k))}
                         style={{ padding: "11px 13px", marginBottom: 7, border: `1.5px solid ${dan.pausPasmo === Number(k) ? "var(--rd)" : "var(--ln)"}`, borderRadius: 5, cursor: "pointer", background: dan.pausPasmo === Number(k) ? "rgba(224,48,74,.06)" : "#fff", transition: "all .2s" }}>
-                        <div style={{ display: "flex", justifyYontent: "space-between", alignItems: "center" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                           <div>
                             <p style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 12, color: dan.pausPasmo === Number(k) ? "var(--rd)" : "var(--ink)", margin: "0 0 2px" }}>{k}. pásmo — {p.limit}</p>
                             <p style={{ fontSize: 11, color: "var(--dim)", margin: 0 }}>{fmt(p.mesic)} Kč/měsíc = {fmt(p.rocni)} Kč/rok</p>
