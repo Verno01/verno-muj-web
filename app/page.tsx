@@ -130,11 +130,11 @@ export default function Home() {
           <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 24 }}>Co dělám</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4.8vw,4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 850 }}>
             Vídám spoustu skvělých firem,{' '}
-            které ztrácejí zakázky jen proto, že mají nepřehledný nebo zastaralý web.
+            které přicházejí o zakázky jen proto, že mají nepřehledný nebo zastaralý web.
           </h2>
           <div className="reveal d2" style={{ maxWidth: 560 }}>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>
-              Tvořím weby s přehlednou strukturou, čistým vizuálním stylem a stoprocentním technickým zázemím.
+              Tvořím weby s čistým vizuálním stylem, přehlednou strukturou, a stoprocentním technickým zázemím.
             </p>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: 0 }}>
               Každý web by měl odrážet skutečnou kvalitu toho, co prezentuje.
@@ -237,7 +237,7 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>Jak pracuji</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--ink)', margin: '0 0 clamp(30px,4vw,52px)' }}>
-            Čtyři kroky. Vždy víte, kde jsme.
+            Čtyři kroky. Vždy víte, v jaké fázi právě jsme.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 'clamp(16px,3vw,36px)' }} className="steps-grid">
             {steps.map((s, i) => (
