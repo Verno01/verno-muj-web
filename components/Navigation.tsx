@@ -9,11 +9,12 @@ const links = [
   { href: '/nabidka',     label: 'Nabídka' },
   { href: '/jak-pracuji', label: 'Jak pracuji' },
   { href: '/proc-takhle', label: 'Proč takhle' },
+  { href: '/kalkulacka',  label: 'Kalkulačka' },
   { href: '/kontakt',     label: 'Kontakt' },
 ]
 
 export default function Navigation() {
-  const [open, setOpen]       = useState(false)
+  const [open, setOpen]         = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
 
