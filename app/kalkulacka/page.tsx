@@ -3,7 +3,7 @@ import Link from 'next/link'
 import KalkulackaWrapper from '@/components/KalkulackaWrapper'
 
 export const metadata: Metadata = {
-  title: 'Kalkulačka hodinové sazby OSVČ 2026 — zdarma',
+  title: 'Kalkulačka hodinové sazby OSVČ 2026. Zdarma, bez registrace',
   description: 'Zjistěte svoji reálnou hodinovou sazbu jako OSVČ. Kalkulačka zohledňuje daně, odvody, výdaje i skutečně fakturovatelný čas. Výsledek za 3 minuty, zdarma.',
   keywords: [
     'kalkulačka hodinové sazby OSVČ',
@@ -12,10 +12,12 @@ export const metadata: Metadata = {
     'kalkulačka sazby freelancer',
     'hodinová sazba OSVČ výpočet',
     'minimální hodinová sazba OSVČ',
+    'kolik na hodinu',
+    'jak vypočítat hodinovou sazbu',
   ],
   openGraph: {
-    title: 'Kalkulačka hodinové sazby OSVČ — VERNO',
-    description: 'Zjistěte svoji reálnou hodinovou sazbu. Zohledňuje daně, odvody i fakticky fakturovatelný čas.',
+    title: 'Kalkulačka hodinové sazby OSVČ - VERNO',
+    description: 'Zjistěte svou reálnou hodinovou sazbu. Zohledňuje daně, odvody i skutečně fakturovatelný čas.',
     url: 'https://www.verno.cz/kalkulacka',
   },
   alternates: {
@@ -26,27 +28,27 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: 'Co je minimální hodinová sazba a proč nestačí?',
-    a: 'Minimální sazba pokrývá přesně to, co potřebujete k životu a podnikání — bez rezervy. Nestačí, protože nepočítá s nemocí, výpadkem zakázek, dovolenými ani rozvojem. Pracovat na minimu dlouhodobě vede k vyhoření a ztrátě.',
+    a: 'Minimální sazba pokrývá přesně to, co potřebujete k životu a podnikání, bez rezerv. Nestačí, protože nepočítá s výpadkem zakázek ani dalším rozvojem. Pracovat na minimu může být dlouhodobě neudržitelné.',
   },
   {
     q: 'Jak kalkulačka počítá daně a odvody?',
-    a: 'Kalkulačka iterativně počítá reálné odvody na zdravotní a sociální pojištění a daň z příjmu podle zvoleného daňového režimu — paušální daň, výdajový paušál nebo skutečné výdaje. Zohledňuje slevy na dani i minimální zálohy.',
+    a: 'Kalkulačka iterativně počítá reálné odvody na zdravotní a sociální pojištění a daň z příjmu podle zvoleného daňového režimu. Paušální daň, výdajový paušál nebo skutečné výdaje. Zohledňí i základní slevy na dani nebo minimální zálohy.',
   },
   {
     q: 'Co je fakturovatelnost a jak ji odhadnout?',
-    a: 'Fakturovatelnost je podíl pracovního času, který skutečně fakturujete. Zbylý čas jde na administrativu, obchod, vzdělávání a přestávky. Začínající OSVČ realisticky počítá s 55–70 %, zkušení freelanceři s etablovanou klientelou s 75–85 %.',
+    a: 'Je to čas, který reálně proměníte ve faktury. Neplacený zbytek tvoří administrativa, provoz a schůzky. U začínajících OSVČ tvoří placená práce průměrně 55–70 % času, u zavedených freelancerů s etablovanou klientelou je to 75–85 %.',
   },
   {
     q: 'Proč je zdravá sazba o 30 % vyšší než minimální?',
-    a: 'Třicet procent nad minimem vytváří polštář na neplánované výpadky, nemoc, sezónní výkyvy a investice do rozvoje. Bez tohoto polštáře jeden prázdný měsíc způsobí existenční tlak.',
+    a: 'Těchto 30 % navíc tvoří Vaši bezpečnou rezervu na neplánované volno, pomalejší měsíce nebo investice do rozvoje. Minimální sazba Vás udrží na nule, ta zdravá Vám zajistí dlouhodobou stabilitu a klidné podnikání.',
   },
   {
     q: 'Liší se výpočet u paušálního a skutečného režimu?',
-    a: 'Ano, výrazně. V paušálním režimu jsou odvody pevné bez ohledu na výši příjmu. U skutečných výdajů a výdajového paušálu kalkulačka iterativně dopočítává reálné odvody — ta čísla závisí na konkrétních příjmech a výdajích.',
+    a: 'Ano, velmi výrazně. V paušálním režimu platíte státu pevnou měsíční částku bez ohledu na příjmy. U skutečných výdajů a výdajových paušálů procentem kalkulačka automaticky přepočítává daňovou složku podle toho, jak se mění Váš poměr příjmů a nákladů.',
   },
   {
-    q: 'Jsou výsledky závazné nebo jen orientační?',
-    a: 'Orientační — model zohledňuje průměrné hodnoty a standardní situace. Pro přesné daňové plánování doporučujeme konzultaci s účetním nebo daňovým poradcem, zejména při nestandardních situacích.',
+    q: 'Jak mohu s výsledky z kalkulačky pracovat?',
+    a: 'Berte je jako orientační odrazový můstek pro své byznysové plánování. Kalkulačka Vám během chvíle ukáže matematickou realitu roku 2026. Můžete si libovolně měnit dny volna, zkoušet různé sazby a ladit své podnikání k dokonalosti. Výstupy mají informativní charakter a nenahrazují daňové či účetní poradenství.',
   },
 ]
 
