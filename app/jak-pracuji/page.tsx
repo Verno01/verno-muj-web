@@ -43,7 +43,7 @@ const steps = [
 const needs = [
   {
     title: 'Informace o tom, co děláte',
-    text: 'Čím se zabýváte, pro koho pracujete a co má návštěvník po otevření webu udělat. Nemusíte umět psát marketingové texty - důležité jsou hlavně informace.',
+    text: 'Čím se zabýváte, pro koho pracujete a co má návštěvník po otevření webu udělat. Nemusíte umět psát marketingové texty — důležité jsou hlavně informace.',
   },
   {
     title: 'Fotografie',
@@ -58,14 +58,14 @@ const needs = [
     text: 'Adresu webu (například vasefirma.cz). Pokud ji ještě nemáte, pomohu vám s výběrem i registrací.',
   },
   {
-    title: 'Vaši představu - pokud nějakou máte',
+    title: 'Vaši představu — pokud nějakou máte',
     text: 'Když máte oblíbené weby, styl nebo naopak něco, čemu se chcete vyhnout, řekněte mi to. Pomůže to vytvořit web, který vám opravdu sedne.',
   },
 ]
 
 const dontExpect = [
   'Levnou kopii cizích webů.',
-  'Přeplácané animace jen proto, aby se „něco hýbalo“.',
+  'Přeplácané animace jen proto, aby se „něco hýbalo".',
   'Editaci webu stylem klikání v administraci jako u WordPressu.',
   'Týdny bez komunikace.',
   'E-shop nebo rozsáhlý portál.',
@@ -95,9 +95,7 @@ export default function JakPracuji() {
             pointerEvents: 'none',
           }}
         />
-
         <div className="noise" />
-
         <div
           style={{
             position: 'absolute',
@@ -117,7 +115,6 @@ export default function JakPracuji() {
         >
           02
         </div>
-
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p
             className="eyebrow"
@@ -125,32 +122,28 @@ export default function JakPracuji() {
               color: 'rgba(240,237,232,.42)',
               marginBottom: 22,
               opacity: 0,
-              animation:
-                'fadeUp .8s .05s cubic-bezier(.16,1,.3,1) forwards',
+              animation: 'fadeUp .8s .05s cubic-bezier(.16,1,.3,1) forwards',
             }}
           >
             Jak pracuji
           </p>
-
           <h1
             style={{
               fontFamily: "'Syne',sans-serif",
               fontSize: 'clamp(2.8rem,6vw,5.5rem)',
               fontWeight: 800,
-              lineHeight: '.92',
+              lineHeight: .92,
               letterSpacing: '-.055em',
               color: 'var(--cloud)',
               margin: '0 0 24px',
               maxWidth: 820,
               opacity: 0,
-              animation:
-                'fadeUp .9s .14s cubic-bezier(.16,1,.3,1) forwards',
+              animation: 'fadeUp .9s .14s cubic-bezier(.16,1,.3,1) forwards',
             }}
           >
             Web nevzniká tak,<br />
             že zmizím na měsíc.
           </h1>
-
           <p
             style={{
               fontSize: 'clamp(1rem,1.2vw,1.08rem)',
@@ -159,12 +152,11 @@ export default function JakPracuji() {
               maxWidth: 620,
               margin: 0,
               opacity: 0,
-              animation:
-                'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards',
+              animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards',
             }}
           >
             Pracuji po krocích a průběžně ukazuji, v jaké fázi web je.
-            Nečekáte týdny na „hotovo“ bez jediné zprávy.
+            Nečekáte týdny na „hotovo" bez jediné zprávy.
           </p>
         </div>
       </section>
@@ -185,17 +177,14 @@ export default function JakPracuji() {
             top: 0,
             bottom: 0,
             width: 4,
-            background:
-              'linear-gradient(180deg,var(--orchid),var(--capri),transparent)',
-            opacity: '.4',
+            background: 'linear-gradient(180deg,var(--orchid),var(--capri),transparent)',
+            opacity: .4,
           }}
         />
-
         <div className="inner">
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>
             Postup krok za krokem
           </p>
-
           <h2
             className="reveal d1"
             style={{
@@ -209,11 +198,8 @@ export default function JakPracuji() {
               maxWidth: 700,
             }}
           >
-            V každé fázi víte,
-            <br />
-            co se právě děje.
+            V každé fázi víte,<br />co se právě děje.
           </h2>
-
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {steps.map((s, i) => (
               <div
@@ -242,18 +228,16 @@ export default function JakPracuji() {
                   >
                     {s.n}
                   </p>
-
                   <div
                     style={{
                       width: 24,
                       height: 2,
                       background: 'var(--orchid)',
                       marginTop: 10,
-                      opacity: '.7',
+                      opacity: .7,
                     }}
                   />
                 </div>
-
                 <div>
                   <h3
                     style={{
@@ -267,7 +251,6 @@ export default function JakPracuji() {
                   >
                     {s.title}
                   </h3>
-
                   <p
                     style={{
                       fontSize: '1rem',
@@ -306,14 +289,11 @@ export default function JakPracuji() {
             backgroundSize: '80px 80px',
           }}
         />
-
         <div className="noise" />
-
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>
             Co od vás budu potřebovat
           </p>
-
           <h2
             className="reveal d1"
             style={{
@@ -327,16 +307,12 @@ export default function JakPracuji() {
               maxWidth: 680,
             }}
           >
-            Web je tak dobrý,
-            <br />
-            jak dobré jsou podklady.
+            Web je tak dobrý,<br />jak dobré jsou podklady.
           </h2>
-
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns:
-                'repeat(auto-fit,minmax(280px,1fr))',
+              gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
               gap: 'clamp(16px,2.5vw,28px)',
             }}
           >
@@ -358,11 +334,9 @@ export default function JakPracuji() {
                     left: 0,
                     right: 0,
                     height: 2,
-                    background:
-                      'linear-gradient(90deg,var(--orchid),transparent)',
+                    background: 'linear-gradient(90deg,var(--orchid),transparent)',
                   }}
                 />
-
                 <h3
                   style={{
                     fontFamily: "'Syne',sans-serif",
@@ -375,7 +349,6 @@ export default function JakPracuji() {
                 >
                   {n.title}
                 </h3>
-
                 <p
                   style={{
                     fontSize: 14,
@@ -405,7 +378,6 @@ export default function JakPracuji() {
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>
             Co ode mě nečekat
           </p>
-
           <h2
             className="reveal d1"
             style={{
@@ -421,12 +393,10 @@ export default function JakPracuji() {
           >
             Nehodí se to pro každého.
           </h2>
-
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns:
-                'repeat(auto-fit,minmax(260px,1fr))',
+              gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))',
               gap: 16,
             }}
           >
@@ -452,7 +422,6 @@ export default function JakPracuji() {
                     flexShrink: 0,
                   }}
                 />
-
                 <p
                   style={{
                     margin: 0,
@@ -484,28 +453,21 @@ export default function JakPracuji() {
             width: 520,
             height: 520,
             borderRadius: '50%',
-            background:
-              'radial-gradient(circle,rgba(168,125,184,.12),transparent 70%)',
+            background: 'radial-gradient(circle,rgba(168,125,184,.12),transparent 70%)',
             left: -100,
             bottom: -100,
             filter: 'blur(70px)',
             pointerEvents: 'none',
           }}
         />
-
         <div className="noise" />
-
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p
             className="eyebrow reveal"
-            style={{
-              color: 'rgba(240,237,232,.42)',
-              marginBottom: 24,
-            }}
+            style={{ color: 'rgba(240,237,232,.42)', marginBottom: 24 }}
           >
             Časová náročnost
           </p>
-
           <h2
             className="reveal d1"
             style={{
@@ -521,7 +483,6 @@ export default function JakPracuji() {
           >
             Jak dlouho to trvá?
           </h2>
-
           <p
             className="reveal d2"
             style={{
@@ -535,7 +496,6 @@ export default function JakPracuji() {
             Záleží na velikosti webu i rychlosti dodání podkladů.
             Nejčastější brzda nejsou technologie, ale texty a fotky.
           </p>
-
           <p
             className="reveal d3"
             style={{
@@ -550,7 +510,6 @@ export default function JakPracuji() {
             Když máte pevné datum spuštění, řekněte mi ho hned na
             začátku a podíváme se, jestli je reálné ho stihnout.
           </p>
-
           <Link href="/kontakt" className="btn btn-lt reveal d4">
             Začněme →
           </Link>
@@ -559,26 +518,13 @@ export default function JakPracuji() {
 
       <style>{`
         @keyframes fadeUp {
-          from {
-            opacity: 0;
-            transform: translateY(28px);
-          }
-          to {
-            opacity: 1;
-            transform: none;
-          }
+          from { opacity: 0; transform: translateY(28px); }
+          to   { opacity: 1; transform: none; }
         }
-
-        @media(max-width:860px){
-          .steps-grid{
-            grid-template-columns:1fr !important;
-          }
-        }
-
-        @media(max-width:720px){
-          section div[style*="grid-template-columns: 90px 1fr"]{
-            grid-template-columns:1fr !important;
-            gap:18px !important;
+        @media(max-width:720px) {
+          .inner div[style*="grid-template-columns: 90px 1fr"] {
+            grid-template-columns: 1fr !important;
+            gap: 18px !important;
           }
         }
       `}</style>
