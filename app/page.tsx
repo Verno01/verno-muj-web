@@ -129,15 +129,15 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 24 }}>Co dělám</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4.8vw,4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 850 }}>
-            Spousta dobrých firem má web,{' '}
-            který jim spíš škodí než pomáhá.
+            Vídám spoustu skvělých firem,{' '}
+            které ztrácejí zakázky jen proto, že mají nepřehledný nebo zastaralý web.
           </h2>
           <div className="reveal d2" style={{ maxWidth: 560 }}>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>
-              Často působí zastarale, nepřehledně nebo nedůvěryhodně — i když samotná práce firmy je kvalitní.
+              Tvořím weby s přehlednou strukturou, čistým vizuálním stylem a stoprocentním technickým zázemím.
             </p>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: 0 }}>
-              Proto tvořím weby, které působí čistě, srozumitelně a profesionálně. Nejen vizuálně, ale i technicky.
+              Každý web by měl odrážet skutečnou kvalitu toho, co prezentuje.
             </p>
           </div>
         </div>
@@ -179,12 +179,12 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }} className="kalk-promo-grid">
             <div>
-              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nástroj zdarma</p>
+              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Moje bezplatná kalkulačka pro OSVČ</p>
               <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.8vw,3rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 20px' }}>
                 Znát svou reálnou hodinovou sazbu je základ úspěchu.
               </h2>
               <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
-                Jednoduchá orientační kalkulačka pro OSVČ. Zadejte své výdaje a časové možnosti — během 5 minut uvidíte, jaká odměna v roce 2026 bezpečně pokryje Váš provoz i rezervy. Tento nástroj slouží pro Vaši osobní byznysovou rozvahu.
+                Jednoduchá orientační kalkulačka pro OSVČ. Zadejte své výdaje a časové možnosti, během 5 minut uvidíte, jaká odměna v roce 2026 bezpečně pokryje Váš provoz i rezervy. Tento nástroj slouží pro Vaši osobní byznysovou rozvahu.
               </p>
               <div className="reveal d3">
                 <Link href="/kalkulacka" className="btn btn-lt" style={{ display: 'inline-block', marginBottom: 24 }}>
