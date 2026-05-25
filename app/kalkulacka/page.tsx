@@ -123,10 +123,10 @@ export default function KalkulackaPage() {
             </div>
             <div className="reveal d2">
               {[
-                { n: '01', title: 'Vyplňte výdaje', desc: 'Osobní náklady na živobytí a provozní náklady podnikání. Čím přesnější čísla, tím přesnější výsledek.' },
-                { n: '02', title: 'Nastavte čas', desc: 'Kolik dní a hodin pracujete, kolik berete dovolené a kolik procent času skutečně fakturujete.' },
-                { n: '03', title: 'Zvolte daňový režim', desc: 'Paušální daň, výdajový paušál nebo skutečné výdaje — kalkulačka přepočítá odvody pro každý případ.' },
-                { n: '04', title: 'Přečtěte výsledek', desc: 'Dostanete tři sazby: minimální, zdravou a komfortní — s vysvětlením, co každá znamená.' },
+                { n: '01', title: 'Vyplňte výdaje', desc: 'Osobní náklady na život a provozní náklady podnikání. Čím přesnější čísla, tím přesnější výsledek.' },
+                { n: '02', title: 'Nastavte čas', desc: 'Počet dní, hodin, kolik dovolené a jakou část pracovního času skutečne fakturujete.' },
+                { n: '03', title: 'Zvolte daňový režim', desc: 'Paušální daň, výdajový paušál nebo skutečné výdaje, kalkulačka sama dopočítá odvody.' },
+                { n: '04', title: 'Zjistěte výsledek', desc: 'Dostanete tři sazby: minimální, zdravou a komfortní, s vysvětlením, co každá znamená.' },
               ].map((s, i) => (
                 <div key={i} style={{ display: 'flex', gap: 16, marginBottom: 20, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: "'Syne',sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: '.14em', color: 'var(--orchid)', flexShrink: 0, paddingTop: 3 }}>{s.n}</span>
@@ -146,7 +146,7 @@ export default function KalkulackaPage() {
         <div className="inner">
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>Časté dotazy</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--ink)', margin: '0 0 clamp(36px,5vw,52px)', maxWidth: 560 }}>
-            Co lidé nejčastěji řeší.
+            Co lidé často řeší.
           </h2>
           <div>
             {faqItems.map((faq, i) => (
@@ -177,7 +177,7 @@ export default function KalkulackaPage() {
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.6rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1, color: 'var(--cloud)', margin: '0 0 18px', maxWidth: 600 }}>
-            A jestli chcete web, který Vám pomůže sazbu obhájit, napište mi.
+            Chcete mít web, který Vám pomůže sazbu obhájit? Napište mi.
           </h2>
           <p className="reveal d1" style={{ fontSize: '1rem', lineHeight: 1.78, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
           </p>
