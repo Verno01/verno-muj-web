@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect, useMemo, useRef } from 'react'
-import Script from 'next/script'
 
 /* ─── KONSTANTY 2026 ─────────────────────────────────────────── */
 const K = {
@@ -173,23 +172,14 @@ function Acc({ title, sum, icon, open, onToggle, children }: any) {
 }
 
 /* ─── PDF STRÁNKA ────────────────────────────────────────────── */
-function PrintPage({ vysl, cas2, cas, celkOs, celkPr, dan }: any) {
+function PrintPage({ vysl, cas2, cas, celkOs, celkPr, dan, slevy }: any) {
   if (!vysl) return null
   const now = new Date()
   const datum = now.toLocaleDateString('cs-CZ')
   const barvaMini = "#E0304A", barvaZdrava = "#7AB830", barvaRoz = "#A87DB8"
   const rezimLabel = dan.rezim === "pausalni" ? `Paušální daň ${dan.pausPasmo}. pásmo` : dan.rezim === "skutecne" ? "Skutečné výdaje" : `Výdajový paušál ${dan.pausalPct} %`
   return (
-    <div id="pdf-page" style={{ 
-      position: "absolute", 
-      left: "-9999px", 
-      top: "0", 
-      width: "210mm", 
-      padding: "14mm 16mm 12mm", 
-      boxSizing: "border-box", 
-      background: "#ffffff", 
-      color: "#191714" 
-    }}>
+    <div id="pdf-page" style={{ display: "none" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", borderBottom: "2px solid #191714", paddingBottom: 10, marginBottom: 16 }}>
         <div>
           <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 22, letterSpacing: ".25em", color: "#191714" }}>VERNO</div>
@@ -206,7 +196,7 @@ function PrintPage({ vysl, cas2, cas, celkOs, celkPr, dan }: any) {
           { l: "Zdravá sazba", s: vysl.zdravaSazba, c: barvaZdrava, desc: "Doporučené pásmo +30% rezerva." },
           { l: "Rozvojová sazba", s: vysl.komfortSazba, c: barvaRoz, desc: "Rozvojová hodnota +65% rezerva." },
         ].map(r => (
-          <div key={r.l} style={{ border: `2px solid ${r.c}`, borderRadius: 6, padding: "10px 12px", position: "relative", backgroundColor: "#ffffff" }}>
+          <div key={r.l} style={{ border: `2px solid ${r.c}`, borderRadius: 6, padding: "10px 12px", position: "relative" }}>
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: r.c, borderRadius: "6px 6px 0 0" }} />
             <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: r.c, marginBottom: 4, marginTop: 2 }}>{r.l}</div>
             <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 22, color: "#191714", letterSpacing: "-.04em", marginBottom: 4 }}>{fmt(r.s)} Kč/h</div>
@@ -359,7 +349,7 @@ export default function KalkulackaOSVC() {
   const [cas, setCas] = useState({ dnyTydne: 5, hodinyDenne: 8, dovolena: 20, nemoc: 12, fakturovatelnost: 65 })
   const updCas = (k: string) => (v: number) => setCas(p => ({
     ...p,
-    [k]: krok === 3 && k === "dnyTydne" ? Math.min(7, Math.max(1, v || 1))
+    [k]: k === "dnyTydne" ? Math.min(7, Math.max(1, v || 1))
       : k === "hodinyDenne" ? Math.min(16, Math.max(1, v || 1))
       : k === "dovolena" ? Math.min(120, Math.max(0, v || 0))
       : k === "nemoc" ? Math.min(90, Math.max(0, v || 0))
@@ -431,20 +421,12 @@ export default function KalkulackaOSVC() {
   const handlePrint = () => {
     const el = document.getElementById('pdf-page')
     if (!el) return
-
-    const w = window as any
-    if (typeof w.html2pdf !== 'undefined') {
-      w.html2pdf().set({
-        margin: [10, 14, 10, 14],
-        filename: 'verno-kalkulacka-osvc-2026.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, logging: false, backgroundColor: '#ffffff' },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      }).from(el).save()
-    } else {
-      // Fallback: window.print()
+    // Zobrazit #pdf-page, spustit tisk, pak schovat
+    el.style.display = 'block'
+    setTimeout(() => {
       window.print()
-    }
+      setTimeout(() => { el.style.display = 'none' }, 1000)
+    }, 150)
   }
 
   const handleCopy = () => {
@@ -463,8 +445,6 @@ export default function KalkulackaOSVC() {
 
   return (
     <>
-      <Script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" strategy="afterInteractive" />
-
       <div style={{ minHeight: "100vh", background: "var(--cloud)", fontFamily: "'DM Sans',system-ui,sans-serif" }}>
 
         {/* HEADER kalkulačky */}
@@ -484,7 +464,7 @@ export default function KalkulackaOSVC() {
           </div>
         </div>
 
-        {/* LIVE PANEL */}
+        {/* BUG FIX: live panel posunut o výšku navigace (64px) aby nebyl překryt */}
         <div style={{ position: "sticky", top: 64, zIndex: 100, background: "var(--deep)", padding: "12px clamp(14px,4vw,52px)", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", alignItems: "center", gap: "clamp(12px,3vw,32px)", flexWrap: "wrap", justifyContent: "space-between" }}>
             <div><div style={{ fontSize: 9.5, letterSpacing: ".18em", textTransform: "uppercase", color: "rgba(240,237,232,.32)", margin: "0 0 2px" }}>Minimální sazba</div><div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: "clamp(.95rem,2.5vw,1.4rem)", letterSpacing: "-.04em", color: "#E0304A" }}>{vysl ? fmtH(vysl.minSazba) : "—"}</div></div>
@@ -697,7 +677,7 @@ export default function KalkulackaOSVC() {
                 <div className="kalk-snum" style={{ background: "var(--or)" }}><span>3</span></div>
                 <div>
                   <h2 className="kalk-sh2">Pracovní fond a časová realita</h2>
-                  <p className="kalk-ssub">Hodinová sazba mustí zohledňovat dny volna, neplánované výpadky a čas strávený administrativou.</p>
+                  <p className="kalk-ssub">Hodinová sazba musí zohledňovat dny volna, neplánované výpadky a čas strávený administrativou.</p>
                 </div>
               </div>
               <div className="kalk-card">
@@ -892,7 +872,7 @@ export default function KalkulackaOSVC() {
                 <p style={{ fontSize: 12, color: "var(--dim)", margin: "0 0 14px" }}>Upřesněte své zázemí pro přesnější odhad daňové složky.</p>
                 <div onClick={() => updSlevy("vedlejci")(!slevy.vedlejci)}
                   style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", border: `1.5px solid ${slevy.vedlejci ? "var(--oc)" : "var(--ln)"}`, borderRadius: 5, cursor: "pointer", background: slevy.vedlejci ? "rgba(168,125,184,.07)" : "#fff", marginBottom: 10, transition: "all .2s" }}>
-                  <div style={{ width: 20, height: 20, borderRadius: 4, border: `2px solid ${slevy.vedlejci ? "var(--oc)" : "rgba(25,23,20,.2)"}`, background: slevy.vedlejci ? "var(--oc)" : "transparent", display: "flex", alignItems: "center", justifyYontent: "center", flexShrink: 0, transition: "all .2s" }}>
+                  <div style={{ width: 20, height: 20, borderRadius: 4, border: `2px solid ${slevy.vedlejci ? "var(--oc)" : "rgba(25,23,20,.2)"}`, background: slevy.vedlejci ? "var(--oc)" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "all .2s" }}>
                     {slevy.vedlejci && <span style={{ color: "#fff", fontSize: 12, fontWeight: 700 }}>✓</span>}
                   </div>
                   <div>
@@ -916,7 +896,7 @@ export default function KalkulackaOSVC() {
                 </div>
                 <div onClick={() => updSlevy("manzel")(!slevy.manzel)}
                   style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", border: `1.5px solid ${slevy.manzel ? "var(--oc)" : "var(--ln)"}`, borderRadius: 5, cursor: "pointer", background: slevy.manzel ? "rgba(168,125,184,.07)" : "#fff", marginBottom: 10, transition: "all .2s" }}>
-                  <div style={{ width: 20, height: 20, borderRadius: 4, border: `2px solid ${slevy.manzel ? "var(--oc)" : "rgba(25,23,20,.2)"}`, background: slevy.manzel ? "var(--oc)" : "transparent", display: "flex", alignItems: "center", justifyYontent: "center", flexShrink: 0, transition: "all .2s" }}>
+                  <div style={{ width: 20, height: 20, borderRadius: 4, border: `2px solid ${slevy.manzel ? "var(--oc)" : "rgba(25,23,20,.2)"}`, background: slevy.manzel ? "var(--oc)" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "all .2s" }}>
                     {slevy.manzel && <span style={{ color: "#fff", fontSize: 12, fontWeight: 700 }}>✓</span>}
                   </div>
                   <div>
@@ -1121,7 +1101,7 @@ export default function KalkulackaOSVC() {
                 <div style={{ borderTop: "1px solid var(--ln)", paddingTop: 14, display: "flex", alignItems: "flex-start", gap: 14 }}>
                   <div style={{ flex: 1 }}>
                     <p style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, color: "var(--ink)", margin: "0 0 4px" }}>Hana Fraňková</p>
-                    <p style={{ fontSize: 12.5, color: "var(--dim)", lineHeight: 1.65, margin: "0 0 12px" }}>Navrhuji prezentační weby pro živnostníky a firmy. Pomáhám jim srozumitelně komunikovat skutečnou hodnotu their práce tak, aby získávali zákazníky, kteří odpovídající sazbu akceptují.</p>
+                    <p style={{ fontSize: 12.5, color: "var(--dim)", lineHeight: 1.65, margin: "0 0 12px" }}>Navrhuji prezentační weby pro živnostníky a firmy. Pomáhám jim srozumitelně komunikovat skutečnou hodnotu jejich práce tak, aby získávali zákazníky, kteří odpovídající sazbu akceptují.</p>
                     <a href="/kontakt" style={{ display: "inline-block", padding: "12px 26px", background: "var(--ink)", color: "#F0EDE8", borderRadius: 2, fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}>Kontaktovat Hanu →</a>
                   </div>
                 </div>
@@ -1194,10 +1174,22 @@ export default function KalkulackaOSVC() {
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
         @media print {
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-          body { background: #fff !important; margin: 0; padding: 0; }
-          body > *:not(#pdf-page) { display: none !important; }
-          #pdf-page { display: block !important; width: 210mm; min-height: 297mm; padding: 14mm 16mm 12mm; box-sizing: border-box; background: #fff; color: #191714; }
           @page { size: A4; margin: 0; }
+          body { background: #fff !important; margin: 0; padding: 0; }
+          body * { visibility: hidden !important; }
+          #pdf-page, #pdf-page * { visibility: visible !important; }
+          #pdf-page {
+            display: block !important;
+            position: fixed !important;
+            top: 0 !important; left: 0 !important;
+            width: 210mm !important;
+            min-height: 297mm !important;
+            padding: 14mm 16mm 12mm !important;
+            box-sizing: border-box !important;
+            background: #fff !important;
+            color: #191714 !important;
+            z-index: 99999 !important;
+          }
         }
       `}</style>
 
