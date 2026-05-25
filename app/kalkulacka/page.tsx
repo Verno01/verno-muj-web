@@ -177,13 +177,13 @@ export default function KalkulackaPage() {
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.6rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1, color: 'var(--cloud)', margin: '0 0 18px', maxWidth: 600 }}>
-            A jestli chcete i web, který Vám s tím pomůže, napište mi.
+            A jestli chcete web, který Vám pomůže sazbu obhájit, napište mi.
           </h2>
           <p className="reveal d1" style={{ fontSize: '1rem', lineHeight: 1.78, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <Link href="/nabidka" className="btn btn-lt reveal d2">Podívat se na nabídku →</Link>
-            <Link href="/kontakt" className="btn btn-lt reveal d3" style={{ background: 'transparent', border: '1.5px solid rgba(240,237,232,.2)', color: 'rgba(240,237,232,.7)' }}>Napsat mi</Link>
+            <Link href="/kontakt" className="btn btn-lt reveal d3" style={{ background: 'transparent', border: '1.5px solid rgba(240,237,232,.2)', color: 'rgba(240,237,232,.7)' }}>Napsat</Link>
           </div>
         </div>
       </section>
