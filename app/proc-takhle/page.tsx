@@ -22,14 +22,14 @@ const reasons = [
   {
     title: 'Každá změna se dá vrátit',
     accent: 'var(--lime)',
-    text: 'Celý web je verzovaný - každá úprava je uložená a očíslovaná.',
-    detail: 'Když se kdykoliv něco pokazí, vrátím web do stavu, kdy fungoval, během chvilky. Nevzniká situace „bylo to dobré, ale už to nejde vrátit".',
+    text: 'Celý web je verzovaný, každá úprava je uložená a očíslovaná.',
+    detail: 'Pokud se něco pokazí, vrátím web do stavu, ve kterém fungoval. Nevzniká situace „bylo to dobré, ale už to nejde vrátit".',
   },
   {
-    title: 'Co vás to stojí na provozu',
+    title: 'Co to stojí na provozu',
     accent: 'var(--marigold)',
-    text: 'Hosting na Cloudflare je u většiny webů, které stavím, zdarma.',
-    detail: 'Pravidelný náklad je obvykle pouze doména - řádově stovky korun ročně, platíte ji přímo registrátorovi, ne mně. Pro srovnání: u běžných webů bývají průběžné náklady na hosting, pluginy nebo technickou správu. Weby, které stavím, fungují výrazně jednodušeji.',
+    text: 'Hosting na Cloudflare je u většiny webů zdarma.',
+    detail: 'Pravidelný náklad je obvykle pouze doména, řádově stovky korun ročně, platíte ji přímo registrátorovi, ne mně. Pro srovnání: u běžných webů bývají průběžné náklady na hosting, pluginy nebo technickou správu. Weby, které stavím, fungují jednodušeji.',
   },
 ]
 
@@ -44,7 +44,7 @@ export default function ProcTakhle() {
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Proč takhle</p>
           <h1 className="page-hero-title">Stavím jinak.<br />Tady vysvětlím proč.</h1>
           <p className="page-hero-sub">
-            Web se dnes dá postavit mnoha způsoby s řadou pluginů. Funguje to, ale nese to věci, se kterými se pak klient roky potýká.
+            Web se dá postavit mnoha způsoby s řadou pluginů. Funguje to, ale nese to věci, se kterými se pak vlastník roky potýká.
           </p>
         </div>
       </div>
@@ -77,13 +77,13 @@ export default function ProcTakhle() {
             Nejsem levná šablona ani velká agentura.
           </h2>
           <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', maxWidth: 640, margin: '0 0 20px' }}>
-            Šablona je rychlá a levná, ale vypadá jako šablona. Neudrží krok s tím, co vaše podnikání potřebuje, a technicky bývá pomalá a nestabilní.
+            Šablona je rychle hotová a levná, ale vypadá jako šablona. Neudrží krok s tím, co vaše podnikání potřebuje. Technicky bývá pomalá a nestabilní.
           </p>
           <p className="reveal d3" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 640, margin: '0 0 36px' }}>
-            Agentura má svou cenu z velké části složenou z režie - tým, kanceláře, account manažeři, kteří přeposílají vaše zprávy dál.
+            Agentura má svou cenu z velké části složenou z režie - tým, kanceláře, manažeři, kteří přeposílají vaše zprávy dál.
           </p>
           <p className="reveal d3" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', maxWidth: 640, margin: '0 0 36px' }}>
-            Pracuji napřímo, od návrhu, až po samotnou realizaci komunikujete přímo se mnou. Díky tomu se pohybuji mezi levnou šablonou a velkou agenturou, s osobním přístupem a komunikací.
+            Já pracuji napřímo, od návrhu po realizaci komunikujete přímo se mnou. Díky tomu se pohybuji mezi levnou šablonou a velkou agenturou.
           </p>
           <Link href="/nabidka" className="btn btn-lt reveal d4">Podívat se na nabídku →</Link>
         </div>
@@ -105,15 +105,15 @@ export default function ProcTakhle() {
 
 function FaqList() {
   const faqs = [
-    { q: 'Kolik to bude přesně stát?', a: 'Každý web je jinak velký, takže pevný ceník neuvádím. Moje projekty se pohybují mezi 12 000 a 60 000 Kč — konkrétní číslo dostanete vždy písemně před zahájením práce, po tom co si e-mailem ujasníme rozsah. Žádné neviditelné položky, se kterými byste nepočítali.' },
-    { q: 'Jak dlouho tvorba trvá?', a: 'Závisí na rozsahu webu a hlavně na tom, jak rychle se sejdou podklady (texty, fotky). Nedávám konkrétní datum, protože bych ho dávala naslepo. Po celou dobu ale zasílám průběžně rozpracovanou verzi, takže budete vědět, v jaké fázi to je. Když máte pevný termín, řekněte mi to hned na začátku.' },
-    { q: 'Co musím připravit já?', a: 'Informace o tom, co děláte, fotografie (ideálně vlastní) a logo, pokud ho máte. Nemusí to být dokonalé - texty obvykle píšu já podle vašich podkladů a dodané fotky umím upravit. Podrobně je to rozepsané na stránce Jak pracuji.' },
-    { q: 'Budu si web moct sám upravovat?', a: 'Web není postavený na systému, kde si sami klikáte do administrace - to je záměr, protože právě ta administrace bývá zdroj problémů. Menší změny (text, fotka, údaj) za vás udělám rychle za hodinovou sazbu. Větší úpravy se domluví zvlášť. Nejste na mně trvale závislí, můžete kdykoliv přejít jinam, web je váš.' },
-    { q: 'Co když budete nedostupná nebo s vámi přestaneme spolupracovat?', a: 'Hotový web je váš včetně všech zdrojových souborů. Není zamčený u mě. Když byste potřebovali pokračovat s někým jiným, předám vše potřebné.' },
-    { q: 'Děláte e-shopy?', a: 'Ne. Soustředím se na prezentační weby - vizitky, firemní weby, landing pages. E-shop je jiná disciplína (sklady, platby, objednávky) a dělat ho napůl by nikomu neposloužilo. Když potřebujete e-shop, ráda doporučím směr, kterým se vydat.' },
-    { q: 'Kde bude web hostovaný a co to stojí?', a: 'Na síti Cloudflare, kde je provoz u webů, které stavím, obvykle zdarma. Platíte jen za doménu - řádově stovky korun ročně, přímo registrátorovi.' },
+    { q: 'Kolik to bude přesně stát?', a: 'Pevný ceník neuvádím, každý web je jíný. Pohybuji se nejčastěji mezi 12 000 a 60 000 Kč. Konkrétní číslo dostanete před zahájením práce, po tom co si e-mailem ujasníme rozsah.' },
+    { q: 'Jak dlouho tvorba trvá?', a: 'Závisí na rozsahu webu a na tom, jak rychle se sejdou podklady (texty, fotky). Nedávám konkrétní datum, protože bych ho dávala naslepo. Po celou dobu ale zasílám průběžně rozpracovanou verzi, takže budete vědět, v jaké fázi web je. Když máte pevný termín, řekněte mi to hned na začátku.' },
+    { q: 'Co musím připravit já?', a: 'Budu od Vás potřebovat logo (pokud ho máte), fotky a informace o tom, co děláte, jaké informace chcete na webu určitě mít. Podklady nemusí být perfektní, texty za Vás ráda napíšu a fotografie upravím. Proces od přípravy až po spuštění podrobně popisuji na stránce Jak pracuji.' },
+    { q: 'Budu si web moct sám upravovat?', a: 'Web není postavený na systému, kde si sami klikáte do administrace, protože právě ta administrace bývá nejčastějším zdrojem problémů. Kdykoliv budete potřebovat, můžete se na mne obrátit. Menší změny (text, fotka, údaj) za vás udělám rychle za hodinovou sazbu. Na větších úpravách se snadno domluvíme. Nejste na mně trvale závislí, můžete kdykoliv přejít jinam, web je váš.' },
+    { q: 'Co když budete nedostupná nebo s vámi přestaneme spolupracovat?', a: 'Hotový web je váš včetně všech zdrojových souborů. Není zamčený u mě. Když budete chtít pokračovat s někým jiným, předám vše potřebné.' },
+    { q: 'Děláte e-shopy?', a: 'Nedělám. Soustředím se na prezentační weby - webové vizitky, firemní weby, landing pages (prodejní stránka). E-shop je jiná disciplína (sklady, platby, objednávky) a dělat ho napůl by nikomu neposloužilo. Když potřebujete e-shop, ráda doporučím.' },
+    { q: 'Kde bude web hostovaný a kolik to stojí?', a: 'Na síti Cloudflare, provoz je obvykle zdarma. Platíte jen za doménu, řádově stovky korun ročně, přímo registrátorovi.' },
     { q: 'Co Google a vyhledávání?', a: 'Každý web dostane základní nastavení pro vyhledávače - správné titulky, popisy a strukturu. Přihlásím vás do Google Search Console, aby vás Google našel a zobrazoval. Negarantuji první místo ve vyhledávání, to nikdo seriózní slíbit nemůže. Garantuji, že web bude technicky připravený, aby vás Google našel.' },
-    { q: 'Můžu mít web ve více jazycích?', a: 'Ano. Vícejazyčný web udělat umím. Řekněte to na začátku. Překlad buď dodáte vy, nebo ho zajistím za příplatek.' },
+    { q: 'Můžu mít web ve více jazycích?', a: 'Ano. Sdělíte mi to na začátku. Překlad buď dodáte vy, nebo ho zajistím za příplatek.' },
     { q: 'Jak probíhá platba?', a: 'Polovina při zahájení, druhá polovina při předání hotového webu. Vše domluveno písemně předem.' },
   ]
 
