@@ -59,7 +59,7 @@ export default function Home() {
               Tvorba webů · Hana Fraňková
             </p>
             <h1 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.8rem,5.8vw,5.6rem)', fontWeight: 800, lineHeight: .92, letterSpacing: '-.05em', color: 'var(--ink)', margin: '0 0 22px', opacity: 0, animation: 'fadeUp .9s .14s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Moderní weby pro<br />živnostníky a<br />malé firmy.
+              Moderní weby pro<br />živnostníky<br />a menší<br />firmy.
             </h1>
             <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 460, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
               Tvořím prezentační weby pro živnostníky, řemeslníky a menší firmy.
