@@ -3,20 +3,20 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Proč takhle',
-  description: 'Čím stavím weby, proč, a v čem je to pro klienta lepší než běžná cesta. Rychlost, stabilita, hosting zdarma, verzování.',
+  description: 'Jak stavím weby, proč, a v čem je to pro klienta lepší. Rychlost, stabilita, hosting zdarma, verzování.',
 }
 
 const reasons = [
   {
     title: 'Rychlost',
     accent: 'var(--capri)',
-    text: 'Pomalý web pozná návštěvník během vteřin a často odejde dřív, než se vůbec načte. Vyhledávače pomalé weby řadí níž.',
-    detail: 'Weby stavím jako rychlé a lehké a hostuji je na síti Cloudflare, která je doručuje z místa nejblíž návštěvníkovi. Cloudflare dnes patří mezi největší internetové infrastruktury na světě, využívají ji miliony webů a firmy jako Shopify, IBM, L\'Oréal nebo Garmin - hlavně kvůli rychlosti, stabilitě a vyšší bezpečnosti. V praxi to znamená weby, které naskočí takřka okamžitě a nezpomalí se ani při vysoké návštěvnosti.',
+    text: 'Pomalý web pozná běžný návštěvník během vteřin a dost často odejde dřív, než se načte. I vyhledávače pomalé weby řadí níž.',
+    detail: 'Weby stavím rychlé, lehké a hostuji je na síti Cloudflare, která je doručuje z nejbližších míst k návštěvníkovi. Cloudflare dnes patří mezi největší internetové infrastruktury na světě, využívají ji miliony webů, například firmy jako Shopify, IBM, L\'Oréal nebo Garmin - hlavně kvůli rychlosti, stabilitě a vyšší bezpečnosti. V praxi to znamená weby, které naskočí takřka okamžitě a nezpomalí se ani při vysoké návštěvnosti.',
   },
   {
-    title: 'Co se nerozbije po aktualizaci',
+    title: 'Nerozbijí se po aktualizaci',
     accent: 'var(--orchid)',
-    text: 'Nejčastější noční můra majitele webu: něco se samo zaktualizovalo a přestal fungovat formulář, zmizela sekce, web spadl.',
+    text: 'Častá noční můra majitele webu: něco se samo zaktualizovalo a přestal fungovat formulář, zmizela sekce, web spadl.',
     detail: 'U webů s mnoha pluginy se to občas děje, protože každý plugin se vyvíjí zvlášť a navzájem si mohou přestat rozumět. Web, který není závislý na desítkách pluginů a automatických aktualizacích, má riziko podobných problémů výrazně menší a nehrozí, že se začne samovolně rozpadat za tři měsíce.',
   },
   {
