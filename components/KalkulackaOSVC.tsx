@@ -424,18 +424,31 @@ export default function KalkulackaOSVC() {
     if (!el) return
 
     const runPdf = () => {
-      el.style.display = 'block'
-      // krátký timeout aby browser stihl vyrenderovat #pdf-page před exportem
+      // Přesuneme #pdf-page přímo do body, mimo React kontejner
+      // aby html2pdf viděl čistý DOM bez overflow:hidden a display:none rodičů
+      const clone = el.cloneNode(true) as HTMLElement
+      clone.id = 'pdf-page-export'
+      clone.style.display = 'block'
+      clone.style.position = 'fixed'
+      clone.style.left = '-9999px'
+      clone.style.top = '0'
+      clone.style.width = '210mm'
+      clone.style.background = '#fff'
+      clone.style.zIndex = '-1'
+      document.body.appendChild(clone)
+
       setTimeout(() => {
         const w = window as any
         w.html2pdf().set({
-          margin: 0,
+          margin: [10, 14, 10, 14],
           filename: 'verno-kalkulacka-osvc-2026.pdf',
           image: { type: 'jpeg', quality: 0.97 },
-          html2canvas: { scale: 2, useCORS: true, logging: false },
+          html2canvas: { scale: 2, useCORS: true, logging: false, backgroundColor: '#ffffff' },
           jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        }).from(el).save().then(() => { el.style.display = 'none' })
-      }, 200)
+        }).from(clone).save().then(() => {
+          document.body.removeChild(clone)
+        })
+      }, 300)
     }
 
     const w = window as any
