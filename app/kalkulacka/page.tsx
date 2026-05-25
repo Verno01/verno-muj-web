@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: 'Co je minimální hodinová sazba a proč nestačí?',
-    a: 'Minimální sazba pokrývá přesně to, co potřebujete k životu a podnikání, bez rezerv. Nestačí, protože nepočítá s výpadkem zakázek ani dalším rozvojem. Pracovat na minimu může být dlouhodobě neudržitelné.',
+    a: 'Minimální sazba je matematická nula. Pokryje Vaše zadané životní i provozní náklady a povinné odvody, ale nezbyde Vám z ní nic navíc. Nestačí proto, že nepočítá s hluchými místy mezi zakázkami, investicemi do nového vybavení ani s rozvojem podnikání. Je to skvělý odrazový můstek, ale ne dlouhodobý cíl.',
   },
   {
     q: 'Jak kalkulačka počítá daně a odvody?',
-    a: 'Kalkulačka iterativně počítá reálné odvody na zdravotní a sociální pojištění a daň z příjmu podle zvoleného daňového režimu. Paušální daň, výdajový paušál nebo skutečné výdaje. Zohledňí i základní slevy na dani nebo minimální zálohy.',
+    a: 'Kompletní matematiku pro rok 2026 vyřeší za Vás. Podle toho, jaký režim si zvolíte (paušální daň, výdajový paušál nebo skutečné výdaje), kalkulačka automaticky dopočítá zdravotní, sociální pojištění a daň z příjmu. Do výpočtu započítá i slevu na poplatníka, děti či případnou vedlejší činnost.',
   },
   {
     q: 'Co je fakturovatelnost a jak ji odhadnout?',
@@ -65,7 +65,7 @@ export default function KalkulackaPage() {
               '@type': 'WebApplication',
               name: 'Kalkulačka hodinové sazby OSVČ — VERNO',
               url: 'https://www.verno.cz/kalkulacka',
-              description: 'Bezplatná kalkulačka pro výpočet reálné hodinové sazby OSVČ v České republice. Zohledňuje daně, odvody, výdaje a fakturovatelný čas.',
+              description: 'Bezplatná kalkulačka pro výpočet reálné hodinové sazby OSVČ. Zohledňuje daně, odvody, výdaje a fakturovatelný čas.',
               applicationCategory: 'FinanceApplication',
               operatingSystem: 'Web',
               offers: { '@type': 'Offer', price: '0', priceCurrency: 'CZK' },
@@ -95,7 +95,7 @@ export default function KalkulackaPage() {
             Kalkulačka<br />hodinové sazby<br />OSVČ
           </h1>
           <p className="page-hero-sub">
-            Zjistěte, za kolik skutečně pracovat — s daněmi, odvody a reálným časem. Výsledek za pár minut, zdarma.
+            Zjistěte, za kolik skutečně pracovat. S daněmi, odvody a reálným časem. Výsledek za pár minut, zdarma.
           </p>
         </div>
       </div>
@@ -112,13 +112,13 @@ export default function KalkulackaPage() {
             <div>
               <p className="eyebrow reveal" style={{ marginBottom: 20 }}>Jak na to</p>
               <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.6rem,3vw,2.4rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--ink)', margin: '0 0 20px' }}>
-                Proč nestačí odhadnout sazbu od oka
+                Proč nestačí odhadovat
               </h2>
               <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: '0 0 16px' }}>
-                Většina živnostníků si sazbu nastavuje intuitivně — podívá se, co účtují ostatní, a přizpůsobí se. Problém je, že tím kopíruje cizí náklady, cizí životní standard a cizí daňový režim.
+                Spousta živnostníků si sazbu nastavuje intuitivně. Podívá se, co účtuje konkurence, a přizpůsobí se. Tím ale nevědomky kopírují cizí náklady, cizí životní standard a cizí daňový režim.
               </p>
               <p className="reveal d3" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: 0 }}>
-                Reálná sazba vychází z toho, co vás stojí život a podnikání, kolik hodin skutečně fakturujete (ne kolik pracujete), a kolik odvedete státu. Kalkulačka tohle celé propočítá iterativně — výsledek odpovídá vaší konkrétní situaci, ne průměru.
+                Vaše reálná sazba vychází z toho, kolik Vás stojí život a provoz podnikání, kolik hodin zákazníkům skutečně fakturujete (ne kolik času prací celkově strávíte) a kolik odvedete státu. Kalkulačka vše automaticky propojí, výsledek pak odpovídá Vaší konkrétní situaci, nikoliv cizímu průměru.
               </p>
             </div>
             <div className="reveal d2">
@@ -177,10 +177,9 @@ export default function KalkulackaPage() {
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.6rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1, color: 'var(--cloud)', margin: '0 0 18px', maxWidth: 600 }}>
-            Víte, co si účtovat. Teď potřebujete web, který to zákazníkům řekne.
+            A jestli chcete i web, který Vám s tím pomůže, napište mi.
           </h2>
           <p className="reveal d1" style={{ fontSize: '1rem', lineHeight: 1.78, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
-            Podívejte se, co nabízím — a napište mi, jestli vás to zaujme.
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <Link href="/nabidka" className="btn btn-lt reveal d2">Podívat se na nabídku →</Link>
