@@ -16,9 +16,9 @@ export default function Footer() {
         {/* CTA */}
         <div className="reveal" style={{ marginBottom: 'clamp(52px,8vw,88px)' }}>
           <p style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.8rem,6.5vw,5.6rem)', fontWeight: 800, lineHeight: .94, letterSpacing: '-.045em', color: 'var(--cloud)', margin: '0 0 32px', maxWidth: 760 }}>
-            Pojďme vašemu<br />webu dát tvar.
+            Pojďme dát<br />Vašemu webu tvar.
           </p>
-          <Link href="/kontakt" className="btn btn-lt">Napište mi ↗</Link>
+          <Link href="/kontakt" className="btn btn-lt">Kontakt ↗</Link>
         </div>
 
         {/* Grid */}
