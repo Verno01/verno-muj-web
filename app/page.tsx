@@ -324,7 +324,7 @@ export default function Home() {
         <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: -30, fontFamily: "'Syne',sans-serif", fontSize: 'clamp(8rem,18vw,18rem)', fontWeight: 800, letterSpacing: '-.06em', color: 'rgba(25,23,20,.025)', pointerEvents: 'none', userSelect: 'none', whiteSpace: 'nowrap' }} aria-hidden>VERNO</div>
         <div className="inner-narrow" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.4rem,5vw,4.4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.02, color: 'var(--ink)', margin: '0 0 18px' }}>
-            Potřebujete nový web?<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>Napište mi.</em>
+            Už víte, jak bude vypadat Váš nový<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>web?</em>
           </h2>
           <p className="reveal d1" style={{ fontSize: '1.01rem', lineHeight: 1.76, color: 'var(--dim)', margin: '0 0 34px' }}>
             Stačí stručně napsat, co děláte a co od webu očekáváte. Ozvu se zpět a domluvíme další postup.
