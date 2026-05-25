@@ -422,19 +422,37 @@ export default function KalkulackaOSVC() {
   const handlePrint = () => {
     const el = document.getElementById('pdf-page')
     if (!el) return
-    el.style.display = 'block'
+
+    const runPdf = () => {
+      el.style.display = 'block'
+      // krátký timeout aby browser stihl vyrenderovat #pdf-page před exportem
+      setTimeout(() => {
+        const w = window as any
+        w.html2pdf().set({
+          margin: 0,
+          filename: 'verno-kalkulacka-osvc-2026.pdf',
+          image: { type: 'jpeg', quality: 0.97 },
+          html2canvas: { scale: 2, useCORS: true, logging: false },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        }).from(el).save().then(() => { el.style.display = 'none' })
+      }, 200)
+    }
+
     const w = window as any
     if (typeof w.html2pdf !== 'undefined') {
-      w.html2pdf().set({
-        margin: 0,
-        filename: 'verno-kalkulacka-osvc-2026.pdf',
-        image: { type: 'jpeg', quality: 0.97 },
-        html2canvas: { scale: 2, useCORS: true, logging: false },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      }).from(el).save().then(() => { el.style.display = 'none' })
+      runPdf()
     } else {
-      window.print()
-      setTimeout(() => { el.style.display = 'none' }, 1500)
+      // skript ještě není načtený — načteme ho teď a počkáme
+      const script = document.createElement('script')
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'
+      script.onload = () => runPdf()
+      script.onerror = () => {
+        // fallback: window.print()
+        el.style.display = 'block'
+        window.print()
+        setTimeout(() => { el.style.display = 'none' }, 1500)
+      }
+      document.head.appendChild(script)
     }
   }
 
