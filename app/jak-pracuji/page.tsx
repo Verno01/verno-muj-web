@@ -43,23 +43,23 @@ const steps = [
 const needs = [
   {
     title: 'Informace o tom, co děláte',
-    text: 'Čím se zabýváte, pro koho pracujete a co má návštěvník po otevření webu udělat. Nemusíte umět psát marketingové texty — důležité jsou hlavně informace.',
+    text: 'Čím se zabýváte a jaký další krok od návštěvníka Vašeho webu čekáte. Stačí mi to i v bodech, informace jsou důležité.',
   },
   {
     title: 'Fotografie',
-    text: 'Ideálně vaše vlastní. Vaše práce, prostředí nebo vy sami působíte vždy důvěryhodněji než fotky z databanky. Dodané fotky upravím a sjednotím.',
+    text: 'Ideálně vaše vlastní. Vaše práce, prostředí nebo vy sami působíte vždy důvěryhodněji než fotky z databanky. Dodané fotografie upravím tak, aby spolu vizuálně ladily.',
   },
   {
     title: 'Logo a barvy, pokud je máte',
-    text: 'Když už máte logo nebo firemní barvy, web na ně navážu. Pokud ne, navrhnu směr tak, aby vše působilo čistě a profesionálně.',
+    text: 'Máte logo nebo dané barvy? Web na ně navážu. Jestli ne, nevadí, navrhnu vizuální směr.',
   },
   {
     title: 'Doménu',
-    text: 'Adresu webu (například vasefirma.cz). Pokud ji ještě nemáte, pomohu vám s výběrem i registrací.',
+    text: 'Adresa webu (například vasefirma.cz). Pokud ji ještě nemáte, pomohu vám s výběrem i registrací.',
   },
   {
-    title: 'Vaši představu — pokud nějakou máte',
-    text: 'Když máte oblíbené weby, styl nebo naopak něco, čemu se chcete vyhnout, řekněte mi to. Pomůže to vytvořit web, který vám opravdu sedne.',
+    title: 'Máte představu?',
+    text: 'Oblíbené weby, styl nebo naopak něco, co se Vám nelíbí, řekněte mi to. I drobné poznámky pomůžou pomůou k tomu, aby Vám web opravdu seděl',
   },
 ]
 
@@ -391,7 +391,7 @@ export default function JakPracuji() {
               maxWidth: 620,
             }}
           >
-            Nehodí se to pro každého.
+            Není to pro každého.
           </h2>
           <div
             style={{
@@ -506,9 +506,9 @@ export default function JakPracuji() {
               margin: '0 0 34px',
             }}
           >
-            Neslibuji termíny naslepo jen proto, aby to dobře znělo.
-            Když máte pevné datum spuštění, řekněte mi ho hned na
-            začátku a podíváme se, jestli je reálné ho stihnout.
+            Neslibuji termíny.
+            Pokud Vás z nějakého důvodu tlačí čas, řekněte mi ho hned na
+            začátku a podíváme se, jestli je reálné to stihnout.
           </p>
           <Link href="/kontakt" className="btn btn-lt reveal d4">
             Začněme →
