@@ -65,7 +65,7 @@ const needs = [
 
 const dontExpect = [
   'Levnou kopii cizích webů.',
-  'Přeplácané animace jen proto, aby se „něco hýbalo".',
+  'Web přeplněný animacemi jen proto, aby se „něco hýbalo".',
   'Editaci webu stylem klikání v administraci jako u WordPressu.',
   'Týdny bez komunikace.',
   'E-shop nebo rozsáhlý portál.',
