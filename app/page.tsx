@@ -4,11 +4,11 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 const services = [
-  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Jednostránkový web s tím nejdůležitějším.' },
-  { id: 'maly-web',        name: 'Malý web',                 short: 'Více prostoru pro služby, reference a tým.' },
-  { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka vedená k jediné akci.' },
-  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Přehledně předané informace, rychle.' },
-  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web jako důležitá součást značky.' },
+  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Jednoduchý web pro služby, kontakt a základní informace.' },
+  { id: 'maly-web',        name: 'Malý web',                 short: 'Více prostoru pro služby, reference nebo ukázky práce.' },
+  { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka zaměřená na konkrétní nabídku nebo službu.' },
+  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Přehledné informace na jednom místě.' },
+  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web jako důležitá součást firmy a jejího dojmu.' },
 ]
 
 const steps = [
@@ -18,7 +18,16 @@ const steps = [
   { n: '04', title: 'Předám',       desc: 'Hotový web spustím na vaší doméně a předám i s přihlášením do Googlu.' },
 ]
 
-const marquee = ['prezentační weby', 'živnostníci', 'malé firmy', 'hosting zdarma', 'moderní technologie', 'přímá komunikace', 'žádné e-shopy', 'Třeboň · ČR']
+const marquee = [
+  'prezentační weby',
+  'živnostníci',
+  'malé firmy',
+  'čistý kód',
+  'rychlé načítání',
+  'přímá komunikace',
+  'bez e-shopů',
+  'Třeboň · ČR',
+]
 
 export default function Home() {
   const glowRef = useRef<HTMLDivElement>(null)
@@ -37,7 +46,7 @@ export default function Home() {
     <>
       <div ref={glowRef} style={{ position: 'fixed', width: 420, height: 420, borderRadius: '50%', pointerEvents: 'none', zIndex: 0, transform: 'translate(-50%,-50%)', background: 'radial-gradient(circle,rgba(168,125,184,.055),transparent 70%)', transition: 'left .14s ease-out,top .14s ease-out', left: '-50%', top: '-50%' }} aria-hidden />
 
-      {/* ── HERO ───────────────────────────────────────────────────── */}
+      {/* ── HERO ─────────────────────────────────────────────────── */}
       <section style={{ minHeight: '100svh', display: 'flex', flexDirection: 'column', background: 'var(--cloud)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'radial-gradient(ellipse 65% 55% at 78% 25%,rgba(168,125,184,.09),transparent 70%),radial-gradient(ellipse 45% 40% at 18% 85%,rgba(0,154,196,.07),transparent 65%)' }} />
         <div className="noise" />
@@ -46,20 +55,26 @@ export default function Home() {
 
           {/* Left text */}
           <div style={{ flex: '0 0 52%', maxWidth: '52%', position: 'relative', zIndex: 2 }} className="hero-left-col">
-            <p className="eyebrow" style={{ marginBottom: 18, opacity: 0, animation: 'fadeUp .8s .06s cubic-bezier(.16,1,.3,1) forwards' }}>Tvorba webů - Hana Fraňková</p>
+            <p className="eyebrow" style={{ marginBottom: 18, opacity: 0, animation: 'fadeUp .8s .06s cubic-bezier(.16,1,.3,1) forwards' }}>
+              Tvorba webů · Hana Fraňková
+            </p>
             <h1 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.8rem,5.8vw,5.6rem)', fontWeight: 800, lineHeight: .92, letterSpacing: '-.05em', color: 'var(--ink)', margin: '0 0 22px', opacity: 0, animation: 'fadeUp .9s .14s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Weby,<br />kterých<br />si lidé<br /><span className="grad-text">všimnou.</span>
+              Moderní weby<br />pro živnostníky<br />a malé firmy.
             </h1>
-            <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 400, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Navrhuji a stavím prezentační weby pro živnostníky, řemeslníky a malé firmy.
-              Sama&nbsp;- od prvního kontaktu po předání hotového webu.
+            <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 460, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
+              Tvořím prezentační weby pro živnostníky, řemeslníky a menší firmy.
+              Od prvního návrhu po spuštění komunikujete přímo se mnou.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 26, opacity: 0, animation: 'fadeUp .9s .32s cubic-bezier(.16,1,.3,1) forwards' }}>
               <Link href="/nabidka" className="btn btn-ink">Co nabízím →</Link>
               <Link href="/jak-pracuji" className="btn btn-ghost">Jak pracuji</Link>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 7, opacity: 0, animation: 'fadeUp .9s .4s cubic-bezier(.16,1,.3,1) forwards' }}>
-              {['Rychlé a stabilní weby na moderní technologii', 'Hosting zdarma, platíte jen doménu', 'Každá změna webu se dá vrátit zpět'].map((t, i) => (
+              {[
+                'Weby, které se načítají rychle i na mobilu',
+                'Bez měsíčních poplatků za správu',
+                'Stabilní web postavený na čistém kódu',
+              ].map((t, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: 'var(--dim)' }}>
                   <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--orchid)', flexShrink: 0 }} />{t}
                 </div>
@@ -69,7 +84,6 @@ export default function Home() {
 
           {/* Right: floating cards */}
           <div className="hero-cards-col" style={{ flex: 1, position: 'relative', height: 460, opacity: 0, animation: 'fadeIn 1.1s .48s cubic-bezier(.16,1,.3,1) forwards', minWidth: 0 }}>
-            {/* 5class */}
             <div className="fl-a" style={{ position: 'absolute', top: 10, left: '30%', width: 260, height: 178, zIndex: 3, background: '#070707', borderRadius: 10, overflow: 'hidden', boxShadow: '0 28px 72px rgba(0,0,0,.42),0 8px 22px rgba(0,0,0,.28)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '8px 12px', background: '#0a0906', borderBottom: '1px solid rgba(201,168,76,.12)' }}>
                 {[0,1,2].map(k => <span key={k} style={{ width: 7, height: 7, borderRadius: '50%', background: 'rgba(201,168,76,.45)', flexShrink: 0 }} />)}
@@ -77,7 +91,6 @@ export default function Home() {
               </div>
               <Image src="/screens/5class-card.jpg" alt="5class.cz" width={260} height={149} style={{ objectFit: 'cover', objectPosition: 'top' }} />
             </div>
-            {/* ambientelight */}
             <div className="fl-b" style={{ position: 'absolute', top: '38%', left: 0, width: 242, height: 166, zIndex: 2, background: '#0c0a1a', borderRadius: 10, overflow: 'hidden', boxShadow: '0 22px 60px rgba(0,0,0,.38),0 5px 16px rgba(0,0,0,.22)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '8px 12px', background: '#0e0c1e', borderBottom: '1px solid rgba(180,80,255,.1)' }}>
                 {[0,1,2].map(k => <span key={k} style={{ width: 7, height: 7, borderRadius: '50%', background: 'rgba(180,80,255,.3)', flexShrink: 0 }} />)}
@@ -85,7 +98,6 @@ export default function Home() {
               </div>
               <Image src="/screens/ambiente-card.jpg" alt="ambientelight.eu" width={242} height={137} style={{ objectFit: 'cover', objectPosition: 'top' }} />
             </div>
-            {/* rovino */}
             <div className="fl-c" style={{ position: 'absolute', bottom: 10, left: '28%', width: 248, height: 168, zIndex: 1, background: '#fff', borderRadius: 10, overflow: 'hidden', boxShadow: '0 22px 56px rgba(210,70,0,.2),0 5px 16px rgba(0,0,0,.14)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '8px 12px', background: '#fafafa', borderBottom: '1px solid rgba(0,0,0,.07)' }}>
                 {[0,1,2].map(k => <span key={k} style={{ width: 7, height: 7, borderRadius: '50%', background: 'rgba(230,90,10,.4)', flexShrink: 0 }} />)}
@@ -108,7 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CO DĚLÁM ───────────────────────────────────────────────── */}
+      {/* ── CO DĚLÁM ─────────────────────────────────────────────── */}
       <section style={{ background: 'var(--deep)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle,rgba(168,125,184,.14),transparent 70%)', right: -80, top: -100, filter: 'blur(70px)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle,rgba(0,154,196,.1),transparent 70%)', left: -60, bottom: -60, filter: 'blur(60px)', pointerEvents: 'none' }} />
@@ -116,17 +128,22 @@ export default function Home() {
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 24 }}>Co dělám</p>
-          <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4.8vw,4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 800 }}>
-            Pomáhám lidem, kteří odvádějí dobrou práci, aby to bylo vidět i online.
+          <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4.8vw,4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 850 }}>
+            Spousta dobrých firem má web,{' '}
+            který jim spíš škodí než pomáhá.
           </h2>
-          <div className="reveal d2" style={{ maxWidth: 520 }}>
-            <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>Spousta živnostníků a malých firem má slabý nebo žádný web - ne proto, že by jejich práce za to nestála, ale protože na to nebyl čas, rozpočet nebo někdo, kdo to zařídí.</p>
-            <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: 0 }}>Tady přicházím já. Web nepostavím jen „aby byl". Promyslím strukturu, texty, to, koho má oslovit a co má návštěvník udělat. Vy dodáte informace. Zbytek je na mně.</p>
+          <div className="reveal d2" style={{ maxWidth: 560 }}>
+            <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>
+              Často působí zastarale, nepřehledně nebo nedůvěryhodně — i když samotná práce firmy je kvalitní.
+            </p>
+            <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: 0 }}>
+              Proto tvořím weby, které působí čistě, srozumitelně a profesionálně. Nejen vizuálně, ale i technicky.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── NABÍDKA ────────────────────────────────────────────────── */}
+      {/* ── NABÍDKA ──────────────────────────────────────────────── */}
       <section style={{ background: 'var(--cloud)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'linear-gradient(180deg,var(--orchid),var(--capri),var(--marigold))', opacity: .4 }} />
         <div className="inner">
@@ -154,41 +171,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── KALKULAČKA PROMO ────────────────────────────────────────── */}
-      <section style={{ background: 'var(--deep)', padding: 'clamp(48px,7vw,80px) 0', position: 'relative', overflow: 'hidden', borderTop: '1px solid rgba(255,255,255,.05)' }}>
-        <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle,rgba(168,125,184,.1),transparent 70%)', left: -80, bottom: -80, filter: 'blur(60px)', pointerEvents: 'none' }} />
+      {/* ── KALKULAČKA ───────────────────────────────────────────── */}
+      <section style={{ background: 'var(--deep)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle,rgba(0,154,196,.1),transparent 70%)', left: -120, top: -120, filter: 'blur(80px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', width: 400, height: 400, borderRadius: '50%', background: 'radial-gradient(circle,rgba(168,125,184,.1),transparent 70%)', right: -60, bottom: -60, filter: 'blur(60px)', pointerEvents: 'none' }} />
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
-          <div className="reveal" style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 'clamp(24px,4vw,60px)', alignItems: 'center' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }} className="kalk-promo-grid">
             <div>
-              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '.22em', textTransform: 'uppercase', color: 'rgba(240,237,232,.35)', margin: '0 0 12px' }}>Nástroj zdarma · OSVČ · Model 2026</p>
-              <h2 style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 'clamp(1.4rem,3vw,2.2rem)', letterSpacing: '-.04em', lineHeight: 1.04, color: 'var(--cloud)', margin: '0 0 12px' }}>
-                Víte, kolik byste si měli<br />reálně účtovat za hodinu?
+              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nástroj zdarma</p>
+              <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.8vw,3rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 20px' }}>
+                Znát svou reálnou hodinovou sazbu je základ úspěchu.
               </h2>
-              <p style={{ fontSize: '1rem', lineHeight: 1.75, color: 'rgba(240,237,232,.45)', margin: '0 0 22px', maxWidth: 440 }}>
-                Kalkulačka hodinové sazby OSVČ — zadejte výdaje a čas, systém dopočítá daně i odvody a ukáže minimální, doporučenou i rozvojovou sazbu.
+              <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
+                Jednoduchá orientační kalkulačka pro OSVČ. Zadejte své výdaje a časové možnosti — během 5 minut uvidíte, jaká odměna v roce 2026 bezpečně pokryje Váš provoz i rezervy. Tento nástroj slouží pro Vaši osobní byznysovou rozvahu.
               </p>
-              <Link href="/kalkulacka" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 24px', background: 'rgba(168,125,184,.15)', border: '1px solid rgba(168,125,184,.35)', borderRadius: 3, fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 14, color: '#d4a8e8', textDecoration: 'none', transition: 'background .2s' }}>
-                Spočítat svoji sazbu →
-              </Link>
+              <div className="reveal d3">
+                <Link href="/kalkulacka" className="btn btn-lt" style={{ display: 'inline-block', marginBottom: 24 }}>
+                  Zjistit svou sazbu →
+                </Link>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 24px' }}>
+                  {[
+                    { label: 'Legislativa 2026', sub: 'Aktuální parametry' },
+                    { label: 'Orientační výpočet', sub: 'Výsledky ihned' },
+                    { label: 'Zdarma', sub: 'Bez registrace' },
+                  ].map((item) => (
+                    <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--capri)', flexShrink: 0 }} />
+                      <span style={{ fontSize: 12.5, color: 'rgba(240,237,232,.6)' }}>
+                        <strong style={{ color: 'var(--cloud)', fontWeight: 600 }}>{item.label}</strong>
+                        {' — '}{item.sub}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 8, minWidth: 140 }} className="kalk-promo-stats">
+            <div className="reveal d2" style={{ background: 'rgba(255,255,255,.04)', border: '1px solid rgba(240,237,232,.08)', borderRadius: 8, padding: 'clamp(28px,4vw,44px)' }}>
+              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'rgba(240,237,232,.3)', margin: '0 0 20px' }}>Ukázka výstupu</p>
               {[
-                { label: 'Daňový model', val: '2026' },
-                { label: 'Výsledky', val: 'okamžitě' },
-                { label: 'Cena', val: 'zdarma' },
-              ].map(s => (
-                <div key={s.label} style={{ textAlign: 'center', padding: '12px 16px', background: 'rgba(255,255,255,.05)', borderRadius: 5, border: '1px solid rgba(255,255,255,.06)' }}>
-                  <p style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 'clamp(1rem,2vw,1.3rem)', color: 'var(--cloud)', margin: '0 0 2px', letterSpacing: '-.03em' }}>{s.val}</p>
-                  <p style={{ fontSize: 10.5, color: 'rgba(240,237,232,.35)', margin: 0, letterSpacing: '.06em', textTransform: 'uppercase' }}>{s.label}</p>
+                { label: 'Minimální sazba', value: '480 Kč/h', color: '#E0304A' },
+                { label: 'Doporučená sazba', value: '620 Kč/h', color: '#7AB830' },
+                { label: 'Rozvojová sazba',  value: '790 Kč/h', color: '#A87DB8' },
+              ].map((r) => (
+                <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 0', borderBottom: '1px solid rgba(240,237,232,.06)' }}>
+                  <span style={{ fontSize: 13, color: 'rgba(240,237,232,.5)' }}>{r.label}</span>
+                  <span style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 18, color: r.color, letterSpacing: '-.03em' }}>{r.value}</span>
                 </div>
               ))}
+              <p style={{ fontSize: 11, color: 'rgba(240,237,232,.2)', margin: '16px 0 0', lineHeight: 1.6 }}>
+                Ilustrační hodnoty. Váš výsledek závisí na Vašich konkrétních výdajích a pracovních podmínkách.
+              </p>
             </div>
           </div>
         </div>
+        <style>{`
+          @media(max-width:720px){ .kalk-promo-grid{ grid-template-columns: 1fr !important; } }
+        `}</style>
       </section>
 
-      {/* ── JAK PRACUJI ────────────────────────────────────────────── */}
+      {/* ── JAK PRACUJI ──────────────────────────────────────────── */}
       <section style={{ background: 'var(--cloud-1)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden', borderTop: '1px solid var(--line-s)' }}>
         <div className="noise" />
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: 'linear-gradient(var(--line-s) 1px,transparent 1px),linear-gradient(90deg,var(--line-s) 1px,transparent 1px)', backgroundSize: '80px 80px' }} />
@@ -213,7 +255,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── REFERENCE ──────────────────────────────────────────────── */}
+      {/* ── REFERENCE ────────────────────────────────────────────── */}
       <section style={{ background: 'var(--deep)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle,rgba(245,138,0,.08),transparent 70%)', right: -80, bottom: -80, filter: 'blur(70px)', pointerEvents: 'none' }} />
         <div className="noise" />
@@ -224,9 +266,9 @@ export default function Home() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }} className="refs-grid">
             {[
-              { img: '/screens/5class.jpg',    name: '5class.cz',         type: 'VIP doprava s řidičem, Praha · 3 jazyky',        href: 'https://5class.cz' },
-              { img: '/screens/rovino.jpg',    name: 'rovino.cz',         type: 'Zemní práce, jižní Čechy · Firemní web',         href: 'https://rovino.cz' },
-              { img: '/screens/ambiente.jpg',  name: 'ambientelight.eu',  type: 'Světelný design · Prezentační web',              href: 'https://ambientelight.eu' },
+              { img: '/screens/5class.jpg',   name: '5class.cz',        type: 'VIP doprava s řidičem, Praha · 3 jazyky',   href: 'https://5class.cz' },
+              { img: '/screens/rovino.jpg',   name: 'rovino.cz',        type: 'Zemní práce, jižní Čechy · Firemní web',    href: 'https://rovino.cz' },
+              { img: '/screens/ambiente.jpg', name: 'ambientelight.eu', type: 'Světelný design · Prezentační web',          href: 'https://ambientelight.eu' },
             ].map((r, i) => (
               <a key={i} href={r.href} target="_blank" rel="noopener" className={`reveal d${i + 1}`}
                 style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', border: '1px solid rgba(240,237,232,.08)', transition: 'transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s', background: 'rgba(255,255,255,.03)', textDecoration: 'none' }}
@@ -262,24 +304,30 @@ export default function Home() {
               Jmenuji se Hana Fraňková.
             </h2>
             <div className="reveal d2">
-              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>Weby tvořím sama, od první zprávy až po předání mluvíte se mnou, ne s někým z týmu, kdo „to vyřídí".</p>
-              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>Kromě webů se věnuji malbě a grafice. I díky tomu vidím barvu, kompozici a to, jak na člověka stránka působí dřív, než si vůbec něco přečte.</p>
-              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 28px' }}>Pracuji volněji a pořádně než rychle a odbytě. Nejde mi o počet webů, ale o to, aby každý, který odevzdám, dělal své práci čest - té vaší i té mojí.</p>
+              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
+                Weby tvořím sama. Od první zprávy po spuštění webu komunikujete přímo se mnou.
+              </p>
+              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
+                Záleží mi nejen na tom, jak web vypadá, ale hlavně jak působí. Jestli je přehledný, důvěryhodný a jestli se v něm člověk rychle zorientuje.
+              </p>
+              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 28px' }}>
+                Nedělám desítky webů měsíčně. Na každém projektu si dávám záležet, protože výsledný web reprezentuje vás i moji práci.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ────────────────────────────────────────────────────── */}
+      {/* ── CTA ──────────────────────────────────────────────────── */}
       <section style={{ background: 'var(--cloud)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle,rgba(168,125,184,.09),transparent 70%)', right: '-4%', top: '-20%', filter: 'blur(60px)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: -30, fontFamily: "'Syne',sans-serif", fontSize: 'clamp(8rem,18vw,18rem)', fontWeight: 800, letterSpacing: '-.06em', color: 'rgba(25,23,20,.025)', pointerEvents: 'none', userSelect: 'none', whiteSpace: 'nowrap' }} aria-hidden>VERNO</div>
         <div className="inner-narrow" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.4rem,5vw,4.4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.02, color: 'var(--ink)', margin: '0 0 18px' }}>
-            Máte nápad?<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>Napište mi.</em>
+            Potřebujete nový web?<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>Napište mi.</em>
           </h2>
           <p className="reveal d1" style={{ fontSize: '1.01rem', lineHeight: 1.76, color: 'var(--dim)', margin: '0 0 34px' }}>
-            Stačí pár vět - co děláte a co od webu čekáte. Ozvu se a domluvíme se na postupu.
+            Stačí stručně napsat, co děláte a co od webu očekáváte. Ozvu se zpět a domluvíme další postup.
           </p>
           <Link href="/kontakt" className="btn btn-ink reveal d2">Napište mi →</Link>
         </div>
@@ -295,7 +343,6 @@ export default function Home() {
           .steps-grid{grid-template-columns:1fr 1fr !important}
           .refs-grid{grid-template-columns:1fr !important}
           .about-grid{grid-template-columns:1fr !important;min-height:auto !important}
-          .kalk-promo-stats{display:none !important}
         }
         @media(max-width:540px){
           .steps-grid{grid-template-columns:1fr !important}
