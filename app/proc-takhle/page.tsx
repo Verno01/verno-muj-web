@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Proč takhle',
-  description: 'Jak stavím weby, proč, a v čem je to pro klienta lepší. Rychlost, stabilita, hosting zdarma, verzování.',
+  title: 'Proč takhle | Tvorba webu bez starostí - VERNO',
+  description: 'Jak stavím webové stránky, proč, a v čem je to pro klienta lepší. Čistý kód, vysoká rychlost, stabilita a hosting obvykle zdarma.',
 }
 
 const reasons = [
   {
     title: 'Rychlost',
     accent: 'var(--capri)',
-    text: 'Pomalý web pozná běžný návštěvník během vteřin a dost často odejde dřív, než se načte. I vyhledávače pomalé weby řadí níž.',
+    text: 'Pomalý web pozná běžný návštěvník během sekund a dost často odejde dřív, než se načte. I vyhledávače pomalé weby řadí níž.',
     detail: 'Weby stavím rychlé, lehké a hostuji je na síti Cloudflare, která je doručuje z nejbližších míst k návštěvníkovi. Cloudflare dnes patří mezi největší internetové infrastruktury na světě, využívají ji miliony webů, například firmy jako Shopify, IBM, L\'Oréal nebo Garmin - hlavně kvůli rychlosti, stabilitě a vyšší bezpečnosti. V praxi to znamená weby, které naskočí takřka okamžitě a nezpomalí se ani při vysoké návštěvnosti.',
   },
   {
@@ -26,7 +26,7 @@ const reasons = [
     detail: 'Pokud se něco pokazí, vrátím web do stavu, ve kterém fungoval. Nevzniká situace „bylo to dobré, ale už to nejde vrátit".',
   },
   {
-    title: 'Co to stojí na provozu',
+    title: 'Minimální náklady na provoz',
     accent: 'var(--marigold)',
     text: 'Hosting na Cloudflare je u většiny webů zdarma.',
     detail: 'Pravidelný náklad je obvykle pouze doména, řádově stovky korun ročně, platíte ji přímo registrátorovi, ne mně. Pro srovnání: u běžných webů bývají průběžné náklady na hosting, pluginy nebo technickou správu. Weby, které stavím, fungují jednodušeji.',
@@ -44,7 +44,7 @@ export default function ProcTakhle() {
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Proč takhle</p>
           <h1 className="page-hero-title">Stavím jinak.<br />Tady vysvětlím proč.</h1>
           <p className="page-hero-sub">
-            Web se dá postavit mnoha způsoby s řadou pluginů. Funguje to, ale nese to věci, se kterými se pak vlastník roky potýká.
+            Webové stránky se dají postavit mnoha způsoby a pomocí spousty pluginů. Na první pohled to funguje, ale v pozadí to často nese problémy, se kterými se pak vlastník webu roky potýká.
           </p>
         </div>
       </div>
@@ -105,8 +105,8 @@ export default function ProcTakhle() {
 
 function FaqList() {
   const faqs = [
-    { q: 'Kolik to bude přesně stát?', a: 'Pevný ceník neuvádím, každý web je jíný. Pohybuji se nejčastěji mezi 12 000 a 60 000 Kč. Konkrétní číslo dostanete před zahájením práce, po tom co si e-mailem ujasníme rozsah.' },
-    { q: 'Jak dlouho tvorba trvá?', a: 'Závisí na rozsahu webu a na tom, jak rychle se sejdou podklady (texty, fotky). Nedávám konkrétní datum, protože bych ho dávala naslepo. Po celou dobu ale zasílám průběžně rozpracovanou verzi, takže budete vědět, v jaké fázi web je. Když máte pevný termín, řekněte mi to hned na začátku.' },
+    { q: 'Kolik to bude stát?', a: 'Pevný ceník neuvádím, každý web je jiný. Pohybuji se nejčastěji mezi 12 000 a 60 000 Kč. Konkrétní pevnou částku dostanete vždy před zahájením práce, jakmile si e-mailem ujasníme rozsah.' },
+    { q: 'Jak dlouho tvorba trvá?', a: 'Závisí na rozsahu webu a na tom, jak rychle se sejdou podklady (texty, fotky). Pevné termíny naslepo neslibuji. Po celou dobu ale zasílám průběžně rozpracovanou verzi, takže přesně víte, v jaké fázi web je. Pokud vás tlačí čas, sdělte mi to hned na začátku a řekneme si, jestli je reálné to stihnout.' },
     { q: 'Co musím připravit já?', a: 'Budu od Vás potřebovat logo (pokud ho máte), fotky a informace o tom, co děláte, jaké informace chcete na webu určitě mít. Podklady nemusí být perfektní, texty za Vás ráda napíšu a fotografie upravím. Proces od přípravy až po spuštění podrobně popisuji na stránce Jak pracuji.' },
     { q: 'Budu si web moct sám upravovat?', a: 'Web není postavený na systému, kde si sami klikáte do administrace, protože právě ta administrace bývá nejčastějším zdrojem problémů. Kdykoliv budete potřebovat, můžete se na mne obrátit. Menší změny (text, fotka, údaj) za vás udělám rychle za hodinovou sazbu. Na větších úpravách se snadno domluvíme. Nejste na mně trvale závislí, můžete kdykoliv přejít jinam, web je váš.' },
     { q: 'Co když budete nedostupná nebo s vámi přestaneme spolupracovat?', a: 'Hotový web je váš včetně všech zdrojových souborů. Není zamčený u mě. Když budete chtít pokračovat s někým jiným, předám vše potřebné.' },
