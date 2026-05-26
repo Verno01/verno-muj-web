@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Jak pracuji',
+  title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
   description:
-    'Celý postup tvorby webu krok za krokem. Co od vás budu potřebovat a proč - texty, fotky, logo. Průběžně ukazuji rozpracovanou verzi, ne screenshoty.',
+    'Celý postup tvorby webových stránek. Co od vás budu potřebovat a proč. Texty, fotky, logo. Průběžně ukazuji rozpracovanou verzi, ne screenshoty.',
 }
 
 const steps = [
@@ -16,7 +16,7 @@ const steps = [
   {
     n: '02',
     title: 'Domluvíme se na zadání',
-    text: 'Projdeme spolu, k čemu web má sloužit, koho má oslovit a co má návštěvník udělat. Určíme rozsah, rozdělíme si podklady a domluvíme cenu předem.',
+    text: 'Projdeme spolu, k čemu má web sloužit, koho má oslovit a co má návštěvník udělat. Určíme rozsah, rozdělíme si podklady a domluvíme pevnou cenu předem.',
   },
   {
     n: '03',
@@ -31,7 +31,7 @@ const steps = [
   {
     n: '05',
     title: 'Spustíme web',
-    text: 'Hotový web nasadím na vaši doménu, zkontroluji mobil i počítač a připojím základní nástroje od Googlu.',
+    text: 'Hotový web nasadím na vaši doménu, zkontroluji zobrazení na mobilu i počítači a napojím na vyhledávač Google.',
   },
   {
     n: '06',
@@ -43,7 +43,7 @@ const steps = [
 const needs = [
   {
     title: 'Informace o tom, co děláte',
-    text: 'Čím se zabýváte a jaký další krok od návštěvníka Vašeho webu čekáte. Stačí mi to i v bodech, informace jsou důležité.',
+    text: 'Čím se zabýváte a jaký další krok od návštěvníka vašeho webu čekáte. Stačí mi to i v bodech, informace jsou důležité.',
   },
   {
     title: 'Fotografie',
@@ -59,7 +59,7 @@ const needs = [
   },
   {
     title: 'Máte představu?',
-    text: 'Oblíbené weby, styl nebo naopak něco, co se Vám nelíbí, řekněte mi to. I drobné poznámky pomůžou pomůou k tomu, aby Vám web opravdu seděl',
+    text: 'Oblíbené weby, styl nebo naopak něco, co se vám nelíbí - řekněte mi to. I drobné poznámky pomůžou k tomu, aby vám web opravdu seděl',
   },
 ]
 
@@ -365,7 +365,7 @@ export default function JakPracuji() {
         </div>
       </section>
 
-      {/* CO ODE MĚ NEČEKAT */}
+      {/* CO U MĚ NEČEKEJTE */}
       <section
         style={{
           background: 'var(--cloud)',
@@ -376,7 +376,7 @@ export default function JakPracuji() {
       >
         <div className="inner">
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>
-            Co ode mě nečekat
+            Co u mě nečekejte
           </p>
           <h2
             className="reveal d1"
@@ -466,7 +466,7 @@ export default function JakPracuji() {
             className="eyebrow reveal"
             style={{ color: 'rgba(240,237,232,.42)', marginBottom: 24 }}
           >
-            Časová náročnost
+            Časová náročnost tvorby webu
           </p>
           <h2
             className="reveal d1"
@@ -493,8 +493,8 @@ export default function JakPracuji() {
               margin: '0 0 16px',
             }}
           >
-            Záleží na velikosti webu i rychlosti dodání podkladů.
-            Nejčastější brzda nejsou technologie, ale texty a fotky.
+            Záleží na rozsahu webu a rychlosti dodání podkladů.
+            Nejčastější brzdou totiž nebývají technologie, ale chybějící texty a fotky.
           </p>
           <p
             className="reveal d3"
@@ -506,9 +506,9 @@ export default function JakPracuji() {
               margin: '0 0 34px',
             }}
           >
-            Neslibuji termíny.
-            Pokud Vás z nějakého důvodu tlačí čas, řekněte mi ho hned na
-            začátku a podíváme se, jestli je reálné to stihnout.
+            Pevné termíny naslepo neslibuji.
+            Pokud vás ale z nějakého důvodu tlačí čas, sdělte mi to hned na
+            začátku a řekneme si, jestli je reálné to stihnout.
           </p>
           <Link href="/kontakt" className="btn btn-lt reveal d4">
             Začněme →
