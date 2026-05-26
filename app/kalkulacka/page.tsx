@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     q: 'Co je minimální hodinová sazba a proč nestačí?',
-    a: 'Minimální sazba je matematická nula. Pokryje Vaše zadané životní i provozní náklady a povinné odvody, ale nezbyde Vám z ní nic navíc. Nestačí proto, že nepočítá s hluchými místy mezi zakázkami, investicemi do nového vybavení ani s rozvojem podnikání. Je to skvělý odrazový můstek, ale ne dlouhodobý cíl.',
+    a: 'Minimální sazba je matematická nula. Pokryje vaše zadané životní i provozní náklady a povinné odvody, ale nezbyde vám z ní nic navíc. Nestačí proto, že nepočítá s hluchými místy mezi zakázkami, investicemi do nového vybavení ani s rozvojem podnikání. Je to skvělý odrazový můstek, ale ne dlouhodobý cíl.',
   },
   {
     q: 'Jak kalkulačka počítá daně a odvody?',
-    a: 'Kompletní matematiku pro rok 2026 vyřeší za Vás. Podle toho, jaký režim si zvolíte (paušální daň, výdajový paušál nebo skutečné výdaje), kalkulačka automaticky dopočítá zdravotní, sociální pojištění a daň z příjmu. Do výpočtu započítá i slevu na poplatníka, děti či případnou vedlejší činnost.',
+    a: 'Kompletní matematiku pro rok 2026 vyřeší za vás. Podle toho, jaký režim si zvolíte (paušální daň, výdajový paušál nebo skutečné výdaje), kalkulačka automaticky dopočítá zdravotní, sociální pojištění a daň z příjmu. Do výpočtu započítá i slevu na poplatníka, děti či případnou vedlejší činnost.',
   },
   {
     q: 'Co je fakturovatelnost a jak ji odhadnout?',
@@ -40,15 +40,15 @@ const faqItems = [
   },
   {
     q: 'Proč je zdravá sazba o 30 % vyšší než minimální?',
-    a: 'Těchto 30 % navíc tvoří Vaši bezpečnou rezervu na neplánované volno, pomalejší měsíce nebo investice do rozvoje. Minimální sazba Vás udrží na nule, ta zdravá Vám zajistí dlouhodobou stabilitu a klidné podnikání.',
+    a: 'Těchto 30 % navíc tvoří vaši bezpečnou rezervu na neplánované volno, pomalejší měsíce nebo investice do rozvoje. Minimální sazba vás udrží na nule, ta zdravá vám zajistí dlouhodobou stabilitu a klidné podnikání.',
   },
   {
     q: 'Liší se výpočet u paušálního a skutečného režimu?',
-    a: 'Ano, velmi výrazně. V paušálním režimu platíte státu pevnou měsíční částku bez ohledu na příjmy. U skutečných výdajů a výdajových paušálů procentem kalkulačka automaticky přepočítává daňovou složku podle toho, jak se mění Váš poměr příjmů a nákladů.',
+    a: 'Ano, velmi výrazně. V paušálním režimu platíte státu pevnou měsíční částku bez ohledu na příjmy. U skutečných výdajů a výdajových paušálů procentem kalkulačka automaticky přepočítává daňovou složku podle toho, jak se mění váš poměr příjmů a nákladů.',
   },
   {
     q: 'Jak mohu s výsledky z kalkulačky pracovat?',
-    a: 'Berte je jako orientační odrazový můstek pro své byznysové plánování. Kalkulačka Vám během chvíle ukáže matematickou realitu roku 2026. Můžete si libovolně měnit dny volna, zkoušet různé sazby a ladit své podnikání k dokonalosti. Výstupy mají informativní charakter a nenahrazují daňové či účetní poradenství.',
+    a: 'Berte je jako orientační odrazový můstek pro své byznysové plánování. Kalkulačka vám během chvíle ukáže matematickou realitu roku 2026. Můžete si libovolně měnit dny volna, zkoušet různé sazby a ladit své podnikání k dokonalosti. Výstupy mají informativní charakter a nenahrazují daňové či účetní poradenství.',
   },
 ]
 
@@ -63,7 +63,7 @@ export default function KalkulackaPage() {
             {
               '@context': 'https://schema.org',
               '@type': 'WebApplication',
-              name: 'Kalkulačka hodinové sazby OSVČ — VERNO',
+              name: 'Kalkulačka hodinové sazby OSVČ - VERNO',
               url: 'https://www.verno.cz/kalkulacka',
               description: 'Bezplatná kalkulačka pro výpočet reálné hodinové sazby OSVČ. Zohledňuje daně, odvody, výdaje a fakturovatelný čas.',
               applicationCategory: 'FinanceApplication',
