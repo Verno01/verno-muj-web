@@ -3,8 +3,8 @@ import Link from 'next/link'
 import KalkulackaWrapper from '@/components/KalkulackaWrapper'
 
 export const metadata: Metadata = {
-  title: 'Kalkulačka hodinové sazby OSVČ 2026. Zdarma, bez registrace',
-  description: 'Zjistěte svoji reálnou hodinovou sazbu jako OSVČ. Kalkulačka zohledňuje daně, odvody, výdaje i skutečně fakturovatelný čas. Výsledek za 3 minuty, zdarma.',
+  title: 'Bezplatná kalkulačka hodinové sazby pro OSVČ 2026',
+  description: 'Jednoduchá orientační kalkulačka pro živnostníky. Zadejte své výdaje a časové možnosti a během 3 minut uvidíte, jaká odměna bezpečně pokryje váš provoz, daně, odvody i rezervy. Nástroj slouží pro vaši osobní byznysovou rozvahu.',
   keywords: [
     'kalkulačka hodinové sazby OSVČ',
     'hodinová sazba živnostník',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'kalkulačka sazby freelancer',
     'hodinová sazba OSVČ výpočet',
     'minimální hodinová sazba OSVČ',
-    'kolik na hodinu',
+    'kolik si účtovat za hodinu',
     'jak vypočítat hodinovou sazbu',
   ],
   openGraph: {
