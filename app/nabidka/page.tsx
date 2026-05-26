@@ -2,67 +2,64 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Nabídka | Weby na míru — VERNO',
-  description: 'Pět typů prezentačních webů pro živnostníky i firmy. Každý web stavím na míru rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
+  title: 'Nabídka | Weby na míru - VERNO',
+  description: 'Tvorba prezentačních webů pro živnostníky a firmy. Každý web stavím na míru rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
 }
 
 const packages = [
   {
     id: 'webova-vizitka', num: '01', name: 'Webová vizitka',
-    for: 'Pro živnostníky a jednotlivce, kteří chtějí být na internetu snadno dohledatelní a mít jednoduchý profesionální web. Ideální například pro řemeslníky, terapeuty, kadeřnice, fotografy, konzultanty nebo menší lokální služby.',
+    for: 'Pro živnostníky a jednotlivce, kteří chtějí být na internetu snadno dohledatelní a mít jednoduchý profesionální web. Ideální například pro řemeslníky, terapeuty, kadeřnice, fotografy, konzultanty nebo menší lokální služby.
+',
     items: [
-      'Jednostránkový web rozdělený do přehledných sekcí (úvod, služby, o vás, kontakt)',
-      'Funguje stejně dobře na mobilu jako na počítači',
+      'Jednostránkový web rozdělený do přehledných sekcí (úvod, služby, o mně/nás, kontakt)',
+      'Rychlé a bezchybné zobrazení na mobilu i na počítači',
       'Kontaktní formulář - zprávy chodí přímo do vašeho e-mailu',
-      'Základní nastavení pro vyhledávače (titulek, popis, struktura)',
-      'Přihlášení do Google Search Console - indexace',
-      'Spuštění na vaší doméně',
+      'Základní SEO nastavení pro vyhledávače (titulek, popis, struktura)',
+      'Napojení na vyhledávač Google pro rychlé dohledání (indexaci)',
+      'Spuštění hotového webu na vaší doméně',
     ],
   },
   {
     id: 'maly-web', num: '02', name: 'Malý web',
     for: 'Pro živnostníky a menší firmy, které potřebují více prostoru pro své služby, reference, portfolio nebo tým. Nejčastěji volená varianta.',
     items: [
-      'Stránky - nejčastěji úvod, služby, o vás, reference, kontakt',
-      'Vše z webové vizitky (mobilní verze, formulář, základ pro vyhledávače, spuštění)',
-      'Struktura a propojení stránek, které návštěvníka přirozeně vedou ke kontaktu nebo poptávce',
+      'Vícestránkový web (nejčastěji úvod, služby, o vás, reference, kontakt)',
+      'Struktura a propojení stránek, které návštěvníka přirozeně vedou k poptávce',
+      'Vše z Webové vizitky (mobilní zobrazení, SEO nastavení, formulář, napojení na Google)',
     ],
   },
   {
     id: 'landing-page', num: '03', name: 'Landing page',
-    for: 'Tato stránka je navržená tak, aby návštěvníka vedla k jedné konkrétní akci - například objednávce, registraci nebo poptávce.',
+    for: 'Jednostránkový web navržený čistě tak, aby vedl návštěvníka k jedné konkrétní akci – například k objednávce, registraci nebo poptávce.',
     items: [
-      'Přehlednou strukturu, která návštěvníka přirozeně vede k akci',
-      'Jasně vystavěný obsah: problém → řešení → důvěra → výzva ke kontaktu nebo objednávce',
-      'Důraz na jednoduchost, přehlednost a čitelnost i na mobilu',
-      'Kontaktní formulář nebo propojení na objednávku',
-      'Základní nastavení pro vyhledávání v Googlu',
-      'Spuštění webu na vaší doméně',
+      'Přehledná struktura, která návštěvníka přirozeně vede k akci',
+      'Jasně vystavěný obsah: problém → řešení → důvěra → výzva ke kontaktu',
+      'Důraz na jednoduchost a maximální čitelnost i na mobilu',
+      'Kontaktní formulář nebo přímé propojení na objednávkový systém',
+      'Základní nastavení pro vyhledávání a spuštění na vaší doméně',
     ],
   },
   {
     id: 'akce-spolek', num: '04', name: 'Web pro akci nebo spolek',
-    for: 'Pro spolky, festivaly, kulturní a komunitní akce, školy, menší obce nebo projekty, kde je důležité rychle a přehledně předat návštěvníkům všechny důležité informace.',
+    for: 'Pro spolky, festivaly, kulturní a komunitní akce, školy nebo projekty, kde je důležité rychle a srozumitelně předat návštěvníkům informace.',
     items: [
       'Přehledný web, obvykle 3-4 stránky podle rozsahu',
-      'Sekce například pro program, informace o akci nebo spolku, přihlášení, vstupenky nebo kontakt',
-      'Jednoduchou orientaci, aby návštěvník rychle našel to důležité',
+      'Sekce pro program, informace o akci, vstupenky nebo kontakt',
+      'Jednoduchá orientace, aby návštěvník rychle našel to nejdůležitější',
       'Funkční zobrazení pro mobil i počítač',
-      'Kontaktní formulář nebo propojení na registraci',
-      'Základní nastavení pro vyhledávání v Googlu',
-      'Spuštění webu na vaší doméně',
+      'Kontaktní formulář nebo propojení na registraci a napojení na Google',
     ],
   },
   {
     id: 'prezentacni-web', num: '05', name: 'Prezentační web',
-    for: 'Pro firmy a organizace, kde web není jen základní kontakt, ale důležitá součást prezentace a důvěryhodnosti značky. Vhodné pro podnikání s více službami nebo složitější nabídkou. Ideální například pro architekty, stavební firmy, ordinace, poradenské firmy nebo studia.',
+    for: 'Profesionální web na míru pro firmy a organizace, kde web není jen základní kontakt, ale klíčová součást budování důvěry značky. Vhodné pro podnikání s více službami nebo složitější nabídkou. Ideální pro architekty, stavební firmy, ordinace, poradenské firmy nebo studia.',
     items: [
-      'Promyšlenou strukturu a navigaci pro větší množství obsahu',
-      'Samostatné stránky pro služby, realizace, reference, tým nebo další informace',
-      'Přehledné propojení jednotlivých částí webu, které návštěvníka přirozeně vedou k poptávce',
+      'Promyšlená struktura a navigaci pro větší množství obsahu',
+      'Samostatné stránky pro služby, realizace, reference, či tým',
+      'Přehledné propojení sekcí, které návštěvníka logicky dovede k poptávce',
       'Plně funkční zobrazení pro mobil i počítač',
-      'Kontaktní formuláře a základní nastavení pro vyhledávání v Googlu',
-      'Spuštění webu na vaší doméně',
+      'Kontaktní formuláře, pokročilejší SEO a napojení na Google',
     ],
   },
 ]
@@ -78,7 +75,7 @@ const priceFactors = [
   },
   {
     label: 'Struktura informací',
-    desc: 'Jak logicky navést návštěvníka k tomu, aby udělal to, co potřebujete.',
+    desc: 'Náročnost toho, jak návštěvníka logicky provést obsahem a navést k akci.',
   },
   {
     label: 'Specifické požadavky',
@@ -97,7 +94,7 @@ export default function Nabidka() {
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nabídka</p>
           <h1 className="page-hero-title">Pět typů webů.<br />Každý pro jiný záměr.</h1>
           <p className="page-hero-sub">
-            Každý web stavím na míru rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
+            Každý prezentační web stavím na míru rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
           </p>
         </div>
       </div>
