@@ -9,8 +9,7 @@ export const metadata: Metadata = {
 const packages = [
   {
     id: 'webova-vizitka', num: '01', name: 'Webová vizitka',
-    for: 'Pro živnostníky a jednotlivce, kteří chtějí být na internetu snadno dohledatelní a mít jednoduchý profesionální web. Ideální například pro řemeslníky, terapeuty, kadeřnice, fotografy, konzultanty nebo menší lokální služby.
-',
+    for: 'Pro živnostníky a jednotlivce, kteří chtějí být na internetu snadno dohledatelní a mít jednoduchý profesionální web. Ideální například pro řemeslníky, terapeuty, kadeřnice, fotografy, konzultanty nebo menší lokální služby.',
     items: [
       'Jednostránkový web rozdělený do přehledných sekcí (úvod, služby, o mně/nás, kontakt)',
       'Rychlé a bezchybné zobrazení na mobilu i na počítači',
