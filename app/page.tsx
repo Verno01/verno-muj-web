@@ -4,24 +4,24 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 const services = [
-  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Jednoduchý web pro služby, kontakt a základní informace.' },
-  { id: 'maly-web',        name: 'Malý web',                 short: 'Více prostoru pro služby, reference nebo ukázky práce.' },
-  { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka zaměřená na konkrétní nabídku nebo službu.' },
-  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Přehledné informace na jednom místě.' },
-  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web jako důležitá součást firmy a jejího dojmu.' },
+  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Jednoduchý web pro vaši službu. Obsahuje kontakt a základní informace.' },
+  { id: 'maly-web',        name: 'Malý web',                 short: 'Více prostoru pro vaše služby, reference a ukázky práce.' },
+  { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka navržená pro konkrétní nabídku, kampaň nebo službu.' },
+  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Všechny důležité informace o akci přehledně na jednom místě.' },
+  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Profesionální web na míru, který buduje důvěru a je klíčovou součástí vaší firmy.' },
 ]
 
 const steps = [
-  { n: '01', title: 'Ozvete se',    desc: 'Napíšete mi přes formulář (nebo zavoláte) pár vět o tom, co děláte a co od webu čekáte.' },
-  { n: '02', title: 'Domluvíme se', desc: 'Projdeme rozsah a cíl webu. Řekneme si, co připravíte vy a co udělám já. Zašlu vám cenu.' },
-  { n: '03', title: 'Tvořím',       desc: 'Pustím se do práce. Průběžně vám ukazuji rozpracovanou verzi, ne screenshoty.' },
-  { n: '04', title: 'Předám',       desc: 'Hotový web spustím na vaší doméně a předám i s přihlášením do Googlu.' },
+  { n: '01', title: 'Ozvete se',    desc: 'Napíšete mi přes formulář (nebo zavoláte) pár vět o tom, co děláte a co od nového webu čekáte.' },
+  { n: '02', title: 'Domluvíme se', desc: 'Projdeme rozsah a cíle webu. Určíme si, co připravíte vy a co já. Předem vám zašlu pevnou cenu.' },
+  { n: '03', title: 'Tvořím',       desc: 'Pustím se do tvorby webu. Průběžně vám posílám odkaz na reálnou rozpracovanou verzi, ne pouhé screenshoty.' },
+  { n: '04', title: 'Předám',       desc: 'Hotové webové stránky nasadím na vaši doménu a napojím na vyhledávač Google.' },
 ]
 
 const marquee = [
-  'prezentační weby',
-  'živnostníci',
-  'malé firmy',
+  'tvorba webu',
+  'prezentační weby na míru',
+  'pro živnostníky a malé firmy',
   'čistý kód',
   'rychlé načítání',
   'přímá komunikace',
@@ -71,9 +71,9 @@ export default function Home() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 7, opacity: 0, animation: 'fadeUp .9s .4s cubic-bezier(.16,1,.3,1) forwards' }}>
               {[
-                'Weby, které se načítají rychle i na mobilu',
-                'Bez měsíčních poplatků za správu',
-                'Stabilní web postavený na čistém kódu',
+                'Rychlý web i na mobilu',
+                'Bez poplatků za hosting',
+                'Stabilní web na čistém kódu',
               ].map((t, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: 'var(--dim)' }}>
                   <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--orchid)', flexShrink: 0 }} />{t}
@@ -179,16 +179,16 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }} className="kalk-promo-grid">
             <div>
-              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Moje bezplatná kalkulačka pro OSVČ</p>
+              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Bezplatná kalkulačka hodinové sazby pro OSVČ</p>
               <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.8vw,3rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 20px' }}>
                 Znát svou reálnou hodinovou sazbu je základ úspěchu.
               </h2>
               <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
-                Jednoduchá orientační kalkulačka pro OSVČ. Zadejte své výdaje a časové možnosti, během 5 minut uvidíte, jaká odměna v roce 2026 bezpečně pokryje Váš provoz i rezervy. Tento nástroj slouží pro Vaši osobní byznysovou rozvahu.
+                Jednoduchá orientační kalkulačka, kterou jsem vytvořila přímo pro živnostníky. Zadejte své výdaje a časové možnosti a během 3 minut uvidíte, jaká odměna v roce 2026 bezpečně pokryje váš provoz, daně, odvody i rezervy. Nástroj slouží pro vaši osobní byznysovou rozvahu.
               </p>
               <div className="reveal d3">
                 <Link href="/kalkulacka" className="btn btn-lt" style={{ display: 'inline-block', marginBottom: 24 }}>
-                  Zjistit svou sazbu →
+                  Zjistit svou hodinovou sazbu →
                 </Link>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px 24px' }}>
                   {[
@@ -324,7 +324,7 @@ export default function Home() {
         <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: -30, fontFamily: "'Syne',sans-serif", fontSize: 'clamp(8rem,18vw,18rem)', fontWeight: 800, letterSpacing: '-.06em', color: 'rgba(25,23,20,.025)', pointerEvents: 'none', userSelect: 'none', whiteSpace: 'nowrap' }} aria-hidden>VERNO</div>
         <div className="inner-narrow" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.4rem,5vw,4.4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.02, color: 'var(--ink)', margin: '0 0 18px' }}>
-            Už víte, jak bude vypadat Váš nový<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>web?</em>
+            Už víte, jak bude vypadat váš nový<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>web?</em>
           </h2>
           <p className="reveal d1" style={{ fontSize: '1.01rem', lineHeight: 1.76, color: 'var(--dim)', margin: '0 0 34px' }}>
             Stačí stručně napsat, co děláte a co od webu očekáváte. Ozvu se zpět a domluvíme další postup.
