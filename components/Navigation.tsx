@@ -11,7 +11,7 @@ const links: NavLink[] = [
   { href: '/nabidka',     label: 'Nabídka' },
   { href: '/jak-pracuji', label: 'Jak pracuji' },
   { href: '/proc-takhle', label: 'Proč takhle' },
-  { href: '/kalkulacka',  label: 'Kalkulačka', accent: true },
+  { href: '/kalkulacka',  label: 'Vaše sazba', accent: true },
   { href: '/kontakt',     label: 'Kontakt' },
 ]
 
