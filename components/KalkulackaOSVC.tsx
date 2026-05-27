@@ -303,12 +303,36 @@ function ShareBlock({ minSazba, zdravaSazba, copied, onCopy, onPrint }: any) {
   )
 }
 
-function scrollToId(id: string) {
+/**
+ * Scroll na tab-bar kalkulačky.
+ *
+ * Pořadí v DOM:
+ *   1) Navigace (fixed, ~64 px)
+ *   2) Header kalkulačky (Jaká by měla být...)
+ *   3) Live panel s mezivýsledky (sticky, top: 64)
+ *   4) Tab-bar (Osobní | Provozní | Čas | Daně | Výsledky)
+ *   5) Obsah kroku
+ *
+ * Při scrollu se navigace + sticky panel mezivýsledků zafixují nahoře,
+ * pod nimi se objeví tab-bar a hned pod ním začíná obsah kroku.
+ *
+ * Offset: navigace (~64) + sticky panel mezivýsledků (~72) ≈ 136 px,
+ * volíme 140 px pro malou rezervu.
+ */
+function scrollToTabBar() {
   setTimeout(() => {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" })
-    else window.scrollTo({ top: 0, behavior: "smooth" })
+    const el = document.getElementById("kalk-tab-bar")
+    if (!el) return
+    const top = el.getBoundingClientRect().top + window.scrollY - 140
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" })
   }, 50)
+}
+
+// Ponecháno pro zpětnou kompatibilitu — všechna volání teď
+// stejně scrollují na tab-bar (lepší UX než skok na kotvu kroku,
+// kterou by stejně překryl sticky panel mezivýsledků).
+function scrollToId(_id: string) {
+  scrollToTabBar()
 }
 
 /* ─── HLAVNÍ APP ─────────────────────────────────────────────── */
@@ -474,8 +498,8 @@ export default function KalkulackaOSVC() {
           </div>
         </div>
 
-        {/* PROGRESS */}
-        <div style={{ display: "flex", background: "#fff", borderBottom: "1px solid rgba(25,23,20,.05)" }}>
+        {/* PROGRESS / tab-bar — kotva pro scroll po kliknutí Pokračovat/Zpět */}
+        <div id="kalk-tab-bar" style={{ display: "flex", background: "#fff", borderBottom: "1px solid rgba(25,23,20,.05)" }}>
           {[{ n: 1, l: "Osobní\nnáklady" }, { n: 2, l: "Provozní\nnáklady" }, { n: 3, l: "Čas\na práce" }, { n: 4, l: "Daně\na odvody" }, { n: 5, l: "Výsledky" }].map(s => (
             <button key={s.n}
               style={{ flex: 1, padding: "12px 4px", background: "none", border: "none", borderBottom: `2.5px solid ${krok === s.n ? "var(--oc)" : "transparent"}`, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", fontSize: 11, fontWeight: 600, color: krok === s.n ? "var(--oc)" : krok > s.n ? "var(--gn)" : "var(--dim)", transition: "all .2s", textAlign: "center", lineHeight: 1.4 }}
@@ -573,7 +597,7 @@ export default function KalkulackaOSVC() {
                 </div>
                 <div style={{ fontSize: 11, color: "rgba(240,237,232,.3)", marginTop: 3 }}>Bez daní a odvodů — ty se připočítají automaticky ve výsledcích</div>
               </div>
-              <button className="kalk-btn" onClick={() => { setKrok(2); window.scrollTo({ top: 0, behavior: "smooth" }) }}>Pokračovat na provozní náklady →</button>
+              <button className="kalk-btn" onClick={() => { setKrok(2); scrollToTabBar() }}>Pokračovat na provozní náklady →</button>
             </div>
           )}
 
@@ -664,8 +688,8 @@ export default function KalkulackaOSVC() {
                 </div>
               </div>
               <div style={{ display: "flex", gap: 10 }}>
-                <button className="kalk-btnb" onClick={() => { setKrok(1); window.scrollTo({ top: 0, behavior: "smooth" }) }}>← Zpět</button>
-                <button className="kalk-btn" style={{ flex: 1, marginTop: 0 }} onClick={() => { setKrok(3); window.scrollTo({ top: 0, behavior: "smooth" }) }}>Pokračovat na pracovní čas →</button>
+                <button className="kalk-btnb" onClick={() => { setKrok(1); scrollToTabBar() }}>← Zpět</button>
+                <button className="kalk-btn" style={{ flex: 1, marginTop: 0 }} onClick={() => { setKrok(3); scrollToTabBar() }}>Pokračovat na pracovní čas →</button>
               </div>
             </div>
           )}
@@ -781,8 +805,8 @@ export default function KalkulackaOSVC() {
                 })()}
               </div>
               <div style={{ display: "flex", gap: 10 }}>
-                <button className="kalk-btnb" onClick={() => { setKrok(2); window.scrollTo({ top: 0, behavior: "smooth" }) }}>← Zpět</button>
-                <button className="kalk-btn" style={{ flex: 1, marginTop: 0 }} onClick={() => { setKrok(4); window.scrollTo({ top: 0, behavior: "smooth" }) }}>Pokračovat na daňový režim →</button>
+                <button className="kalk-btnb" onClick={() => { setKrok(2); scrollToTabBar() }}>← Zpět</button>
+                <button className="kalk-btn" style={{ flex: 1, marginTop: 0 }} onClick={() => { setKrok(4); scrollToTabBar() }}>Pokračovat na daňový režim →</button>
               </div>
             </div>
           )}
@@ -918,9 +942,9 @@ export default function KalkulackaOSVC() {
                 </div>
               </div>
               <div style={{ display: "flex", gap: 10 }}>
-                <button className="kalk-btnb" onClick={() => { setKrok(3); window.scrollTo({ top: 0, behavior: "smooth" }) }}>← Zpět</button>
+                <button className="kalk-btnb" onClick={() => { setKrok(3); scrollToTabBar() }}>← Zpět</button>
                 <button style={{ flex: 1, padding: "16px", background: "linear-gradient(135deg,var(--oc),var(--rd))", color: "#fff", border: "none", borderRadius: 3, fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 15, cursor: "pointer" }}
-                  onClick={() => { if (vysl) { setSimSazba(vysl.zdravaSazba); setSimDny(cas.dnyTydne); setSimHod(cas.hodinyDenne) } setKrok(5); window.scrollTo({ top: 0, behavior: "smooth" }) }}>
+                  onClick={() => { if (vysl) { setSimSazba(vysl.zdravaSazba); setSimDny(cas.dnyTydne); setSimHod(cas.hodinyDenne) } setKrok(5); scrollToTabBar() }}>
                   Zobrazit vyhodnocení sazby →
                 </button>
               </div>
@@ -1107,7 +1131,7 @@ export default function KalkulackaOSVC() {
                 </div>
               </div>
 
-              <button onClick={() => { setKrok(1); setSimSazba(null); setSimDny(null); setSimHod(null); try { localStorage.removeItem('verno_kalk_v5') } catch (e) { } window.scrollTo({ top: 0, behavior: "smooth" }) }}
+              <button onClick={() => { setKrok(1); setSimSazba(null); setSimDny(null); setSimHod(null); try { localStorage.removeItem('verno_kalk_v5') } catch (e) { } scrollToTabBar() }}
                 style={{ width: "100%", padding: "13px", background: "transparent", color: "var(--ink)", border: "1.5px solid var(--ln)", borderRadius: 3, fontFamily: "'Syne',sans-serif", fontWeight: 600, fontSize: 13, cursor: "pointer" }}>
                 ← Resetovat data a začít znovu
               </button>
