@@ -90,7 +90,7 @@ a { color: inherit; }
 
 /* Marquee */
 @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.marquee-inner { display: flex; white-space: nowrap; animation: mq 26s linear infinite; }
+.marquee-inner { display: flex; white-space: nowrap; animation: mq 18s linear infinite; }
 
 /* Float cards */
 @keyframes floatA { 0%,100%{transform:rotate(-4deg) translateY(0)} 40%{transform:rotate(-2.5deg) translateY(-14px)} 75%{transform:rotate(-5deg) translateY(-7px)} }
