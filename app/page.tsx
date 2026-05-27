@@ -48,10 +48,14 @@ export default function Home() {
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section style={{ minHeight: '100svh', display: 'flex', flexDirection: 'column', background: 'var(--cloud)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'radial-gradient(ellipse 65% 55% at 78% 25%,rgba(168,125,184,.09),transparent 70%),radial-gradient(ellipse 45% 40% at 18% 85%,rgba(0,154,196,.07),transparent 65%)' }} />
+        {/* Světelná hloubka */}
+        <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+          <div style={{ position: 'absolute', width: '72vw', height: '72vw', top: '-22%', right: '-20%', background: 'rgba(168,125,184,.11)', filter: 'blur(115px)', animation: 'driftA 58s ease-in-out infinite alternate' }} />
+          <div style={{ position: 'absolute', width: '52vw', height: '52vw', bottom: '-18%', left: '-14%', background: 'rgba(212,198,178,.15)', filter: 'blur(130px)', animation: 'driftB 72s ease-in-out infinite alternate' }} />
+        </div>
         <div className="noise" />
 
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', maxWidth: 1320, margin: '0 auto', width: '100%', padding: 'clamp(90px,10vw,110px) clamp(22px,5vw,62px) clamp(40px,5vw,60px)', gap: 40 }} className="hero-grid-wrap">
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', maxWidth: 1320, margin: '0 auto', width: '100%', padding: 'clamp(90px,10vw,110px) clamp(22px,5vw,62px) clamp(20px,3vw,40px)', gap: 40 }} className="hero-grid-wrap">
 
           {/* Left text */}
           <div style={{ flex: '0 0 52%', maxWidth: '52%', position: 'relative', zIndex: 2 }} className="hero-left-col">
@@ -179,27 +183,6 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }} className="kalk-promo-grid">
             <div>
-              <span className="reveal" style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 7,
-                background: 'var(--capri)',
-                color: 'var(--cloud)',
-                padding: '6px 13px',
-                borderRadius: 999,
-                fontSize: 10.5,
-                fontWeight: 700,
-                letterSpacing: '.14em',
-                textTransform: 'uppercase',
-                marginBottom: 18,
-                fontFamily: "'Syne',sans-serif",
-              }}>
-                <span aria-hidden="true" style={{
-                  width: 4, height: 4, borderRadius: '50%',
-                  background: 'var(--cloud)', display: 'inline-block',
-                }} />
-                Něco navíc
-              </span>
               <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Bezplatná kalkulačka hodinové sazby pro OSVČ</p>
               <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.8vw,3rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 20px' }}>
                 Znát svou reálnou hodinovou sazbu je základ úspěchu.
@@ -357,6 +340,8 @@ export default function Home() {
       <style>{`
         @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
         @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+        @keyframes driftA { 0%{transform:translate(0,0) scale(1)} 100%{transform:translate(-4%,6%) scale(1.07)} }
+        @keyframes driftB { 0%{transform:translate(0,0) scale(1)} 100%{transform:translate(5%,-5%) scale(1.05)} }
         @media(max-width:860px){
           .hero-grid-wrap{flex-direction:column !important;align-items:flex-start !important;padding-top:clamp(68px,11vw,86px) !important}
           .hero-left-col{flex:none !important;max-width:100% !important;width:100% !important}
