@@ -179,6 +179,27 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }} className="kalk-promo-grid">
             <div>
+              <span className="reveal" style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 7,
+                background: 'var(--capri)',
+                color: 'var(--cloud)',
+                padding: '6px 13px',
+                borderRadius: 999,
+                fontSize: 10.5,
+                fontWeight: 700,
+                letterSpacing: '.14em',
+                textTransform: 'uppercase',
+                marginBottom: 18,
+                fontFamily: "'Syne',sans-serif",
+              }}>
+                <span aria-hidden="true" style={{
+                  width: 4, height: 4, borderRadius: '50%',
+                  background: 'var(--cloud)', display: 'inline-block',
+                }} />
+                Něco navíc
+              </span>
               <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Bezplatná kalkulačka hodinové sazby pro OSVČ</p>
               <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.8vw,3rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 20px' }}>
                 Znát svou reálnou hodinovou sazbu je základ úspěchu.
