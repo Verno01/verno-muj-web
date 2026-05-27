@@ -108,7 +108,7 @@ export default function CookieBanner() {
                 Cookies na verno.cz
               </p>
               <p id="cookie-banner-desc" className="cookie-banner-desc">
-                Web používá nezbytné cookies pro provoz a — pokud souhlasíte — analytické cookies pro měření návštěvnosti.{' '}
+                Tento web používá technické cookies pro zajištění svého provozu. S vaším souhlasem využívám také analytické cookies pro měření návštěvnosti.{' '}
                 <Link href="/cookies">Podrobnosti</Link>.
               </p>
             </div>
