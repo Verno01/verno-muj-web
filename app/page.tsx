@@ -51,7 +51,7 @@ export default function Home() {
         {/* Světelná hloubka */}
         <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
           {/* Fialová — vpravo nahoře, viditelná i na mobilu */}
-          <div style={{ position: 'absolute', width: '90vw', height: '90vw', top: '-10%', right: '-10%', background: 'rgba(168,125,184,.22)', filter: 'blur(72px)', animation: 'driftA 58s ease-in-out infinite alternate' }} />
+          <div style={{ position: 'absolute', width: '90vw', height: '90vw', top: '-10%', right: '-10%', background: 'rgba(168,125,184,.13)', filter: 'blur(72px)', animation: 'driftA 58s ease-in-out infinite alternate' }} />
           {/* Teplá — vlevo dole */}
           <div style={{ position: 'absolute', width: '70vw', height: '70vw', bottom: '-10%', left: '-10%', background: 'rgba(200,182,155,.2)', filter: 'blur(80px)', animation: 'driftB 72s ease-in-out infinite alternate' }} />
           {/* Horní tah — jemný světelný přechod přes celou šířku */}
