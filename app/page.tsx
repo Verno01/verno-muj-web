@@ -50,8 +50,12 @@ export default function Home() {
       <section style={{ minHeight: '100svh', display: 'flex', flexDirection: 'column', background: 'var(--cloud)', position: 'relative', overflow: 'hidden' }}>
         {/* Světelná hloubka */}
         <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', width: '72vw', height: '72vw', top: '-22%', right: '-20%', background: 'rgba(168,125,184,.11)', filter: 'blur(115px)', animation: 'driftA 58s ease-in-out infinite alternate' }} />
-          <div style={{ position: 'absolute', width: '52vw', height: '52vw', bottom: '-18%', left: '-14%', background: 'rgba(212,198,178,.15)', filter: 'blur(130px)', animation: 'driftB 72s ease-in-out infinite alternate' }} />
+          {/* Fialová — vpravo nahoře, viditelná i na mobilu */}
+          <div style={{ position: 'absolute', width: '90vw', height: '90vw', top: '-10%', right: '-10%', background: 'rgba(168,125,184,.22)', filter: 'blur(72px)', animation: 'driftA 58s ease-in-out infinite alternate' }} />
+          {/* Teplá — vlevo dole */}
+          <div style={{ position: 'absolute', width: '70vw', height: '70vw', bottom: '-10%', left: '-10%', background: 'rgba(200,182,155,.2)', filter: 'blur(80px)', animation: 'driftB 72s ease-in-out infinite alternate' }} />
+          {/* Horní tah — jemný světelný přechod přes celou šířku */}
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 200, background: 'linear-gradient(180deg, rgba(168,125,184,.07) 0%, transparent 100%)', pointerEvents: 'none' }} />
         </div>
         <div className="noise" />
 
