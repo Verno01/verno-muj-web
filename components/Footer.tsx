@@ -1,7 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 
 export default function Footer() {
   const year = new Date().getFullYear()
+
+  const openCookieSettings = () => {
+    if (typeof window !== 'undefined' && (window as any).openCookieSettings) {
+      ;(window as any).openCookieSettings()
+    }
+  }
+
   return (
     <footer style={{
       background: 'var(--deep)', color: 'rgba(240,237,232,.45)',
@@ -49,6 +58,14 @@ export default function Footer() {
             <Link href="/obchodni-podminky" style={{ color: 'inherit', textDecoration: 'none' }}>Obchodní podmínky</Link>
             <Link href="/ochrana-osobnich-udaju" style={{ color: 'inherit', textDecoration: 'none' }}>Ochrana osobních údajů</Link>
             <Link href="/cookies" style={{ color: 'inherit', textDecoration: 'none' }}>Cookies</Link>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="footer-cookie-btn"
+              aria-label="Otevřít nastavení cookies"
+            >
+              Nastavení cookies
+            </button>
           </div>
         </div>
       </div>
@@ -64,6 +81,24 @@ export default function Footer() {
         }
         .footer-link:hover {
           color: rgba(240,237,232,.88) !important;
+        }
+        .footer-cookie-btn {
+          background: none;
+          border: none;
+          padding: 0;
+          font: inherit;
+          font-size: 11px;
+          color: rgba(240,237,232,.25);
+          cursor: pointer;
+          text-decoration: none;
+          transition: color .2s;
+        }
+        .footer-cookie-btn:hover {
+          color: rgba(240,237,232,.88);
+        }
+        .footer-cookie-btn:focus-visible {
+          outline: 1px solid rgba(240,237,232,.5);
+          outline-offset: 2px;
         }
       `}</style>
     </footer>
