@@ -4,12 +4,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
-const links = [
+type NavLink = { href: string; label: string; accent?: boolean }
+
+const links: NavLink[] = [
   { href: '/',            label: 'Domů' },
   { href: '/nabidka',     label: 'Nabídka' },
   { href: '/jak-pracuji', label: 'Jak pracuji' },
   { href: '/proc-takhle', label: 'Proč takhle' },
-  { href: '/kalkulacka',  label: 'Kalkulačka' },
+  { href: '/kalkulacka',  label: 'Kalkulačka', accent: true },
   { href: '/kontakt',     label: 'Kontakt' },
 ]
 
@@ -43,18 +45,27 @@ export default function Navigation() {
 
           {/* Desktop nav */}
           <nav style={{ display: 'flex', alignItems: 'center', gap: 2 }} className="nav-desktop">
-            {links.map(({ href, label }) => {
+            {links.map(({ href, label, accent }) => {
               const active = here === norm(href)
+              // accent (Kalkulačka) má capri trvale; ostatní řídí active/inactive
+              const color = accent
+                ? 'var(--capri)'
+                : (active ? 'var(--ink)' : 'var(--dim)')
+              const underlineColor = accent ? 'var(--capri)' : 'var(--orchid)'
               return (
                 <Link key={href} href={href} style={{
-                  position: 'relative', fontSize: 13, fontWeight: active ? 600 : 400,
-                  color: active ? 'var(--ink)' : 'var(--dim)', padding: '7px 14px',
-                  textDecoration: 'none', transition: 'color .2s',
+                  position: 'relative',
+                  fontSize: 13,
+                  fontWeight: active ? 600 : (accent ? 600 : 400),
+                  color,
+                  padding: '7px 14px',
+                  textDecoration: 'none',
+                  transition: 'color .2s',
                 }}>
                   {label}
                   <span style={{
                     position: 'absolute', left: 14, right: 14, bottom: 2,
-                    height: 1.5, background: 'var(--orchid)',
+                    height: 1.5, background: underlineColor,
                     transform: active ? 'scaleX(1)' : 'scaleX(0)',
                     transformOrigin: 'left', transition: 'transform .3s cubic-bezier(.16,1,.3,1)',
                   }} />
@@ -87,16 +98,26 @@ export default function Navigation() {
             background: 'none', border: 'none', cursor: 'pointer',
             fontSize: 28, color: 'var(--ink)', padding: 8, lineHeight: 1,
           }}>✕</button>
-          {links.map(({ href, label }) => (
-            <Link key={href} href={href} onClick={() => setOpen(false)} style={{
-              fontFamily: "'Syne',sans-serif",
-              fontSize: 'clamp(2rem,9vw,3.2rem)', fontWeight: 700,
-              color: here === norm(href) ? 'var(--orchid)' : 'var(--ink)',
-              textDecoration: 'none', display: 'block',
-              padding: '14px 0', borderBottom: '1px solid var(--line-s)',
-              letterSpacing: '-.03em',
-            }}>{label}</Link>
-          ))}
+          {links.map(({ href, label, accent }) => {
+            const isHere = here === norm(href)
+            // Na mobilu:
+            //   - Kalkulačka má capri trvale (i když není aktivní)
+            //   - Aktivní stránka mimo Kalkulačku má orchid (jako dosud)
+            //   - Aktivní Kalkulačka má taky capri (nepřepisuje se na orchid)
+            const color = accent
+              ? 'var(--capri)'
+              : (isHere ? 'var(--orchid)' : 'var(--ink)')
+            return (
+              <Link key={href} href={href} onClick={() => setOpen(false)} style={{
+                fontFamily: "'Syne',sans-serif",
+                fontSize: 'clamp(2rem,9vw,3.2rem)', fontWeight: 700,
+                color,
+                textDecoration: 'none', display: 'block',
+                padding: '14px 0', borderBottom: '1px solid var(--line-s)',
+                letterSpacing: '-.03em',
+              }}>{label}</Link>
+            )
+          })}
           <Link href="/kontakt" onClick={() => setOpen(false)} style={{
             display: 'inline-block', marginTop: 28,
             background: 'var(--ink)', color: 'var(--cloud)',
