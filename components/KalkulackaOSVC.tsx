@@ -1159,18 +1159,6 @@ export default function KalkulackaOSVC() {
                 </p>
               </div>
 
-              <div style={{ padding: "22px 24px", background: "#fff", border: "1px solid var(--ln)", borderRadius: 6, marginBottom: 14 }}>
-                <p style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 14, color: "var(--ink)", margin: "0 0 10px" }}>Představuje reálná sazba změnu oproti Vaší stávající praxi?</p>
-                <p style={{ fontSize: 13, lineHeight: 1.75, color: "var(--inks)", margin: "0 0 14px" }}>Mnoho živnostníků si dlouhodobě účtuje méně, než jejich podnikání skutečně stojí. Dobře nastavená prezentace pomáhá získávat klienty, kteří kvalitní práci chápou a respektují.</p>
-                <div style={{ borderTop: "1px solid var(--ln)", paddingTop: 14, display: "flex", alignItems: "flex-start", gap: 14 }}>
-                  <div style={{ flex: 1 }}>
-                    <p style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, color: "var(--ink)", margin: "0 0 4px" }}>Hana Fraňková</p>
-                    <p style={{ fontSize: 12.5, color: "var(--dim)", lineHeight: 1.65, margin: "0 0 12px" }}>Navrhuji prezentační weby pro živnostníky a firmy. Pomáhám jim srozumitelně komunikovat skutečnou hodnotu jejich práce tak, aby získávali zákazníky, kteří odpovídající sazbu akceptují.</p>
-                    <a href="/kontakt" style={{ display: "inline-block", padding: "12px 26px", background: "var(--ink)", color: "#F0EDE8", borderRadius: 2, fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}>Potřebuji nový web →</a>
-                  </div>
-                </div>
-              </div>
-
               <button onClick={() => { setKrok(1); setSimSazba(null); setSimDny(null); setSimHod(null); try { localStorage.removeItem('verno_kalk_v5') } catch (e) { } scrollToTabBar() }}
                 style={{ width: "100%", padding: "13px", background: "transparent", color: "var(--ink)", border: "1.5px solid var(--ln)", borderRadius: 3, fontFamily: "'Syne',sans-serif", fontWeight: 600, fontSize: 13, cursor: "pointer" }}>
                 ← Resetovat data a začít znovu
@@ -1236,22 +1224,20 @@ export default function KalkulackaOSVC() {
         @media print {
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
           @page { size: A4; margin: 0; }
-          body { background: #fff !important; margin: 0; padding: 0; }
-          body > * { display: none !important; }
-          #pdf-page { display: block !important; }
+          body { background: #fff !important; margin: 0 !important; padding: 0 !important; }
+          body * { visibility: hidden !important; }
+          #pdf-page, #pdf-page * { visibility: visible !important; }
           #pdf-page {
-            position: absolute !important;
+            position: fixed !important;
             top: 0 !important; left: 0 !important;
             width: 210mm !important;
-            max-height: 297mm !important;
+            height: 297mm !important;
             overflow: hidden !important;
             padding: 14mm 16mm 12mm !important;
             box-sizing: border-box !important;
             background: #fff !important;
             color: #191714 !important;
-            z-index: 99999 !important;
-            page-break-after: avoid !important;
-            break-after: avoid !important;
+            z-index: 999999 !important;
           }
         }
       `}</style>
