@@ -4,6 +4,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Nabídka | Weby na míru - VERNO',
   description: 'Tvorba prezentačních webů pro živnostníky a firmy. Každý web stavím na míru rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
+  alternates: { canonical: 'https://verno.cz/nabidka' },
+  openGraph: { title: 'Nabídka | Weby na míru - VERNO', description: 'Tvorba prezentačních webů pro živnostníky a firmy. Ceny mezi 12 000 a 60 000 Kč.', url: 'https://verno.cz/nabidka' },
 }
 
 const packages = [
