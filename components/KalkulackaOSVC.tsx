@@ -110,7 +110,47 @@ const fmtH = (n: number) => `${fmt(n)} Kč/h`
 
 /* ─── SUB-KOMPONENTY ─────────────────────────────────────────── */
 function T({ text }: { text: string }) {
-  return <span className="kalk-tip">?<span className="kalk-tb">{text}</span></span>
+  const [visible, setVisible] = useState(false)
+  const [pos, setPos] = useState({ x: 0, y: 0 })
+  const ref = useRef<HTMLSpanElement>(null)
+
+  const show = (e: React.MouseEvent | React.TouchEvent) => {
+    let x = 0, y = 0
+    if ('touches' in e) {
+      x = e.touches[0].clientX
+      y = e.touches[0].clientY
+    } else {
+      x = (e as React.MouseEvent).clientX
+      y = (e as React.MouseEvent).clientY
+    }
+    setPos({ x, y })
+    setVisible(true)
+  }
+  const hide = () => setVisible(false)
+
+  return (
+    <>
+      <span
+        ref={ref}
+        className="kalk-tip"
+        onMouseEnter={show}
+        onMouseMove={show}
+        onMouseLeave={hide}
+        onTouchStart={show}
+        onTouchEnd={e => { e.preventDefault(); setTimeout(hide, 2200) }}
+      >?</span>
+      {visible && typeof window !== 'undefined' && (
+        <span className="kalk-jtip-react" style={{
+          position: "fixed",
+          left: Math.min(pos.x - 120, window.innerWidth - 258),
+          top: pos.y - 10 > 80 ? pos.y - 14 : pos.y + 28,
+          transform: pos.y - 10 > 80 ? "translateY(-100%)" : "none",
+          zIndex: 99999,
+          pointerEvents: "none",
+        }}>{text}</span>
+      )}
+    </>
+  )
 }
 
 function F({ label, hint, tip, value, onChange, sfx = "Kč", auto, rocni }: any) {
@@ -1126,7 +1166,7 @@ export default function KalkulackaOSVC() {
                   <div style={{ flex: 1 }}>
                     <p style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, color: "var(--ink)", margin: "0 0 4px" }}>Hana Fraňková</p>
                     <p style={{ fontSize: 12.5, color: "var(--dim)", lineHeight: 1.65, margin: "0 0 12px" }}>Navrhuji prezentační weby pro živnostníky a firmy. Pomáhám jim srozumitelně komunikovat skutečnou hodnotu jejich práce tak, aby získávali zákazníky, kteří odpovídající sazbu akceptují.</p>
-                    <a href="/kontakt" style={{ display: "inline-block", padding: "12px 26px", background: "var(--ink)", color: "#F0EDE8", borderRadius: 2, fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}>Kontaktovat Hanu →</a>
+                    <a href="/kontakt" style={{ display: "inline-block", padding: "12px 26px", background: "var(--ink)", color: "#F0EDE8", borderRadius: 2, fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}>Potřebuji nový web →</a>
                   </div>
                 </div>
               </div>
@@ -1142,9 +1182,6 @@ export default function KalkulackaOSVC() {
           )}
         </div>
       </div>
-
-      {/* Tooltip */}
-      <div id="kalk-jtip" style={{ position: "fixed", background: "#111", color: "#f0ede8", fontSize: 12, lineHeight: 1.6, padding: "10px 14px", borderRadius: 6, whiteSpace: "pre-wrap", width: 240, maxWidth: "90vw", zIndex: 99999, boxShadow: "0 8px 32px rgba(0,0,0,.5)", fontFamily: "'DM Sans',sans-serif", fontWeight: 400, pointerEvents: "none", display: "none" }} />
 
       <style>{`
         :root {
@@ -1163,8 +1200,8 @@ export default function KalkulackaOSVC() {
         .kalk-iw input { width: 100%; padding: 11px 44px 11px 12px; border: 1.5px solid rgba(25,23,20,.12); border-radius: 3px; font-family: 'DM Sans'; font-size: 15px; color: var(--ink); background: var(--cl); outline: none; transition: border-color .2s; }
         .kalk-iw input:focus { border-color: var(--oc); background: #fff; }
         .kalk-sfx { position: absolute; right: 11px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--dim); pointer-events: none; }
-        .kalk-tip { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; border-radius: 50%; background: rgba(25,23,20,.1); font-size: 9px; font-weight: 700; color: var(--dim); cursor: help; flex-shrink: 0; position: relative; vertical-align: middle; }
-        .kalk-tb { display: none; }
+        .kalk-tip { display: inline-flex; align-items: center; justify-content: center; width: 17px; height: 17px; border-radius: 50%; background: rgba(25,23,20,.1); font-size: 9px; font-weight: 700; color: var(--dim); cursor: help; flex-shrink: 0; position: relative; vertical-align: middle; user-select: none; }
+        .kalk-jtip-react { display: block; background: #111; color: #f0ede8; font-size: 12px; line-height: 1.6; padding: 10px 14px; border-radius: 6px; white-space: pre-wrap; width: 240px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,.5); font-family: 'DM Sans',sans-serif; font-weight: 400; }
         .kalk-atag { display: inline-flex; align-items: center; gap: 4px; background: rgba(168,125,184,.12); border: 1px solid rgba(168,125,184,.22); border-radius: 20px; padding: 2px 9px; font-size: 10.5px; color: var(--oc); font-weight: 500; margin-left: 6px; }
         .kalk-acc-h { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; cursor: pointer; border-bottom: 1px solid var(--ln); user-select: none; }
         .kalk-acc-t { font-family: 'Syne',sans-serif; font-weight: 700; font-size: 13.5px; color: var(--ink); display: flex; align-items: center; gap: 8px; transition: color .2s; }
@@ -1200,54 +1237,25 @@ export default function KalkulackaOSVC() {
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
           @page { size: A4; margin: 0; }
           body { background: #fff !important; margin: 0; padding: 0; }
-          body * { visibility: hidden !important; }
-          #pdf-page, #pdf-page * { visibility: visible !important; }
+          body > * { display: none !important; }
+          #pdf-page { display: block !important; }
           #pdf-page {
-            display: block !important;
-            position: fixed !important;
+            position: absolute !important;
             top: 0 !important; left: 0 !important;
             width: 210mm !important;
-            min-height: 297mm !important;
+            max-height: 297mm !important;
+            overflow: hidden !important;
             padding: 14mm 16mm 12mm !important;
             box-sizing: border-box !important;
             background: #fff !important;
             color: #191714 !important;
             z-index: 99999 !important;
+            page-break-after: avoid !important;
+            break-after: avoid !important;
           }
         }
       `}</style>
 
-      <script dangerouslySetInnerHTML={{ __html: `
-        (function(){
-          var tip = document.getElementById('kalk-jtip');
-          if (!tip) return;
-          document.addEventListener('mouseover', function(e){
-            var el = e.target.closest('.kalk-tip');
-            if(!el) return;
-            var tb = el.querySelector('.kalk-tb');
-            if(!tb) return;
-            tip.textContent = tb.textContent;
-            tip.style.display = 'block';
-          });
-          document.addEventListener('mousemove', function(e){
-            if(tip.style.display === 'none') return;
-            var x = e.clientX, y = e.clientY;
-            var tw = tip.offsetWidth, th = tip.offsetHeight;
-            var vw = window.innerWidth, vh = window.innerHeight;
-            var top = y - th - 14;
-            if(top < 8) top = y + 20;
-            var left = x - tw/2;
-            if(left < 8) left = 8;
-            if(left + tw > vw - 8) left = vw - tw - 8;
-            tip.style.left = left + 'px';
-            tip.style.top = top + 'px';
-          });
-          document.addEventListener('mouseout', function(e){
-            var el = e.target.closest('.kalk-tip');
-            if(el) tip.style.display = 'none';
-          });
-        })();
-      `}} />
     </>
   )
 }
