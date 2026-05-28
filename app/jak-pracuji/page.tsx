@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
   description:
     'Celý postup tvorby webových stránek. Co od vás budu potřebovat a proč. Texty, fotky, logo. Průběžně ukazuji rozpracovanou verzi, ne screenshoty.',
+  alternates: { canonical: 'https://verno.cz/jak-pracuji' },
+  openGraph: {
+    title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
+    description: 'Celý postup tvorby webových stránek. Průběžně ukazuji rozpracovanou verzi, ne screenshoty.',
+    url: 'https://verno.cz/jak-pracuji',
+  },
 }
 
 const steps = [
