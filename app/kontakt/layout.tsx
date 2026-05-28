@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: 'Kontakt | VERNO',
     description: 'Napište mi pár vět o svém projektu. Ozvu se do dvou pracovních dnů.',
     url: 'https://verno.cz/kontakt',
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
   },
 }
 
