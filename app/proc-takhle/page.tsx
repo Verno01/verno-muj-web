@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: 'Proč takhle | Tvorba webu bez starostí - VERNO',
     description: 'Jak stavím webové stránky, proč, a v čem je to pro klienta lepší. Čistý kód, vysoká rychlost a hosting obvykle zdarma.',
     url: 'https://verno.cz/proc-takhle',
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
   },
 }
 
