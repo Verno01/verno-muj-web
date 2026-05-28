@@ -228,10 +228,10 @@ function ShareBlock({ minSazba, zdravaSazba, copied, onCopy, onPrint }: any) {
           {copied ? "✓ Zkopírováno!" : "📋 Zkopírovat výsledek"}
         </button>
         <button onClick={onPrint} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 18px", background: "rgba(240,237,232,.1)", border: "1px solid rgba(240,237,232,.2)", borderRadius: 3, color: "#F0EDE8", fontFamily: "'Syne',sans-serif", fontWeight: 600, fontSize: 12.5, cursor: "pointer" }}>
-          📄 Stáhnout jako PDF
+          📄 Exportovat výsledky
         </button>
       </div>
-      <p style={{ fontSize: 11, color: "rgba(240,237,232,.3)", margin: "8px 0 0" }}>Soubor se stáhne přímo do Vašeho zařízení.</p>
+      <p style={{ fontSize: 11, color: "rgba(240,237,232,.3)", margin: "8px 0 0" }}>Otevře se stránka s výsledky — klikněte na tlačítko ⬇ Uložit jako PDF.</p>
     </div>
   )
 }
@@ -422,8 +422,12 @@ export default function KalkulackaOSVC() {
   .odvod-l{font-size:8px;color:#7A7268}
   .footer{border-top:1px solid #e2dcd1;padding-top:8px;margin-top:16px}
   .footer p{font-size:7.5px;color:#9a9288;line-height:1.65}
+  .save-btn{position:fixed;bottom:24px;right:24px;background:#191714;color:#F0EDE8;border:none;border-radius:4px;padding:12px 22px;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.25);letter-spacing:.03em}
+  .save-btn:hover{background:#2e2b26}
+  @media print{.save-btn{display:none!important} @page{size:A4;margin:0} body{width:210mm;padding:14mm 16mm 12mm}}
 </style>
 </head><body>
+<button class="save-btn" onclick="window.print()">⬇ Uložit jako PDF</button>
 <div class="hdr">
   <div><div class="logo">VERNO</div><div class="logo-sub">Kalkulačka reálné hodinové sazby OSVČ</div></div>
   <div class="hdr-r"><div>Datum výpočtu: ${datum}</div><div style="margin-top:2px">verno.cz/kalkulacka</div></div>
@@ -469,125 +473,12 @@ ${dan.rezim !== "pausalni" ? `
 </div>`}
 <div class="footer"><p>Výpočet vychází z veřejně dostupných parametrů OSVČ pro rok 2026 a slouží jako orientační ekonomický model. Výstupy mají informativní charakter a nenahrazují daňové, účetní či právní poradenství.</p></div>
 </body></html>`
-    // Načíst jsPDF z CDN a sestavit PDF přímo v prohlížeči
-    const loadJsPDF = (): Promise<any> => new Promise((resolve, reject) => {
-      if ((window as any).jspdf) { resolve((window as any).jspdf.jsPDF); return }
-      const s = document.createElement('script')
-      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'
-      s.onload = () => resolve((window as any).jspdf.jsPDF)
-      s.onerror = reject
-      document.head.appendChild(s)
-    })
-
-    loadJsPDF().then((JsPDF: any) => {
-      const doc = new JsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' })
-      const lm = 16, tm = 14, pw = 210 - lm * 2
-      let y = tm
-
-      // Fonty — jsPDF má zabudované Helvetica
-      const syne = 'helvetica'
-
-      // Pomocné funkce
-      const txt = (text: string, x: number, yy: number, opts: any = {}) => {
-        doc.setFont(opts.font || 'helvetica', opts.style || 'normal')
-        doc.setFontSize(opts.size || 9)
-        doc.setTextColor(opts.color || '#191714')
-        doc.text(text, x, yy, { align: opts.align || 'left', maxWidth: opts.maxWidth })
-      }
-      const line = (x1: number, y1: number, x2: number, y2: number, color = '#191714', w = 0.3) => {
-        doc.setDrawColor(color); doc.setLineWidth(w); doc.line(x1, y1, x2, y2)
-      }
-      const rect = (x: number, yy: number, w: number, h: number, color: string, fill = true) => {
-        if (fill) { doc.setFillColor(color); doc.rect(x, yy, w, h, 'F') }
-        else { doc.setDrawColor(color); doc.rect(x, yy, w, h, 'S') }
-      }
-
-      // ── HLAVIČKA ──
-      txt('VERNO', lm, y, { font: syne, style: 'bold', size: 18, color: '#191714' })
-      txt('Kalkulačka reálné hodinové sazby OSVČ', lm, y + 5, { size: 7.5, color: '#7A7268' })
-      txt('Datum výpočtu: ' + datum, lm + pw, y, { size: 8, color: '#7A7268', align: 'right' })
-      txt('verno.cz/kalkulacka', lm + pw, y + 5, { size: 8, color: '#7A7268', align: 'right' })
-      y += 10
-      line(lm, y, lm + pw, y, '#191714', 0.5)
-      y += 8
-
-      // ── 3 SAZBY ──
-      const bw = (pw - 8) / 3
-      sazby.forEach((r, i) => {
-        const bx = lm + i * (bw + 4)
-        rect(bx, y, bw, 3, r.c)
-        // Rámeček
-        doc.setDrawColor(r.c); doc.setLineWidth(0.5)
-        doc.rect(bx, y, bw, 32, 'S')
-        txt(r.l, bx + 4, y + 8, { size: 7, color: r.c, style: 'bold' })
-        txt(fmt(r.s) + ' Kč/h', bx + 4, y + 16, { font: syne, style: 'bold', size: 14, color: '#191714' })
-        txt(r.desc, bx + 4, y + 21, { size: 7, color: '#7A7268', maxWidth: bw - 8 })
-        line(bx + 2, y + 25, bx + bw - 2, y + 25, '#f0ede8', 0.2)
-        txt('Příjem / měs.', bx + 4, y + 29, { size: 7, color: '#7A7268' })
-        txt(fmt(r.s * cas2.fakturHodinMesic) + ' Kč', bx + bw - 4, y + 29, { size: 7.5, style: 'bold', color: '#191714', align: 'right' })
-      })
-      y += 38
-
-      // ── NÁKLADY + KAPACITA ──
-      const hw = (pw - 8) / 2
-      // Levý sloupec
-      txt('Měsíční struktura nákladů', lm, y + 4, { font: syne, style: 'bold', size: 9, color: '#191714' })
-      line(lm, y + 6, lm + hw, y + 6, '#e2dcd1', 0.2)
-      let ly = y + 11
-      ;[{l:"Osobní náklady",v:celkOs,c:"#A87DB8"},{l:"Provozní náklady",v:celkPr,c:"#009AC4"},{l:"Daně a odvody",v:Math.round(vysl.odvody.mesicne),c:"#E0304A"}].forEach(r => {
-        rect(lm, ly - 2.5, 3, 3, r.c)
-        txt(r.l, lm + 5, ly, { size: 8, color: '#3A3630' })
-        txt(fmt(r.v) + ' Kč', lm + hw, ly, { size: 8, style: 'bold', color: '#191714', align: 'right' })
-        ly += 6
-      })
-      line(lm, ly, lm + hw, ly, '#e2dcd1', 0.2)
-      ly += 4
-      txt('Celkem musíte vydělat', lm, ly, { size: 8, style: 'bold', color: '#191714' })
-      txt(fmt(vysl.celkMesicVcOdvodu) + ' Kč', lm + hw, ly, { size: 9, style: 'bold', color: '#191714', align: 'right' })
-
-      // Pravý sloupec
-      const rx = lm + hw + 8
-      txt('Pracovní fond a kapacita', rx, y + 4, { font: syne, style: 'bold', size: 9, color: '#191714' })
-      line(rx, y + 6, rx + hw, y + 6, '#e2dcd1', 0.2)
-      let ry = y + 11
-      ;[{l:"Prac. dny/týden",v:cas.dnyTydne+" dní"},{l:"Hodin denně",v:cas.hodinyDenne+" h"},{l:"Dovolená",v:cas.dovolena+" dní/rok"},{l:"Nemoc",v:cas.nemoc+" dní/rok"},{l:"Fakturovatelnost",v:cas.fakturovatelnost+" %"},{l:"Fakt. hodin / měsíc",v:Math.round(cas2.fakturHodinMesic)+" h"}].forEach(r => {
-        txt(r.l, rx, ry, { size: 8, color: '#7A7268' })
-        txt(r.v, rx + hw, ry, { size: 8, style: 'bold', color: '#191714', align: 'right' })
-        ry += 5
-      })
-      y += 50
-
-      // ── ODVODY ──
-      rect(lm, y, pw, dan.rezim !== "pausalni" ? 20 : 14, '#f8f6f2')
-      txt('Daňový režim: ' + rezimLabel, lm + 4, y + 5, { font: syne, style: 'bold', size: 8.5, color: '#191714' })
-      if (dan.rezim !== "pausalni") {
-        const ow = pw / 3
-        ;[{l:"Zdravotní pojištění",v:Math.round(vysl.odvody.zdravotni/12)},{l:"Sociální pojištění",v:Math.round(vysl.odvody.socialni/12)},{l:"Daň z příjmu",v:Math.round(vysl.odvody.dan/12)}].forEach((o, i) => {
-          const ox = lm + i * ow + ow / 2
-          txt(fmt(o.v) + ' Kč', ox, y + 12, { size: 10, style: 'bold', color: '#191714', align: 'center' })
-          txt(o.l, ox, y + 17, { size: 7, color: '#7A7268', align: 'center' })
-        })
-        y += 24
-      } else {
-        txt('Fixní platba státu: ' + fmt(vysl.odvody.mesicne) + ' Kč/měsíc (zahrnuje daň, sociální i zdravotní)', lm + 4, y + 10, { size: 8.5, color: '#3A3630' })
-        y += 18
-      }
-
-      // ── FOOTER ──
-      y += 6
-      line(lm, y, lm + pw, y, '#e2dcd1', 0.2)
-      txt('Výpočet vychází z veřejně dostupných parametrů OSVČ pro rok 2026 a slouží jako orientační ekonomický model. Nenahrazuje daňové ani účetní poradenství.', lm, y + 5, { size: 6.5, color: '#9a9288', maxWidth: pw })
-
-      doc.save('verno-sazba-osvc.pdf')
-    }).catch(() => {
-      // Fallback: pokud CDN selže, otevřeme okno pro tisk
-      const w = window.open('', '_blank', 'width=900,height=700')
-      if (!w) return
-      w.document.write(html)
-      w.document.close()
-      w.focus()
-      setTimeout(() => { w.print() }, 600)
-    })
+    // Otevřít čistou HTML stránku s výsledky — uživatel uloží přes Ctrl+P nebo tlačítko
+    const w = window.open('', '_blank', 'width=860,height=720')
+    if (!w) return
+    w.document.write(html)
+    w.document.close()
+    w.focus()
   }
 
   const handleCopy = () => {
