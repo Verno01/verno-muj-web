@@ -319,21 +319,17 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="reveal" style={{ position: 'relative', overflow: 'hidden', background: '#1a1015' }}>
+          <div className="reveal" style={{ position: 'relative', overflow: 'hidden', background: 'var(--cloud)' }}>
             <Image
-              src="/verno_weby-pro-firmy_hana.jpg"
+              src="/verno_weby-pro-firmy_hana.png"
               alt="Hana Fraňková – tvorba webů VERNO"
               fill
-              style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'saturate(0.82) contrast(1.06) brightness(1.02)' }}
+              style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
             />
-            {/* Fialový tónový přeliv – sladí s orchidejí webu */}
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(168,125,184,.13) 0%,rgba(200,150,80,.06) 60%,transparent 100%)', pointerEvents: 'none', mixBlendMode: 'multiply' as const }} />
             {/* Přechod doleva – zapuštění do stránky */}
-            <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 90, background: 'linear-gradient(to right,var(--cloud),transparent)', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 80, background: 'linear-gradient(to right,var(--cloud),transparent)', pointerEvents: 'none' }} />
             {/* Přechod dolů */}
-            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '30%', background: 'linear-gradient(to top,var(--cloud),transparent)', pointerEvents: 'none' }} />
-            {/* Přechod nahoru – jemný */}
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 100, background: 'linear-gradient(to bottom,rgba(168,125,184,.15),transparent)', pointerEvents: 'none' }} />
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '20%', background: 'linear-gradient(to top,var(--cloud),transparent)', pointerEvents: 'none' }} />
           </div>
         </div>
       </section>
