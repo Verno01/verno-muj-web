@@ -98,9 +98,9 @@ export default function Nabidka() {
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nabídka</p>
-          <h1 className="page-hero-title">Pět typů webů.<br />Každý pro jiný záměr.</h1>
+          <h1 className="page-hero-title">Vaše zadání, mé provedení.<br />Weby bez šablon.</h1>
           <p className="page-hero-sub">
-            Každý prezentační web stavím na míru rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
+            Seznam webů níže slouží jako odrazový můstek. Každý projekt skládám podle konkrétního zadání a obsahu. Cena je vždy odsouhlasena předem.
           </p>
         </div>
       </div>
