@@ -7,8 +7,11 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.verno.cz'),
-  title: { default: 'VERNO — Prezentační weby pro živnostníky a malé firmy', template: '%s | VERNO' },
-  description: 'Hana Fraňková. Navrhuji a stavím prezentační weby pro živnostníky, řemeslníky a malé firmy. Sama, od prvního kontaktu po předání hotového webu.',
+  title: {
+    default: 'VERNO — Prezentační weby',
+    template: '%s | VERNO',
+  },
+  description: 'Na míru, bez šablon, bez prostředníků. Tvorba moderních webových prezentací pro firmy a živnostníky. verno.cz',
   keywords: ['tvorba webů', 'prezentační web', 'web pro živnostníka', 'webdesign', 'Hana Fraňková', 'VERNO'],
   authors: [{ name: 'Hana Fraňková', url: 'https://www.verno.cz' }],
   icons: {
@@ -16,13 +19,27 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    type: 'website', locale: 'cs_CZ', url: 'https://www.verno.cz',
+    type: 'website',
+    locale: 'cs_CZ',
+    url: 'https://www.verno.cz',
     siteName: 'VERNO',
-    title: 'VERNO — Prezentační weby pro živnostníky a malé firmy',
-    description: 'Navrhuji a stavím prezentační weby. Sama, od prvního kontaktu po předání.',
-    images: [{ url: '/og-verno.jpg', width: 1200, height: 630 }],
+    title: 'VERNO — Prezentační weby',
+    description: 'Na míru, bez šablon, bez prostředníků. verno.cz',
+    images: [
+      {
+        url: '/og-verno-2.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'VERNO — Tvorba moderních webových prezentací',
+      },
+    ],
   },
-  twitter: { card: 'summary_large_image', images: ['/og-verno.jpg'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'VERNO — Prezentační weby',
+    description: 'Na míru, bez šablon, bez prostředníků. verno.cz',
+    images: ['/og-verno-2.jpg'],
+  },
   robots: { index: true, follow: true },
 }
 
