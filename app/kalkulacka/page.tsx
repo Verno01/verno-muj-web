@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kalkulačka hodinové sazby OSVČ - VERNO',
     description: 'Zjistěte svou reálnou hodinovou sazbu. Zohledňuje daně, odvody i skutečně fakturovatelný čas.',
-    url: 'https://www.verno.cz/kalkulacka',
+    url: 'https://verno.cz/kalkulacka',
   },
   alternates: {
-    canonical: 'https://www.verno.cz/kalkulacka',
+    canonical: 'https://verno.cz/kalkulacka',
   },
 }
 
@@ -64,7 +64,7 @@ export default function KalkulackaPage() {
               '@context': 'https://schema.org',
               '@type': 'WebApplication',
               name: 'Kalkulačka hodinové sazby OSVČ - VERNO',
-              url: 'https://www.verno.cz/kalkulacka',
+              url: 'https://verno.cz/kalkulacka',
               description: 'Bezplatná kalkulačka pro výpočet reálné hodinové sazby OSVČ. Zohledňuje daně, odvody, výdaje a fakturovatelný čas.',
               applicationCategory: 'FinanceApplication',
               operatingSystem: 'Web',
