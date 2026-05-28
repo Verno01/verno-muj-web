@@ -97,21 +97,21 @@ export default function Home() {
                 {[0,1,2].map(k => <span key={k} style={{ width: 7, height: 7, borderRadius: '50%', background: 'rgba(201,168,76,.45)', flexShrink: 0 }} />)}
                 <span style={{ marginLeft: 6, fontSize: 7.5, color: 'rgba(201,168,76,.3)', letterSpacing: '.04em' }}>5class.cz</span>
               </div>
-              <Image src="/screens/5class-card.jpg" alt="5class.cz" width={260} height={149} style={{ objectFit: 'cover', objectPosition: 'top' }} />
+              <Image src="/screens/5class-card.jpg" alt="Ukázka webu pro VIP dopravu s řidičem 5class.cz – tvorba VERNO" width={260} height={149} style={{ objectFit: 'cover', objectPosition: 'top' }} />
             </div>
             <div className="fl-b" style={{ position: 'absolute', top: '38%', left: 0, width: 242, height: 166, zIndex: 2, background: '#0c0a1a', borderRadius: 10, overflow: 'hidden', boxShadow: '0 22px 60px rgba(0,0,0,.38),0 5px 16px rgba(0,0,0,.22)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '8px 12px', background: '#0e0c1e', borderBottom: '1px solid rgba(180,80,255,.1)' }}>
                 {[0,1,2].map(k => <span key={k} style={{ width: 7, height: 7, borderRadius: '50%', background: 'rgba(180,80,255,.3)', flexShrink: 0 }} />)}
                 <span style={{ marginLeft: 6, fontSize: 7.5, color: 'rgba(180,150,255,.25)', letterSpacing: '.04em' }}>ambientelight.eu</span>
               </div>
-              <Image src="/screens/ambiente-card.jpg" alt="ambientelight.eu" width={242} height={137} style={{ objectFit: 'cover', objectPosition: 'top' }} />
+              <Image src="/screens/ambiente-card.jpg" alt="Web Ambiente Light – světelný design, v procesu tvorby VERNO" width={242} height={137} style={{ objectFit: 'cover', objectPosition: 'top' }} />
             </div>
             <div className="fl-c" style={{ position: 'absolute', bottom: 10, left: '28%', width: 248, height: 168, zIndex: 1, background: '#fff', borderRadius: 10, overflow: 'hidden', boxShadow: '0 22px 56px rgba(210,70,0,.2),0 5px 16px rgba(0,0,0,.14)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '8px 12px', background: '#fafafa', borderBottom: '1px solid rgba(0,0,0,.07)' }}>
                 {[0,1,2].map(k => <span key={k} style={{ width: 7, height: 7, borderRadius: '50%', background: 'rgba(230,90,10,.4)', flexShrink: 0 }} />)}
                 <span style={{ marginLeft: 6, fontSize: 7.5, color: 'rgba(100,80,60,.35)', letterSpacing: '.04em' }}>rovino.cz</span>
               </div>
-              <Image src="/screens/rovino-card.jpg" alt="rovino.cz" width={248} height={139} style={{ objectFit: 'cover', objectPosition: 'top' }} />
+              <Image src="/screens/rovino-card.jpg" alt="Ukázka webu pro zemní a stavební práce Rovino – tvorba VERNO" width={248} height={139} style={{ objectFit: 'cover', objectPosition: 'top' }} />
             </div>
           </div>
         </div>
@@ -274,9 +274,9 @@ export default function Home() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }} className="refs-grid">
             {[
-              { img: '/screens/5class.jpg',   name: '5class.cz',        type: 'VIP doprava s řidičem, Praha · 3 jazyky',   href: 'https://5class.cz' },
-              { img: '/screens/rovino.jpg',   name: 'rovino.cz',        type: 'Zemní práce, jižní Čechy · Firemní web',    href: 'https://rovino.cz' },
-              { img: '/screens/ambiente.jpg', name: 'ambientelight.eu', type: 'Světelný design · Prezentační web',          href: 'https://ambientelight.eu' },
+              { img: '/screens/5class.jpg',   name: 'Web pro VIP dopravu s řidičem 5class.cz',        type: 'VIP doprava s řidičem, Praha · 3 jazyky',   href: 'https://5class.cz' },
+              { img: '/screens/rovino.jpg',   name: 'Web pro zemní a stavební práce Rovino',        type: 'Zemní práce, jižní Čechy · Firemní web',    href: 'https://rovino.cz' },
+              { img: '/screens/ambiente.jpg', name: 'Web Ambiente Light – světelný design',          type: 'Světelný design · Prezentační web',          href: 'https://ambientelight.eu' },
             ].map((r, i) => (
               <a key={i} href={r.href} target="_blank" rel="noopener" className={`reveal d${i + 1}`}
                 style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', border: '1px solid rgba(240,237,232,.08)', transition: 'transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s', background: 'rgba(255,255,255,.03)', textDecoration: 'none' }}
