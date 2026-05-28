@@ -4,6 +4,12 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Proč takhle | Tvorba webu bez starostí - VERNO',
   description: 'Jak stavím webové stránky, proč, a v čem je to pro klienta lepší. Čistý kód, vysoká rychlost, stabilita a hosting obvykle zdarma.',
+  alternates: { canonical: 'https://verno.cz/proc-takhle' },
+  openGraph: {
+    title: 'Proč takhle | Tvorba webu bez starostí - VERNO',
+    description: 'Jak stavím webové stránky, proč, a v čem je to pro klienta lepší. Čistý kód, vysoká rychlost a hosting obvykle zdarma.',
+    url: 'https://verno.cz/proc-takhle',
+  },
 }
 
 const reasons = [
