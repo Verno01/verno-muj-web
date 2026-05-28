@@ -309,13 +309,13 @@ export default function Home() {
             </h2>
             <div className="reveal d2">
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
-                Weby tvořím sama. Od první zprávy po spuštění webu komunikujete přímo se mnou.
+                Od úvodního zadání po spuštění komunikujete přímo se mnou. Nedelaguji práci na nikoho dalšího.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
-                Záleží mi nejen na tom, jak web vypadá, ale hlavně jak působí. Jestli je přehledný, důvěryhodný a jestli se v něm člověk rychle zorientuje.
+                Věřím, že dobrý web dělá hlavně přehlednost a srozumitelnost.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 28px' }}>
-                Nedělám desítky webů měsíčně. Na každém projektu si dávám záležet, protože výsledný web reprezentuje vás i moji práci.
+                Nečekejte ode mě pásovou výrobu. Každému projektu věnuji čas a plnou pozornost, protože výsledný web reprezentuje vás i mou práci.
               </p>
             </div>
           </div>
