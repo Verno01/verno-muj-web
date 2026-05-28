@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vasedomena.cz/sitemap.xml
+Sitemap: https://verno.cz/sitemap.xml
