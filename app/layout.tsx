@@ -6,14 +6,17 @@ import CookieBanner from '@/components/CookieBanner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.verno.cz'),
+  metadataBase: new URL('https://verno.cz'),
+  alternates: {
+    canonical: 'https://verno.cz',
+  },
   title: {
     default: 'VERNO - Prezentační weby',
     template: '%s | VERNO',
   },
   description: 'Tvorba webových prezentací pro firmy a živnostníky. Na míru, bez šablon, bez prostředníků.',
   keywords: ['tvorba webů', 'prezentační web', 'web pro živnostníka', 'webdesign', 'Hana Fraňková', 'VERNO'],
-  authors: [{ name: 'Hana Fraňková', url: 'https://www.verno.cz' }],
+  authors: [{ name: 'Hana Fraňková', url: 'https://verno.cz' }],
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
-    url: 'https://www.verno.cz',
+    url: 'https://verno.cz',
     siteName: 'VERNO',
     title: 'VERNO - Prezentační weby',
     description: 'Tvorba webových prezentací pro firmy a živnostníky.',
@@ -54,13 +57,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org', '@type': 'ProfessionalService',
-          '@id': 'https://www.verno.cz/#business',
+          '@id': 'https://verno.cz/#business',
           name: 'VERNO - prezentační weby',
           description: 'Tvorba webů pro živnostníky, řemeslníky a malé firmy.',
-          url: 'https://www.verno.cz', email: 'info@verno.cz', telephone: '+420705911941',
+          url: 'https://verno.cz', email: 'info@verno.cz', telephone: '+420705911941',
           founder: { '@type': 'Person', name: 'Hana Fraňková' },
           areaServed: { '@type': 'Country', name: 'Česká republika' },
-          address: { '@type': 'PostalAddress', addressLocality: 'Lišov', addressCountry: 'CZ' },
+          address: { '@type': 'PostalAddress', addressLocality: 'Lomnice nad Lužnicí', addressCountry: 'CZ' },
           priceRange: '12 000 – 60 000 Kč', knowsLanguage: ['cs', 'en', 'de'],
         }) }} />
         <Navigation />
