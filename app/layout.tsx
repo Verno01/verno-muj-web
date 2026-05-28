@@ -8,10 +8,10 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.verno.cz'),
   title: {
-    default: 'VERNO — Prezentační weby',
+    default: 'VERNO - Prezentační weby',
     template: '%s | VERNO',
   },
-  description: 'Na míru, bez šablon, bez prostředníků. Tvorba moderních webových prezentací pro firmy a živnostníky. verno.cz',
+  description: 'Tvorba webových prezentací pro firmy a živnostníky. Na míru, bez šablon, bez prostředníků.',
   keywords: ['tvorba webů', 'prezentační web', 'web pro živnostníka', 'webdesign', 'Hana Fraňková', 'VERNO'],
   authors: [{ name: 'Hana Fraňková', url: 'https://www.verno.cz' }],
   icons: {
@@ -23,21 +23,21 @@ export const metadata: Metadata = {
     locale: 'cs_CZ',
     url: 'https://www.verno.cz',
     siteName: 'VERNO',
-    title: 'VERNO — Prezentační weby',
-    description: 'Na míru, bez šablon, bez prostředníků. verno.cz',
+    title: 'VERNO - Prezentační weby',
+    description: 'Tvorba webových prezentací pro firmy a živnostníky.',
     images: [
       {
         url: '/og-verno-2.jpg',
         width: 1200,
         height: 630,
-        alt: 'VERNO — Tvorba moderních webových prezentací',
+        alt: 'VERNO - Tvorba moderních webových prezentací',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VERNO — Prezentační weby',
-    description: 'Na míru, bez šablon, bez prostředníků. verno.cz',
+    title: 'VERNO - Prezentační weby',
+    description: 'Tvorba webových prezentací pro firmy a živnostníky.',
     images: ['/og-verno-2.jpg'],
   },
   robots: { index: true, follow: true },
@@ -55,8 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org', '@type': 'ProfessionalService',
           '@id': 'https://www.verno.cz/#business',
-          name: 'VERNO — Hana Fraňková',
-          description: 'Tvorba prezentačních webů pro živnostníky, řemeslníky a malé firmy.',
+          name: 'VERNO - prezentační weby',
+          description: 'Tvorba webů pro živnostníky, řemeslníky a malé firmy.',
           url: 'https://www.verno.cz', email: 'info@verno.cz', telephone: '+420705911941',
           founder: { '@type': 'Person', name: 'Hana Fraňková' },
           areaServed: { '@type': 'Country', name: 'Česká republika' },
