@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
     description: 'Celý postup tvorby webových stránek. Průběžně ukazuji rozpracovanou verzi, ne screenshoty.',
     url: 'https://verno.cz/jak-pracuji',
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
   },
 }
 
