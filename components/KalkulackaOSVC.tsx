@@ -211,113 +211,6 @@ function Acc({ title, sum, icon, open, onToggle, children }: any) {
   )
 }
 
-/* ─── PDF STRÁNKA ────────────────────────────────────────────── */
-function PrintPage({ vysl, cas2, cas, celkOs, celkPr, dan, slevy }: any) {
-  if (!vysl) return null
-  const now = new Date()
-  const datum = now.toLocaleDateString('cs-CZ')
-  const barvaMini = "#E0304A", barvaZdrava = "#7AB830", barvaRoz = "#A87DB8"
-  const rezimLabel = dan.rezim === "pausalni" ? `Paušální daň ${dan.pausPasmo}. pásmo` : dan.rezim === "skutecne" ? "Skutečné výdaje" : `Výdajový paušál ${dan.pausalPct} %`
-  return (
-    <div id="pdf-page" style={{ display: "none" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", borderBottom: "2px solid #191714", paddingBottom: 10, marginBottom: 16 }}>
-        <div>
-          <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 22, letterSpacing: ".25em", color: "#191714" }}>VERNO</div>
-          <div style={{ fontSize: 10, color: "#7A7268", letterSpacing: ".12em", textTransform: "uppercase", marginTop: 2 }}>Kalkulačka reálné hodinové sazby OSVČ</div>
-        </div>
-        <div style={{ textAlign: "right", fontSize: 10, color: "#7A7268" }}>
-          <div>Datum výpočtu: {datum}</div>
-          <div style={{ marginTop: 2 }}>verno.cz/kalkulacka</div>
-        </div>
-      </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 14 }}>
-        {[
-          { l: "Minimální sazba", s: vysl.minSazba, c: barvaMini, desc: "Pokrývá náklady a odvody." },
-          { l: "Zdravá sazba", s: vysl.zdravaSazba, c: barvaZdrava, desc: "Doporučené pásmo +30% rezerva." },
-          { l: "Rozvojová sazba", s: vysl.komfortSazba, c: barvaRoz, desc: "Rozvojová hodnota +65% rezerva." },
-        ].map(r => (
-          <div key={r.l} style={{ border: `2px solid ${r.c}`, borderRadius: 6, padding: "10px 12px", position: "relative" }}>
-            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: r.c, borderRadius: "6px 6px 0 0" }} />
-            <div style={{ fontSize: 8.5, fontWeight: 700, letterSpacing: ".12em", textTransform: "uppercase", color: r.c, marginBottom: 4, marginTop: 2 }}>{r.l}</div>
-            <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 22, color: "#191714", letterSpacing: "-.04em", marginBottom: 4 }}>{fmt(r.s)} Kč/h</div>
-            <div style={{ fontSize: 8.5, color: "#7A7268", lineHeight: 1.4 }}>{r.desc}</div>
-            <div style={{ marginTop: 6, display: "flex", justifyContent: "space-between", borderTop: "1px solid #f0ede8", paddingTop: 5 }}>
-              <span style={{ fontSize: 8.5, color: "#7A7268" }}>Hrubý příjem / měs.</span>
-              <span style={{ fontSize: 9, fontWeight: 700, color: "#191714" }}>{fmt(r.s * cas2.fakturHodinMesic)} Kč</span>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 12 }}>
-        <div>
-          <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 11, color: "#191714", marginBottom: 8, borderBottom: "1px solid #e2dcd1", paddingBottom: 4 }}>Měsíční struktura nákladů</div>
-          {[
-            { l: "Osobní náklady", v: celkOs, c: "#A87DB8" },
-            { l: "Provozní náklady", v: celkPr, c: "#009AC4" },
-            { l: "Daně a odvody", v: Math.round(vysl.odvody.mesicne), c: "#E0304A" },
-          ].map(r => (
-            <div key={r.l} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 5 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                <div style={{ width: 8, height: 8, borderRadius: 2, background: r.c, flexShrink: 0 }} />
-                <span style={{ fontSize: 9, color: "#3A3630" }}>{r.l}</span>
-              </div>
-              <span style={{ fontSize: 9.5, fontWeight: 700, color: "#191714" }}>{fmt(r.v)} Kč</span>
-            </div>
-          ))}
-          <div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid #e2dcd1", paddingTop: 5, marginTop: 5 }}>
-            <span style={{ fontSize: 9, fontWeight: 700, color: "#191714" }}>Celkem musíte vydělat</span>
-            <span style={{ fontSize: 10, fontWeight: 800, color: "#191714" }}>{fmt(vysl.celkMesicVcOdvodu)} Kč</span>
-          </div>
-        </div>
-        <div>
-          <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 11, color: "#191714", marginBottom: 8, borderBottom: "1px solid #e2dcd1", paddingBottom: 4 }}>Pracovní fond a kapacita</div>
-          {[
-            { l: "Pracovní dny/týden", v: cas.dnyTydne + " dní" },
-            { l: "Hodin denně", v: cas.hodinyDenne + " h" },
-            { l: "Dovolená", v: cas.dovolena + " dní/rok" },
-            { l: "Nemoc (odhad)", v: cas.nemoc + " dní/rok" },
-            { l: "Fakturovatelnost", v: cas.fakturovatelnost + " %" },
-            { l: "Fakt. hodin / měsíc", v: Math.round(cas2.fakturHodinMesic) + " h" },
-          ].map(r => (
-            <div key={r.l} style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-              <span style={{ fontSize: 9, color: "#7A7268" }}>{r.l}</span>
-              <span style={{ fontSize: 9.5, fontWeight: 600, color: "#191714" }}>{r.v}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-      {dan.rezim !== "pausalni" && (
-        <div style={{ background: "#f8f6f2", borderRadius: 5, padding: "9px 12px", marginBottom: 10 }}>
-          <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 10, color: "#191714", marginBottom: 6 }}>Odvody státu / měsíc (při minimální sazbě) · Daňový režim: {rezimLabel}</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 6 }}>
-            {[
-              { l: "Zdravotní pojištění", v: Math.round(vysl.odvody.zdravotni / 12) },
-              { l: "Sociální pojištění", v: Math.round(vysl.odvody.socialni / 12) },
-              { l: "Daň z příjmu", v: Math.round(vysl.odvody.dan / 12) },
-            ].map(o => (
-              <div key={o.l} style={{ textAlign: "center" }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: "#191714" }}>{fmt(o.v)} Kč</div>
-                <div style={{ fontSize: 8, color: "#7A7268" }}>{o.l}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-      {dan.rezim === "pausalni" && (
-        <div style={{ background: "#f8f6f2", borderRadius: 5, padding: "9px 12px", marginBottom: 10 }}>
-          <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 10, color: "#191714", marginBottom: 4 }}>Daňový režim: {rezimLabel}</div>
-          <div style={{ fontSize: 10, color: "#3A3630" }}>Fixní platba státu: <strong>{fmt(vysl.odvody.mesicne)} Kč/měsíc</strong> (zahrnuje daň, sociální i zdravotní)</div>
-        </div>
-      )}
-      <div style={{ borderTop: "1px solid #e2dcd1", paddingTop: 8, marginTop: 16 }}>
-        <p style={{ fontSize: 7.5, color: "#9a9288", lineHeight: 1.65, margin: 0 }}>
-          Výpočet vychází z veřejně dostupných parametrů OSVČ pro rok 2026 a slouží jako orientační ekonomický model. Výstupy mají informativní charakter a nenahrazují daňové, účetní či právní poradenství.
-        </p>
-      </div>
-    </div>
-  )
-}
-
 /* ─── SHARE BLOCK ────────────────────────────────────────────── */
 function ShareBlock({ minSazba, zdravaSazba, copied, onCopy, onPrint }: any) {
   return (
@@ -483,14 +376,105 @@ export default function KalkulackaOSVC() {
   const cas2 = vysl?.cas || vypocitejRealneCasy(cas)
 
   const handlePrint = () => {
-    const el = document.getElementById('pdf-page')
-    if (!el) return
-    // Zobrazit #pdf-page, spustit tisk, pak schovat
-    el.style.display = 'block'
-    setTimeout(() => {
-      window.print()
-      setTimeout(() => { el.style.display = 'none' }, 1000)
-    }, 150)
+    if (!vysl) return
+    const datum = new Date().toLocaleDateString('cs-CZ')
+    const rezimLabel = dan.rezim === "pausalni" ? `Paušální daň ${dan.pausPasmo}. pásmo` : dan.rezim === "skutecne" ? "Skutečné výdaje" : `Výdajový paušál ${dan.pausalPct} %`
+    const sazby = [
+      { l: "Minimální sazba", s: vysl.minSazba, c: "#E0304A", desc: "Pokrývá náklady a odvody." },
+      { l: "Zdravá sazba", s: vysl.zdravaSazba, c: "#7AB830", desc: "Doporučené pásmo +30 % rezerva." },
+      { l: "Rozvojová sazba", s: vysl.komfortSazba, c: "#A87DB8", desc: "Rozvojová hodnota +65 % rezerva." },
+    ]
+    const html = `<!DOCTYPE html><html lang="cs"><head><meta charset="UTF-8">
+<title>VERNO – Kalkulačka sazby OSVČ</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:A4;margin:0}
+  body{font-family:'DM Sans',sans-serif;background:#fff;color:#191714;width:210mm;padding:14mm 16mm 12mm;font-size:10px}
+  .hdr{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #191714;padding-bottom:10px;margin-bottom:16px}
+  .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:.25em}
+  .logo-sub{font-size:10px;color:#7A7268;letter-spacing:.12em;text-transform:uppercase;margin-top:2px}
+  .hdr-r{text-align:right;font-size:10px;color:#7A7268}
+  .sazby{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+  .sazba-box{border-radius:6px;padding:10px 12px;position:relative;border-width:2px;border-style:solid}
+  .sazba-bar{position:absolute;top:0;left:0;right:0;height:3px;border-radius:6px 6px 0 0}
+  .sazba-l{font-size:8.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px;margin-top:2px}
+  .sazba-v{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.04em;color:#191714;margin-bottom:4px}
+  .sazba-d{font-size:8.5px;color:#7A7268;line-height:1.4}
+  .sazba-prijem{display:flex;justify-content:space-between;border-top:1px solid #f0ede8;padding-top:5px;margin-top:6px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+  .sec-title{font-family:'Syne',sans-serif;font-weight:700;font-size:11px;color:#191714;margin-bottom:8px;border-bottom:1px solid #e2dcd1;padding-bottom:4px}
+  .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+  .dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;margin-right:6px}
+  .row-l{display:flex;align-items:center;font-size:9px;color:#3A3630}
+  .row-v{font-size:9.5px;font-weight:700;color:#191714}
+  .total{display:flex;justify-content:space-between;border-top:1px solid #e2dcd1;padding-top:5px;margin-top:5px}
+  .total-l{font-size:9px;font-weight:700;color:#191714}
+  .total-v{font-size:10px;font-weight:800;color:#191714}
+  .kv{display:flex;justify-content:space-between;margin-bottom:4px}
+  .kv-l{font-size:9px;color:#7A7268}
+  .kv-v{font-size:9.5px;font-weight:600;color:#191714}
+  .odvody-box{background:#f8f6f2;border-radius:5px;padding:9px 12px;margin-bottom:10px}
+  .odvody-title{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;color:#191714;margin-bottom:6px}
+  .odvody-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+  .odvod-item{text-align:center}
+  .odvod-v{font-size:11px;font-weight:700;color:#191714}
+  .odvod-l{font-size:8px;color:#7A7268}
+  .footer{border-top:1px solid #e2dcd1;padding-top:8px;margin-top:16px}
+  .footer p{font-size:7.5px;color:#9a9288;line-height:1.65}
+</style>
+</head><body>
+<div class="hdr">
+  <div><div class="logo">VERNO</div><div class="logo-sub">Kalkulačka reálné hodinové sazby OSVČ</div></div>
+  <div class="hdr-r"><div>Datum výpočtu: ${datum}</div><div style="margin-top:2px">verno.cz/kalkulacka</div></div>
+</div>
+<div class="sazby">
+  ${sazby.map(r => `
+  <div class="sazba-box" style="border-color:${r.c}">
+    <div class="sazba-bar" style="background:${r.c}"></div>
+    <div class="sazba-l" style="color:${r.c}">${r.l}</div>
+    <div class="sazba-v">${fmt(r.s)} Kč/h</div>
+    <div class="sazba-d">${r.desc}</div>
+    <div class="sazba-prijem">
+      <span style="font-size:8.5px;color:#7A7268">Hrubý příjem / měs.</span>
+      <span style="font-size:9px;font-weight:700;color:#191714">${fmt(r.s * cas2.fakturHodinMesic)} Kč</span>
+    </div>
+  </div>`).join('')}
+</div>
+<div class="grid2">
+  <div>
+    <div class="sec-title">Měsíční struktura nákladů</div>
+    ${[{l:"Osobní náklady",v:celkOs,c:"#A87DB8"},{l:"Provozní náklady",v:celkPr,c:"#009AC4"},{l:"Daně a odvody",v:Math.round(vysl.odvody.mesicne),c:"#E0304A"}].map(r=>`
+    <div class="row"><div class="row-l"><div class="dot" style="background:${r.c}"></div>${r.l}</div><span class="row-v">${fmt(r.v)} Kč</span></div>`).join('')}
+    <div class="total"><span class="total-l">Celkem musíte vydělat</span><span class="total-v">${fmt(vysl.celkMesicVcOdvodu)} Kč</span></div>
+  </div>
+  <div>
+    <div class="sec-title">Pracovní fond a kapacita</div>
+    ${[{l:"Pracovní dny/týden",v:cas.dnyTydne+" dní"},{l:"Hodin denně",v:cas.hodinyDenne+" h"},{l:"Dovolená",v:cas.dovolena+" dní/rok"},{l:"Nemoc (odhad)",v:cas.nemoc+" dní/rok"},{l:"Fakturovatelnost",v:cas.fakturovatelnost+" %"},{l:"Fakt. hodin / měsíc",v:Math.round(cas2.fakturHodinMesic)+" h"}].map(r=>`
+    <div class="kv"><span class="kv-l">${r.l}</span><span class="kv-v">${r.v}</span></div>`).join('')}
+  </div>
+</div>
+${dan.rezim !== "pausalni" ? `
+<div class="odvody-box">
+  <div class="odvody-title">Odvody státu / měs. · ${rezimLabel}</div>
+  <div class="odvody-grid">
+    <div class="odvod-item"><div class="odvod-v">${fmt(Math.round(vysl.odvody.zdravotni/12))} Kč</div><div class="odvod-l">Zdravotní pojištění</div></div>
+    <div class="odvod-item"><div class="odvod-v">${fmt(Math.round(vysl.odvody.socialni/12))} Kč</div><div class="odvod-l">Sociální pojištění</div></div>
+    <div class="odvod-item"><div class="odvod-v">${fmt(Math.round(vysl.odvody.dan/12))} Kč</div><div class="odvod-l">Daň z příjmu</div></div>
+  </div>
+</div>` : `
+<div class="odvody-box">
+  <div class="odvody-title">Daňový režim: ${rezimLabel}</div>
+  <div style="font-size:10px;color:#3A3630">Fixní platba státu: <strong>${fmt(vysl.odvody.mesicne)} Kč/měsíc</strong></div>
+</div>`}
+<div class="footer"><p>Výpočet vychází z veřejně dostupných parametrů OSVČ pro rok 2026 a slouží jako orientační ekonomický model. Výstupy mají informativní charakter a nenahrazují daňové, účetní či právní poradenství.</p></div>
+</body></html>`
+    const w = window.open('', '_blank', 'width=900,height=700')
+    if (!w) return
+    w.document.write(html)
+    w.document.close()
+    w.focus()
+    setTimeout(() => { w.print() }, 600)
   }
 
   const handleCopy = () => {
@@ -1023,7 +1007,6 @@ export default function KalkulackaOSVC() {
                 ))}
               </div>
 
-              <PrintPage vysl={vysl} cas2={cas2} cas={cas} celkOs={celkOs} celkPr={celkPr} dan={dan} slevy={slevy} />
               <ShareBlock minSazba={vysl.minSazba} zdravaSazba={vysl.zdravaSazba} copied={copied} onPrint={handlePrint} onCopy={handleCopy} />
 
               {(() => {
@@ -1221,25 +1204,6 @@ export default function KalkulackaOSVC() {
         input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.18); }
         input[type=number] { -moz-appearance: textfield; }
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
-        @media print {
-          * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-          @page { size: A4; margin: 0; }
-          body { background: #fff !important; margin: 0 !important; padding: 0 !important; }
-          body * { visibility: hidden !important; }
-          #pdf-page, #pdf-page * { visibility: visible !important; }
-          #pdf-page {
-            position: fixed !important;
-            top: 0 !important; left: 0 !important;
-            width: 210mm !important;
-            height: 297mm !important;
-            overflow: hidden !important;
-            padding: 14mm 16mm 12mm !important;
-            box-sizing: border-box !important;
-            background: #fff !important;
-            color: #191714 !important;
-            z-index: 999999 !important;
-          }
-        }
       `}</style>
 
     </>
