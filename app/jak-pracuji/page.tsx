@@ -148,8 +148,8 @@ export default function JakPracuji() {
               animation: 'fadeUp .9s .14s cubic-bezier(.16,1,.3,1) forwards',
             }}
           >
-            Web nevzniká tak,<br />
-            že zmizím na měsíc.
+            Web stavím transparentně<br />
+            a po částech.
           </h1>
           <p
             style={{
@@ -162,8 +162,8 @@ export default function JakPracuji() {
               animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards',
             }}
           >
-            Pracuji po krocích a průběžně ukazuji, v jaké fázi web je.
-            Nečekáte týdny na „hotovo" bez jediné zprávy.
+            Do procesu vidíte od začátku do konce,
+            bez překvapení ve finálním spuštění.
           </p>
         </div>
       </section>
