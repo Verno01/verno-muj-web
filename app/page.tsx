@@ -302,10 +302,6 @@ export default function Home() {
       {/* ── O MNĚ ────────────────────────────────────────────────── */}
       <section style={{ background: 'var(--cloud)', padding: 0, overflow: 'hidden' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: 600 }} className="about-grid">
-          <div className="reveal" style={{ position: 'relative', overflow: 'hidden', background: 'var(--cloud-2)' }}>
-            <Image src="/hana.jpg" alt="Hana Fraňková" fill style={{ objectFit: 'cover', objectPosition: 'top center' }} />
-            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(to top,var(--cloud),transparent)', pointerEvents: 'none' }} />
-          </div>
           <div style={{ padding: 'clamp(60px,8vw,100px) clamp(32px,5vw,72px)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <p className="eyebrow reveal" style={{ marginBottom: 24 }}>O mně</p>
             <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.2rem,3.8vw,3.4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1, color: 'var(--ink)', margin: '0 0 26px' }}>
@@ -322,6 +318,22 @@ export default function Home() {
                 Nedělám desítky webů měsíčně. Na každém projektu si dávám záležet, protože výsledný web reprezentuje vás i moji práci.
               </p>
             </div>
+          </div>
+          <div className="reveal" style={{ position: 'relative', overflow: 'hidden', background: '#1a1015' }}>
+            <Image
+              src="/verno_weby-pro-firmy_hana.jpg"
+              alt="Hana Fraňková – tvorba webů VERNO"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'saturate(0.82) contrast(1.06) brightness(1.02)' }}
+            />
+            {/* Fialový tónový přeliv – sladí s orchidejí webu */}
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg,rgba(168,125,184,.13) 0%,rgba(200,150,80,.06) 60%,transparent 100%)', pointerEvents: 'none', mixBlendMode: 'multiply' as const }} />
+            {/* Přechod doleva – zapuštění do stránky */}
+            <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 90, background: 'linear-gradient(to right,var(--cloud),transparent)', pointerEvents: 'none' }} />
+            {/* Přechod dolů */}
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '30%', background: 'linear-gradient(to top,var(--cloud),transparent)', pointerEvents: 'none' }} />
+            {/* Přechod nahoru – jemný */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 100, background: 'linear-gradient(to bottom,rgba(168,125,184,.15),transparent)', pointerEvents: 'none' }} />
           </div>
         </div>
       </section>
