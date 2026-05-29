@@ -1,8 +1,16 @@
 'use client'
 
 import LegalLayout from '@/components/LegalLayout'
+import { useEffect } from 'react'
+
+// Metadata pro /cookies jsou nastavena v app/layout.tsx přes metadataBase
+// Tato stránka musí být 'use client' kvůli onClick handleru v tlačítku
 
 export default function Cookies() {
+  useEffect(() => {
+    document.title = 'Zásady cookies | VERNO'
+  }, [])
+
   return (
     <LegalLayout
       eyebrow="Právní informace"
