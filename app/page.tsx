@@ -70,7 +70,7 @@ export default function Home() {
               <span style={{ background: 'linear-gradient(90deg,#9B4FCC 0%,#FF7A00 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Moderní weby</span> pro<br />živnostníky<br />a menší<br />firmy.
             </h1>
             <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 460, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Lidé si vás nejdříve najdou na internetu. Váš web rozhoduje o vaší důvěryhodnosti dřív, než s nimi stihnete promluvit.
+              Lidé si vás nejdřív najdou na internetu. Váš web rozhoduje o vaší důvěryhodnosti dřív, než s nimi stihnete promluvit.
               Stavím stránky, které první dojem nepokazí.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 26, opacity: 0, animation: 'fadeUp .9s .32s cubic-bezier(.16,1,.3,1) forwards' }}>
@@ -213,10 +213,10 @@ export default function Home() {
               </div>
             </div>
             <div className="reveal d2" style={{ background: 'rgba(255,255,255,.04)', border: '1px solid rgba(240,237,232,.08)', borderRadius: 8, padding: 'clamp(28px,4vw,44px)' }}>
-              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'rgba(240,237,232,.3)', margin: '0 0 20px' }}>Ukázka výstupu</p>
+              <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'rgba(240,237,232,.3)', margin: '0 0 20px' }}>Příklad výstupu</p>
               {[
                 { label: 'Minimální sazba', value: '480 Kč/h', color: '#E0304A' },
-                { label: 'Doporučená sazba', value: '620 Kč/h', color: '#7AB830' },
+                { label: 'Zdravá sazba',     value: '620 Kč/h', color: '#7AB830' },
                 { label: 'Rozvojová sazba',  value: '790 Kč/h', color: '#A87DB8' },
               ].map((r) => (
                 <div key={r.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 0', borderBottom: '1px solid rgba(240,237,232,.06)' }}>
@@ -306,7 +306,7 @@ export default function Home() {
             </h2>
             <div className="reveal d2">
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
-                Každý web řeším sama od začátku do konce, takže vždy víte, kdo sedí za klávesnicí.
+                Jsem Hana Fraňková a každý web řeším sama od začátku do konce, takže vždy víte, kdo sedí za klávesnicí.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
                 Webům se věnuji několik let a průběžně se v oboru dál vzdělávám. Záleží mi na tom, aby web dobře vypadal, byl přehledný a spolehlivě fungoval i dlouhodobě.
