@@ -4,7 +4,8 @@ import LegalLayout from '@/components/LegalLayout'
 export const metadata: Metadata = {
   title: 'Obchodní podmínky',
   description: 'Obchodní podmínky pro tvorbu webových stránek a souvisejících služeb. Rovino s.r.o., obchodní značka Verno.',
-  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://verno.cz/obchodni-podminky' },
+  robots: { index: false, follow: true },
 }
 
 export default function ObchodniPodminky() {
