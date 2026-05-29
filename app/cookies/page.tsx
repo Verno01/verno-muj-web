@@ -1,12 +1,6 @@
-import type { Metadata } from 'next'
-import LegalLayout from '@/components/LegalLayout'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Zásady cookies | VERNO',
-  description: 'Co jsou cookies, jaké druhy na webu verno.cz používáme a jak můžete svou volbu kdykoli změnit.',
-  alternates: { canonical: 'https://verno.cz/cookies' },
-  robots: { index: false, follow: true },
-}
+import LegalLayout from '@/components/LegalLayout'
 
 export default function Cookies() {
   return (
