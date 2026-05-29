@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Nabídka | Weby na míru - VERNO',
+  title: 'Nabídka | Weby na míru pro živnostníky',
   description: 'Tvorba prezentačních webů pro živnostníky a firmy. Každý web stavím na míru rozsahu, obsahu i cílům. Ceny projektů se pohybují mezi 12 000 a 60 000 Kč.',
   alternates: { canonical: 'https://verno.cz/nabidka' },
   openGraph: {
-    title: 'Nabídka | Weby na míru - VERNO',
+    title: 'Nabídka | Weby na míru pro živnostníky',
     description: 'Tvorba prezentačních webů pro živnostníky a firmy. Ceny mezi 12 000 a 60 000 Kč.',
     url: 'https://verno.cz/nabidka',
     images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
@@ -98,9 +98,9 @@ export default function Nabidka() {
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nabídka</p>
-          <h1 className="page-hero-title">Vaše zadání, mé provedení.<br />Weby bez šablon.</h1>
+          <h1 className="page-hero-title">Pět typů webů.<br />Každý pro jiný záměr.</h1>
           <p className="page-hero-sub">
-            Seznam webů níže slouží jako odrazový můstek. Každý projekt skládám podle konkrétního zadání a obsahu. Cena je vždy odsouhlasena předem.
+            Každý prezentační web stavím na míru rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
           </p>
         </div>
       </div>
