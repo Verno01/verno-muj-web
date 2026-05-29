@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
+  title: 'Jak pracuji | Tvorba webu krok za krokem',
   description: 'Od první zprávy po hotový web. Šest kroků, transparentní cena, živý odkaz na rozpracovanou verzi po celou dobu tvorby.',
   alternates: { canonical: 'https://verno.cz/jak-pracuji' },
   openGraph: {
-    title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
+    title: 'Jak pracuji | Tvorba webu krok za krokem',
     description: 'Od první zprávy po hotový web. Šest kroků, transparentní cena, živý odkaz na rozpracovanou verzi po celou dobu tvorby.',
     url: 'https://verno.cz/jak-pracuji',
     images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
@@ -158,7 +158,7 @@ const dostanete = [
 const nedostanete = [
   'e-shop s košíkem a skladovým systémem,',
   'rozsáhlý redakční systém pro tým lidí,',
-  'správu sociálních sítí nebo placených reklamních kampaní.',
+  'správu sociálních sítí nebo placených reklamních kampaní,',
 ]
 
 const faq = [
@@ -281,9 +281,9 @@ export default function JakPracuji() {
       <section style={{ background: 'var(--cloud)', padding: '0 0 clamp(72px,10vw,128px)' }}>
         <div className="inner">
           <div className="jp-cta reveal">
-            <h2 className="jp-cta-title">Stránky mají pracovat pro vás. Nikoliv vy pro ně.</h2>
+            <h2 className="jp-cta-title">Sedne vám, jak to dělám?</h2>
             <p className="jp-cta-sub">
-              Stačí mi pár vět o tom, co děláte. Brzy vám odpovím s tím, jak to spolu uděláme.
+              Tak se ozvěte. Stačí pár vět o tom, co děláte a co od webu čekáte. Brzy vám odpovím s tím, jestli a jak to spolu uděláme.
             </p>
             <a href="/kontakt" className="btn btn-ink jp-cta-btn">Napsat →</a>
           </div>
