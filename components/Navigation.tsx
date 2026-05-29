@@ -10,7 +10,6 @@ const links: NavLink[] = [
   { href: '/',            label: 'Domů' },
   { href: '/nabidka',     label: 'Nabídka' },
   { href: '/jak-pracuji', label: 'Jak pracuji' },
-  { href: '/proc-takhle', label: 'Proč takhle' },
   { href: '/kalkulacka',  label: 'Vaše sazba', accent: true },
   { href: '/kontakt',     label: 'Kontakt' },
 ]
@@ -47,7 +46,7 @@ export default function Navigation() {
           <nav style={{ display: 'flex', alignItems: 'center', gap: 2 }} className="nav-desktop">
             {links.map(({ href, label, accent }) => {
               const active = here === norm(href)
-              // accent (Kalkulačka) má capri trvale; ostatní řídí active/inactive
+              // accent (Vaše sazba) má capri trvale; ostatní řídí active/inactive
               const color = accent
                 ? 'var(--capri)'
                 : (active ? 'var(--ink)' : 'var(--dim)')
@@ -100,10 +99,6 @@ export default function Navigation() {
           }}>✕</button>
           {links.map(({ href, label, accent }) => {
             const isHere = here === norm(href)
-            // Na mobilu:
-            //   - Kalkulačka má capri trvale (i když není aktivní)
-            //   - Aktivní stránka mimo Kalkulačku má orchid (jako dosud)
-            //   - Aktivní Kalkulačka má taky capri (nepřepisuje se na orchid)
             const color = accent
               ? 'var(--capri)'
               : (isHere ? 'var(--orchid)' : 'var(--ink)')
