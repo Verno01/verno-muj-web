@@ -70,8 +70,8 @@ export default function Home() {
               <span style={{ background: 'linear-gradient(90deg,#9B4FCC 0%,#FF7A00 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Moderní weby</span> pro<br />živnostníky<br />a menší<br />firmy.
             </h1>
             <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 460, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Tvořím prezentační weby pro živnostníky, řemeslníky a menší firmy.
-              Od prvního návrhu po spuštění komunikujete přímo se mnou.
+              Lidé si vás nejdřív najdou na internetu. Váš web rozhoduje o vaší důvěryhodnosti dřív, než s nimi stihnete promluvit.
+              Stavím stránky, které tenhle první dojem nepokazí.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 26, opacity: 0, animation: 'fadeUp .9s .32s cubic-bezier(.16,1,.3,1) forwards' }}>
               <Link href="/nabidka" className="btn btn-ink">Co nabízím →</Link>
@@ -137,15 +137,12 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 24 }}>Co dělám</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4.8vw,4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 850 }}>
-            Vídám spoustu skvělých firem,{' '}
-            které přicházejí o zakázky jen proto, že mají nepřehledný nebo zastaralý web.
+            Spousta dobrých firem přichází o zákazníky kvůli webu. Ne kvůli ceně nebo konkurenci.
+            Kvůli webu.
           </h2>
           <div className="reveal d2" style={{ maxWidth: 560 }}>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>
-              Tvořím weby s čistým vizuálním stylem, přehlednou strukturou, a stoprocentním technickým zázemím.
-            </p>
-            <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: 0 }}>
-              Každý web by měl odrážet skutečnou kvalitu toho, co prezentuje.
+              Pracujete na maximum a vaše služby jsou skvělé. Web by měl odrážet skutečnou kvalitu toho, co prezentuje.
             </p>
           </div>
         </div>
@@ -245,7 +242,7 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ marginBottom: 24 }}>Jak pracuji</p>
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--ink)', margin: '0 0 clamp(30px,4vw,52px)' }}>
-            Čtyři kroky. Vždy víte, v jaké fázi právě jsme.
+            Od první zprávy po hotový web. Vždy víte, kde se právě nacházíme.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 'clamp(16px,3vw,36px)' }} className="steps-grid">
             {steps.map((s, i) => (
@@ -309,20 +306,17 @@ export default function Home() {
             </h2>
             <div className="reveal d2">
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
-                Od úvodního zadání po spuštění komunikujete přímo se mnou. Nedelaguji práci na nikoho dalšího.
+                Jsem Hana Fraňková a každý web řeším sama od začátku do konce, takže vždy víte, kdo sedí za klávesnicí.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
-                Věřím, že dobrý web dělá hlavně přehlednost a srozumitelnost.
-              </p>
-              <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 28px' }}>
-                Nečekejte ode mě pásovou výrobu. Každému projektu věnuji čas a plnou pozornost, protože výsledný web reprezentuje vás i mou práci.
+                Webům se věnuji několik let a průběžně se v oboru dál vzdělávám. Záleží mi na tom, aby web dobře vypadal, byl přehledný a spolehlivě fungoval i dlouhodobě.
               </p>
             </div>
           </div>
           <div className="reveal" style={{ position: 'relative', overflow: 'hidden', background: 'var(--cloud)' }}>
             <Image
               src="/verno_weby-pro-firmy_hana.png"
-              alt="Hana Fraňková – tvorba webů VERNO"
+              alt="Hana Fraňková, tvůrce webů VERNO – prezentační weby pro živnostníky"
               fill
               style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
             />
@@ -340,10 +334,10 @@ export default function Home() {
         <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', bottom: -30, fontFamily: "'Syne',sans-serif", fontSize: 'clamp(8rem,18vw,18rem)', fontWeight: 800, letterSpacing: '-.06em', color: 'rgba(25,23,20,.025)', pointerEvents: 'none', userSelect: 'none', whiteSpace: 'nowrap' }} aria-hidden>VERNO</div>
         <div className="inner-narrow" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
           <h2 className="reveal" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.4rem,5vw,4.4rem)', fontWeight: 800, letterSpacing: '-.045em', lineHeight: 1.02, color: 'var(--ink)', margin: '0 0 18px' }}>
-            Už víte, jak bude vypadat váš nový<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>web?</em>
+            Napište mi pár vět<br /><em style={{ fontStyle: 'italic', fontWeight: 400, color: 'var(--orchid)' }}>o tom, co děláte.</em>
           </h2>
           <p className="reveal d1" style={{ fontSize: '1.01rem', lineHeight: 1.76, color: 'var(--dim)', margin: '0 0 34px' }}>
-            Stačí stručně napsat, co děláte a co od webu očekáváte. Ozvu se zpět a domluvíme další postup.
+            Co nejdříve se vám ozvu.
           </p>
           <Link href="/kontakt" className="btn btn-ink reveal d2">Napište mi →</Link>
         </div>
