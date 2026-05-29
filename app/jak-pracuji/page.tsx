@@ -1,538 +1,526 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
-  description:
-    'Celý postup tvorby webových stránek. Co od vás budu potřebovat a proč. Texty, fotky, logo. Průběžně ukazuji rozpracovanou verzi, ne screenshoty.',
+  description: 'Od první zprávy po hotový web. Šest kroků, transparentní cena, živý odkaz na rozpracovanou verzi po celou dobu tvorby.',
   alternates: { canonical: 'https://verno.cz/jak-pracuji' },
   openGraph: {
     title: 'Jak pracuji | Tvorba webu krok za krokem - VERNO',
-    description: 'Celý postup tvorby webových stránek. Průběžně ukazuji rozpracovanou verzi, ne screenshoty.',
+    description: 'Od první zprávy po hotový web. Šest kroků, transparentní cena, živý odkaz na rozpracovanou verzi po celou dobu tvorby.',
     url: 'https://verno.cz/jak-pracuji',
     images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
   },
+  robots: { index: true, follow: true },
 }
 
 const steps = [
   {
     n: '01',
     title: 'Ozvete se',
-    text: 'Napíšete mi pár vět o tom, co děláte, jaký web si představujete a co už máte připravené. Do dvou pracovních dnů se ozvu zpět.',
+    body: (
+      <p>
+        Napíšete přes formulář, e-mailem nebo zavoláte. Stačí pár vět o tom, co děláte, co od webu čekáte a pro jaké návštěvníky je určený.
+      </p>
+    ),
   },
   {
     n: '02',
-    title: 'Domluvíme se na zadání',
-    text: 'Projdeme spolu, k čemu má web sloužit, koho má oslovit a co má návštěvník udělat. Určíme rozsah, rozdělíme si podklady a domluvíme pevnou cenu předem.',
+    title: 'Domluvíme se',
+    body: (
+      <>
+        <p>Společně si ujasníme:</p>
+        <ul>
+          <li>co má web splnit,</li>
+          <li>komu je určený,</li>
+          <li>jaké služby nabízíte,</li>
+          <li>jak má působit,</li>
+          <li>a jaké informace na něm mají být.</li>
+        </ul>
+        <p>
+          Ve většině případů stačí e-mail. Je to rychlé, přehledné a můžeme se k informacím kdykoliv vrátit. Když je potřeba probrat něco důkladněji, zavoláme si nebo domluvíme schůzku.
+        </p>
+      </>
+    ),
   },
   {
     n: '03',
-    title: 'Tvořím a průběžně ukazuji',
-    text: 'Začnu stavět. Místo posílání screenshotů dostanete přístup na rozpracovanou verzi webu, takže vidíte vše přímo v reálném provozu.',
+    title: 'Dodáte podklady a domluvíme cenu',
+    body: (
+      <>
+        <p>Od vás budu potřebovat:</p>
+        <ul>
+          <li>texty nebo alespoň základní podklady k obsahu,</li>
+          <li>fotografie,</li>
+          <li>kontaktní údaje,</li>
+          <li>reference nebo ukázky práce, pokud máte,</li>
+          <li>doménu, případně pomohu s jejím výběrem a nastavením.</li>
+        </ul>
+        <p>
+          Když nemáte texty nebo nevíte, co napsat, nevadí. Vycházím z toho, co mi pošlete.
+        </p>
+        <p>
+          Jakmile mám podklady a přehled o rozsahu, pošlu pevnou cenu za celý web.
+        </p>
+        <p>
+          Před zahájením prací se hradí záloha 50 %. Doplatek probíhá před spuštěním hotového webu.
+        </p>
+      </>
+    ),
   },
   {
     n: '04',
-    title: 'Zapracuji připomínky',
-    text: 'Po každé ukázce si řekneme, co doladit. Dvě kola běžných úprav jsou součástí ceny. Pokud by šlo o větší změny mimo původní zadání, řeknu vám to dopředu.',
+    title: 'Tvořím a průběžně informuji',
+    body: (
+      <>
+        <p>Navrhnu strukturu, upravím texty, vytvořím design a celý web postavím.</p>
+        <p>
+          Dostanete živý odkaz na rozpracovaný web. Můžete si ho otevřít na mobilu a projít si ho. Vidíte, jak vzniká.
+        </p>
+        <p>
+          Ozvu se, když potřebuji něco potvrdit nebo doladit. Vy se ozvete, když budete chtít něco upravit.
+        </p>
+        <p>Web stavím v čistém kódu bez složitých systémů a pluginů. Díky tomu je:</p>
+        <ul>
+          <li>rychlý,</li>
+          <li>přehledný,</li>
+          <li>bezpečný,</li>
+          <li>stabilní,</li>
+          <li>a připravený fungovat dlouhodobě bez technických problémů.</li>
+        </ul>
+        <p>
+          Místo desítek pluginů, které se mezi sebou hádají, je u čistého kódu riziko, že web zničehonic přestane fungovat, minimální.
+        </p>
+      </>
+    ),
   },
   {
     n: '05',
-    title: 'Spustíme web',
-    text: 'Hotový web nasadím na vaši doménu, zkontroluji zobrazení na mobilu i počítači a napojím na vyhledávač Google.',
+    title: 'Předám vám web',
+    body: (
+      <>
+        <p>
+          Ve chvíli, kdy si web společně odsouhlasíme, přesunu ho z testovací adresy na vaši doménu a vše finálně nastavím.
+        </p>
+        <p>Dostanete:</p>
+        <ul>
+          <li>hotový funkční web,</li>
+          <li>napojení domény,</li>
+          <li>zabezpečené HTTPS,</li>
+          <li>základní SEO nastavení,</li>
+          <li>propojení s analytickým nástrojem,</li>
+          <li>responzivní zobrazení pro mobil i počítač,</li>
+          <li>kompletní zdrojový kód,</li>
+          <li>stručnou dokumentaci.</li>
+        </ul>
+        <p>
+          Po spuštění si web ještě jednou společně projdeme a ověříme, že vše funguje tak, jak má.
+        </p>
+        <p>
+          Web je váš. Kód i obsah. Pokud se někdy rozhodnete pokračovat jinak, můžete si web převést kamkoliv. K jinému webaři, na vlastní hosting nebo pod vlastní správu.
+        </p>
+      </>
+    ),
   },
   {
     n: '06',
-    title: 'Předám',
-    text: 'Dostanete hotový funkční web a vysvětlení základních věcí kolem něj. Když budete někdy potřebovat něco upravit nebo doplnit, stačí se ozvat.',
+    title: 'Hosting, péče a drobné úpravy',
+    body: (
+      <>
+        <p>
+          Celou technickou správu a hosting řeším za vás. Web běží na infrastruktuře VERNO, která využívá moderní technologie pro Next.js s vysokým zabezpečením a rychlostí. Samotný hosting u běžných firemních webů neúčtuji, protože provoz v tomto rozsahu je zdarma.
+        </p>
+        <p>Platíte pouze doménu u svého registrátora.</p>
+        <p>
+          Kdykoliv budete potřebovat cokoliv upravit, stačí napsat. Změna textu, výměna fotky, doplnění služby nebo drobné rozšíření většinou zabere chvíli a řeším to formou hodinové sazby.
+        </p>
+        <p>
+          Dokud web běží u mě, technické chyby řeším bezplatně. Pokud by se něco rozbilo kvůli změnám prohlížečů, aktualizacím nebo chybě v kódu. Úpravy obsahu a nové funkce už jsou běžně placené změny.
+        </p>
+        <p>
+          Web běží na stejné infrastruktuře, kterou využívají velké světové firmy a služby s vysokými nároky na rychlost a bezpečnost.
+        </p>
+      </>
+    ),
   },
 ]
 
-const needs = [
-  {
-    title: 'Informace o tom, co děláte',
-    text: 'Čím se zabýváte a jaký další krok od návštěvníka vašeho webu čekáte. Stačí mi to i v bodech, informace jsou důležité.',
-  },
-  {
-    title: 'Fotografie',
-    text: 'Ideálně vaše vlastní. Vaše práce, prostředí nebo vy sami působíte vždy důvěryhodněji než fotky z databanky. Dodané fotografie upravím tak, aby spolu vizuálně ladily.',
-  },
-  {
-    title: 'Logo a barvy, pokud je máte',
-    text: 'Máte logo nebo dané barvy? Web na ně navážu. Jestli ne, nevadí, navrhnu vizuální směr.',
-  },
-  {
-    title: 'Doménu',
-    text: 'Adresa webu (například vasefirma.cz). Pokud ji ještě nemáte, pomohu vám s výběrem i registrací.',
-  },
-  {
-    title: 'Máte představu?',
-    text: 'Oblíbené weby, styl nebo naopak něco, co se vám nelíbí - řekněte mi to. I drobné poznámky pomůžou k tomu, aby vám web opravdu seděl',
-  },
+const dostanete = [
+  'prezentační web na míru postavený od základu,',
+  'pevnou cenu domluvenou předem,',
+  'preview odkaz na dobu tvorby,',
+  'kompletně upravené texty,',
+  'zdrojový kód po předání,',
+  'hosting bez měsíčních poplatků,',
+  'technickou záruku po dobu spolupráce,',
+  'jednoho člověka, který celý web řeší od začátku do konce.',
 ]
 
-const dontExpect = [
-  'Levnou kopii cizích webů.',
-  'Web přeplněný animacemi jen proto, aby se „něco hýbalo".',
-  'Editaci webu stylem klikání v administraci jako u WordPressu.',
-  'Týdny bez komunikace.',
-  'E-shop nebo rozsáhlý portál.',
+const nedostanete = [
+  'e-shop s košíkem a skladovým systémem,',
+  'rozsáhlý redakční systém pro tým lidí,',
+  'správu sociálních sítí nebo placených reklamních kampaní,',
+]
+
+const faq = [
+  {
+    q: 'Jak dlouho trvá, než bude web hotový?',
+    a: 'To záleží na rozsahu a také rychlosti dodání podkladů. Menší web bývá hotový během několika týdnů. Větší prezentační web obvykle za měsíc až dva. Přesnější odhad dostanete po první domluvě.',
+  },
+  {
+    q: 'Co když nemám texty ani jasnou představu?',
+    a: 'To je celkem běžné. Hodně lidí nepřijde s hotovým zadáním. Vysvětlíte mi, co děláte, pro koho a jak chcete působit. Zbytek společně poskládáme.',
+  },
+  {
+    q: 'Co když po předání budu chtít něco změnit?',
+    a: 'Menší úpravy řeším průběžně formou hodinové sazby. Větší změny nebo nové sekce řešíme jako navazující projekt.',
+  },
+  {
+    q: 'Co se stane, když u vás nechci dál hostovat?',
+    a: 'Web je váš a můžete si ho kdykoliv přesunout jinam. S technickým přesunem na jiné místo vám ráda pomůžu, aby všechno běželo bez výpadku dál.',
+  },
+  {
+    q: 'Proč nedělám e-shopy?',
+    a: 'Protože e-shop je jiný typ projektu než prezentační web. Vyžaduje jinou technickou specializaci.',
+  },
+  {
+    q: 'Můžu si web spravovat sám/sama?',
+    a: 'Vlastní administraci k webu nedávám, protože bývá u stránek nejčastějším zdrojem problémů a chyb. Kdykoliv budete potřebovat cokoliv změnit, stačí mi napsat. Všechny menší úpravy dělám obratem v rámci hodinové sazby. Vy máte jistotu, že web zůstane technicky čistý a rychlý.',
+  },
 ]
 
 export default function JakPracuji() {
   return (
     <>
-      {/* HERO */}
-      <section
-        style={{
-          minHeight: '72svh',
-          display: 'flex',
-          alignItems: 'center',
-          background: 'var(--deep)',
-          position: 'relative',
-          overflow: 'hidden',
-          padding: 'clamp(90px,10vw,120px) 0',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'radial-gradient(ellipse 55% 45% at 78% 24%,rgba(168,125,184,.12),transparent 70%), radial-gradient(ellipse 45% 40% at 20% 85%,rgba(0,154,196,.08),transparent 65%)',
-            pointerEvents: 'none',
-          }}
-        />
+      {/* Page hero */}
+      <div className="page-hero">
+        <div className="page-hero-orb" />
         <div className="noise" />
-        <div
-          style={{
-            position: 'absolute',
-            right: 'clamp(20px,6vw,100px)',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            fontFamily: "'Syne',sans-serif",
-            fontSize: 'clamp(10rem,20vw,22rem)',
-            fontWeight: 800,
-            letterSpacing: '-.06em',
-            color: 'rgba(255,255,255,.025)',
-            lineHeight: 1,
-            userSelect: 'none',
-            pointerEvents: 'none',
-          }}
-          aria-hidden
-        >
-          02
-        </div>
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
-          <p
-            className="eyebrow"
-            style={{
-              color: 'rgba(240,237,232,.42)',
-              marginBottom: 22,
-              opacity: 0,
-              animation: 'fadeUp .8s .05s cubic-bezier(.16,1,.3,1) forwards',
-            }}
-          >
-            Jak pracuji
+          <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>
+            Od první zprávy po hotový web
           </p>
-          <h1
-            style={{
-              fontFamily: "'Syne',sans-serif",
-              fontSize: 'clamp(2.8rem,6vw,5.5rem)',
-              fontWeight: 800,
-              lineHeight: .92,
-              letterSpacing: '-.055em',
-              color: 'var(--cloud)',
-              margin: '0 0 24px',
-              maxWidth: 820,
-              opacity: 0,
-              animation: 'fadeUp .9s .14s cubic-bezier(.16,1,.3,1) forwards',
-            }}
-          >
-            Web stavím transparentně<br />
-            a po částech.
-          </h1>
-          <p
-            style={{
-              fontSize: 'clamp(1rem,1.2vw,1.08rem)',
-              lineHeight: 1.9,
-              color: 'rgba(240,237,232,.52)',
-              maxWidth: 620,
-              margin: 0,
-              opacity: 0,
-              animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards',
-            }}
-          >
-            Do procesu vidíte od začátku do konce,
-            bez překvapení ve finálním spuštění.
+          <h1 className="page-hero-title">Jak pracuji</h1>
+          <p className="page-hero-sub">
+            Žádné nekonečné porady přes Zoom. Píšeme si a vy během tvorby vidíte rozpracovaný web a celou dobu víte, kam to směřuje. Jak je to krok po kroku?
           </p>
         </div>
-      </section>
+      </div>
 
-      {/* KROKY */}
-      <section
-        style={{
-          background: 'var(--cloud)',
-          padding: 'clamp(80px,11vw,140px) 0',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            bottom: 0,
-            width: 4,
-            background: 'linear-gradient(180deg,var(--orchid),var(--capri),transparent)',
-            opacity: .4,
-          }}
-        />
+      {/* Kroky */}
+      <section style={{ background: 'var(--cloud)', padding: 'clamp(72px,10vw,128px) 0' }}>
         <div className="inner">
-          <p className="eyebrow reveal" style={{ marginBottom: 24 }}>
-            Postup krok za krokem
-          </p>
-          <h2
-            className="reveal d1"
-            style={{
-              fontFamily: "'Syne',sans-serif",
-              fontSize: 'clamp(2rem,4vw,3.5rem)',
-              fontWeight: 700,
-              letterSpacing: '-.045em',
-              lineHeight: 1.04,
-              color: 'var(--ink)',
-              margin: '0 0 clamp(40px,5vw,70px)',
-              maxWidth: 700,
-            }}
-          >
-            V každé fázi víte,<br />co se právě děje.
-          </h2>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className="jp-steps">
             {steps.map((s, i) => (
-              <div
-                key={i}
-                className={`reveal d${Math.min(i + 1, 5)}`}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '90px 1fr',
-                  gap: '0 clamp(24px,4vw,56px)',
-                  padding: 'clamp(34px,4vw,52px) 0',
-                  borderBottom: '1px solid var(--line)',
-                  alignItems: 'start',
-                }}
-              >
-                <div>
-                  <p
-                    style={{
-                      fontFamily: "'Syne',sans-serif",
-                      fontSize: 'clamp(2rem,4vw,3.3rem)',
-                      fontWeight: 800,
-                      letterSpacing: '-.06em',
-                      color: 'rgba(25,23,20,.08)',
-                      margin: 0,
-                      lineHeight: 1,
-                    }}
-                  >
-                    {s.n}
-                  </p>
-                  <div
-                    style={{
-                      width: 24,
-                      height: 2,
-                      background: 'var(--orchid)',
-                      marginTop: 10,
-                      opacity: .7,
-                    }}
-                  />
+              <article key={s.n} className="jp-step reveal" style={{ transitionDelay: `${i * 60}ms` }}>
+                <div className="jp-step-num">
+                  <span className="jp-step-num-label">Krok</span>
+                  <span className="jp-step-num-digits">{s.n}</span>
                 </div>
-                <div>
-                  <h3
-                    style={{
-                      fontFamily: "'Syne',sans-serif",
-                      fontSize: 'clamp(1.1rem,1.7vw,1.4rem)',
-                      fontWeight: 700,
-                      letterSpacing: '-.02em',
-                      color: 'var(--ink)',
-                      margin: '0 0 12px',
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: '1rem',
-                      lineHeight: 1.84,
-                      color: 'var(--ink-s)',
-                      margin: 0,
-                      maxWidth: 620,
-                    }}
-                  >
-                    {s.text}
-                  </p>
+                <div className="jp-step-body">
+                  <h2 className="jp-step-title">{s.title}</h2>
+                  <div className="jp-step-text">{s.body}</div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CO POTŘEBUJI */}
-      <section
-        style={{
-          background: 'var(--cloud-1)',
-          padding: 'clamp(80px,11vw,140px) 0',
-          borderTop: '1px solid var(--line-s)',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            pointerEvents: 'none',
-            backgroundImage:
-              'linear-gradient(var(--line-s) 1px,transparent 1px),linear-gradient(90deg,var(--line-s) 1px,transparent 1px)',
-            backgroundSize: '80px 80px',
-          }}
-        />
+      {/* Dostanete / nedostanete */}
+      <section style={{ background: 'var(--deep)', padding: 'clamp(72px,10vw,128px) 0', color: 'var(--cloud)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', width: 480, height: 480, borderRadius: '50%', background: 'radial-gradient(circle,rgba(0,154,196,.10),transparent 70%)', right: -80, top: 40, filter: 'blur(50px)', pointerEvents: 'none' }} />
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
-          <p className="eyebrow reveal" style={{ marginBottom: 24 }}>
-            Co od vás budu potřebovat
-          </p>
-          <h2
-            className="reveal d1"
-            style={{
-              fontFamily: "'Syne',sans-serif",
-              fontSize: 'clamp(1.9rem,4vw,3rem)',
-              fontWeight: 700,
-              letterSpacing: '-.04em',
-              lineHeight: 1.06,
-              color: 'var(--ink)',
-              margin: '0 0 clamp(36px,5vw,60px)',
-              maxWidth: 680,
-            }}
-          >
-            Web je tak dobrý,<br />jak dobré jsou podklady.
-          </h2>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
-              gap: 'clamp(16px,2.5vw,28px)',
-            }}
-          >
-            {needs.map((n, i) => (
-              <div
-                key={i}
-                className={`reveal d${Math.min(i + 1, 5)}`}
-                style={{
-                  padding: 'clamp(24px,3vw,36px)',
-                  background: 'var(--cloud)',
-                  border: '1px solid var(--line)',
-                  position: 'relative',
-                }}
-              >
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: 2,
-                    background: 'linear-gradient(90deg,var(--orchid),transparent)',
-                  }}
-                />
-                <h3
-                  style={{
-                    fontFamily: "'Syne',sans-serif",
-                    fontSize: '1.06rem',
-                    fontWeight: 700,
-                    color: 'var(--ink)',
-                    margin: '0 0 12px',
-                    letterSpacing: '-.01em',
-                  }}
-                >
-                  {n.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: 14,
-                    lineHeight: 1.8,
-                    color: 'var(--dim)',
-                    margin: 0,
-                  }}
-                >
-                  {n.text}
-                </p>
-              </div>
-            ))}
+          <div className="jp-twocol">
+            <div className="reveal">
+              <p className="eyebrow" style={{ color: 'var(--capri)', marginBottom: 20 }}>Co dostanete</p>
+              <h2 className="jp-h2 jp-h2-lt">Co všechno je v ceně</h2>
+              <ul className="jp-list jp-list-plus">
+                {dostanete.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="reveal d1">
+              <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Co se mnou nedostanete</p>
+              <h2 className="jp-h2 jp-h2-lt">A co u mě nehledejte</h2>
+              <ul className="jp-list jp-list-minus">
+                {nedostanete.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CO U MĚ NEČEKEJTE */}
-      <section
-        style={{
-          background: 'var(--cloud)',
-          padding: 'clamp(80px,11vw,130px) 0',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
+      {/* FAQ */}
+      <section style={{ background: 'var(--cloud)', padding: 'clamp(72px,10vw,128px) 0' }}>
         <div className="inner">
-          <p className="eyebrow reveal" style={{ marginBottom: 24 }}>
-            Co u mě nečekejte
-          </p>
-          <h2
-            className="reveal d1"
-            style={{
-              fontFamily: "'Syne',sans-serif",
-              fontSize: 'clamp(1.9rem,4vw,3rem)',
-              fontWeight: 700,
-              letterSpacing: '-.04em',
-              lineHeight: 1.06,
-              color: 'var(--ink)',
-              margin: '0 0 clamp(34px,5vw,54px)',
-              maxWidth: 620,
-            }}
-          >
-            Není to pro každého.
-          </h2>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))',
-              gap: 16,
-            }}
-          >
-            {dontExpect.map((item, i) => (
-              <div
-                key={i}
-                className={`reveal d${Math.min(i + 1, 5)}`}
-                style={{
-                  padding: '22px 24px',
-                  border: '1px solid var(--line)',
-                  background: 'var(--cloud-1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 14,
-                }}
-              >
-                <span
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: '50%',
-                    background: 'var(--orchid)',
-                    flexShrink: 0,
-                  }}
-                />
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: 14,
-                    lineHeight: 1.7,
-                    color: 'var(--ink-s)',
-                  }}
-                >
-                  {item}
-                </p>
-              </div>
+          <div style={{ marginBottom: 'clamp(40px,6vw,72px)' }}>
+            <p className="eyebrow reveal" style={{ marginBottom: 20 }}>Často kladené otázky</p>
+            <h2 className="jp-h2 reveal d1">Na co se klienti ptají nejčastěji</h2>
+          </div>
+          <div className="jp-faq">
+            {faq.map((item, i) => (
+              <details key={i} className="jp-faq-item reveal" style={{ transitionDelay: `${i * 50}ms` }}>
+                <summary className="jp-faq-q">
+                  <span>{item.q}</span>
+                  <span className="jp-faq-icon" aria-hidden="true">+</span>
+                </summary>
+                <div className="jp-faq-a">
+                  <p>{item.a}</p>
+                </div>
+              </details>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ČAS */}
-      <section
-        style={{
-          background: 'var(--deep)',
-          padding: 'clamp(80px,11vw,140px) 0',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            width: 520,
-            height: 520,
-            borderRadius: '50%',
-            background: 'radial-gradient(circle,rgba(168,125,184,.12),transparent 70%)',
-            left: -100,
-            bottom: -100,
-            filter: 'blur(70px)',
-            pointerEvents: 'none',
-          }}
-        />
-        <div className="noise" />
-        <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
-          <p
-            className="eyebrow reveal"
-            style={{ color: 'rgba(240,237,232,.42)', marginBottom: 24 }}
-          >
-            Časová náročnost tvorby webu
-          </p>
-          <h2
-            className="reveal d1"
-            style={{
-              fontFamily: "'Syne',sans-serif",
-              fontSize: 'clamp(2rem,4vw,3rem)',
-              fontWeight: 700,
-              letterSpacing: '-.045em',
-              lineHeight: 1.04,
-              color: 'var(--cloud)',
-              margin: '0 0 26px',
-              maxWidth: 620,
-            }}
-          >
-            Jak dlouho to trvá?
-          </h2>
-          <p
-            className="reveal d2"
-            style={{
-              fontSize: '1rem',
-              lineHeight: 1.86,
-              color: 'rgba(240,237,232,.5)',
-              maxWidth: 600,
-              margin: '0 0 16px',
-            }}
-          >
-            Záleží na rozsahu webu a rychlosti dodání podkladů.
-            Nejčastější brzdou totiž nebývají technologie, ale chybějící texty a fotky.
-          </p>
-          <p
-            className="reveal d3"
-            style={{
-              fontSize: '1rem',
-              lineHeight: 1.86,
-              color: 'rgba(240,237,232,.5)',
-              maxWidth: 600,
-              margin: '0 0 34px',
-            }}
-          >
-            Pevné termíny naslepo neslibuji.
-            Pokud vás ale z nějakého důvodu tlačí čas, sdělte mi to hned na
-            začátku a řekneme si, jestli je reálné to stihnout.
-          </p>
-          <Link href="/kontakt" className="btn btn-lt reveal d4">
-            Začněme →
-          </Link>
+      {/* CTA */}
+      <section style={{ background: 'var(--cloud)', padding: '0 0 clamp(72px,10vw,128px)' }}>
+        <div className="inner">
+          <div className="jp-cta reveal">
+            <h2 className="jp-cta-title">Sedne vám, jak to dělám?</h2>
+            <p className="jp-cta-sub">
+              Tak se ozvěte. Stačí pár vět o tom, co děláte a co od webu čekáte. Brzy vám odpovím s tím, jestli a jak to spolu uděláme.
+            </p>
+            <a href="/kontakt" className="btn btn-ink jp-cta-btn">Napsat →</a>
+          </div>
         </div>
       </section>
 
       <style>{`
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(28px); }
-          to   { opacity: 1; transform: none; }
+        /* ========== KROKY ========== */
+        .jp-steps {
+          display: flex;
+          flex-direction: column;
+          gap: clamp(40px, 5vw, 64px);
+          max-width: 880px;
+          margin: 0 auto;
         }
-        @media(max-width:720px) {
-          .inner div[style*="grid-template-columns: 90px 1fr"] {
-            grid-template-columns: 1fr !important;
-            gap: 18px !important;
+        .jp-step {
+          display: grid;
+          grid-template-columns: 160px 1fr;
+          gap: clamp(20px, 3vw, 48px);
+          padding-bottom: clamp(40px, 5vw, 64px);
+          border-bottom: 1px solid rgba(28,28,30,.08);
+        }
+        .jp-step:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+        .jp-step-num {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .jp-step-num-label {
+          font-family: 'Syne', sans-serif;
+          font-size: 10px;
+          letter-spacing: .24em;
+          text-transform: uppercase;
+          color: var(--dim);
+          margin-bottom: 4px;
+        }
+        .jp-step-num-digits {
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(3rem, 7vw, 4.8rem);
+          font-weight: 800;
+          letter-spacing: -.05em;
+          line-height: 1;
+          color: var(--capri);
+        }
+        .jp-step-title {
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(1.45rem, 3vw, 2rem);
+          font-weight: 800;
+          letter-spacing: -.03em;
+          line-height: 1.1;
+          color: var(--ink);
+          margin: 8px 0 20px;
+        }
+        .jp-step-text {
+          font-size: 1rem;
+          line-height: 1.78;
+          color: var(--ink-s);
+        }
+        .jp-step-text p {
+          margin: 0 0 14px;
+        }
+        .jp-step-text p:last-child {
+          margin-bottom: 0;
+        }
+        .jp-step-text ul {
+          margin: 4px 0 14px;
+          padding-left: 22px;
+        }
+        .jp-step-text li {
+          margin: 0 0 6px;
+          color: var(--ink-s);
+        }
+
+        @media (max-width: 720px) {
+          .jp-step {
+            grid-template-columns: 1fr;
+            gap: 12px;
           }
+          .jp-step-num-digits {
+            font-size: 3rem;
+          }
+        }
+
+        /* ========== DOSTANETE / NEDOSTANETE ========== */
+        .jp-twocol {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: clamp(40px, 6vw, 80px);
+          max-width: 1080px;
+          margin: 0 auto;
+        }
+        @media (max-width: 760px) {
+          .jp-twocol { grid-template-columns: 1fr; gap: 56px; }
+        }
+        .jp-h2 {
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(1.6rem, 3.3vw, 2.4rem);
+          font-weight: 800;
+          letter-spacing: -.035em;
+          line-height: 1.1;
+          margin: 0 0 28px;
+          color: var(--ink);
+        }
+        .jp-h2-lt {
+          color: var(--cloud);
+        }
+        .jp-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .jp-list li {
+          position: relative;
+          padding-left: 28px;
+          font-size: 1rem;
+          line-height: 1.7;
+          color: rgba(240,237,232,.75);
+          margin-bottom: 12px;
+        }
+        .jp-list-plus li::before {
+          content: '+';
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-family: 'Syne', sans-serif;
+          font-weight: 800;
+          color: var(--capri);
+          font-size: 1.15rem;
+          line-height: 1.5;
+        }
+        .jp-list-minus li::before {
+          content: '−';
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-family: 'Syne', sans-serif;
+          font-weight: 800;
+          color: rgba(240,237,232,.4);
+          font-size: 1.15rem;
+          line-height: 1.5;
+        }
+
+        /* ========== FAQ ========== */
+        .jp-faq {
+          max-width: 820px;
+          margin: 0 auto;
+        }
+        .jp-faq-item {
+          border-bottom: 1px solid rgba(28,28,30,.10);
+        }
+        .jp-faq-item[open] {
+          border-bottom-color: rgba(28,28,30,.18);
+        }
+        .jp-faq-q {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          padding: 22px 0;
+          cursor: pointer;
+          list-style: none;
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(1rem, 1.8vw, 1.2rem);
+          font-weight: 700;
+          color: var(--ink);
+          letter-spacing: -.015em;
+          transition: color .2s;
+        }
+        .jp-faq-q:hover {
+          color: var(--capri);
+        }
+        .jp-faq-q::-webkit-details-marker { display: none; }
+        .jp-faq-icon {
+          font-family: 'Syne', sans-serif;
+          font-weight: 400;
+          font-size: 1.6rem;
+          color: var(--capri);
+          line-height: 1;
+          transition: transform .25s ease;
+          flex-shrink: 0;
+        }
+        .jp-faq-item[open] .jp-faq-icon {
+          transform: rotate(45deg);
+        }
+        .jp-faq-a {
+          padding: 0 0 24px;
+          max-width: 720px;
+        }
+        .jp-faq-a p {
+          margin: 0;
+          font-size: .98rem;
+          line-height: 1.78;
+          color: var(--ink-s);
+        }
+
+        /* ========== CTA ========== */
+        .jp-cta {
+          max-width: 760px;
+          margin: 0 auto;
+          padding: clamp(48px, 7vw, 80px) clamp(28px, 5vw, 64px);
+          background: var(--ink);
+          color: var(--cloud);
+          border-radius: 4px;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        }
+        .jp-cta-title {
+          font-family: 'Syne', sans-serif;
+          font-size: clamp(1.8rem, 4vw, 2.8rem);
+          font-weight: 800;
+          letter-spacing: -.04em;
+          line-height: 1.05;
+          margin: 0 0 18px;
+          color: var(--cloud);
+        }
+        .jp-cta-sub {
+          font-size: 1.02rem;
+          line-height: 1.7;
+          color: rgba(240,237,232,.7);
+          margin: 0 0 32px;
+          max-width: 540px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .jp-cta-btn {
+          background: var(--capri);
+          color: var(--cloud);
+          padding: 14px 32px;
+          font-size: .95rem;
+        }
+        .jp-cta-btn:hover {
+          background: var(--cloud);
+          color: var(--ink);
         }
       `}</style>
     </>
