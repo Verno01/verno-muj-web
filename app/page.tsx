@@ -306,7 +306,7 @@ export default function Home() {
             </h2>
             <div className="reveal d2">
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
-                Jsem Hana Fraňková a každý web řeším sama od začátku do konce, takže vždy víte, kdo sedí za klávesnicí.
+                Každý web řeším sama od začátku do konce, takže vždy víte, kdo sedí za klávesnicí.
               </p>
               <p style={{ fontSize: '1rem', lineHeight: 1.84, color: 'var(--ink-s)', margin: '0 0 16px' }}>
                 Webům se věnuji několik let a průběžně se v oboru dál vzdělávám. Záleží mi na tom, aby web dobře vypadal, byl přehledný a spolehlivě fungoval i dlouhodobě.
