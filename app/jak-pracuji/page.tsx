@@ -158,7 +158,7 @@ const dostanete = [
 const nedostanete = [
   'e-shop s košíkem a skladovým systémem,',
   'rozsáhlý redakční systém pro tým lidí,',
-  'správu sociálních sítí nebo placených reklamních kampaní,',
+  'správu sociálních sítí nebo placených reklamních kampaní.',
 ]
 
 const faq = [
