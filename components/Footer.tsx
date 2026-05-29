@@ -22,13 +22,6 @@ export default function Footer() {
       <div className="noise" />
 
       <div className="inner-wide" style={{ position: 'relative', zIndex: 2 }}>
-        {/* CTA */}
-        <div className="reveal" style={{ marginBottom: 'clamp(52px,8vw,88px)' }}>
-          <p style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2.8rem,6.5vw,5.6rem)', fontWeight: 800, lineHeight: .94, letterSpacing: '-.045em', color: 'var(--cloud)', margin: '0 0 32px', maxWidth: 760 }}>
-            Pojďme dát<br />Vašemu webu tvar.
-          </p>
-          <Link href="/kontakt" className="btn btn-lt">Kontakt ↗</Link>
-        </div>
 
         {/* Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(170px,1fr))', gap: 38, paddingTop: 44, borderTop: '1px solid rgba(240,237,232,.09)' }}>
@@ -40,20 +33,20 @@ export default function Footer() {
             <p style={{ fontSize: 10, letterSpacing: '.22em', textTransform: 'uppercase', color: 'rgba(240,237,232,.3)', margin: '0 0 14px' }}>Stránky</p>
             <Link href="/nabidka" className="footer-link">Nabídka</Link>
             <Link href="/jak-pracuji" className="footer-link">Jak pracuji</Link>
-            <Link href="/proc-takhle" className="footer-link">Proč takhle</Link>
+            <Link href="/kalkulacka" className="footer-link">Vaše sazba</Link>
             <Link href="/kontakt" className="footer-link">Kontakt</Link>
           </div>
           <div>
             <p style={{ fontSize: 10, letterSpacing: '.22em', textTransform: 'uppercase', color: 'rgba(240,237,232,.3)', margin: '0 0 14px' }}>Kontakt</p>
             <a href="mailto:info@verno.cz" style={{ display: 'block', fontSize: 13, color: 'rgba(240,237,232,.5)', textDecoration: 'none', padding: '4px 0' }}>info@verno.cz</a>
             <a href="tel:+420705911941" style={{ display: 'block', fontSize: 13, color: 'rgba(240,237,232,.5)', textDecoration: 'none', padding: '4px 0' }}>+420 705 911 941</a>
-            <p style={{ fontSize: 13, padding: '4px 0', margin: 0 }}>IČ: 23526629</p>
+            <p style={{ fontSize: 13, padding: '4px 0', margin: 0 }}>IČO: 235 26 629</p>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div style={{ paddingTop: 24, marginTop: 30, borderTop: '1px solid rgba(240,237,232,.07)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 12, fontSize: 11, color: 'rgba(240,237,232,.25)' }}>
-          <p style={{ margin: 0 }}>© {year} VERNO — Hana Fraňková</p>
+          <p style={{ margin: 0 }}>© {year} VERNO · Rovino s.r.o., IČO 235 26 629</p>
           <div style={{ display: 'flex', gap: 18, flexWrap: 'wrap' }}>
             <Link href="/obchodni-podminky" style={{ color: 'inherit', textDecoration: 'none' }}>Obchodní podmínky</Link>
             <Link href="/ochrana-osobnich-udaju" style={{ color: 'inherit', textDecoration: 'none' }}>Ochrana osobních údajů</Link>
