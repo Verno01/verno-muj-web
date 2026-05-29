@@ -4,7 +4,8 @@ import LegalLayout from '@/components/LegalLayout'
 export const metadata: Metadata = {
   title: 'Ochrana osobních údajů',
   description: 'Jaké osobní údaje zpracováváme, proč, komu je předáváme a jaká máte práva. V souladu s GDPR.',
-  robots: { index: true, follow: true },
+  alternates: { canonical: 'https://verno.cz/ochrana-osobnich-udaju' },
+  robots: { index: false, follow: true },
 }
 
 export default function OchranaOsobnichUdaju() {
