@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Kontakt | Poptat web - VERNO',
+  title: 'Kontakt | Poptat web',
   description: 'Napište mi pár vět o svém projektu. Ozvu se do dvou pracovních dnů. Tvorba webů pro živnostníky a malé firmy.',
   alternates: {
     canonical: 'https://verno.cz/kontakt',
