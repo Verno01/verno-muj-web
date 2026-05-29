@@ -281,11 +281,11 @@ export default function JakPracuji() {
       <section style={{ background: 'var(--cloud)', padding: '0 0 clamp(72px,10vw,128px)' }}>
         <div className="inner">
           <div className="jp-cta reveal">
-            <h2 className="jp-cta-title">Sedne vám, jak to dělám?</h2>
+            <h2 className="jp-cta-title">Nečekejte na „někdy“.</h2>
             <p className="jp-cta-sub">
-              Tak se ozvěte. Stačí pár vět o tom, co děláte a co od webu čekáte. Brzy vám odpovím s tím, jestli a jak to spolu uděláme.
+              Váš nový web můžeme začít plánovat už dnes.
             </p>
-            <a href="/kontakt" className="btn btn-ink jp-cta-btn">Napsat →</a>
+            <a href="/kontakt" className="btn btn-ink jp-cta-btn">Napište mi →</a>
           </div>
         </div>
       </section>
