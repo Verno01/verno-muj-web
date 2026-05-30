@@ -65,15 +65,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org', '@type': 'ProfessionalService',
+          '@context': 'https://schema.org',
+          '@type': 'ProfessionalService',
           '@id': 'https://verno.cz/#business',
-          name: 'VERNO - prezentační weby',
-          description: 'Tvorba webů pro živnostníky, řemeslníky a malé firmy.',
-          url: 'https://verno.cz', email: 'info@verno.cz', telephone: '+420705911941',
-          founder: { '@type': 'Person', name: 'Hana Fraňková' },
+          name: 'VERNO – prezentační weby',
+          description: 'Tvorba webů pro živnostníky, řemeslníky a malé firmy. Čistý kód, rychlé načítání, hosting v ceně.',
+          url: 'https://verno.cz',
+          email: 'info@verno.cz',
+          telephone: '+420705911941',
+          image: 'https://verno.cz/logo.jpg',
+          logo: 'https://verno.cz/logo.jpg',
+          founder: {
+            '@type': 'Person',
+            '@id': 'https://verno.cz/#hana',
+            name: 'Hana Fraňková',
+            jobTitle: 'Webdesigner & vývojář',
+            knowsAbout: ['webdesign', 'tvorba webů', 'Next.js', 'SEO', 'prezentační weby'],
+          },
+          serviceType: 'Tvorba prezentačních webových stránek',
           areaServed: { '@type': 'Country', name: 'Česká republika' },
           address: { '@type': 'PostalAddress', addressLocality: 'Třeboň', addressCountry: 'CZ' },
-          priceRange: '12 000 – 60 000 Kč', knowsLanguage: ['cs', 'en', 'de'],
+          priceRange: 'od 12 000 Kč',
+          knowsLanguage: ['cs', 'en', 'de'],
         }) }} />
         <Navigation />
         <main>{children}</main>
