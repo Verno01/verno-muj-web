@@ -266,12 +266,13 @@ export default function Home() {
         <div className="noise" />
         <div className="inner-wide" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 24 }}>Reference</p>
+          <p className="reveal d2" style={{ fontSize: 'clamp(1rem,1.6vw,1.22rem)', lineHeight: 1.7, color: 'rgba(240,237,232,.45)', fontStyle: 'italic', margin: '0 0 24px', maxWidth: 680, borderLeft: '2px solid var(--orchid)', paddingLeft: 20 }}>
+            „Bylo vidět, že cílem nebylo jen vytvořit web, ale vytvořit web, který bude firmě opravdu sloužit. Výsledek je krásný."
+          </p>
+
           <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(2rem,4vw,3.4rem)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 clamp(30px,4vw,52px)' }}>
             Ukázka z tvorby.
           </h2>
-          <p className="reveal d2" style={{ fontSize: 'clamp(1rem,1.6vw,1.22rem)', lineHeight: 1.7, color: 'rgba(240,237,232,.45)', fontStyle: 'italic', margin: '0 0 clamp(30px,4vw,52px)', maxWidth: 680, borderLeft: '2px solid var(--orchid)', paddingLeft: 20 }}>
-            „Bylo vidět, že cílem nebylo jen vytvořit web, ale vytvořit web, který bude firmě dobře sloužit. Výsledek je krásný."
-          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }} className="refs-grid">
             {[
               { img: '/screens/5class.jpg',   name: 'Web pro VIP dopravu s řidičem 5class.cz',        type: 'VIP doprava s řidičem, Praha · 3 jazyky',   href: 'https://5class.cz' },
