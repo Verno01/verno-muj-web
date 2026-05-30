@@ -184,12 +184,12 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }} className="kalk-promo-grid">
             <div>
-              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>MIMO NABÍDKU: Bezplatná kalkulačka hodinové sazby</p>
+              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>navíc: Bezplatná kalkulačka hodinové sazby</p>
               <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.8vw,3rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 20px' }}>
                 Znát svou reálnou hodinovou sazbu je základ úspěchu.
               </h2>
               <p className="reveal d2" style={{ fontSize: '1rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 32px', maxWidth: 480 }}>
-                Jednoduchá orientační kalkulačka, kterou jsem vytvořila přímo pro živnostníky. Zadejte své výdaje a časové možnosti a během 3 minut uvidíte, jaká odměna v roce 2026 bezpečně pokryje váš provoz, daně, odvody i rezervy. Nástroj slouží pro vaši osobní byznysovou rozvahu.
+                Jednoduchá orientační kalkulačka pro podnikatele. Zadejte své výdaje a časové možnosti a během 3 minut uvidíte, jaká odměna v roce 2026 bezpečně pokryje váš provoz, daně, odvody i rezervy. Nástroj slouží pro vaši osobní byznysovou rozvahu.
               </p>
               <div className="reveal d3">
                 <Link href="/kalkulacka" className="btn btn-lt" style={{ display: 'inline-block', marginBottom: 24 }}>
