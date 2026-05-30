@@ -94,7 +94,7 @@ export default function KalkulackaPage() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nástroj zdarma</p>
           <h1 className="page-hero-title">
-            Kalkulačka<br />hodinové sazby<br />OSVČ
+            Kalkulačka hodinové sazby OSVČ
           </h1>
           <p className="page-hero-sub">
             Zjistěte, za kolik skutečně pracovat. S daněmi, odvody a reálným časem. Výsledek za pár minut, zdarma.
