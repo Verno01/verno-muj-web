@@ -139,7 +139,7 @@ export default function Nabidka() {
           <div className="reveal" style={{ padding: 'clamp(48px,6vw,80px) 0', borderBottom: '1px solid var(--line)' }}>
             <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 800, letterSpacing: '-.04em', color: 'var(--ink)', margin: '0 0 24px' }}>Doplňkové služby</h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: '0 0 16px' }}>K libovolnému webu lze doplnit:</p>
-            {['Jazyková mutace webu (angličtina nebo jiný jazyk)', 'Vlastní administrace pro úpravu vybraného obsahu,'].map((item, i) => (
+            {['Jazyková mutace webu (angličtina nebo jiný jazyk).', 'Vlastní administrace pro úpravu vybraného obsahu.'].map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
                 <span style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(168,125,184,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
                   <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--orchid)', display: 'block' }} />
