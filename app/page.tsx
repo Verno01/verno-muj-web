@@ -142,7 +142,7 @@ export default function Home() {
           </h2>
           <div className="reveal d2" style={{ maxWidth: 560 }}>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>
-              Pracujete naplno. Váš web by to měl ukazovat.
+              Dobrá práce si zaslouží dobrý web.
             </p>
           </div>
         </div>
