@@ -189,8 +189,64 @@ const faq = [
 ]
 
 export default function JakPracuji() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Jak dlouho trvá, než bude web hotový?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'To záleží na rozsahu a také rychlosti dodání podkladů. Menší web bývá hotový během několika týdnů. Větší prezentační web obvykle za měsíc až dva. Přesnější odhad dostanete po první domluvě.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Co když nemám texty ani jasnou představu?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'To je celkem běžné. Hodně lidí nepřijde s hotovým zadáním. Vysvětlíte mi, co děláte, pro koho a jak chcete působit. Zbytek společně poskládáme.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Co když po předání budu chtít něco změnit?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Menší úpravy řeším průběžně formou hodinové sazby. Větší změny nebo nové sekce řešíme jako navazující projekt.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Co se stane, když u vás nechci dál hostovat?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Web je váš a můžete si ho kdykoliv přesunout jinam. S technickým přesunem na jiné místo vám ráda pomůžu, aby všechno běželo bez výpadku dál.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Proč nedělám e-shopy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Protože e-shop je jiný typ projektu než prezentační web. Vyžaduje jinou technickou specializaci.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Můžu si web spravovat sám/sama?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Vlastní administraci k webu nedávám, protože bývá u stránek nejčastějším zdrojem problémů a chyb. Kdykoliv budete potřebovat cokoliv změnit, stačí mi napsat. Všechny menší úpravy dělám obratem v rámci hodinové sazby. Vy máte jistotu, že web zůstane technicky čistý a rychlý.',
+        },
+      },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* Page hero */}
       <div className="page-hero">
         <div className="page-hero-orb" />
