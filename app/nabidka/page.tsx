@@ -37,7 +37,7 @@ const packages = [
   },
   {
     id: 'landing-page', num: '03', name: 'Landing page',
-    for: 'Jednostránkový web navržený čistě tak, aby vedl návštěvníka k jedné konkrétní akci – například k objednávce, registraci nebo poptávce.',
+    for: 'Jednostránkový web navržený čistě tak, aby vedl návštěvníka k jedné konkrétní akci - například k objednávce, registraci nebo poptávce.',
     items: [
       'Přehledná struktura, která návštěvníka přirozeně vede k akci',
       'Jasně vystavěný obsah: problém → řešení → důvěra → výzva ke kontaktu',
@@ -98,9 +98,9 @@ export default function Nabidka() {
         <div className="noise" />
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <p className="eyebrow" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Nabídka</p>
-          <h1 className="page-hero-title">Pět typů webů.<br />Každý pro jiný záměr.</h1>
+          <h1 className="page-hero-title">Prezentační weby<br />postavené na míru</h1>
           <p className="page-hero-sub">
-            Každý prezentační web stavím na míru rozsahu, obsahu i cílům. Konkrétní cenu dostanete vždy písemně a předem, než cokoliv začnu. Žádné dodatečné položky, o kterých byste nevěděli.
+            Orientační příklady nejčastějších typů projektů. Slouží pro představu o rozsahu. Každý web je navržen individuálně podle konkrétního zadání a domluvy.
           </p>
         </div>
       </div>
@@ -138,8 +138,8 @@ export default function Nabidka() {
           {/* Doplňkové služby */}
           <div className="reveal" style={{ padding: 'clamp(48px,6vw,80px) 0', borderBottom: '1px solid var(--line)' }}>
             <h2 style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontWeight: 800, letterSpacing: '-.04em', color: 'var(--ink)', margin: '0 0 24px' }}>Doplňkové služby</h2>
-            <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: '0 0 16px' }}>K libovolnému balíčku se dá přidat:</p>
-            {['Anglická (nebo jiná jazyková) verze webu', 'Pozdější úpravy hotového webu - hodinově, vždy po domluvě'].map((item, i) => (
+            <p style={{ fontSize: '1rem', lineHeight: 1.82, color: 'var(--ink-s)', margin: '0 0 16px' }}>K libovolnému webu lze doplnit:</p>
+            {['Jazyková mutace webu (angličtina nebo jiný jazyk)', 'Vlastní administrace pro úpravu vybraného obsahu,'].map((item, i) => (
               <div key={i} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
                 <span style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(168,125,184,.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
                   <span style={{ width: 5, height: 5, borderRadius: '50%', background: 'var(--orchid)', display: 'block' }} />
