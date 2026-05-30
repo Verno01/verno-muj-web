@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     canonical: 'https://verno.cz',
   },
   title: {
-    default: 'VERNO - Prezentační weby',
+    default: 'VERNO | Tvorba webů pro firmy a živnostníky',
     template: '%s | VERNO',
   },
-  description: 'Tvorba webových prezentací pro firmy a živnostníky. Na míru, bez šablon, bez prostředníků.',
+  description: 'Tvorba webových prezentací pro firmy a živnostníky. Bez hostingových poplatků, čistý kód na míru.',
   keywords: ['tvorba webů', 'prezentační web', 'web pro živnostníka', 'webdesign', 'Hana Fraňková', 'VERNO'],
   authors: [{ name: 'Hana Fraňková', url: 'https://verno.cz' }],
   icons: {
@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           url: 'https://verno.cz', email: 'info@verno.cz', telephone: '+420705911941',
           founder: { '@type': 'Person', name: 'Hana Fraňková' },
           areaServed: { '@type': 'Country', name: 'Česká republika' },
-          address: { '@type': 'PostalAddress', addressLocality: 'Lomnice nad Lužnicí', addressCountry: 'CZ' },
+          address: { '@type': 'PostalAddress', addressLocality: 'Třeboň', addressCountry: 'CZ' },
           priceRange: '12 000 – 60 000 Kč', knowsLanguage: ['cs', 'en', 'de'],
         }) }} />
         <Navigation />
