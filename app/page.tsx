@@ -7,7 +7,7 @@ const services = [
   { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Přehledný jednostránkový web. Kontakt, služby a základní informace na jednom místě.' },
   { id: 'maly-web',        name: 'Malý web',                 short: 'Vícestránkový web pro živnostníka s jednou hlavní službou. Chcete být na internetu a působit důvěryhodně.' },
   { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka navržená pro konkrétní nabídku, kampaň nebo službu.' },
-  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Web pro festival, spolek nebo projekt. Program, info, kontakt - přehledně.' },
+  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Web pro festival, spolek nebo projekt. Program, info, kontakt. Vše řehledné.' },
   { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web pro živnostníka nebo firmu s více službami či širší nabídkou. Promyšlená struktura, která zákazníka provede a přesvědčí.' },
 ]
 
@@ -79,9 +79,9 @@ export default function Home() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 7, opacity: 0, animation: 'fadeUp .9s .4s cubic-bezier(.16,1,.3,1) forwards' }}>
               {[
-                'Rychlý web i na mobilu',
-                'Bez poplatků za hosting',
-                'Stabilní web na čistém kódu',
+                'Čistý kód, žádné pluginy',
+                'Hosting v ceně',
+                'Rychlé načítání i na mobilu',
               ].map((t, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12, color: 'var(--dim)' }}>
                   <span style={{ width: 4, height: 4, borderRadius: '50%', background: 'var(--orchid)', flexShrink: 0 }} />{t}
@@ -184,7 +184,7 @@ export default function Home() {
         <div className="inner" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }} className="kalk-promo-grid">
             <div>
-              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>Bezplatná kalkulačka hodinové sazby pro OSVČ</p>
+              <p className="eyebrow reveal" style={{ color: 'rgba(240,237,232,.4)', marginBottom: 20 }}>MIMO NABÍDKU: Bezplatná kalkulačka hodinové sazby</p>
               <h2 className="reveal d1" style={{ fontFamily: "'Syne',sans-serif", fontSize: 'clamp(1.8rem,3.8vw,3rem)', fontWeight: 800, letterSpacing: '-.04em', lineHeight: 1.06, color: 'var(--cloud)', margin: '0 0 20px' }}>
                 Znát svou reálnou hodinovou sazbu je základ úspěchu.
               </h2>
