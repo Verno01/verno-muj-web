@@ -4,11 +4,11 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 const services = [
-  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Jednoduchý web pro vaši službu. Obsahuje kontakt a základní informace.' },
-  { id: 'maly-web',        name: 'Malý web',                 short: 'Více prostoru pro vaše služby, reference a ukázky práce.' },
+  { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Přehledný jednostránkový web. Kontakt, služby a základní informace na jednom místě.' },
+  { id: 'maly-web',        name: 'Malý web',                 short: 'Vícestránkový web pro živnostníka s jednou hlavní službou. Chcete být na internetu a působit důvěryhodně.' },
   { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka navržená pro konkrétní nabídku, kampaň nebo službu.' },
-  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Všechny důležité informace o akci přehledně na jednom místě.' },
-  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Profesionální web na míru, který buduje důvěru a je klíčovou součástí vaší firmy.' },
+  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Web pro festival, spolek nebo projekt. Program, info, kontakt - přehledně.' },
+  { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web pro živnostníka nebo firmu s více službami či širší nabídkou. Promyšlená struktura, která zákazníka provede a přesvědčí.' },
 ]
 
 const steps = [
@@ -22,7 +22,7 @@ const marquee = [
   'tvorba webu',
   'prezentační weby na míru',
   'pro živnostníky a malé firmy',
-  'čistý kód',
+  'bez šablon',
   'rychlé načítání',
   'responzivní web',
   'bezplatný hosting',
@@ -142,7 +142,7 @@ export default function Home() {
           </h2>
           <div className="reveal d2" style={{ maxWidth: 560 }}>
             <p style={{ fontSize: '1.01rem', lineHeight: 1.82, color: 'rgba(240,237,232,.5)', margin: '0 0 16px' }}>
-              Pracujete na maximum a vaše služby jsou skvělé. Web by měl odrážet skutečnou kvalitu toho, co prezentuje.
+              Pracujete naplno. Váš web by to měl ukazovat.
             </p>
           </div>
         </div>
