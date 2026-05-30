@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'VERNO | Tvorba webů pro firmy a živnostníky',
     template: '%s | VERNO',
   },
-  description: 'Tvorba webových prezentací pro firmy a živnostníky. Bez hostingových poplatků, čistý kód na míru.',
+  description: 'Tvorba webových prezentací pro firmy a živnostníky. Bez poplatků za hosting, bez šablon.',
   keywords: ['tvorba webů', 'prezentační web', 'web pro živnostníka', 'webdesign', 'Hana Fraňková', 'VERNO'],
   authors: [{ name: 'Hana Fraňková', url: 'https://verno.cz' }],
   icons: {
