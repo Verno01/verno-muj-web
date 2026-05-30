@@ -40,7 +40,7 @@ export default function Navigation() {
         borderBottom: scrolled || open ? '1px solid var(--line)' : '1px solid transparent',
       }}>
         <div style={{ maxWidth: 1320, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Link href="/" style={{ fontFamily: "'Syne',sans-serif", fontSize: 15, fontWeight: 800, letterSpacing: '.3em', color: 'var(--ink)', textDecoration: 'none' }}>VERNO</Link>
+          <Link href="/" style={{ fontFamily: "'Syne',sans-serif", fontSize: 15, fontWeight: 800, letterSpacing: '.3em', color: 'var(--ink)', textDecoration: 'none' }}>WWW·VERNO</Link>
 
           {/* Desktop nav */}
           <nav style={{ display: 'flex', alignItems: 'center', gap: 2 }} className="nav-desktop">
