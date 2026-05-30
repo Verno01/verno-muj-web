@@ -201,7 +201,7 @@ export default function JakPracuji() {
           </p>
           <h1 className="page-hero-title">Jak pracuji</h1>
           <p className="page-hero-sub">
-            Žádné nekonečné porady přes Zoom. Píšeme si a vy během tvorby vidíte rozpracovaný web a celou dobu víte, kam to směřuje. Jak je to krok po kroku?
+            Žádné nekonečné porady přes Zoom. Píšeme si a vy během tvorby vidíte rozpracovaný web. Jak je to krok po kroku?
           </p>
         </div>
       </div>
@@ -258,8 +258,8 @@ export default function JakPracuji() {
       <section style={{ background: 'var(--cloud)', padding: 'clamp(72px,10vw,128px) 0' }}>
         <div className="inner">
           <div style={{ marginBottom: 'clamp(40px,6vw,72px)' }}>
-            <p className="eyebrow reveal" style={{ marginBottom: 20 }}>Často kladené otázky</p>
-            <h2 className="jp-h2 reveal d1">Na co se klienti ptají nejčastěji</h2>
+            <p className="eyebrow reveal" style={{ marginBottom: 20 }}>Otázky a odpovědi</p>
+            <h2 className="jp-h2 reveal d1">Co by vás mohlo zajímat</h2>
           </div>
           <div className="jp-faq">
             {faq.map((item, i) => (
