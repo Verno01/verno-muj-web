@@ -261,7 +261,8 @@ export default function Home() {
       </section>
 
       {/* ── REFERENCE ────────────────────────────────────────────── */}
-      <section style={{ background: 'var(--deep)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: 'var(--deep)', padding: 'clamp(80px,11vw,140px) 0', position: 'relative', overflow: 'hidden' }} itemScope itemType="https://schema.org/ItemList">
+        <meta itemProp="name" content="Ukázka z tvorby — weby od VERNO" />
         <div style={{ position: 'absolute', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle,rgba(245,138,0,.08),transparent 70%)', right: -80, bottom: -80, filter: 'blur(70px)', pointerEvents: 'none' }} />
         <div className="noise" />
         <div className="inner-wide" style={{ position: 'relative', zIndex: 2 }}>
@@ -279,10 +280,14 @@ export default function Home() {
               { img: '/screens/ambiente.jpg', name: 'Web Ambiente Light – světelný design',          type: 'Světelný design · Prezentační web',          href: 'https://ambientelight.eu' },
             ].map((r, i) => (
               <a key={i} href={r.href} target="_blank" rel="noopener" className={`reveal d${i + 1}`}
+                itemScope itemType="https://schema.org/CreativeWork" itemProp="itemListElement"
                 style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', border: '1px solid rgba(240,237,232,.08)', transition: 'transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s', background: 'rgba(255,255,255,.03)', textDecoration: 'none' }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = 'translateY(-8px)'; el.style.boxShadow = '0 32px 80px rgba(0,0,0,.4)' }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = ''; el.style.boxShadow = '' }}
               >
+                <meta itemProp="name" content={r.name} />
+                <meta itemProp="url" content={r.href} />
+                <meta itemProp="creator" content="Hana Fraňková – VERNO" />
                 <div style={{ height: 220, overflow: 'hidden', position: 'relative' }}>
                   <Image src={r.img} alt={r.name} fill style={{ objectFit: 'cover', objectPosition: 'top' }} />
                 </div>
