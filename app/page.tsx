@@ -5,9 +5,9 @@ import { useEffect, useRef } from 'react'
 
 const services = [
   { id: 'webova-vizitka',  name: 'Webová vizitka',          short: 'Přehledný jednostránkový web. Kontakt, služby a základní informace na jednom místě.' },
-  { id: 'maly-web',        name: 'Malý web',                 short: 'Vícestránkový web pro živnostníka s jednou hlavní službou. Chcete být na internetu a působit důvěryhodně.' },
+  { id: 'maly-web',        name: 'Malý web',                 short: 'Vícestránkový web pro živnostníka s jednou hlavní službou. Pro ty, kdo chtějí být na internetu a působit důvěryhodně.' },
   { id: 'landing-page',    name: 'Landing page',             short: 'Jedna stránka navržená pro konkrétní nabídku, kampaň nebo službu.' },
-  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Web pro festival, spolek nebo projekt. Program, info, kontakt. Vše řehledné.' },
+  { id: 'akce-spolek',     name: 'Web pro akci nebo spolek', short: 'Web pro festival, spolek nebo projekt. Program, info, kontakt. Vše přehledné.' },
   { id: 'prezentacni-web', name: 'Prezentační web',          short: 'Web pro živnostníka nebo firmu s více službami či širší nabídkou. Promyšlená struktura, která zákazníka provede a přesvědčí.' },
 ]
 
