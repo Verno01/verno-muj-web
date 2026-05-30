@@ -24,8 +24,8 @@ const marquee = [
   'pro živnostníky a malé firmy',
   'čistý kód',
   'rychlé načítání',
-  'přímá komunikace',
-  'bez e-shopů',
+  'responzivní web',
+  'bezplatný hosting',
   'Třeboň · ČR',
 ]
 
@@ -70,8 +70,8 @@ export default function Home() {
               <span style={{ background: 'linear-gradient(90deg,#9B4FCC 0%,#FF7A00 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Moderní weby</span> pro<br />živnostníky<br />a menší<br />firmy.
             </h1>
             <p style={{ fontSize: 'clamp(.93rem,1.1vw,1.04rem)', lineHeight: 1.82, color: 'var(--ink-s)', maxWidth: 460, margin: '0 0 30px', opacity: 0, animation: 'fadeUp .9s .24s cubic-bezier(.16,1,.3,1) forwards' }}>
-              Lidé si vás nejdřív najdou na internetu. Váš web rozhoduje o vaší důvěryhodnosti dřív, než s nimi stihnete promluvit.
-              Stavím stránky, které první dojem nepokazí.
+              Lidé si vás dnes nejdříve najdou na internetu. Váš web rozhoduje o důvěře dřív, než s nimi stihnete promluvit.
+              Tvořím stránky, které jsou přehledné, působí profesionálně a dělají dobrý první dojem.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 26, opacity: 0, animation: 'fadeUp .9s .32s cubic-bezier(.16,1,.3,1) forwards' }}>
               <Link href="/nabidka" className="btn btn-ink">Co nabízím →</Link>
