@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: 'https://verno.cz',
   },
   title: {
-    default: 'VERNO | Tvorba webů pro firmy a živnostníky',
+    default: 'Tvorba webů pro firmy a živnostníky - VERNO',
     template: '%s | VERNO',
   },
   description: 'Tvorba webových prezentací pro firmy a živnostníky. Bez poplatků za hosting, bez šablon.',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: '/og-verno-2.jpg',
         width: 1200,
         height: 630,
-        alt: 'VERNO - Tvorba moderních webových prezentací',
+        alt: 'Tvorba webových stránek - VERNO',
       },
     ],
   },
