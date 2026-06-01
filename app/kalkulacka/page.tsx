@@ -3,8 +3,8 @@ import Link from 'next/link'
 import KalkulackaWrapper from '@/components/KalkulackaWrapper'
 
 export const metadata: Metadata = {
-  title: 'Bezplatná kalkulačka hodinové sazby pro OSVČ 2026',
-  description: 'Jednoduchá orientační kalkulačka pro živnostníky. Zadejte své výdaje a časové možnosti a během 3 minut uvidíte, jaká odměna bezpečně pokryje váš provoz, daně, odvody i rezervy. Nástroj slouží pro vaši osobní byznysovou rozvahu.',
+  title: 'Kalkulačka hodinové sazby pro OSVČ 2026',
+  description: 'Zjistěte, jaká odměna vám bezpečně pokryje provoz, daně, odvody i rezervy. Jednoduchá byznysová kalkulačka pro živnostníky',
   keywords: [
     'kalkulačka hodinové sazby OSVČ',
     'hodinová sazba živnostník',
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     'jak vypočítat hodinovou sazbu',
   ],
   openGraph: {
-    title: 'Kalkulačka hodinové sazby OSVČ - VERNO',
-    description: 'Zjistěte svou reálnou hodinovou sazbu. Zohledňuje daně, odvody i skutečně fakturovatelný čas.',
+    title: 'Kalkulačka hodinové sazby - VERNO',
+    description: 'Jednoduchá orientační kalkulačka pro živnostníky. Zohledňuje daně, odvody i skutečně fakturovatelný čas.',
     url: 'https://verno.cz/kalkulacka',
     images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
   },
