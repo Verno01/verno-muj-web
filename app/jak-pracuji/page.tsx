@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Jak pracuji | Tvorba webu krok za krokem',
-  description: 'Od první zprávy po hotový web. Šest kroků, transparentní cena, živý odkaz na rozpracovanou verzi po celou dobu tvorby.',
+  title: 'Tvorba webových stránek | Jak pracuji',
+  description: 'Od první zprávy po hotový web. Tvorba webu postaveného na míru od základu krok za krokem',
   alternates: { canonical: 'https://verno.cz/jak-pracuji' },
   openGraph: {
-    title: 'Jak pracuji | Tvorba webu krok za krokem',
-    description: 'Od první zprávy po hotový web. Šest kroků, transparentní cena, živý odkaz na rozpracovanou verzi po celou dobu tvorby.',
+    title: 'Tvorba webových stránek | Jak pracuji',
+    description: 'Od první zprávy po hotový web. Tvorba webu postaveného na míru od základu krok za krokem.',
     url: 'https://verno.cz/jak-pracuji',
     images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO - Tvorba moderních webových prezentací' }],
   },
