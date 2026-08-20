@@ -5,21 +5,21 @@ export const metadata: Metadata = {
     absolute: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
   },
   description:
-    'Jednoduchý prezentační web pro živnostníky a malé firmy za 8 900 Kč bez DPH. Responzivní design, základní SEO, Google Analytics a spuštění webu v ceně.',
+    'Tvorba prezentačních webů pro živnostníky a malé firmy za 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO, Google Analytics a spuštění webu.',
   alternates: {
     canonical: 'https://www.verno.cz',
   },
   openGraph: {
     title: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
     description:
-      'Jednoduchý firemní web za jednu jasnou cenu. Pro živnostníky a malé firmy. Dodání obvykle do 1 až 2 týdnů.',
+      'Prezentační web pro živnostníky a malé firmy. Návrh, zpracování a spuštění v jedné ceně.',
     url: 'https://www.verno.cz',
     images: [
       {
         url: '/og-verno-2.jpg',
         width: 1200,
         height: 630,
-        alt: 'VERNO – prezentační weby pro živnostníky a malé firmy',
+        alt: 'VERNO – tvorba prezentačních webů',
       },
     ],
   },
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
     description:
-      'Jednoduchý firemní web za jednu jasnou cenu. Pro živnostníky a malé firmy.',
+      'Prezentační web pro živnostníky a malé firmy. Návrh, zpracování a spuštění v jedné ceně.',
     images: ['/og-verno-2.jpg'],
   },
   robots: {
