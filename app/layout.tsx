@@ -6,14 +6,14 @@ import CookieBanner from '@/components/CookieBanner'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://verno.cz'),
-  alternates: { canonical: 'https://verno.cz' },
+  metadataBase: new URL('https://www.verno.cz'),
+  alternates: { canonical: 'https://www.verno.cz' },
   title: {
     default: 'Prezentační weby pro živnostníky a malé firmy | VERNO',
     template: '%s | VERNO',
   },
   description: 'Tvorba jednoduchých prezentačních webů pro živnostníky a malé firmy. Jedna jasná cena, responzivní zobrazení, základní SEO a spuštění webu.',
-  authors: [{ name: 'VERNO', url: 'https://verno.cz' }],
+  authors: [{ name: 'VERNO', url: 'https://www.verno.cz' }],
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
-    url: 'https://verno.cz',
+    url: 'https://www.verno.cz',
     siteName: 'VERNO',
     title: 'VERNO – prezentační weby pro živnostníky a malé firmy',
     description: 'Jednoduchý firemní web za jednu jasnou cenu.',
@@ -45,9 +45,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': 'https://verno.cz/#business',
+    '@id': 'https://www.verno.cz/#business',
     name: 'VERNO',
-    url: 'https://verno.cz',
+    url: 'https://www.verno.cz',
     email: 'info@verno.cz',
     telephone: '+420705911941',
     description: 'Tvorba jednoduchých prezentačních webů pro živnostníky a malé firmy.',
