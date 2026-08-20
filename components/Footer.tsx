@@ -4,18 +4,20 @@ import Link from 'next/link'
 
 export default function Footer() {
   const year = new Date().getFullYear()
-
   const openCookieSettings = () => {
-    if (typeof window !== 'undefined' && (window as any).openCookieSettings) {
-      ;(window as any).openCookieSettings()
-    }
+    if (typeof window !== 'undefined' && (window as any).openCookieSettings) (window as any).openCookieSettings()
   }
 
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <span>© {year} VERNO · Rovino s.r.o. · IČO 235 26 629</span>
-        <div className="footer-links">
+        <div className="footer-brand">VERNO<span aria-hidden="true" /></div>
+        <div className="footer-contact">
+          <a href="tel:+420705911941">+420 705 911 941</a>
+          <a href="mailto:info@verno.cz">info@verno.cz</a>
+        </div>
+        <div className="footer-legal">
+          <span>© {year} Rovino s.r.o. · IČO 235 26 629</span>
           <Link href="/obchodni-podminky">Obchodní podmínky</Link>
           <Link href="/ochrana-osobnich-udaju">Ochrana osobních údajů</Link>
           <Link href="/cookies">Cookies</Link>
@@ -23,13 +25,7 @@ export default function Footer() {
         </div>
       </div>
       <style>{`
-        .footer{padding:26px 0;background:#111;border-top:1px solid #2b2b2b;color:#777}
-        .footer-inner{width:min(1240px,calc(100% - 64px));margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:22px;font-size:11px;line-height:1.5}
-        .footer-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
-        .footer a,.footer button{font:inherit;color:#777;text-decoration:none;background:none;border:0;padding:0;cursor:pointer}
-        .footer a:hover,.footer button:hover{color:#bbb}
-        @media(max-width:900px){.footer-inner{width:min(100% - 40px,1240px);flex-direction:column;align-items:flex-start}.footer-links{justify-content:flex-start}}
-        @media(max-width:520px){.footer-inner{width:min(100% - 28px,1240px)}}
+        .footer{background:#f5f5f1;border-top:1px solid #deded8;padding:34px 0 30px}.footer-inner{width:min(1180px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:26px 50px;align-items:start}.footer-brand{display:flex;align-items:center;gap:8px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.04em;color:#171717}.footer-brand span{width:9px;height:9px;background:#edff5a}.footer-contact{display:flex;gap:24px}.footer a,.footer button{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#5f5f5a;text-decoration:none;background:none;border:0;padding:0;cursor:pointer}.footer a:hover,.footer button:hover{color:#111}.footer-legal{grid-column:1/-1;border-top:1px solid #d9d9d3;padding-top:20px;display:flex;gap:18px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#84847e}.footer-legal span{margin-right:auto}@media(max-width:720px){.footer-inner{width:min(100% - 32px,1180px);grid-template-columns:1fr}.footer-contact{flex-direction:column;gap:7px}.footer-legal{grid-column:1;flex-direction:column;gap:9px}.footer-legal span{margin-right:0;margin-bottom:6px}}
       `}</style>
     </footer>
   )
