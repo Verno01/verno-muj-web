@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'Prezentační weby pro živnostníky a malé firmy | VERNO',
     template: '%s | VERNO',
   },
-  description: 'Tvorba jednoduchých prezentačních webů pro živnostníky a malé firmy. Jedna jasná cena, responzivní zobrazení, základní SEO a spuštění webu.',
+  description: 'Prezentační weby pro živnostníky a malé firmy. Pevná cena 8 900 Kč bez DPH. Návrh, zpracování, základní SEO, Google Analytics a spuštění webu.',
   authors: [{ name: 'VERNO', url: 'https://www.verno.cz' }],
   icons: {
     icon: [
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     locale: 'cs_CZ',
     url: 'https://www.verno.cz',
     siteName: 'VERNO',
-    title: 'VERNO – prezentační weby pro živnostníky a malé firmy',
-    description: 'Jednoduchý firemní web za jednu jasnou cenu.',
-    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO – tvorba prezentačních webů' }],
+    title: 'VERNO | Prezentační weby',
+    description: 'Prezentační web pro živnostníky a malé firmy za 8 900 Kč bez DPH.',
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO – prezentační weby' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VERNO – prezentační weby pro živnostníky a malé firmy',
-    description: 'Jednoduchý firemní web za jednu jasnou cenu.',
+    title: 'VERNO | Prezentační weby',
+    description: 'Prezentační web pro živnostníky a malé firmy za 8 900 Kč bez DPH.',
     images: ['/og-verno-2.jpg'],
   },
   robots: { index: true, follow: true },
@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     url: 'https://www.verno.cz',
     email: 'info@verno.cz',
     telephone: '+420705911941',
-    description: 'Tvorba jednoduchých prezentačních webů pro živnostníky a malé firmy.',
+    description: 'Tvorba prezentačních webů pro živnostníky a malé firmy.',
     serviceType: 'Tvorba prezentačních webových stránek',
     areaServed: { '@type': 'Country', name: 'Česká republika' },
     priceRange: '8 900 Kč bez DPH',
@@ -59,17 +59,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       name: 'Prezentační web',
       price: '8900',
       priceCurrency: 'CZK',
-      description: 'Prezentační web pro živnostníky a malé firmy včetně responzivního zobrazení, základního SEO, Google Analytics a nasazení na doménu.',
+      description: 'Prezentační web včetně responzivního zobrazení, základního SEO, Google Analytics a nasazení na doménu.',
     },
   }
 
   return (
     <html lang="cs">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-      </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <Navigation />
