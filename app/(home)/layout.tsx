@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     'Jednoduchý prezentační web pro živnostníky a malé firmy za 8 900 Kč bez DPH. Responzivní design, základní SEO, Google Analytics a spuštění webu v ceně.',
   alternates: {
-    canonical: 'https://verno.cz',
+    canonical: 'https://www.verno.cz',
   },
   openGraph: {
     title: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
     description:
       'Jednoduchý firemní web za jednu jasnou cenu. Pro živnostníky a malé firmy. Dodání obvykle do 1 až 2 týdnů.',
-    url: 'https://verno.cz',
+    url: 'https://www.verno.cz',
     images: [
       {
         url: '/og-verno-2.jpg',
