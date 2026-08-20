@@ -7,95 +7,73 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://verno.cz'),
-  alternates: {
-    canonical: 'https://verno.cz',
-  },
+  alternates: { canonical: 'https://verno.cz' },
   title: {
-    default: 'Tvorba webů pro firmy a živnostníky - VERNO',
+    default: 'Prezentační weby pro živnostníky a malé firmy | VERNO',
     template: '%s | VERNO',
   },
-  description: 'Tvorba webových prezentací pro firmy a živnostníky. Bez poplatků za hosting, bez šablon.',
-  keywords: ['tvorba webů', 'prezentační web', 'web pro živnostníka', 'webdesign', 'Hana Fraňková', 'VERNO'],
-  authors: [{ name: 'Hana Fraňková', url: 'https://verno.cz' }],
+  description: 'Tvorba jednoduchých prezentačních webů pro živnostníky a malé firmy. Jedna jasná cena, responzivní zobrazení, základní SEO a spuštění webu.',
+  authors: [{ name: 'VERNO', url: 'https://verno.cz' }],
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
     ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'icon', url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
-    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    other: [{ rel: 'icon', url: '/favicon-192.png', sizes: '192x192', type: 'image/png' }],
   },
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
     url: 'https://verno.cz',
     siteName: 'VERNO',
-    title: 'VERNO - Prezentační weby',
-    description: 'Tvorba webových prezentací pro firmy a živnostníky.',
-    images: [
-      {
-        url: '/og-verno-2.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Tvorba webových stránek - VERNO',
-      },
-    ],
+    title: 'VERNO – prezentační weby pro živnostníky a malé firmy',
+    description: 'Jednoduchý firemní web za jednu jasnou cenu.',
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO – tvorba prezentačních webů' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VERNO - Prezentační weby',
-    description: 'Tvorba webových prezentací pro firmy a živnostníky.',
+    title: 'VERNO – prezentační weby pro živnostníky a malé firmy',
+    description: 'Jednoduchý firemní web za jednu jasnou cenu.',
     images: ['/og-verno-2.jpg'],
   },
   robots: { index: true, follow: true },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': 'https://verno.cz/#business',
+    name: 'VERNO',
+    url: 'https://verno.cz',
+    email: 'info@verno.cz',
+    telephone: '+420705911941',
+    description: 'Tvorba jednoduchých prezentačních webů pro živnostníky a malé firmy.',
+    serviceType: 'Tvorba prezentačních webových stránek',
+    areaServed: { '@type': 'Country', name: 'Česká republika' },
+    priceRange: '8 900 Kč bez DPH',
+    offers: {
+      '@type': 'Offer',
+      name: 'Prezentační web',
+      price: '8900',
+      priceCurrency: 'CZK',
+      description: 'Prezentační web pro živnostníky a malé firmy včetně responzivního zobrazení, základního SEO, Google Analytics a nasazení na doménu.',
+    },
+  }
+
   return (
     <html lang="cs">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-        {/* Google Analytics 4 */}
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-T009ZW218B" />
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-T009ZW218B', { anonymize_ip: true });
-        ` }} />
+        <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-T009ZW218B',{anonymize_ip:true});` }} />
       </head>
       <body>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'ProfessionalService',
-          '@id': 'https://verno.cz/#business',
-          name: 'VERNO – prezentační weby',
-          description: 'Tvorba webů pro živnostníky, řemeslníky a malé firmy. Čistý kód, rychlé načítání, hosting v ceně.',
-          url: 'https://verno.cz',
-          email: 'info@verno.cz',
-          telephone: '+420705911941',
-          image: 'https://verno.cz/logo.jpg',
-          logo: 'https://verno.cz/logo.jpg',
-          founder: {
-            '@type': 'Person',
-            '@id': 'https://verno.cz/#hana',
-            name: 'Hana Fraňková',
-            jobTitle: 'Webdesigner & vývojář',
-            knowsAbout: ['webdesign', 'tvorba webů', 'Next.js', 'SEO', 'prezentační weby'],
-          },
-          serviceType: 'Tvorba prezentačních webových stránek',
-          areaServed: { '@type': 'Country', name: 'Česká republika' },
-          address: { '@type': 'PostalAddress', addressLocality: 'Třeboň', addressCountry: 'CZ' },
-          priceRange: 'od 12 000 Kč',
-          knowsLanguage: ['cs', 'en', 'de'],
-        }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
         <Navigation />
         <main>{children}</main>
         <Footer />
