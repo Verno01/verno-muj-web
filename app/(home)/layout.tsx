@@ -2,44 +2,32 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Tvorba webů pro živnostníky a malé firmy | VERNO',
+    absolute: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
   },
   description:
-    'Prezentační weby na míru. Čistý kód, rychlé načítání, hosting v ceně. Responzivní design pro všechna zařízení. Bez šablon, bez pluginů.',
-  keywords: [
-    'tvorba webů pro živnostníky',
-    'prezentační web na míru',
-    'web pro malou firmu',
-    'webdesign bez šablon',
-    'tvorba webových stránek',
-    'web pro řemeslníka',
-    'Hana Fraňková',
-    'VERNO',
-    'tvorba webu Třeboň',
-    'tvorba webu jižní Čechy',
-  ],
+    'Jednoduchý prezentační web pro živnostníky a malé firmy za 8 900 Kč bez DPH. Responzivní design, základní SEO, Google Analytics a spuštění webu v ceně.',
   alternates: {
     canonical: 'https://verno.cz',
   },
   openGraph: {
-    title: 'Tvorba webů pro živnostníky a malé firmy | VERNO',
+    title: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
     description:
-      'Prezentační weby na míru, čistý kód, hosting v ceně, pevná cena předem. Responzivní design pro všechna zařízení.',
+      'Jednoduchý firemní web za jednu jasnou cenu. Pro živnostníky a malé firmy. Dodání obvykle do 1 až 2 týdnů.',
     url: 'https://verno.cz',
     images: [
       {
         url: '/og-verno-2.jpg',
         width: 1200,
         height: 630,
-        alt: 'Tvorba prezentačních webů pro živnostníky a malé firmy - VERNO',
+        alt: 'VERNO – prezentační weby pro živnostníky a malé firmy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tvorba webů pro živnostníky a malé firmy | VERNO',
+    title: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
     description:
-      'Prezentační weby na míru. Čistý kód, hosting v ceně, pevná cena předem. Responzivní design pro všechna zařízení.',
+      'Jednoduchý firemní web za jednu jasnou cenu. Pro živnostníky a malé firmy.',
     images: ['/og-verno-2.jpg'],
   },
   robots: {
@@ -48,10 +36,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function HomeLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function HomeLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }
