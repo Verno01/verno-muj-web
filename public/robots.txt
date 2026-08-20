@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://verno.cz/sitemap.xml
+Sitemap: https://www.verno.cz/sitemap.xml
