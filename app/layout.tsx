@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import RevealObserver from '@/components/RevealObserver'
 import CookieBanner from '@/components/CookieBanner'
 import './globals.css'
 
@@ -9,11 +8,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.verno.cz'),
   alternates: { canonical: 'https://www.verno.cz' },
   title: {
-    default: 'Prezentační weby pro živnostníky a malé firmy | VERNO',
+    default: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
     template: '%s | VERNO',
   },
-  description: 'Prezentační weby pro živnostníky a malé firmy. Pevná cena 8 900 Kč bez DPH. Návrh, zpracování, základní SEO, Google Analytics a spuštění webu.',
+  description: 'Tvorba prezentačních webů pro živnostníky a malé firmy za 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO, Google Analytics a spuštění webu.',
   authors: [{ name: 'VERNO', url: 'https://www.verno.cz' }],
+  creator: 'VERNO',
+  publisher: 'VERNO',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -21,47 +22,62 @@ export const metadata: Metadata = {
       { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
-    other: [{ rel: 'icon', url: '/favicon-192.png', sizes: '192x192', type: 'image/png' }],
   },
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
     url: 'https://www.verno.cz',
     siteName: 'VERNO',
-    title: 'VERNO | Prezentační weby',
-    description: 'Prezentační web pro živnostníky a malé firmy za 8 900 Kč bez DPH.',
-    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO – prezentační weby' }],
+    title: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
+    description: 'Prezentační web pro živnostníky a malé firmy. Návrh, zpracování a spuštění v jedné ceně.',
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'VERNO – tvorba prezentačních webů' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VERNO | Prezentační weby',
-    description: 'Prezentační web pro živnostníky a malé firmy za 8 900 Kč bez DPH.',
+    title: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
+    description: 'Prezentační web pro živnostníky a malé firmy. Návrh, zpracování a spuštění v jedné ceně.',
     images: ['/og-verno-2.jpg'],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    '@id': 'https://www.verno.cz/#business',
-    name: 'VERNO',
-    url: 'https://www.verno.cz',
-    email: 'info@verno.cz',
-    telephone: '+420705911941',
-    description: 'Tvorba prezentačních webů pro živnostníky a malé firmy.',
-    serviceType: 'Tvorba prezentačních webových stránek',
-    areaServed: { '@type': 'Country', name: 'Česká republika' },
-    priceRange: '8 900 Kč bez DPH',
-    offers: {
-      '@type': 'Offer',
-      name: 'Prezentační web',
-      price: '8900',
-      priceCurrency: 'CZK',
-      description: 'Prezentační web včetně responzivního zobrazení, základního SEO, Google Analytics a nasazení na doménu.',
+  const schema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': 'https://www.verno.cz/#website',
+      url: 'https://www.verno.cz/',
+      name: 'VERNO',
+      alternateName: 'VERNO tvorba webů',
+      inLanguage: 'cs',
     },
-  }
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ProfessionalService',
+      '@id': 'https://www.verno.cz/#business',
+      name: 'VERNO',
+      url: 'https://www.verno.cz/',
+      email: 'info@verno.cz',
+      telephone: '+420705911941',
+      description: 'Tvorba prezentačních webů pro živnostníky a malé firmy.',
+      serviceType: 'Tvorba prezentačních webových stránek',
+      areaServed: { '@type': 'Country', name: 'Česká republika' },
+      priceRange: '8 900 Kč bez DPH',
+      offers: {
+        '@type': 'Offer',
+        name: 'Prezentační web',
+        price: '8900',
+        priceCurrency: 'CZK',
+        url: 'https://www.verno.cz/#sluzba',
+        description: 'Prezentační web včetně návrhu, responzivního zobrazení, základního SEO, Google Analytics a spuštění na doméně.',
+      },
+    },
+  ]
 
   return (
     <html lang="cs">
@@ -70,7 +86,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <main>{children}</main>
         <Footer />
-        <RevealObserver />
         <CookieBanner />
       </body>
     </html>
