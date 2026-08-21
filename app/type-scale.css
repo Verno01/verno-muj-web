@@ -1,43 +1,61 @@
-/* Jemná korekce čitelnosti hlavní stránky VERNO. Nemění hierarchii nadpisů ani rozvržení. */
+/* Jednotná typografická stupnice hlavní stránky VERNO. */
 
 .hero .label,
 .section .label,
-.contact .label { font-size: 11px !important; }
+.contact .label { font-size: 11.5px !important; }
 
-.hero .lead { font-size: 15px !important; line-height: 1.55 !important; }
-.hero .price span { font-size: 12px !important; }
+.hero .lead { font-size: 15.5px !important; line-height: 1.55 !important; }
+.hero .price span { font-size: 12.5px !important; }
 .hero .cta { font-size: 13px !important; }
 
-.offer-intro > p:last-child { font-size: 14px !important; line-height: 1.62 !important; }
-.service-card h3 { font-size: 14px !important; }
-.service-card p { font-size: 13px !important; line-height: 1.52 !important; }
-.service-card > span { font-size: 10px !important; }
+.offer-intro > p:last-child { font-size: 15px !important; line-height: 1.62 !important; }
+.service-card h3 { font-size: 14.5px !important; }
+.service-card p { font-size: 13.5px !important; line-height: 1.55 !important; }
+.service-card > span { font-size: 10.5px !important; }
 
-.section-head > p { font-size: 12px !important; line-height: 1.5 !important; }
-.project-meta h3 { font-size: 13px !important; }
-.project-meta p { font-size: 11.5px !important; line-height: 1.5 !important; }
+.section-head > p { font-size: 13px !important; line-height: 1.5 !important; }
+.project-meta h3 { font-size: 13.5px !important; }
+.project-meta p { font-size: 12px !important; line-height: 1.52 !important; }
 .project-meta span { font-size: 13px !important; }
 
-.steps span { font-size: 10px !important; }
-.steps p { font-size: 13.5px !important; line-height: 1.55 !important; }
-.faq summary { font-size: 13.5px !important; }
-.faq details p { font-size: 12.5px !important; line-height: 1.58 !important; }
+.steps span { font-size: 10.5px !important; }
+.steps p { font-size: 14.5px !important; line-height: 1.56 !important; }
+.faq summary { font-size: 14.5px !important; line-height: 1.45 !important; }
+.faq details p { font-size: 13.5px !important; line-height: 1.6 !important; }
 
-.contact-side p { font-size: 13.5px !important; line-height: 1.55 !important; }
-.contact-mail { font-size: 13px !important; }
+/* Vpravo je stejná vizuální úroveň jako u nadpisu „Jak začít.“ */
+.info-grid #faq > .label {
+  margin: 0 0 21px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(1.95rem, 3.25vw, 3rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.04em !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  color: var(--ink) !important;
+}
 
-.nav-shell nav a { font-size: 11px !important; }
-.nav-cta { font-size: 11px !important; }
+.contact-side p { font-size: 14.5px !important; line-height: 1.56 !important; }
+.contact-mail { font-size: 13.5px !important; }
+
+.nav-shell nav a { font-size: 12px !important; }
+.nav-cta { font-size: 12px !important; }
 .brand { font-size: 15px !important; }
 
+.footer a,
+.footer button { font-size: 11.5px !important; }
+.footer-legal { font-size: 10.5px !important; }
+.footer-brand { font-size: 13px !important; }
+
 @media (max-width: 560px) {
-  .hero .lead { font-size: 14px !important; }
-  .offer-intro > p:last-child,
+  .hero .lead { font-size: 14.5px !important; }
+  .offer-intro > p:last-child { font-size: 14px !important; }
   .service-card h3,
   .steps p,
   .faq summary,
-  .contact-side p { font-size: 13px !important; }
+  .contact-side p { font-size: 14px !important; }
   .service-card p,
-  .faq details p { font-size: 12px !important; }
-  .project-meta p { font-size: 11px !important; }
+  .faq details p { font-size: 13px !important; }
+  .project-meta p { font-size: 11.5px !important; }
+  .info-grid #faq > .label { margin-bottom: 18px !important; }
 }
