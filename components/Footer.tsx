@@ -25,7 +25,16 @@ export default function Footer() {
         </div>
       </div>
       <style>{`
-        .footer{background:#f5f5f1;border-top:1px solid #deded8;padding:34px 0 30px}.footer-inner{width:min(1180px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:26px 50px;align-items:start}.footer-brand{display:flex;align-items:center;gap:8px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:.04em;color:#171717}.footer-brand span{width:9px;height:9px;background:#edff5a}.footer-contact{display:flex;gap:24px}.footer a,.footer button{font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#5f5f5a;text-decoration:none;background:none;border:0;padding:0;cursor:pointer}.footer a:hover,.footer button:hover{color:#111}.footer-legal{grid-column:1/-1;border-top:1px solid #d9d9d3;padding-top:20px;display:flex;gap:18px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#84847e}.footer-legal span{margin-right:auto}@media(max-width:720px){.footer-inner{width:min(100% - 32px,1180px);grid-template-columns:1fr}.footer-contact{flex-direction:column;gap:7px}.footer-legal{grid-column:1;flex-direction:column;gap:9px}.footer-legal span{margin-right:0;margin-bottom:6px}}
+        .footer{background:#f5f5f1;border-top:1px solid #deded8;padding:26px 0 24px}
+        .footer-inner{width:min(1040px,calc(100% - 44px));margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:20px 40px;align-items:start}
+        .footer-brand{display:flex;align-items:center;gap:7px;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:.035em;color:#171717}
+        .footer-brand span{width:8px;height:8px;background:#f1fd9a}
+        .footer-contact{display:flex;gap:20px}
+        .footer a,.footer button{font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#666660;text-decoration:none;background:none;border:0;padding:0;cursor:pointer}
+        .footer a:hover,.footer button:hover{color:#111}
+        .footer-legal{grid-column:1/-1;border-top:1px solid #d9d9d3;padding-top:15px;display:flex;gap:14px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:9px;color:#888882}
+        .footer-legal span{margin-right:auto}
+        @media(max-width:720px){.footer-inner{width:min(100% - 30px,1040px);grid-template-columns:1fr}.footer-contact{flex-direction:column;gap:6px}.footer-legal{grid-column:1;flex-direction:column;gap:8px}.footer-legal span{margin-right:0;margin-bottom:4px}}
       `}</style>
     </footer>
   )
