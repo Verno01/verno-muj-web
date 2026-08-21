@@ -27,7 +27,7 @@ const references = [
 const included = [
   ['01', 'Návrh a zpracování', 'Struktura, vzhled a zpracování webu podle konkrétního podnikání.'],
   ['02', 'Mobilní verze', 'Plnohodnotné zobrazení na telefonu, tabletu i počítači.'],
-  ['03', 'Kontakt a formulář', 'Kontaktní formulář, klikací telefon, e mail a další potřebné kontaktní prvky.'],
+  ['03', 'Kontaktní prvky', 'Kontaktní formulář, klikací telefon, e-mail a další prvky podle potřeb webu.'],
   ['04', 'Základní SEO a měření', 'Metadata, sitemap, nastavení pro vyhledávače, Search Console a základní měření návštěvnosti.'],
   ['05', 'Spuštění webu', 'Nasazení na doménu a základní hosting bez pravidelného poplatku za správu.'],
 ]
@@ -72,7 +72,7 @@ export default function Home() {
           <div className="offer-intro">
             <p className="label">Služba</p>
             <h2>Co je v ceně.</h2>
-            <p>Plnohodnotný firemní web se vším potřebným pro běžnou prezentaci firmy. Rozsah přizpůsobím konkrétnímu podnikání. Bez e shopu, rezervačního systému a jiných webových aplikací.</p>
+            <p>Plnohodnotný firemní web se vším potřebným pro běžnou prezentaci firmy. Rozsah přizpůsobím konkrétnímu podnikání. Bez e-shopu, rezervačního systému a jiných webových aplikací.</p>
           </div>
           <div className="service-cards" id="v-cene">
             {included.map(([num, title, text]) => (
@@ -122,11 +122,11 @@ export default function Home() {
       <section id="postup" className="section soft compact-section">
         <div className="wrap info-grid">
           <div>
-            <p className="label">Spolupráce</p>
-            <h2>Jak začít.</h2>
+            <p className="label">Postup</p>
+            <h2>Stačí se ozvat.</h2>
             <div className="steps">
-              <div><span>01</span><p><strong>Ozvěte se.</strong> Nejrychlejší je krátký telefonát. Můžete také napsat e mail.</p></div>
-              <div><span>02</span><p><strong>Pošlu zadání.</strong> Dostanete přesný seznam podkladů, které budu potřebovat.</p></div>
+              <div><span>01</span><p><strong>Ozvěte se.</strong> Nejrychlejší je krátký telefonát. Můžete také napsat e-mail.</p></div>
+              <div><span>02</span><p><strong>Dostanete seznam podkladů.</strong> Pošlu vám přesně, co budu pro přípravu webu potřebovat.</p></div>
               <div><span>03</span><p><strong>Připravím web.</strong> Hotovou verzi společně projdeme, doladíme a web spustím.</p></div>
             </div>
           </div>
