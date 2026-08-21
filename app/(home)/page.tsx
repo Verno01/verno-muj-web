@@ -72,7 +72,7 @@ export default function Home() {
           <div className="offer-intro">
             <p className="label">Služba</p>
             <h2>Co je v ceně.</h2>
-            <p>Běžný firemní web v rozsahu, který odpovídá vašemu podnikání. Bez e shopu, rezervačního systému a jiných webových aplikací.</p>
+            <p>Plnohodnotný firemní web se vším potřebným pro běžnou prezentaci firmy. Rozsah přizpůsobím konkrétnímu podnikání. Bez e shopu, rezervačního systému a jiných webových aplikací.</p>
           </div>
           <div className="service-cards" id="v-cene">
             {included.map(([num, title, text]) => (
@@ -145,6 +145,10 @@ export default function Home() {
               <details>
                 <summary>Co budu muset dodat?</summary>
                 <p>Základní informace o firmě, služby, kontakty, logo a vlastní fotografie, pokud je máte. Po domluvě dostanete konkrétní seznam.</p>
+              </details>
+              <details>
+                <summary>Jak probíhá platba?</summary>
+                <p>50 % ceny se hradí před zahájením práce, zbývajících 50 % po dokončení webu.</p>
               </details>
               <details>
                 <summary>Platí se za web každý měsíc?</summary>
