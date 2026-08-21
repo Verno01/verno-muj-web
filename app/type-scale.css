@@ -1,0 +1,43 @@
+/* Jemná korekce čitelnosti hlavní stránky VERNO. Nemění hierarchii nadpisů ani rozvržení. */
+
+.hero .label,
+.section .label,
+.contact .label { font-size: 11px !important; }
+
+.hero .lead { font-size: 15px !important; line-height: 1.55 !important; }
+.hero .price span { font-size: 12px !important; }
+.hero .cta { font-size: 13px !important; }
+
+.offer-intro > p:last-child { font-size: 14px !important; line-height: 1.62 !important; }
+.service-card h3 { font-size: 14px !important; }
+.service-card p { font-size: 13px !important; line-height: 1.52 !important; }
+.service-card > span { font-size: 10px !important; }
+
+.section-head > p { font-size: 12px !important; line-height: 1.5 !important; }
+.project-meta h3 { font-size: 13px !important; }
+.project-meta p { font-size: 11.5px !important; line-height: 1.5 !important; }
+.project-meta span { font-size: 13px !important; }
+
+.steps span { font-size: 10px !important; }
+.steps p { font-size: 13.5px !important; line-height: 1.55 !important; }
+.faq summary { font-size: 13.5px !important; }
+.faq details p { font-size: 12.5px !important; line-height: 1.58 !important; }
+
+.contact-side p { font-size: 13.5px !important; line-height: 1.55 !important; }
+.contact-mail { font-size: 13px !important; }
+
+.nav-shell nav a { font-size: 11px !important; }
+.nav-cta { font-size: 11px !important; }
+.brand { font-size: 15px !important; }
+
+@media (max-width: 560px) {
+  .hero .lead { font-size: 14px !important; }
+  .offer-intro > p:last-child,
+  .service-card h3,
+  .steps p,
+  .faq summary,
+  .contact-side p { font-size: 13px !important; }
+  .service-card p,
+  .faq details p { font-size: 12px !important; }
+  .project-meta p { font-size: 11px !important; }
+}
