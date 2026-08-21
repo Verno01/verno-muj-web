@@ -10,8 +10,8 @@ export default function Navigation() {
   return (
     <header className="verno-nav-shell">
       <div className="verno-nav-inner">
-        <Link href="/" className="verno-brand" aria-label="VERNO domů" onClick={close}>
-          VERNO<span aria-hidden="true" />
+        <Link href="/" className="verno-brand" aria-label="SpustWeb.cz domů" onClick={close}>
+          SpustWeb.cz<span aria-hidden="true" />
         </Link>
 
         <nav className="verno-desktop-nav" aria-label="Hlavní navigace">
