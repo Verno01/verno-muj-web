@@ -4,22 +4,22 @@ const references = [
   {
     name: 'Rovino',
     url: 'https://rovino.cz',
-    image: '/screens/rovino.jpg',
-    alt: 'Web Rovino pro zemní a stavební práce',
+    image: '/screens/rovino-new.jpg',
+    alt: 'Aktuální web Rovino pro zemní a stavební práce',
     description: 'Firemní web pro zemní a stavební práce.',
   },
   {
     name: '5class',
     url: 'https://5class.cz',
-    image: '/screens/5class.jpg',
-    alt: 'Web 5class pro osobní dopravu s řidičem',
+    image: '/screens/5class-new.jpg',
+    alt: 'Aktuální web 5class pro osobní dopravu s řidičem',
     description: 'Web pro osobní dopravu s řidičem.',
   },
   {
     name: 'Pětilistá',
     url: 'https://www.petilista.cz',
-    image: 'https://www.petilista.cz/og-nahled.jpg',
-    alt: 'Web Pětilistá pro péči o hrobová místa',
+    image: '/screens/petilista-new.jpg',
+    alt: 'Aktuální web Pětilistá pro péči o hrobová místa',
     description: 'Web služby péče o hrobová místa s online objednávkou.',
   },
 ]
