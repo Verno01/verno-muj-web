@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
 import './globals.css'
+import './hero-fix.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.verno.cz'),
