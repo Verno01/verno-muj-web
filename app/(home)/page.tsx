@@ -167,10 +167,10 @@ export default function Home() {
         <div className="wrap contact-grid">
           <div>
             <p className="label dark-label">Kontakt</p>
-            <h2>Potřebujete nový web?</h2>
+            <h2>Probereme váš web.</h2>
           </div>
           <div className="contact-side">
-            <p>Nejrychlejší je zavolat. Pokud chcete začít písemně, napište.</p>
+            <p>Stačí krátce popsat vaše podnikání a co na webu potřebujete mít. Rovnou probereme rozsah, podklady a další postup.</p>
             <a className="contact-main" href="tel:+420705911941">+420 705 911 941</a>
             <a className="contact-mail" href="mailto:info@spustweb.cz">info@spustweb.cz</a>
           </div>
