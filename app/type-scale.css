@@ -70,7 +70,45 @@
   .contact-side p { font-size: 14px !important; }
   .service-card p,
   .faq details p { font-size: 13px !important; }
-  .project-meta p { font-size: 11.5px !important; }
   .info-grid #faq > .label { margin-bottom: 18px !important; }
   .offer-intro h2 { font-size: 12px !important; }
+
+  /* Reference jsou na telefonu kompaktní řádky, ne velké obrazové bloky. */
+  .references-section .section-head { margin-bottom: 22px !important; }
+  .references-section .section-head > p { display: none !important; }
+  .projects {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  .project {
+    display: grid !important;
+    grid-template-columns: 42% 1fr !important;
+    gap: 14px !important;
+    align-items: center !important;
+    padding: 13px 0 !important;
+    border-top: 1px solid #e3e3dd !important;
+  }
+  .project:last-child { border-bottom: 1px solid #e3e3dd !important; }
+  .project-image-wrap { border: 0 !important; }
+  .project-image {
+    width: 100% !important;
+    aspect-ratio: 1.55 / 1 !important;
+    object-fit: cover !important;
+    object-position: top !important;
+  }
+  .project-meta {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    padding: 0 22px 0 0 !important;
+  }
+  .project-meta h3 { font-size: 14px !important; line-height: 1.25 !important; }
+  .project-meta p { font-size: 12.5px !important; line-height: 1.45 !important; }
+  .project-meta span {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    font-size: 13px !important;
+  }
 }
