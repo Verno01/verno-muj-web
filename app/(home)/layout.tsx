@@ -5,7 +5,7 @@ export const metadata: Metadata = {
     absolute: 'Prezentační web za 8 900 Kč bez DPH | VERNO',
   },
   description:
-    'Tvorba prezentačních webů pro živnostníky a malé firmy za 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO, Google Analytics a spuštění webu.',
+    'Tvorba prezentačních webů pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Návrh, mobilní verze, kontaktní formulář, základní SEO a spuštění webu.',
   alternates: {
     canonical: 'https://www.verno.cz',
   },
