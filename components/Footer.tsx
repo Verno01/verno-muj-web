@@ -11,10 +11,10 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <div className="footer-brand">VERNO<span aria-hidden="true" /></div>
+        <div className="footer-brand">SpustWeb.cz<span aria-hidden="true" /></div>
         <div className="footer-contact">
           <a href="tel:+420705911941">+420 705 911 941</a>
-          <a href="mailto:info@verno.cz">info@verno.cz</a>
+          <a href="mailto:info@spustweb.cz">info@spustweb.cz</a>
         </div>
         <div className="footer-legal">
           <span>© {year} Rovino s.r.o. · IČO 235 26 629</span>
