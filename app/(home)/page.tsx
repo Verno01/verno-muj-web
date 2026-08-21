@@ -38,7 +38,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="wrap hero-top">
           <div className="hero-main">
-            <p className="label">VERNO · tvorba webových stránek</p>
+            <p className="label">SpustWeb.cz · tvorba webových stránek</p>
             <h1 id="hero-title">Prezentační web pro živnostníky a malé firmy.</h1>
           </div>
           <div className="hero-side">
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="wrap hero-image-wrap">
           <img
             src="/hero-verno-final.webp"
-            alt="Ukázka prezentačního webu VERNO na notebooku"
+            alt="Ukázka prezentačního webu SpustWeb.cz na notebooku"
             width="1983"
             height="793"
             fetchPriority="high"
@@ -172,7 +172,7 @@ export default function Home() {
           <div className="contact-side">
             <p>Nejrychlejší je zavolat. Pokud chcete začít písemně, napište.</p>
             <a className="contact-main" href="tel:+420705911941">+420 705 911 941</a>
-            <a className="contact-mail" href="mailto:info@verno.cz">info@verno.cz</a>
+            <a className="contact-mail" href="mailto:info@spustweb.cz">info@spustweb.cz</a>
           </div>
         </div>
       </section>
