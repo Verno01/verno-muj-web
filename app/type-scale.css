@@ -13,6 +13,20 @@
 .service-card p { font-size: 13.5px !important; line-height: 1.55 !important; }
 .service-card > span { font-size: 10.5px !important; }
 
+/* Cena je dominantní, údaj o DPH pouze doplňkový. */
+.offer-intro h2 {
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  color: #777770 !important;
+}
+.offer-intro h2::first-line {
+  font-size: clamp(1.95rem, 3.25vw, 3rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.04em !important;
+  color: var(--ink) !important;
+}
+
 .section-head > p { font-size: 13px !important; line-height: 1.5 !important; }
 .project-meta h3 { font-size: 13.5px !important; }
 .project-meta p { font-size: 12px !important; line-height: 1.52 !important; }
@@ -58,4 +72,5 @@
   .faq details p { font-size: 13px !important; }
   .project-meta p { font-size: 11.5px !important; }
   .info-grid #faq > .label { margin-bottom: 18px !important; }
+  .offer-intro h2 { font-size: 12px !important; }
 }
