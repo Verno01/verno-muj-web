@@ -25,10 +25,10 @@ const references = [
 ]
 
 const included = [
-  ['01', 'Návrh a zpracování', 'Struktura, vzhled a zpracování prezentačního webu.'],
+  ['01', 'Návrh a zpracování', 'Struktura, vzhled a zpracování webu podle konkrétního podnikání.'],
   ['02', 'Mobilní verze', 'Plnohodnotné zobrazení na telefonu, tabletu i počítači.'],
-  ['03', 'Základní SEO', 'Metadata, sitemap, indexace a technické nastavení pro vyhledávače.'],
-  ['04', 'Google Analytics', 'Napojení základního měření návštěvnosti.'],
+  ['03', 'Kontakt a formulář', 'Kontaktní formulář, klikací telefon, e mail a další potřebné kontaktní prvky.'],
+  ['04', 'Základní SEO a měření', 'Metadata, sitemap, nastavení pro vyhledávače, Search Console a základní měření návštěvnosti.'],
   ['05', 'Spuštění webu', 'Nasazení na doménu a základní hosting bez pravidelného poplatku za správu.'],
 ]
 
@@ -58,15 +58,21 @@ export default function Home() {
             className="hero-image"
           />
           <div className="accent-line" aria-hidden="true" />
+          <div className="trust-strip" aria-label="Základní podmínky služby">
+            <span>Pevná cena 8 900 Kč</span>
+            <span>Obvykle 1 až 2 týdny</span>
+            <span>Bez poplatku za správu</span>
+            <span>Hotový web je váš</span>
+          </div>
         </div>
       </section>
 
       <section id="sluzba" className="section compact-section">
         <div className="wrap offer-grid">
           <div className="offer-intro">
-            <p className="label">Prezentační web</p>
-            <h2>8 900 Kč<br />bez DPH.</h2>
-            <p>Pro živnostníky a menší firmy. Cena platí pro běžný prezentační web bez e shopu, rezervačního systému nebo jiné webové aplikace.</p>
+            <p className="label">Služba</p>
+            <h2>Co je v ceně.</h2>
+            <p>Běžný firemní web v rozsahu, který odpovídá vašemu podnikání. Bez e shopu, rezervačního systému a jiných webových aplikací.</p>
           </div>
           <div className="service-cards" id="v-cene">
             {included.map(([num, title, text]) => (
@@ -121,7 +127,7 @@ export default function Home() {
             <div className="steps">
               <div><span>01</span><p><strong>Ozvěte se.</strong> Nejrychlejší je krátký telefonát. Můžete také napsat e mail.</p></div>
               <div><span>02</span><p><strong>Pošlu zadání.</strong> Dostanete přesný seznam podkladů, které budu potřebovat.</p></div>
-              <div><span>03</span><p><strong>Připravím web.</strong> Hotovou verzi společně projdeme a web spustím.</p></div>
+              <div><span>03</span><p><strong>Připravím web.</strong> Hotovou verzi společně projdeme, doladíme a web spustím.</p></div>
             </div>
           </div>
 
@@ -131,6 +137,10 @@ export default function Home() {
               <details open>
                 <summary>Jak dlouho tvorba trvá?</summary>
                 <p>Obvykle 1 až 2 týdny od dodání potřebných podkladů.</p>
+              </details>
+              <details>
+                <summary>Musí být web jednostránkový?</summary>
+                <p>Ne. Strukturu navrhnu podle toho, co vaše podnikání potřebuje. Může jít o jednu stránku i několik základních podstránek.</p>
               </details>
               <details>
                 <summary>Co budu muset dodat?</summary>
@@ -180,6 +190,8 @@ export default function Home() {
         .hero-image-wrap{position:relative}
         .hero-image{display:block;width:100%;height:auto;aspect-ratio:2.5/1;object-fit:cover}
         .accent-line{height:8px;background:var(--acid);width:100%}
+        .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+        .trust-strip span{padding:11px 8px 10px 0;font-size:11px;line-height:1.3;color:#5d5d58}
         .section{padding:68px 0;border-top:1px solid var(--line);background:var(--paper)}
         .compact-section{padding:60px 0}
         .soft{background:var(--soft)}
@@ -230,6 +242,7 @@ export default function Home() {
           .hero h1{font-size:clamp(2.55rem,9.5vw,4rem)}
           .hero-side{max-width:420px}
           .section,.compact-section{padding:54px 0}
+          .trust-strip{grid-template-columns:1fr 1fr}
         }
         @media(max-width:560px){
           .wrap{width:min(100% - 30px,1040px)}
@@ -238,6 +251,7 @@ export default function Home() {
           .hero h1{font-size:clamp(2.35rem,11.5vw,3.5rem)}
           .hero-image{aspect-ratio:1.55/1;object-position:36% center}
           .accent-line{height:7px}
+          .trust-strip span{font-size:10.5px;padding:9px 6px 9px 0}
           .projects{grid-template-columns:1fr}
           .section-head{display:block}
           .section-head>p{margin-top:10px}
