@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       '@id': 'https://spustweb.cz/#business',
       name: 'SpustWeb.cz',
       url: 'https://spustweb.cz/',
-      email: 'info@spustweb.cz',
+      email: 'kontakt@spustweb.cz',
       telephone: '+420705911941',
       description: 'Tvorba prezentačních webů pro živnostníky a malé firmy.',
       serviceType: 'Tvorba prezentačních webových stránek',
