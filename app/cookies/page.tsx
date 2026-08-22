@@ -8,7 +8,7 @@ import { useEffect } from 'react'
 
 export default function Cookies() {
   useEffect(() => {
-    document.title = 'Zásady cookies | VERNO'
+    document.title = 'Zásady cookies | SpustWeb.cz'
   }, [])
 
   return (
@@ -115,6 +115,9 @@ export default function Cookies() {
           </tr>
         </tbody>
       </table>
+      <p>
+        Technické názvy <code>verno_cookie_consent</code> a <code>verno_kalk_v5</code> jsou historické interní identifikátory úložiště. Nemají vliv na název služby ani na zpracování údajů.
+      </p>
 
       <h3>3.2. Analytické (vyžadují souhlas)</h3>
       <p>Pomáhají nám pochopit, jak je web používán, abychom jej mohli zlepšovat. Spouští se až po vašem souhlasu.</p>
@@ -158,7 +161,7 @@ export default function Cookies() {
 
       <h2 id="c-5">5. Změny tohoto dokumentu</h2>
       <p>
-        Seznam cookies se v čase mění — pokud nasadíme nebo odebereme některou ze služeb třetích osob, tabulky aktualizujeme. Aktuální verze je vždy k dispozici na verno.cz/cookies.
+        Seznam cookies se v čase mění — pokud nasadíme nebo odebereme některou ze služeb třetích osob, tabulky aktualizujeme. Aktuální verze je vždy k dispozici na spustweb.cz/cookies.
       </p>
     </LegalLayout>
   )
