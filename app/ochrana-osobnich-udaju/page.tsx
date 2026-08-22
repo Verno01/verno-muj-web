@@ -4,7 +4,7 @@ import LegalLayout from '@/components/LegalLayout'
 export const metadata: Metadata = {
   title: 'Ochrana osobních údajů',
   description: 'Jaké osobní údaje zpracováváme, proč, komu je předáváme a jaká máte práva. V souladu s GDPR.',
-  alternates: { canonical: 'https://verno.cz/ochrana-osobnich-udaju' },
+  alternates: { canonical: 'https://spustweb.cz/ochrana-osobnich-udaju' },
   robots: { index: false, follow: true },
 }
 
@@ -46,7 +46,7 @@ export default function OchranaOsobnichUdaju() {
 
       <h2 id="g-2">2. Jaké údaje zpracováváme a proč</h2>
 
-      <h3>2.1. Návštěva webu verno.cz</h3>
+      <h3>2.1. Návštěva webu spustweb.cz</h3>
       <p>
         Při běžné návštěvě webu zpracováváme v omezeném rozsahu provozní údaje (zejména IP adresu, typ prohlížeče, čas přístupu, navštívenou URL). Tyto údaje jsou nezbytné pro fungování a zabezpečení webu a jsou zpracovávány na základě <strong>oprávněného zájmu Správce</strong> na bezpečném provozu webové prezentace (čl. 6 odst. 1 písm. f) GDPR).
       </p>
@@ -185,7 +185,7 @@ export default function OchranaOsobnichUdaju() {
 
       <h2 id="g-7">7. Změny zásad</h2>
       <p>
-        Tyto zásady mohou být aktualizovány, zejména v souvislosti se změnou zpracování, nasazením nových služeb nebo legislativními změnami. Aktuální verze je vždy k dispozici na adrese verno.cz/ochrana-osobnich-udaju.
+        Tyto zásady mohou být aktualizovány, zejména v souvislosti se změnou zpracování, nasazením nových služeb nebo legislativními změnami. Aktuální verze je vždy k dispozici na adrese spustweb.cz/ochrana-osobnich-udaju.
       </p>
     </LegalLayout>
   )
