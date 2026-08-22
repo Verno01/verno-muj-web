@@ -72,3 +72,48 @@ body .hero .hero-image {
     object-position: 35% center;
   }
 }
+
+/* Plumber demo: keep the compact layout, but restore normal reading sizes. */
+body .plbPage .plbDemo{font-size:10px!important}
+body .plbPage .plbLinks,body .plbPage .plbPhone{font-size:12px!important}
+body .plbPage .plbNavCta,body .plbPage .plbBtn{font-size:12px!important}
+body .plbPage .plbBrand small{font-size:9px!important}
+body .plbPage .plbEyebrow{font-size:11px!important}
+body .plbPage .plbLead{font-size:15px!important;line-height:1.55!important}
+body .plbPage .plbHeroHint{font-size:11px!important;line-height:1.45!important}
+body .plbPage .plbPhotoText strong{font-size:14px!important}
+body .plbPage .plbPhotoText span{font-size:11px!important}
+body .plbPage .plbProofItem{font-size:12px!important}
+body .plbPage .plbProofItem span{font-size:11px!important}
+body .plbPage .plbKicker{font-size:10px!important}
+body .plbPage .plbHead p{font-size:13px!important;line-height:1.55!important}
+body .plbPage .plbSituationLabel{font-size:10px!important}
+body .plbPage .plbTags span{font-size:10px!important}
+body .plbPage .plbService h3{font-size:18px!important}
+body .plbPage .plbService p{font-size:12.5px!important;line-height:1.52!important}
+body .plbPage .plbProjectText small{font-size:9px!important}
+body .plbPage .plbProjectText h3{font-size:17px!important}
+body .plbPage .plbProject:first-child .plbProjectText h3{font-size:19px!important}
+body .plbPage .plbDemoNote{font-size:10px!important}
+body .plbPage .plbConditionNum{font-size:10px!important}
+body .plbPage .plbCondition strong{font-size:16px!important}
+body .plbPage .plbCondition p{font-size:12px!important;line-height:1.52!important}
+body .plbPage .plbAboutCopy p{font-size:13px!important;line-height:1.58!important}
+body .plbPage .plbFact{font-size:11px!important}
+body .plbPage .plbFact span{font-size:10px!important}
+body .plbPage .plbStep h3{font-size:15px!important}
+body .plbPage .plbStep p{font-size:12px!important;line-height:1.5!important}
+body .plbPage .plbArea p{font-size:12px!important;line-height:1.5!important}
+body .plbPage .plbTowns span{font-size:10px!important}
+body .plbPage .plbDistance{font-size:11px!important}
+body .plbPage .plbFaqItem h3{font-size:12px!important}
+body .plbPage .plbFaqItem p{font-size:12px!important;line-height:1.45!important}
+body .plbPage .plbContact p{font-size:13px!important;line-height:1.55!important}
+body .plbPage .plbField{font-size:11px!important}
+body .plbPage .plbFormNote{font-size:9px!important}
+body .plbPage .plbFooterInner{font-size:10px!important}
+
+@media (max-width:650px){
+  body .plbPage .plbLead{font-size:15px!important}
+  body .plbPage .plbService p,body .plbPage .plbCondition p,body .plbPage .plbStep p,body .plbPage .plbFaqItem p{font-size:13px!important}
+}
