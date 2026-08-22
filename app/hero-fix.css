@@ -113,6 +113,30 @@ body .plbPage .plbField{font-size:13px!important}
 body .plbPage .plbFormNote{font-size:10px!important}
 body .plbPage .plbFooterInner{font-size:11px!important}
 
+/* Plumber demo: cooler blue-grey palette with a restrained emergency accent. */
+body .plbPage{--ink:#182732!important;--muted:#667985!important;--line:#d7e1e7!important;--soft:#edf4f7!important;--signal:#df6548!important;background:#f8fbfc!important}
+body:has(.plbPage){background:#f8fbfc!important}
+body .plbPage .plbDemo{background:#17242d!important;color:#dbe4e9!important}
+body .plbPage .plbNavShell{background:rgba(248,251,252,.96)!important;border-color:#d7e1e7!important}
+body .plbPage .plbSectionAlt{background:#f0f5f8!important}
+body .plbPage .plbSituationPlan{background:#eaf2f6!important}
+body .plbPage .plbSituationHot{background:#fff2ed!important}
+body .plbPage .plbServices,body .plbPage .plbConditions,body .plbPage .plbSteps,body .plbPage .plbAbout{background:#fbfdfe!important}
+body .plbPage .plbServiceIcon,body .plbPage .plbSituationIcon{border-color:#6d8797!important;color:#2e5369!important}
+body .plbPage .plbSituationHot .plbSituationIcon{border-color:var(--signal)!important;color:var(--signal)!important}
+body .plbPage .plbTags span,body .plbPage .plbTowns span{border-color:#b8c9d3!important;background:#f8fbfc!important}
+body .plbPage .plbWork{background:#17242d!important}
+body .plbPage .plbWork .plbKicker,body .plbPage .plbWork .plbHead p{color:#aec0cb!important}
+body .plbPage .plbProject:after{background:linear-gradient(transparent,rgba(12,28,38,.88))!important}
+body .plbPage .plbArea{background:#eaf2f6!important}
+body .plbPage .plbContact{background:#17242d!important}
+body .plbPage .plbFooter{background:#101b22!important;border-color:#2a3c48!important}
+body .plbPage .plbNavCta,body .plbPage .plbBtnDark{background:#223b4b!important;border-color:#223b4b!important}
+body .plbPage .plbBtnLight{background:#f8fbfc!important;border-color:#91a7b5!important}
+body .plbPage .plbEyebrow:before{background:#5b86a0!important}
+body .plbPage .plbConditionNum{color:#5b86a0!important}
+body .plbPage .plbHeroHint,body .plbPage .plbProof,body .plbPage .plbFaq,body .plbPage .plbDistance{border-color:#d7e1e7!important}
+
 @media (max-width:650px){
   body .plbPage .plbLead{font-size:16px!important}
   body .plbPage .plbService p,body .plbPage .plbCondition p,body .plbPage .plbStep p,body .plbPage .plbFaqItem p{font-size:14px!important}
