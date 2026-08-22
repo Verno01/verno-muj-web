@@ -3,8 +3,8 @@ import LegalLayout from '@/components/LegalLayout'
 
 export const metadata: Metadata = {
   title: 'Obchodní podmínky',
-  description: 'Obchodní podmínky pro tvorbu webových stránek a souvisejících služeb. Rovino s.r.o., obchodní značka Verno.',
-  alternates: { canonical: 'https://verno.cz/obchodni-podminky' },
+  description: 'Obchodní podmínky pro tvorbu webových stránek a souvisejících služeb. Rovino s.r.o., služba SpustWeb.cz.',
+  alternates: { canonical: 'https://spustweb.cz/obchodni-podminky' },
   robots: { index: false, follow: true },
 }
 
@@ -13,21 +13,21 @@ export default function ObchodniPodminky() {
     <LegalLayout
       eyebrow="Právní informace"
       title={<>Obchodní<br />podmínky</>}
-      intro="Pravidla pro tvorbu webových stránek a souvisejících služeb. Vztahy mezi klientem a Rovino s.r.o. (značka Verno)."
+      intro="Pravidla pro tvorbu webových stránek a souvisejících služeb. Vztahy mezi klientem a Rovino s.r.o. v rámci služby SpustWeb.cz."
       effectiveFrom="27. května 2026"
     >
       <p className="lead">
         <strong>Společnost:</strong> Rovino s.r.o., se sídlem Na Blatech 637, 378 16 Lomnice nad Lužnicí, IČO 235 26 629, DIČ CZ23526629, zapsaná v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 35567 (dále jen <em>„Poskytovatel"</em>).
       </p>
       <p>
-        <strong>Označení Verno</strong> je obchodní značkou Poskytovatele používanou pro prezentaci služeb a komunikaci s klienty. Nejde o samostatný právní subjekt. Veškeré smluvní vztahy vznikají vždy se společností Rovino s.r.o.
+        <strong>SpustWeb.cz</strong> je označení služby Poskytovatele používané pro prezentaci tvorby webových stránek a komunikaci s klienty. Nejde o samostatný právní subjekt. Veškeré smluvní vztahy vznikají vždy se společností Rovino s.r.o.
       </p>
       <p>
         <strong>Kontakt pro smluvní a reklamační záležitosti:</strong>{' '}
         <a href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a>
       </p>
       <p>
-        Tyto obchodní podmínky upravují vztahy mezi Poskytovatelem a klientem při tvorbě webových stránek a souvisejících službách. Jsou veřejně dostupné na verno.cz a tvoří součást každého smluvního vztahu, ledaže byla mezi stranami písemně sjednána odchylná úprava.
+        Tyto obchodní podmínky upravují vztahy mezi Poskytovatelem a klientem při tvorbě webových stránek a souvisejících službách. Jsou veřejně dostupné na spustweb.cz a tvoří součást každého smluvního vztahu, ledaže byla mezi stranami písemně sjednána odchylná úprava.
       </p>
 
       <div className="toc">
@@ -96,6 +96,7 @@ export default function ObchodniPodminky() {
       <p className="clause"><span className="clause-num">6.4.</span> <strong>Provozní zázemí.</strong> Web je v průběhu projektu a následně po dobu, kdy se klient rozhodne využívat hosting Poskytovatele, provozován na infrastruktuře Poskytovatele (hosting Cloudflare, správa kódu GitHub). Klient bere tuto skutečnost na vědomí. Doménu si po celou dobu spolupráce i po jejím skončení zajišťuje a hradí klient přímo u příslušného registrátora; doména je v dispozici klienta a netvoří součást díla.</p>
       <p className="clause"><span className="clause-num">6.5.</span> Poskytovatel není poskytovatelem hostingových ani registračních služeb a v rozsahu povoleném zákonem nenese odpovědnost za výpadky, omezení nebo technické problémy služeb třetích osob (zejména Cloudflare, GitHub, registrátor domény).</p>
       <p className="clause"><span className="clause-num">6.6.</span> Poskytovatel je oprávněn uvést dokončený projekt ve svém portfoliu jako referenci, pokud si klient před zahájením prací písemně nevyhradí jinak.</p>
+
       <h2 id="cl-7">7. Pokračování spolupráce po předání díla</h2>
       <p className="clause"><span className="clause-num">7.1.</span> Po předání díla může klient pokračovat ve spolupráci s Poskytovatelem zejména v těchto formách:</p>
       <ul>
