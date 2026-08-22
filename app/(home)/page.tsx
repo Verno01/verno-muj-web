@@ -33,11 +33,11 @@ const included = [
 ]
 
 const industryGroups = [
-  ['Řemesla a stavba', 'zemní práce, rekonstrukce, zednictví, elektroinstalace, voda a topení, střechy, truhlářství, kovovýroba'],
-  ['Doprava a technika', 'autoservisy, pneuservisy, autodoprava, osobní doprava, odtahové služby, půjčovny aut, techniky a nářadí'],
+  ['Řemesla a stavba', 'stavební firmy, zemní práce, rekonstrukce, zednictví, elektroinstalace, voda a topení, střechy, truhlářství, kovovýroba'],
+  ['Doprava a technika', 'autoservisy, pneuservisy, autodoprava, osobní doprava, odtahové služby, půjčovny aut, stavební techniky a nářadí'],
   ['Služby pro dům a firmu', 'úklidové firmy, zahradní práce, stěhování, vyklízení, správa nemovitostí, servisní a montážní firmy'],
-  ['Odborné profese', 'účetní, daňoví poradci, projektanti, geodeti, revizní technici, finanční poradci, konzultanti a kanceláře'],
-  ['Péče a osobní služby', 'fyzioterapie, masáže, kosmetika, kadeřnictví, trenéři, terapeuti, veterinární a další lokální služby'],
+  ['Odborné profese', 'účetní, daňoví poradci, projektanti, geodeti, revizní technici, finanční poradci, konzultanti a odborné kanceláře'],
+  ['Péče a osobní služby', 'fyzioterapie, masáže, kosmetika, kadeřnictví, osobní trenéři, terapeuti, veterinární a další lokální služby'],
   ['Ubytování, gastro a volný čas', 'penziony, apartmány, restaurace, kavárny, catering, svatební služby, sportovní a zážitkové služby'],
 ]
 
@@ -101,31 +101,18 @@ export default function Home() {
         <div className="wrap fit-grid">
           <div className="fit-intro">
             <p className="label">Pro koho</p>
-            <h2 id="fit-title">Nejen když web ještě nemáte.</h2>
-            <p>Stejný typ webu dává smysl i ve chvíli, kdy současná stránka už neodpovídá tomu, jak vaše firma dnes funguje.</p>
+            <h2 id="fit-title">Web podle vašeho oboru.</h2>
           </div>
-          <div className="fit-cases">
-            <div className="fit-case">
-              <span>01</span>
-              <div>
-                <h3>Web zatím nemáte.</h3>
-                <p>Potřebujete jedno místo, kde zákazník rychle pochopí, co děláte, uvidí služby nebo realizace a najde kontakt.</p>
-              </div>
-            </div>
-            <div className="fit-case">
-              <span>02</span>
-              <div>
-                <h3>Současný web už nestačí.</h3>
-                <p>Je zastaralý, špatně se používá na telefonu, obsahuje neaktuální informace nebo z něj není na první pohled jasné, co nabízíte a jak vás kontaktovat.</p>
-              </div>
-            </div>
+          <div className="fit-copy">
+            <p>Prezentační web připravuji pro živnostníky a malé firmy napříč obory. Může vzniknout úplně nový web nebo kompletní náhrada stávajícího.</p>
+            <p>Struktura se přizpůsobí konkrétní firmě a tomu, co má na webu být: služby, realizace, reference, ceník, kontakty nebo další základní informace.</p>
           </div>
         </div>
 
         <div className="wrap industries">
           <div className="industries-head">
-            <h3>Obory, kde podobný web dává smysl.</h3>
-            <p>Typicky tam, kde zákazník hledá dodavatele, porovnává služby a reference a potřebuje se rychle rozhodnout, komu zavolat nebo napsat.</p>
+            <h3>Příklady oborů a služeb.</h3>
+            <p>Přehled je orientační. Rozsah webu se vždy řeší podle konkrétního podnikání.</p>
           </div>
           <div className="industry-grid">
             {industryGroups.map(([title, text]) => (
@@ -259,13 +246,10 @@ export default function Home() {
         .service-card p{margin:0;font-size:12px;line-height:1.48;color:var(--muted)}
         .fit-section{background:#fafaf7}
         .fit-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
-        .fit-intro>p:last-child{max-width:360px;margin:17px 0 0;font-size:13px;line-height:1.58;color:var(--muted)}
-        .fit-cases{border-top:1px solid var(--line)}
-        .fit-case{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
-        .fit-case>span{padding-top:2px;font-size:9px;color:#8c8c86}
-        .fit-case h3{margin:0 0 5px;font-size:13px;font-weight:600;color:var(--ink)}
-        .fit-case p{margin:0;max-width:520px;font-size:12px;line-height:1.55;color:var(--muted)}
-        .industries{margin-top:42px;padding-top:26px;border-top:1px solid var(--line)}
+        .fit-copy{max-width:560px}
+        .fit-copy p{margin:0;font-size:12px;line-height:1.58;color:var(--muted)}
+        .fit-copy p+p{margin-top:10px}
+        .industries{margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
         .industries-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;margin-bottom:20px}
         .industries-head h3{margin:0;font-size:14px;font-weight:600;color:var(--ink)}
         .industries-head p{margin:0;max-width:520px;font-size:11px;line-height:1.55;color:var(--muted)}
@@ -314,7 +298,7 @@ export default function Home() {
           .hero-side{max-width:420px}
           .section,.compact-section{padding:54px 0}
           .trust-strip{grid-template-columns:1fr 1fr}
-          .industries{margin-top:34px}
+          .industries{margin-top:30px}
         }
         @media(max-width:560px){
           .wrap{width:min(100% - 30px,1040px)}
