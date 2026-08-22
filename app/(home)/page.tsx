@@ -209,7 +209,7 @@ export default function Home() {
           <div className="contact-side">
             <p>Jmenuji se Hana Fraňková a při krátkém telefonátu si ujasníme, co má váš web obsahovat, jaké podklady už máte a co bude potřeba dodat.</p>
             <a className="contact-main" href="tel:+420705911941">+420 705 911 941</a>
-            <a className="contact-mail" href="mailto:info@spustweb.cz">info@spustweb.cz</a>
+            <a className="contact-mail" href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a>
           </div>
         </div>
       </section>
