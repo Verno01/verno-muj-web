@@ -34,13 +34,11 @@ export const metadata: Metadata = {
     siteName: 'SpustWeb.cz',
     title: 'Prezentační web za 8 900 Kč bez DPH | SpustWeb.cz',
     description: 'Plnohodnotný firemní web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH.',
-    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'SpustWeb.cz – tvorba prezentačních webů' }],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Prezentační web za 8 900 Kč bez DPH | SpustWeb.cz',
     description: 'Plnohodnotný firemní web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH.',
-    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
