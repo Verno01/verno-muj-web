@@ -32,6 +32,15 @@ const included = [
   ['05', 'Spuštění webu', 'Nasazení na doménu a základní hosting bez pravidelného poplatku za správu.'],
 ]
 
+const industryGroups = [
+  ['Řemesla a stavba', 'zemní práce, rekonstrukce, zednictví, elektroinstalace, voda a topení, střechy, truhlářství, kovovýroba'],
+  ['Doprava a technika', 'autoservisy, pneuservisy, autodoprava, osobní doprava, odtahové služby, půjčovny aut, techniky a nářadí'],
+  ['Služby pro dům a firmu', 'úklidové firmy, zahradní práce, stěhování, vyklízení, správa nemovitostí, servisní a montážní firmy'],
+  ['Odborné profese', 'účetní, daňoví poradci, projektanti, geodeti, revizní technici, finanční poradci, konzultanti a kanceláře'],
+  ['Péče a osobní služby', 'fyzioterapie, masáže, kosmetika, kadeřnictví, trenéři, terapeuti, veterinární a další lokální služby'],
+  ['Ubytování, gastro a volný čas', 'penziony, apartmány, restaurace, kavárny, catering, svatební služby, sportovní a zážitkové služby'],
+]
+
 export default function Home() {
   return (
     <>
@@ -82,6 +91,47 @@ export default function Home() {
                   <h3>{title}</h3>
                   <p>{text}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section fit-section" aria-labelledby="fit-title">
+        <div className="wrap fit-grid">
+          <div className="fit-intro">
+            <p className="label">Pro koho</p>
+            <h2 id="fit-title">Nejen když web ještě nemáte.</h2>
+            <p>Stejný typ webu dává smysl i ve chvíli, kdy současná stránka už neodpovídá tomu, jak vaše firma dnes funguje.</p>
+          </div>
+          <div className="fit-cases">
+            <div className="fit-case">
+              <span>01</span>
+              <div>
+                <h3>Web zatím nemáte.</h3>
+                <p>Potřebujete jedno místo, kde zákazník rychle pochopí, co děláte, uvidí služby nebo realizace a najde kontakt.</p>
+              </div>
+            </div>
+            <div className="fit-case">
+              <span>02</span>
+              <div>
+                <h3>Současný web už nestačí.</h3>
+                <p>Je zastaralý, špatně se používá na telefonu, obsahuje neaktuální informace nebo z něj není na první pohled jasné, co nabízíte a jak vás kontaktovat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="wrap industries">
+          <div className="industries-head">
+            <h3>Obory, kde podobný web dává smysl.</h3>
+            <p>Typicky tam, kde zákazník hledá dodavatele, porovnává služby a reference a potřebuje se rychle rozhodnout, komu zavolat nebo napsat.</p>
+          </div>
+          <div className="industry-grid">
+            {industryGroups.map(([title, text]) => (
+              <div className="industry" key={title}>
+                <h4>{title}</h4>
+                <p>{text}</p>
               </div>
             ))}
           </div>
@@ -207,6 +257,22 @@ export default function Home() {
         .service-card>span{padding-top:2px;font-size:9px;color:#8c8c86}
         .service-card h3{margin:0 0 4px;font-size:13px;font-weight:600;color:var(--ink)}
         .service-card p{margin:0;font-size:12px;line-height:1.48;color:var(--muted)}
+        .fit-section{background:#fafaf7}
+        .fit-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+        .fit-intro>p:last-child{max-width:360px;margin:17px 0 0;font-size:13px;line-height:1.58;color:var(--muted)}
+        .fit-cases{border-top:1px solid var(--line)}
+        .fit-case{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}
+        .fit-case>span{padding-top:2px;font-size:9px;color:#8c8c86}
+        .fit-case h3{margin:0 0 5px;font-size:13px;font-weight:600;color:var(--ink)}
+        .fit-case p{margin:0;max-width:520px;font-size:12px;line-height:1.55;color:var(--muted)}
+        .industries{margin-top:42px;padding-top:26px;border-top:1px solid var(--line)}
+        .industries-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;margin-bottom:20px}
+        .industries-head h3{margin:0;font-size:14px;font-weight:600;color:var(--ink)}
+        .industries-head p{margin:0;max-width:520px;font-size:11px;line-height:1.55;color:var(--muted)}
+        .industry-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+        .industry{padding:15px 16px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.45)}
+        .industry h4{margin:0 0 6px;font-size:11px;font-weight:600;color:var(--ink)}
+        .industry p{margin:0;font-size:10.5px;line-height:1.52;color:var(--muted)}
         .section-head{display:flex;justify-content:space-between;align-items:end;gap:34px;margin-bottom:28px}
         .section-head>p{margin:0 0 3px;max-width:200px;font-size:11px;line-height:1.45;color:var(--muted)}
         .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -240,13 +306,15 @@ export default function Home() {
         .contact-main{font-size:clamp(1.4rem,2.3vw,1.9rem);letter-spacing:-.025em;color:#fff;text-decoration:none;border-bottom:2px solid var(--acid);padding-bottom:3px}
         .contact-mail{margin-top:10px;font-size:12px;color:#cecec8;text-decoration:none}
         @media(max-width:820px){
-          .hero-top,.offer-grid,.info-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+          .hero-top,.offer-grid,.fit-grid,.industries-head,.info-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+          .industry-grid{grid-template-columns:1fr 1fr}
           .projects{grid-template-columns:1fr 1fr}
           .hero{padding:80px 0 48px}
           .hero h1{font-size:clamp(2.55rem,9.5vw,4rem)}
           .hero-side{max-width:420px}
           .section,.compact-section{padding:54px 0}
           .trust-strip{grid-template-columns:1fr 1fr}
+          .industries{margin-top:34px}
         }
         @media(max-width:560px){
           .wrap{width:min(100% - 30px,1040px)}
@@ -256,6 +324,8 @@ export default function Home() {
           .hero-image{aspect-ratio:1.55/1;object-position:36% center}
           .accent-line{height:7px}
           .trust-strip span{font-size:10.5px;padding:9px 6px 9px 0}
+          .industry-grid{grid-template-columns:1fr}
+          .industry{padding:13px 14px}
           .projects{grid-template-columns:1fr}
           .section-head{display:block}
           .section-head>p{margin-top:10px}
