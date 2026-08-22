@@ -148,7 +148,7 @@ export default function Home() {
               </details>
               <details>
                 <summary>Jak probíhá platba?</summary>
-                <p>50 % ceny se hradí před zahájením práce, zbývajících 50 % po dokončení webu.</p>
+                <p>50 % ceny se hradí před zahájením práce, zbývajících 50 % po dokončení webu před jeho spuštěním.</p>
               </details>
               <details>
                 <summary>Platí se za web každý měsíc?</summary>
