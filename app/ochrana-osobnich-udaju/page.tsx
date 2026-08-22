@@ -38,7 +38,7 @@ export default function OchranaOsobnichUdaju() {
         Správcem osobních údajů je společnost <strong>Rovino s.r.o.</strong>, IČO 235 26 629, se sídlem Na Blatech 637, 378 16 Lomnice nad Lužnicí, zapsaná v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 35567 (dále <em>„Správce"</em>).
       </p>
       <p>
-        Pro komunikaci se Správcem v záležitostech ochrany osobních údajů použijte e-mail <a href="mailto:info@verno.cz">info@verno.cz</a> nebo poštovní adresu sídla.
+        Pro komunikaci se Správcem v záležitostech ochrany osobních údajů použijte e-mail <a href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a> nebo poštovní adresu sídla.
       </p>
       <p>
         Správce nejmenoval pověřence pro ochranu osobních údajů; nemá k tomu zákonnou povinnost.
@@ -170,7 +170,7 @@ export default function OchranaOsobnichUdaju() {
           <a href="https://uoou.gov.cz" target="_blank" rel="noopener noreferrer">uoou.gov.cz</a>).</li>
       </ul>
       <p>
-        Své právo uplatníte zasláním žádosti na <a href="mailto:info@verno.cz">info@verno.cz</a>. Žádosti vyřizujeme bezplatně, v zákonné lhůtě jednoho měsíce, kterou lze v odůvodněných případech prodloužit nejvýše o další dva měsíce (čl. 12 odst. 3 GDPR).
+        Své právo uplatníte zasláním žádosti na <a href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a>. Žádosti vyřizujeme bezplatně, v zákonné lhůtě jednoho měsíce, kterou lze v odůvodněných případech prodloužit nejvýše o další dva měsíce (čl. 12 odst. 3 GDPR).
       </p>
 
       <h2 id="g-5">5. Zabezpečení údajů</h2>
