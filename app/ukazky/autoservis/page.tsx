@@ -3,14 +3,11 @@ import {
   ArrowRight,
   CalendarDays,
   Car,
-  Check,
-  ChevronRight,
   Clock3,
   Gauge,
   MapPin,
   Phone,
   ShieldCheck,
-  Sparkles,
   Wrench,
 } from 'lucide-react'
 
@@ -22,37 +19,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
-const needs = [
-  {
-    no: '01',
-    title: 'Pravidelný servis',
-    text: 'Výměna oleje a filtrů, servisní prohlídky a běžná údržba podle nájezdu a stáří vozu.',
-    tags: ['olej a filtry', 'servisní prohlídka'],
-  },
-  {
-    no: '02',
-    title: 'Diagnostika a závady',
-    text: 'Kontrolky, hluk, vibrace, ztráta výkonu a další závady. Zjistíme příčinu a navrhneme opravu.',
-    tags: ['diagnostika', 'hledání závady'],
-  },
-  {
-    no: '03',
-    title: 'Brzdy a podvozek',
-    text: 'Brzdy, tlumiče, čepy, ložiska a geometrie. Kontrola, výměna opotřebených dílů a seřízení.',
-    tags: ['brzdy', 'podvozek'],
-  },
-  {
-    no: '04',
-    title: 'Klimatizace',
-    text: 'Kontrola funkce, servis, doplnění chladiva a dezinfekce klimatizace.',
-    tags: ['servis A/C', 'dezinfekce'],
-  },
-  {
-    no: '05',
-    title: 'Pneuservis',
-    text: 'Přezutí, vyvážení, kontrola stavu pneumatik a opravy běžných defektů.',
-    tags: ['přezutí', 'vyvážení'],
-  },
+const services = [
+  ['01', 'Pravidelný servis', 'Výměna oleje a filtrů, servisní prohlídky a běžná údržba podle nájezdu a stáří vozu.', 'olej · filtry · prohlídka'],
+  ['02', 'Diagnostika a závady', 'Kontrolky, hluk, vibrace, ztráta výkonu a další závady. Zjistíme příčinu a navrhneme opravu.', 'diagnostika · hledání závady'],
+  ['03', 'Brzdy a podvozek', 'Brzdy, tlumiče, čepy, ložiska a geometrie. Kontrola, výměna opotřebených dílů a seřízení.', 'brzdy · podvozek · geometrie'],
+  ['04', 'Klimatizace', 'Kontrola funkce, servis, doplnění chladiva a dezinfekce klimatizace.', 'servis A/C · dezinfekce'],
+  ['05', 'Pneuservis', 'Přezutí, vyvážení, kontrola stavu pneumatik a opravy běžných defektů.', 'přezutí · vyvážení · defekty'],
 ]
 
 const prices = [
@@ -64,10 +36,10 @@ const prices = [
 ]
 
 const rules = [
-  ['01', 'Změnu ceny řešíme předem.', 'Pokud se během práce ukáže další závada nebo větší rozsah opravy, před pokračováním zavoláme.'],
-  ['02', 'U nejasné závady začínáme diagnostikou.', 'Po zjištění příčiny sdělíme navrženou opravu, potřebné díly a cenu.'],
-  ['03', 'Vyměněné díly můžeme nechat k nahlédnutí.', 'Na požádání ukážeme, co se na autě měnilo.'],
-  ['04', 'Při převzetí dostanete přehled práce.', 'Uvedeme provedené úkony a použitý materiál.'],
+  ['Změnu ceny řešíme předem.', 'Pokud se během práce ukáže další závada nebo větší rozsah opravy, před pokračováním zavoláme.'],
+  ['U nejasné závady začínáme diagnostikou.', 'Po zjištění příčiny sdělíme navrženou opravu, potřebné díly a cenu.'],
+  ['Vyměněné díly můžeme nechat k nahlédnutí.', 'Na požádání ukážeme, co se na autě měnilo.'],
+  ['Při převzetí dostanete přehled práce.', 'Uvedeme provedené úkony a použitý materiál.'],
 ]
 
 const steps = [
@@ -84,320 +56,104 @@ const reviews = [
   ['„Na přezutí jsem byl objednaný na osmou a vzali mě hned. Za půl hodiny hotovo.“', 'Jakub M.'],
 ]
 
+const brands = ['Škoda', 'Volkswagen', 'Seat', 'Ford', 'Toyota', 'Hyundai', 'Kia', 'Peugeot', 'Renault', 'BMW', 'Mercedes']
+
 export default function AutoserviceShowcase() {
   return (
-    <div className="asgPage" id="top">
+    <div className="asg2" id="top">
       <style>{`
-        body:has(.asgPage) > .verno-nav-shell,body:has(.asgPage) > .footer{display:none!important}
-        body:has(.asgPage) main{padding:0!important;margin:0!important}
-        body:has(.asgPage){background:#f5f3ed!important}
-        .asgPage{--ink:#111514;--paper:#f5f3ed;--white:#fff;--muted:#68706b;--line:#d8d8d0;--blue:#3158ff;--blueDark:#1f3ec7;--soft:#e9ece8;--acid:#d9ff69;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-size:16px}
-        .asgPage *{box-sizing:border-box}.asgPage a{color:inherit;text-decoration:none}.asgPage svg{stroke-width:1.85}.asgWrap{width:min(1220px,calc(100% - 48px));margin:0 auto}
-        .asgDemo{height:26px;background:#0e1211;color:#d7dbd8;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.asgDemo a{color:#fff!important;text-decoration:underline;text-underline-offset:3px;margin-left:8px}
-        .asgNavShell{position:sticky;top:0;z-index:120;background:rgba(245,243,237,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(17,21,20,.14)}
-        .asgNav{height:74px;display:grid;grid-template-columns:minmax(205px,1fr) auto minmax(205px,1fr);align-items:center;gap:24px}.asgBrand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.04em;font-size:19px}.asgBrandMark{width:28px;height:28px;border:2px solid var(--ink);border-radius:50%;position:relative}.asgBrandMark:before,.asgBrandMark:after{content:'';position:absolute;background:var(--ink)}.asgBrandMark:before{width:2px;height:11px;left:12px;top:2px}.asgBrandMark:after{height:2px;width:11px;left:2px;top:12px}.asgBrand small{display:block;font-size:8px;letter-spacing:.15em;color:var(--muted);margin-top:1px}.asgLinks{display:flex;align-items:center;gap:28px;font-size:12px;font-weight:800}.asgLinks a{position:relative;padding:28px 0}.asgLinks a:after{content:'';position:absolute;left:0;right:100%;bottom:19px;height:2px;background:var(--blue);transition:right .2s ease}.asgLinks a:hover:after{right:0}.asgNavRight{justify-self:end;display:flex;align-items:center;gap:12px}.asgPhone{font-size:12px;font-weight:900}.asgNavCta,.asgBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:900;transition:.2s ease}.asgNavCta{min-height:39px;padding:0 16px;background:var(--ink);color:#fff!important;font-size:11px}.asgNavCta:hover{background:var(--blue)}
-        .asgHero{background:var(--paper);border-bottom:1px solid var(--line)}.asgHeroGrid{display:grid;grid-template-columns:.92fr 1.08fr;min-height:600px}.asgHeroCopy{padding:72px 58px 58px 0;display:flex;flex-direction:column;justify-content:center}.asgEyebrow{font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:9px;margin-bottom:20px}.asgEyebrow:before{content:'';width:28px;height:2px;background:var(--blue)}.asgHero h1{font-size:clamp(49px,5.25vw,76px);line-height:.91;letter-spacing:-.058em;font-weight:500;margin:0 0 22px;max-width:670px}.asgHeroLead{font-size:15px;line-height:1.58;color:#3d4541;max-width:610px;margin:0 0 24px}.asgHeroActions{display:flex;gap:9px;flex-wrap:wrap}.asgBtn{min-height:44px;padding:0 18px;border:1px solid var(--ink);font-size:11px}.asgBtnBlue{background:var(--blue);border-color:var(--blue);color:#fff!important}.asgBtnBlue:hover{background:var(--blueDark)}.asgBtnLight{background:transparent}.asgBtnLight:hover{background:#fff}.asgHeroFacts{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:10.5px;font-weight:800;color:#3a423e}.asgHeroFacts span{display:flex;align-items:center;gap:6px}.asgHeroPhoto{position:relative;min-height:600px;background:#d7dad4;overflow:hidden}.asgHeroPhoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.82) contrast(1.02)}.asgHeroPhoto:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,12,11,.04) 45%,rgba(8,12,11,.72) 100%)}.asgPhotoCaption{position:absolute;z-index:2;left:26px;right:26px;bottom:24px;color:#fff;display:flex;justify-content:space-between;align-items:end;gap:20px}.asgPhotoCaption strong{font-size:15px}.asgPhotoCaption small{display:block;margin-top:4px;font-size:10px;color:#d9ddda}.asgPhotoBadge{width:52px;height:52px;border:1px solid rgba(255,255,255,.7);display:grid;place-items:center;border-radius:50%}
-        .asgQuick{background:#111514;color:#fff}.asgQuickGrid{display:grid;grid-template-columns:1.1fr .9fr;min-height:92px}.asgQuickLeft{display:flex;align-items:center;gap:25px;padding:20px 0}.asgQuickLeft strong{font-size:14px}.asgQuickMeta{display:flex;align-items:center;gap:18px;font-size:10.5px;color:#c7ccc9}.asgQuickMeta span{display:flex;gap:6px;align-items:center}.asgQuickRight{background:var(--acid);color:var(--ink);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.asgQuickRight strong{font-size:13px}.asgQuickRight span{font-size:10.5px;color:#35402e;max-width:270px;line-height:1.4}
-        .asgSection{padding:64px 0}.asgSectionWhite{background:#fff}.asgSectionSoft{background:#e9ece8}.asgSectionDark{background:#111514;color:#fff}.asgHead{display:grid;grid-template-columns:160px 1fr;gap:28px;align-items:start;margin-bottom:30px}.asgKicker{font-size:9.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);padding-top:7px}.asgSectionDark .asgKicker{color:var(--acid)}.asgHead h2{font-size:clamp(34px,4vw,52px);line-height:.96;letter-spacing:-.047em;font-weight:500;margin:0;max-width:800px}.asgHead p{font-size:13px;line-height:1.6;color:var(--muted);max-width:620px;margin:10px 0 0}.asgSectionDark .asgHead p{color:#aeb6b1}
-        .asgNeeds{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}.asgNeed{border:1px solid var(--line);background:var(--paper);padding:22px;min-height:205px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .2s ease,border-color .2s ease}.asgNeed:hover{transform:translateY(-3px);border-color:#aeb1a9}.asgNeed:nth-child(1),.asgNeed:nth-child(2){grid-column:span 6}.asgNeed:nth-child(n+3){grid-column:span 4}.asgNeedNo{font-size:10px;font-weight:900;color:var(--blue);letter-spacing:.08em}.asgNeed h3{font-size:24px;line-height:1.02;letter-spacing:-.035em;font-weight:500;margin:24px 0 8px}.asgNeed p{font-size:11.5px;line-height:1.55;color:var(--muted);margin:0 0 17px;max-width:330px}.asgNeedTags{display:flex;gap:5px;flex-wrap:wrap;margin-top:auto}.asgNeedTags span{font-size:9px;font-weight:700;padding:5px 7px;border:1px solid #c9cbc4;background:#fff}.asgNeedArrow{position:absolute;right:18px;top:18px;width:34px;height:34px;border:1px solid #bfc2ba;display:grid;place-items:center;border-radius:50%}
-        .asgPricesLayout{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:start}.asgPriceList{border-top:1px solid var(--line)}.asgPriceRow{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}.asgPriceRow span{font-size:13px;font-weight:700}.asgPriceRow strong{font-size:13px}.asgPriceNote{background:var(--blue);color:#fff;padding:30px 32px;min-height:100%;display:flex;flex-direction:column;justify-content:space-between}.asgPriceNote svg{margin-bottom:46px}.asgPriceNote h3{font-size:29px;line-height:1;letter-spacing:-.04em;font-weight:500;margin:0 0 12px}.asgPriceNote p{font-size:12px;line-height:1.6;color:#e2e6ff;margin:0}.asgPriceFine{font-size:9.5px;color:var(--muted);margin-top:10px}
-        .asgWorkshop{display:grid;grid-template-columns:1.15fr .85fr;min-height:520px}.asgWorkshopPhoto{position:relative;overflow:hidden;background:#333}.asgWorkshopPhoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.78) contrast(1.04)}.asgWorkshopPhoto:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(17,21,20,.12))}.asgWorkshopCopy{background:#111514;color:#fff;padding:52px 50px;display:flex;flex-direction:column;justify-content:center}.asgWorkshopCopy .asgKicker{color:var(--acid)}.asgWorkshopCopy h2{font-size:48px;line-height:.93;letter-spacing:-.05em;font-weight:500;margin:16px 0}.asgWorkshopCopy p{font-size:13px;line-height:1.65;color:#b6bdb8;max-width:430px;margin:0}.asgWorkshopFacts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}.asgWorkshopFact{border-top:1px solid #3b413e;padding-top:10px;font-size:11px;font-weight:800}.asgWorkshopFact span{display:block;color:#909994;font-weight:500;font-size:9.5px;margin-top:3px}
-        .asgRules{display:grid;grid-template-columns:1fr 1fr;column-gap:54px}.asgRule{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:24px 0;border-top:1px solid var(--line)}.asgRuleNo{font-size:10px;font-weight:900;color:var(--blue);padding-top:3px}.asgRule strong{display:block;font-size:16px;line-height:1.25;margin-bottom:7px}.asgRule p{font-size:11px;line-height:1.55;color:var(--muted);margin:0;max-width:430px}
-        .asgBrands{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}.asgBrandsInner{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center}.asgBrands strong{font-size:10px;letter-spacing:.12em;text-transform:uppercase}.asgBrandNames{display:flex;gap:20px;flex-wrap:wrap;color:#525a55;font-size:12px;font-weight:800}.asgBrandNames span{white-space:nowrap}
-        .asgSteps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.asgStep{padding:22px 20px 24px;border-right:1px solid var(--line);min-height:170px}.asgStep:last-child{border-right:0}.asgStepNo{font-size:26px;color:#b5b9b3;font-weight:500}.asgStep h3{font-size:14px;margin:26px 0 7px}.asgStep p{font-size:10.5px;line-height:1.5;color:var(--muted);margin:0}.asgStep:nth-child(4){background:#eef0ff}.asgStep:nth-child(4) .asgStepNo{color:var(--blue)}
-        .asgReviewsTop{display:grid;grid-template-columns:.72fr 1.28fr;gap:40px;align-items:end;margin-bottom:22px}.asgRating{display:flex;align-items:end;gap:12px}.asgRating strong{font-size:62px;line-height:.85;letter-spacing:-.05em;font-weight:500}.asgRating span{font-size:11px;color:#b4bbb6;line-height:1.45}.asgReviewIntro h2{font-size:38px;line-height:1;letter-spacing:-.04em;font-weight:500;margin:0}.asgReviewIntro p{font-size:11px;color:#9ea6a1;margin:8px 0 0}.asgReviews{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #3a403d}.asgReview{padding:22px 25px 20px 0;border-right:1px solid #3a403d;min-height:170px}.asgReview+.asgReview{padding-left:25px}.asgReview:last-child{border-right:0}.asgReview p{font-size:14px;line-height:1.5;margin:0 0 24px}.asgReview small{font-size:9.5px;color:#a7afa9}.asgDemoLabel{display:inline-flex;margin-top:22px;font-size:9px;color:#838c86;border:1px solid #39403c;padding:6px 8px}
-        .asgTeam{display:grid;grid-template-columns:.88fr 1.12fr;border:1px solid var(--line);background:#fff}.asgTeamPhoto{position:relative;min-height:390px;overflow:hidden;background:#ddd}.asgTeamPhoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;filter:saturate(.72) contrast(1.02)}.asgTeamCopy{padding:44px 48px;display:flex;flex-direction:column;justify-content:center}.asgTeamCopy h2{font-size:42px;line-height:.95;letter-spacing:-.045em;font-weight:500;margin:13px 0}.asgTeamCopy p{font-size:12.5px;line-height:1.62;color:#48504c;max-width:580px;margin:0}.asgPeople{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}.asgPerson{border-top:1px solid var(--line);padding-top:10px}.asgPerson strong{display:block;font-size:11px}.asgPerson span{font-size:9.5px;color:var(--muted)}
-        .asgLocation{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px}.asgLocCard{background:#fff;border:1px solid var(--line);padding:28px}.asgLocCard h3{font-size:25px;letter-spacing:-.03em;margin:0 0 12px}.asgLocData{display:grid;gap:12px;margin-top:24px}.asgLocLine{display:grid;grid-template-columns:24px 1fr;gap:9px;font-size:11px;line-height:1.45}.asgLocLine strong{display:block}.asgLocLine span{color:var(--muted)}.asgMap{min-height:330px;background:#dfe3de;position:relative;overflow:hidden;border:1px solid var(--line)}.asgMap:before{content:'';position:absolute;inset:-20%;background:repeating-linear-gradient(24deg,transparent 0 42px,#c9cec8 43px 45px),repeating-linear-gradient(118deg,transparent 0 68px,#c7ccc6 69px 72px);opacity:.86}.asgMap:after{content:'';position:absolute;width:22px;height:22px;border:7px solid var(--blue);border-radius:50% 50% 50% 0;transform:rotate(-45deg);left:56%;top:46%;background:#fff}.asgMapLabel{position:absolute;z-index:2;left:22px;bottom:20px;background:#111514;color:#fff;padding:10px 12px;font-size:10px;font-weight:800}.asgMapRoad{position:absolute;z-index:1;left:-6%;right:-4%;top:48%;height:13px;background:#f5f3ed;transform:rotate(-9deg);box-shadow:0 0 0 1px #bfc4bd}.asgMapRoad2{position:absolute;z-index:1;top:-10%;bottom:-5%;left:43%;width:11px;background:#f5f3ed;transform:rotate(14deg);box-shadow:0 0 0 1px #bfc4bd}
-        .asgBooking{background:var(--blue);color:#fff}.asgBookingGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:62px;align-items:center}.asgBookingCopy h2{font-size:clamp(42px,4.7vw,62px);line-height:.93;letter-spacing:-.052em;font-weight:500;margin:12px 0 18px}.asgBookingCopy p{font-size:13px;line-height:1.6;color:#e1e6ff;max-width:500px}.asgBookingAlt{display:flex;gap:18px;align-items:center;margin-top:25px;font-size:10.5px}.asgBookingAlt strong{font-size:13px}.asgBookingPanel{background:#fff;color:var(--ink);padding:24px}.asgBookingPanelTop{display:flex;justify-content:space-between;align-items:start;padding-bottom:18px;border-bottom:1px solid var(--line)}.asgBookingPanelTop strong{font-size:17px}.asgBookingPanelTop span{font-size:9.5px;color:var(--muted);max-width:220px;text-align:right}.asgFields{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.asgField{min-height:48px;border:1px solid var(--line);padding:9px 11px}.asgFieldWide{grid-column:1/-1}.asgField label{display:block;font-size:8px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:4px}.asgField span{font-size:11px;color:#3d4541}.asgBookingBtn{width:100%;min-height:44px;border:0;background:#111514;color:#fff;font-size:11px;font-weight:900;display:flex;justify-content:center;align-items:center;gap:8px}.asgBookingNote{font-size:8.5px;color:#7b837e;margin-top:8px}.asgFooter{background:#0b0e0d;color:#bfc5c1;border-top:3px solid var(--acid)}.asgFooterInner{min-height:130px;padding:28px 0;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;font-size:10px}.asgFooter strong{font-size:14px;color:#fff}.asgFooterRight{display:flex;align-items:center;gap:16px}.asgFooter a{text-decoration:underline;text-underline-offset:3px}.asgFooterCta{border:1px solid #454b48;padding:10px 12px;color:#fff!important;text-decoration:none!important;font-weight:800}.asgFooterCta:hover{border-color:var(--acid)}
-        @media(max-width:980px){.asgWrap{width:min(100% - 34px,1220px)}.asgNav{grid-template-columns:1fr auto}.asgLinks{display:none}.asgHeroGrid{grid-template-columns:1fr 1fr}.asgHeroCopy{padding-right:34px}.asgHero h1{font-size:48px}.asgQuickGrid{grid-template-columns:1fr}.asgQuickRight{display:none}.asgHead{grid-template-columns:120px 1fr}.asgNeed:nth-child(n){grid-column:span 6}.asgPricesLayout{gap:30px}.asgWorkshop{grid-template-columns:1fr 1fr}.asgWorkshopCopy{padding:38px}.asgWorkshopCopy h2{font-size:39px}.asgSteps{grid-template-columns:repeat(3,1fr)}.asgStep:nth-child(3){border-right:0}.asgStep:nth-child(n+4){border-top:1px solid var(--line)}.asgStep:nth-child(4){border-left:0}.asgReviews{grid-template-columns:1fr}.asgReview,.asgReview+.asgReview{padding:18px 0;border-right:0;border-bottom:1px solid #3a403d;min-height:auto}.asgReview:last-child{border-bottom:0}.asgTeam{grid-template-columns:.8fr 1.2fr}.asgTeamCopy{padding:34px}.asgLocation{grid-template-columns:.9fr 1.1fr}.asgBookingGrid{gap:34px}}
-        @media(max-width:720px){.asgWrap{width:min(100% - 26px,1220px)}.asgDemo{height:auto;min-height:26px;text-align:center;padding:5px 10px;font-size:8px}.asgNav{height:62px}.asgBrand{font-size:16px}.asgBrandMark{width:24px;height:24px}.asgBrandMark:before{left:10px}.asgBrandMark:after{top:10px}.asgPhone{display:none}.asgNavCta{min-height:36px;padding:0 12px}.asgHeroGrid{grid-template-columns:1fr}.asgHeroCopy{padding:52px 0 36px}.asgHero h1{font-size:clamp(43px,13vw,60px);max-width:640px}.asgHeroPhoto{min-height:430px}.asgQuickLeft{flex-direction:column;align-items:flex-start;gap:10px}.asgQuickMeta{flex-wrap:wrap;gap:10px 16px}.asgSection{padding:50px 0}.asgHead{grid-template-columns:1fr;gap:10px;margin-bottom:22px}.asgKicker{padding:0}.asgNeed:nth-child(n){grid-column:span 12}.asgNeed{min-height:185px}.asgPricesLayout{grid-template-columns:1fr}.asgPriceNote{min-height:260px}.asgWorkshop{grid-template-columns:1fr}.asgWorkshopPhoto{min-height:420px}.asgWorkshopCopy{padding:38px 28px}.asgWorkshopCopy h2{font-size:41px}.asgRules{grid-template-columns:1fr}.asgBrandsInner{grid-template-columns:1fr;gap:11px}.asgBrandNames{gap:11px 16px}.asgSteps{grid-template-columns:1fr}.asgStep,.asgStep:nth-child(3),.asgStep:nth-child(4){border-right:0;border-left:0;border-top:1px solid var(--line);min-height:auto;display:grid;grid-template-columns:46px 1fr;gap:12px}.asgStep:first-child{border-top:0}.asgStep h3{margin:2px 0 6px}.asgStep p{grid-column:2}.asgReviewsTop{grid-template-columns:1fr;gap:22px}.asgTeam{grid-template-columns:1fr}.asgTeamPhoto{min-height:360px}.asgTeamCopy{padding:32px 26px}.asgPeople{grid-template-columns:1fr}.asgLocation{grid-template-columns:1fr}.asgMap{min-height:310px}.asgBookingGrid{grid-template-columns:1fr}.asgBookingCopy{padding-bottom:8px}.asgFields{grid-template-columns:1fr}.asgFieldWide{grid-column:auto}.asgFooterInner{grid-template-columns:1fr}.asgFooterRight{align-items:flex-start;flex-wrap:wrap}}
+        body:has(.asg2) > .verno-nav-shell,body:has(.asg2) > .footer{display:none!important}
+        body:has(.asg2) main{padding:0!important;margin:0!important}
+        body:has(.asg2){background:#f1f1ec!important}
+        .asg2{--ink:#0e1110;--paper:#f1f1ec;--white:#fff;--muted:#666d69;--line:#d3d5cf;--blue:#2f55ff;--acid:#d9ff64;--dark:#101412;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-size:16px}
+        .asg2 *{box-sizing:border-box}.asg2 a{color:inherit;text-decoration:none}.asg2 svg{stroke-width:1.8}.asg2Wrap{width:min(1240px,calc(100% - 48px));margin:0 auto}.asg2Kicker{font-size:10px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+        .asg2Demo{min-height:25px;padding:5px 14px;background:#090b0a;color:#d5d8d5;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.asg2Demo a{color:#fff!important;text-decoration:underline;text-underline-offset:3px;margin-left:8px}
+        .asg2NavShell{position:sticky;top:0;z-index:100;background:rgba(14,17,16,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)}.asg2Nav{height:68px;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:34px;color:#fff}.asg2Brand{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:900;letter-spacing:-.045em}.asg2Mark{width:30px;height:30px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center}.asg2Brand small{display:block;font-size:8px;letter-spacing:.16em;color:#aeb4b0;margin-top:2px}.asg2Links{display:flex;gap:26px;font-size:11px;font-weight:800}.asg2Links a{opacity:.78;transition:.2s}.asg2Links a:hover{opacity:1;color:var(--acid)}.asg2NavRight{display:flex;align-items:center;gap:12px}.asg2Phone{font-size:11px;font-weight:900}.asg2NavCta{min-height:38px;padding:0 15px;background:var(--acid);color:var(--ink)!important;display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:900}
+
+        .asg2Hero{position:relative;min-height:690px;background:#131715;overflow:hidden;color:#fff}.asg2Hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 52%;filter:saturate(.72) contrast(1.07) brightness(.72)}.asg2Hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,11,10,.96) 0%,rgba(8,11,10,.88) 34%,rgba(8,11,10,.30) 68%,rgba(8,11,10,.12) 100%),linear-gradient(180deg,rgba(8,11,10,.18),rgba(8,11,10,.40))}.asg2HeroContent{position:relative;z-index:2;min-height:690px;display:grid;grid-template-columns:minmax(0,720px) 1fr;align-items:end;padding-bottom:58px}.asg2HeroCopy{padding-top:100px}.asg2Hero .asg2Kicker{color:var(--acid);margin-bottom:18px}.asg2Hero h1{font-size:clamp(58px,7vw,96px);line-height:.86;letter-spacing:-.065em;font-weight:500;max-width:760px;margin:0 0 24px}.asg2Lead{font-size:15px;line-height:1.6;color:#d6dbd7;max-width:580px;margin:0 0 24px}.asg2HeroActions{display:flex;gap:9px;flex-wrap:wrap}.asg2Btn{min-height:44px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:900;border:1px solid rgba(255,255,255,.5)}.asg2BtnPrimary{background:var(--acid);border-color:var(--acid);color:var(--ink)!important}.asg2BtnGhost{color:#fff!important}.asg2HeroSide{justify-self:end;align-self:end;width:260px;border-left:1px solid rgba(255,255,255,.28);padding-left:22px;margin-bottom:4px}.asg2HeroSide strong{display:block;font-size:12px;margin-bottom:12px}.asg2HeroSide div{display:grid;gap:8px;font-size:10px;color:#c6ccc8}.asg2HeroSide span{display:flex;align-items:center;gap:7px}.asg2HeroIndex{position:absolute;right:28px;top:28px;z-index:2;font-size:10px;letter-spacing:.13em;color:#c8ceca}.asg2HeroBadge{position:absolute;right:34px;bottom:34px;z-index:2;width:82px;height:82px;border-radius:50%;background:var(--blue);display:grid;place-items:center;color:#fff;transform:rotate(-8deg)}
+
+        .asg2ServiceIntro{padding:66px 0 22px;background:#fff}.asg2ServiceIntroGrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:end}.asg2ServiceIntro h2{font-size:clamp(42px,5.3vw,70px);line-height:.9;letter-spacing:-.055em;font-weight:500;margin:0}.asg2ServiceIntro p{font-size:13px;line-height:1.65;color:var(--muted);max-width:520px;margin:0 0 4px}
+        .asg2Services{background:#fff;border-top:1px solid var(--line)}.asg2Service{display:grid;grid-template-columns:70px 1.15fr 1fr 170px;align-items:center;gap:28px;min-height:112px;border-bottom:1px solid var(--line);transition:background .2s,padding .2s;padding:0 2px}.asg2Service:hover{background:#f5f6f1;padding:0 14px}.asg2ServiceNo{font-size:11px;color:var(--blue);font-weight:900}.asg2Service h3{font-size:28px;line-height:1;letter-spacing:-.035em;font-weight:500;margin:0}.asg2Service p{font-size:11.5px;line-height:1.55;color:var(--muted);margin:0}.asg2ServiceMeta{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#747b77}.asg2ServiceArrow{justify-self:end;width:42px;height:42px;border:1px solid #bec2bc;border-radius:50%;display:grid;place-items:center}
+
+        .asg2PriceScene{display:grid;grid-template-columns:1.02fr .98fr;min-height:600px;background:var(--paper)}.asg2PricePhoto{position:relative;overflow:hidden}.asg2PricePhoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.72) contrast(1.04)}.asg2PricePhoto:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.52))}.asg2PriceCaption{position:absolute;left:30px;bottom:26px;z-index:2;color:#fff}.asg2PriceCaption strong{display:block;font-size:18px}.asg2PriceCaption span{font-size:10px;color:#d8ddda}.asg2PricePanel{padding:64px clamp(34px,5vw,74px);display:flex;flex-direction:column;justify-content:center}.asg2PricePanel h2{font-size:clamp(40px,4.7vw,62px);line-height:.92;letter-spacing:-.052em;font-weight:500;margin:12px 0 24px}.asg2PriceList{border-top:1px solid #bfc3bc}.asg2PriceRow{display:grid;grid-template-columns:1fr auto;gap:20px;padding:15px 0;border-bottom:1px solid #c9ccc6;font-size:12px}.asg2PriceRow strong{font-size:12px}.asg2PriceNote{margin-top:22px;background:var(--blue);color:#fff;padding:20px 22px;display:grid;grid-template-columns:34px 1fr;gap:14px}.asg2PriceNote strong{font-size:13px}.asg2PriceNote p{font-size:10.5px;line-height:1.5;color:#e5e8ff;margin:4px 0 0}.asg2Fine{font-size:8.5px;color:#7a817c;margin-top:10px}
+
+        .asg2Workshop{position:relative;min-height:680px;background:#222;color:#fff;overflow:hidden}.asg2Workshop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:saturate(.68) contrast(1.08) brightness(.64)}.asg2Workshop:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,9,.08),rgba(8,10,9,.72) 78%)}.asg2WorkshopInner{position:relative;z-index:2;min-height:680px;display:flex;flex-direction:column;justify-content:space-between;padding-top:56px;padding-bottom:44px}.asg2WorkshopTop{display:flex;justify-content:space-between;gap:40px}.asg2Workshop h2{font-size:clamp(52px,6.2vw,82px);line-height:.88;letter-spacing:-.06em;font-weight:500;margin:14px 0 0;max-width:650px}.asg2WorkshopLead{max-width:360px;font-size:12px;line-height:1.6;color:#d2d8d4;margin-top:34px}.asg2WorkshopStats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.35)}.asg2WorkshopStat{padding:18px 22px 0 0;border-right:1px solid rgba(255,255,255,.24)}.asg2WorkshopStat+.asg2WorkshopStat{padding-left:22px}.asg2WorkshopStat:last-child{border-right:0}.asg2WorkshopStat strong{display:block;font-size:13px}.asg2WorkshopStat span{display:block;font-size:9.5px;color:#bfc6c1;margin-top:4px}
+
+        .asg2Manifesto{background:var(--acid);padding:46px 0}.asg2ManifestoHead{display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:start;margin-bottom:28px}.asg2ManifestoHead h2{font-size:clamp(34px,4vw,52px);line-height:.95;letter-spacing:-.045em;font-weight:500;margin:0}.asg2Rules{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid rgba(14,17,16,.25)}.asg2Rule{padding:22px 34px 22px 0;border-bottom:1px solid rgba(14,17,16,.25)}.asg2Rule:nth-child(even){padding-left:34px;border-left:1px solid rgba(14,17,16,.25)}.asg2Rule strong{display:block;font-size:17px;line-height:1.25;margin-bottom:6px}.asg2Rule p{font-size:10.5px;line-height:1.55;color:#3d453f;margin:0;max-width:450px}
+
+        .asg2Brands{background:#fff;padding:24px 0;border-bottom:1px solid var(--line)}.asg2BrandsInner{display:flex;align-items:center;gap:28px;overflow:hidden}.asg2Brands strong{font-size:9px;text-transform:uppercase;letter-spacing:.13em;white-space:nowrap;color:#676e69}.asg2BrandList{display:flex;gap:28px;flex-wrap:wrap;font-size:12px;font-weight:900}
+
+        .asg2Journey{background:#fff;padding:70px 0 74px}.asg2JourneyHead{display:grid;grid-template-columns:1fr .9fr;gap:70px;align-items:end;margin-bottom:40px}.asg2JourneyHead h2{font-size:clamp(44px,5vw,68px);line-height:.9;letter-spacing:-.055em;font-weight:500;margin:12px 0 0}.asg2JourneyHead p{font-size:12px;line-height:1.6;color:var(--muted);max-width:470px;margin:0}.asg2Timeline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:0;padding-top:30px}.asg2Timeline:before{content:'';position:absolute;left:8%;right:8%;top:41px;height:1px;background:#bdc1bb}.asg2Step{position:relative;padding:34px 22px 0 0}.asg2StepDot{position:absolute;top:4px;left:0;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid #aeb3ad;z-index:2}.asg2Step:nth-child(4) .asg2StepDot{border-color:var(--blue);background:var(--acid);box-shadow:0 0 0 8px rgba(47,85,255,.10)}.asg2StepNo{font-size:10px;color:#929993;font-weight:900}.asg2Step h3{font-size:15px;margin:10px 0 7px}.asg2Step p{font-size:10.5px;line-height:1.5;color:var(--muted);margin:0;max-width:180px}.asg2Step:nth-child(4) h3{color:var(--blue)}
+
+        .asg2Reviews{background:var(--dark);color:#fff;padding:68px 0}.asg2ReviewsGrid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}.asg2Rating strong{display:block;font-size:108px;line-height:.78;letter-spacing:-.07em;font-weight:500}.asg2Rating span{font-size:10px;color:#aeb6b0}.asg2ReviewsMain h2{font-size:46px;line-height:.95;letter-spacing:-.048em;font-weight:500;margin:0 0 26px}.asg2ReviewFeature{font-size:24px;line-height:1.35;letter-spacing:-.025em;margin:0 0 24px;max-width:720px}.asg2ReviewFeature small{display:block;font-size:9px;letter-spacing:.08em;color:#98a29b;margin-top:16px}.asg2ReviewMini{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #343a36}.asg2ReviewMini article{padding:20px 24px 0 0}.asg2ReviewMini article+article{border-left:1px solid #343a36;padding-left:24px}.asg2ReviewMini p{font-size:12px;line-height:1.55;color:#d4d9d6;margin:0}.asg2ReviewMini small{display:block;font-size:8.5px;color:#8f9992;margin-top:12px}.asg2DemoLabel{display:inline-block;margin-top:24px;border:1px solid #3a413d;padding:6px 8px;font-size:8px;color:#7f8982}
+
+        .asg2Team{position:relative;min-height:560px;background:#d9dbd5;overflow:hidden}.asg2Team img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.58) contrast(1.08)}.asg2Team:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(241,241,236,.98) 0%,rgba(241,241,236,.94) 40%,rgba(241,241,236,.25) 68%,transparent 100%)}.asg2TeamInner{position:relative;z-index:2;min-height:560px;display:flex;align-items:center}.asg2TeamCard{max-width:610px;padding:52px 0}.asg2TeamCard h2{font-size:clamp(46px,5.2vw,70px);line-height:.9;letter-spacing:-.055em;font-weight:500;margin:14px 0 18px}.asg2TeamCard>p{font-size:13px;line-height:1.65;color:#4b534f;max-width:520px;margin:0}.asg2People{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.asg2Person{border-top:1px solid #bfc3bd;padding-top:10px}.asg2Person strong{display:block;font-size:11px}.asg2Person span{font-size:9px;color:#747b76}
+
+        .asg2Location{padding:68px 0;background:#e6e9e4}.asg2LocationGrid{display:grid;grid-template-columns:.72fr 1.28fr;gap:14px;align-items:stretch}.asg2LocCopy{background:#fff;padding:34px}.asg2LocCopy h2{font-size:38px;line-height:.95;letter-spacing:-.045em;font-weight:500;margin:12px 0 20px}.asg2LocRows{display:grid;gap:15px}.asg2LocRow{display:grid;grid-template-columns:24px 1fr;gap:9px;font-size:11px;line-height:1.45}.asg2LocRow strong{display:block}.asg2LocRow span{color:var(--muted)}.asg2Map{position:relative;min-height:360px;background:#d6dbd4;overflow:hidden}.asg2Map:before{content:'';position:absolute;inset:-15%;background:repeating-linear-gradient(24deg,transparent 0 42px,#c3c9c2 43px 45px),repeating-linear-gradient(118deg,transparent 0 68px,#c1c7c0 69px 72px)}.asg2Map:after{content:'';position:absolute;width:24px;height:24px;border:8px solid var(--blue);border-radius:50% 50% 50% 0;transform:rotate(-45deg);left:57%;top:45%;background:#fff}.asg2MapTag{position:absolute;left:22px;bottom:20px;z-index:2;background:var(--dark);color:#fff;padding:10px 13px;font-size:10px;font-weight:900}.asg2Road{position:absolute;left:-4%;right:-3%;top:52%;height:13px;background:#f2f2ed;transform:rotate(-8deg);box-shadow:0 0 0 1px #b7bdb6}.asg2Road2{position:absolute;top:-12%;bottom:-7%;left:44%;width:12px;background:#f2f2ed;transform:rotate(15deg);box-shadow:0 0 0 1px #b7bdb6}
+
+        .asg2Booking{background:var(--blue);color:#fff;padding:74px 0}.asg2BookingGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:76px;align-items:start}.asg2BookingCopy h2{font-size:clamp(50px,6vw,80px);line-height:.86;letter-spacing:-.06em;font-weight:500;margin:14px 0 20px}.asg2BookingCopy p{font-size:13px;line-height:1.6;color:#e3e7ff;max-width:460px}.asg2BookingAlt{display:flex;gap:11px;align-items:center;margin-top:24px;font-size:11px}.asg2BookingAlt strong{font-size:14px}.asg2BookingPanel{background:#fff;color:var(--ink)}.asg2BookingTop{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px}.asg2BookingTop strong{font-size:17px}.asg2BookingTop span{font-size:9px;color:var(--muted);max-width:220px;text-align:right}.asg2Fields{display:grid;grid-template-columns:1fr 1fr}.asg2Field{min-height:70px;padding:13px 15px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.asg2Field:nth-child(even){border-right:0}.asg2FieldWide{grid-column:1/-1;border-right:0}.asg2Field label{display:block;font-size:8px;text-transform:uppercase;letter-spacing:.09em;color:#7c837e;margin-bottom:8px}.asg2Field span{font-size:12px}.asg2BookingBtn{margin:16px;width:calc(100% - 32px);min-height:48px;background:var(--dark);color:#fff;border:0;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:8px}.asg2BookingNote{padding:0 16px 16px;font-size:8.5px;color:#7c837e}
+
+        .asg2Footer{background:#090b0a;color:#b9c0bb;border-top:3px solid var(--acid)}.asg2FooterInner{min-height:122px;padding:26px 0;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;font-size:10px}.asg2Footer strong{font-size:14px;color:#fff}.asg2FooterRight{display:flex;align-items:center;gap:16px}.asg2Footer a{text-decoration:underline;text-underline-offset:3px}.asg2FooterCta{border:1px solid #414743;padding:10px 12px;color:#fff!important;text-decoration:none!important;font-weight:900}
+
+        @media(max-width:980px){.asg2Wrap{width:min(100% - 34px,1240px)}.asg2Nav{grid-template-columns:1fr auto}.asg2Links{display:none}.asg2HeroContent{grid-template-columns:1fr}.asg2HeroSide{justify-self:start;margin-top:34px}.asg2Service{grid-template-columns:54px 1fr 1fr 42px}.asg2ServiceMeta{display:none}.asg2PriceScene{grid-template-columns:1fr 1fr}.asg2ManifestoHead{grid-template-columns:160px 1fr}.asg2ReviewsGrid{gap:38px}.asg2BookingGrid{gap:38px}}
+        @media(max-width:720px){.asg2Wrap{width:min(100% - 26px,1240px)}.asg2Demo{font-size:8px;text-align:center;line-height:1.35}.asg2Nav{height:62px}.asg2Phone{display:none}.asg2Hero,.asg2HeroContent{min-height:650px}.asg2Hero:after{background:linear-gradient(180deg,rgba(8,11,10,.54),rgba(8,11,10,.92) 70%)}.asg2HeroContent{align-items:end;padding-bottom:36px}.asg2HeroCopy{padding-top:90px}.asg2Hero h1{font-size:clamp(50px,15vw,72px)}.asg2HeroSide{display:none}.asg2HeroBadge{width:62px;height:62px;right:18px;bottom:20px}.asg2ServiceIntro{padding:50px 0 20px}.asg2ServiceIntroGrid{grid-template-columns:1fr;gap:18px}.asg2Service{grid-template-columns:42px 1fr 38px;gap:12px;padding:18px 0;min-height:0}.asg2Service p{grid-column:2/-1}.asg2ServiceMeta{display:none}.asg2ServiceArrow{grid-column:3;grid-row:1;width:34px;height:34px}.asg2Service h3{font-size:23px}.asg2PriceScene{grid-template-columns:1fr}.asg2PricePhoto{min-height:390px}.asg2PricePanel{padding:48px 26px}.asg2Workshop,.asg2WorkshopInner{min-height:620px}.asg2WorkshopTop{display:block}.asg2WorkshopLead{margin-top:20px}.asg2WorkshopStats{grid-template-columns:1fr 1fr}.asg2WorkshopStat{border-bottom:1px solid rgba(255,255,255,.24);padding:15px 12px 15px 0}.asg2WorkshopStat+.asg2WorkshopStat{padding-left:12px}.asg2ManifestoHead{grid-template-columns:1fr;gap:12px}.asg2Rules{grid-template-columns:1fr}.asg2Rule,.asg2Rule:nth-child(even){padding:18px 0;border-left:0}.asg2BrandsInner{align-items:flex-start;flex-direction:column}.asg2BrandList{gap:12px 18px}.asg2Journey{padding:52px 0}.asg2JourneyHead{grid-template-columns:1fr;gap:18px}.asg2Timeline{display:block;padding-top:0}.asg2Timeline:before{left:8px;right:auto;top:0;bottom:0;width:1px;height:auto}.asg2Step{padding:0 0 28px 42px}.asg2StepDot{left:0;top:3px}.asg2Step p{max-width:none}.asg2ReviewsGrid{grid-template-columns:1fr;gap:26px}.asg2Rating strong{font-size:84px}.asg2ReviewFeature{font-size:21px}.asg2ReviewMini{grid-template-columns:1fr}.asg2ReviewMini article,.asg2ReviewMini article+article{padding:18px 0;border-left:0;border-top:1px solid #343a36}.asg2Team,.asg2TeamInner{min-height:610px}.asg2Team:after{background:linear-gradient(180deg,rgba(241,241,236,.96) 0%,rgba(241,241,236,.88) 62%,rgba(241,241,236,.25) 100%)}.asg2TeamInner{align-items:flex-start}.asg2TeamCard{padding-top:48px}.asg2People{grid-template-columns:1fr}.asg2LocationGrid{grid-template-columns:1fr}.asg2Map{min-height:300px}.asg2BookingGrid{grid-template-columns:1fr}.asg2Fields{grid-template-columns:1fr}.asg2Field,.asg2Field:nth-child(even){border-right:0}.asg2FooterInner{grid-template-columns:1fr}.asg2FooterRight{flex-wrap:wrap}}
       `}</style>
 
-      <div className="asgDemo">
-        UKÁZKOVÝ KONCEPT SPUSTWEB.CZ · NEJDE O SKUTEČNOU FIRMU
-        <a href="/">ZPĚT NA SPUSTWEB.CZ</a>
-      </div>
+      <div className="asg2Demo">UKÁZKOVÝ KONCEPT SPUSTWEB.CZ · NEJDE O SKUTEČNOU FIRMU <a href="/">ZPĚT NA SPUSTWEB.CZ</a></div>
 
-      <div className="asgNavShell">
-        <div className="asgWrap">
-          <nav className="asgNav" aria-label="Navigace ukázkového autoservisu">
-            <a className="asgBrand" href="#top">
-              <span className="asgBrandMark" />
-              <span>GARÁŽ 17<small>AUTOSERVIS · BRNO</small></span>
-            </a>
-            <div className="asgLinks">
-              <a href="#servis">Servis</a>
-              <a href="#cenik">Ceník</a>
-              <a href="#jak-to-funguje">Jak to funguje</a>
-              <a href="#o-nas">O nás</a>
-              <a href="#kontakt">Kontakt</a>
-            </div>
-            <div className="asgNavRight">
-              <a className="asgPhone" href="tel:+420777000000">777 000 000</a>
-              <a className="asgNavCta" href="#rezervace">Objednat servis <ArrowRight size={13} /></a>
-            </div>
+      <div className="asg2NavShell">
+        <div className="asg2Wrap">
+          <nav className="asg2Nav" aria-label="Navigace ukázkového autoservisu">
+            <a className="asg2Brand" href="#top"><span className="asg2Mark"><Wrench size={15}/></span><span>GARÁŽ 17<small>AUTOSERVIS · BRNO</small></span></a>
+            <div className="asg2Links"><a href="#servis">Servis</a><a href="#cenik">Ceník</a><a href="#prubeh">Jak to funguje</a><a href="#tym">O nás</a><a href="#kontakt">Kontakt</a></div>
+            <div className="asg2NavRight"><a className="asg2Phone" href="tel:+420777000000">777 000 000</a><a className="asg2NavCta" href="#rezervace">Objednat servis <ArrowRight size={12}/></a></div>
           </nav>
         </div>
       </div>
 
-      <header className="asgHero">
-        <div className="asgWrap">
-          <div className="asgHeroGrid">
-            <div className="asgHeroCopy">
-              <div className="asgEyebrow">AUTOSERVIS · BRNO SLATINA</div>
-              <h1>Servis a opravy osobních aut v Brně-Slatině.</h1>
-              <p className="asgHeroLead">
-                Pravidelný servis, diagnostika, brzdy, podvozek, klimatizace a pneuservis pro většinu běžných značek.
-                U větších oprav předem potvrdíme rozsah práce a cenu.
-              </p>
-              <div className="asgHeroActions">
-                <a className="asgBtn asgBtnBlue" href="#rezervace">Objednat termín <CalendarDays size={15} /></a>
-                <a className="asgBtn asgBtnLight" href="#cenik">Služby a ceny <ArrowRight size={14} /></a>
-              </div>
-              <div className="asgHeroFacts">
-                <span><Clock3 size={14} /> Po–Pá 7:30–17:00</span>
-                <span><MapPin size={14} /> Brno–Slatina</span>
-                <span><Car size={14} /> většina běžných značek</span>
-              </div>
-            </div>
-            <div className="asgHeroPhoto">
-              <img
-                src="https://images.pexels.com/photos/6870298/pexels-photo-6870298.jpeg?auto=compress&cs=tinysrgb&w=1800"
-                alt="Mechanik kontroluje motor běžného osobního auta v servisní dílně"
-              />
-              <div className="asgPhotoCaption">
-                <div><strong>Běžný servis i složitější opravy.</strong><small>Diagnostika, mechanické práce a pneuservis.</small></div>
-                <div className="asgPhotoBadge"><Wrench size={21} /></div>
-              </div>
-            </div>
+      <header className="asg2Hero">
+        <img src="https://images.pexels.com/photos/6870298/pexels-photo-6870298.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="Mechanik kontroluje motor běžného osobního auta v servisní dílně"/>
+        <div className="asg2HeroIndex">GARÁŽ 17 / BRNO-SLATINA / PO–PÁ 7:30–17:00</div>
+        <div className="asg2HeroBadge"><Wrench size={26}/></div>
+        <div className="asg2Wrap asg2HeroContent">
+          <div className="asg2HeroCopy">
+            <div className="asg2Kicker">AUTOSERVIS · BRNO SLATINA</div>
+            <h1>Servis a opravy osobních aut.</h1>
+            <p className="asg2Lead">Pravidelný servis, diagnostika, brzdy, podvozek, klimatizace a pneuservis pro většinu běžných značek. U větších oprav předem potvrdíme rozsah práce a cenu.</p>
+            <div className="asg2HeroActions"><a className="asg2Btn asg2BtnPrimary" href="#rezervace">Objednat termín <CalendarDays size={15}/></a><a className="asg2Btn asg2BtnGhost" href="#cenik">Služby a ceny <ArrowRight size={14}/></a></div>
           </div>
+          <div className="asg2HeroSide"><strong>Objednání a kontakt</strong><div><span><Phone size={13}/> 777 000 000</span><span><Clock3 size={13}/> Po–Pá 7:30–17:00</span><span><MapPin size={13}/> Řípská 17, Brno</span><span><Car size={13}/> většina běžných značek</span></div></div>
         </div>
       </header>
 
-      <section className="asgQuick">
-        <div className="asgWrap">
-          <div className="asgQuickGrid">
-            <div className="asgQuickLeft">
-              <strong>Objednání a dotazy</strong>
-              <div className="asgQuickMeta">
-                <span><Phone size={13} /> 777 000 000</span>
-                <span><Clock3 size={13} /> dnes do 17:00</span>
-                <span><MapPin size={13} /> Řípská 17, Brno</span>
-              </div>
-            </div>
-            <div className="asgQuickRight">
-              <strong>Náhradní vůz po dohodě</strong>
-              <span>U delších oprav lze po předchozí domluvě zajistit náhradní auto.</span>
-            </div>
-          </div>
-        </div>
+      <section className="asg2ServiceIntro" id="servis"><div className="asg2Wrap asg2ServiceIntroGrid"><div><div className="asg2Kicker">SERVIS A OPRAVY</div><h2>S čím k nám můžete přijet.</h2></div><p>Od pravidelné údržby po hledání závady. Rozsah práce závisí na konkrétním vozu a jeho stavu.</p></div></section>
+      <section className="asg2Services"><div className="asg2Wrap">{services.map(([no,title,text,meta])=><a className="asg2Service" href="#rezervace" key={no}><span className="asg2ServiceNo">{no}</span><h3>{title}</h3><p>{text}</p><span className="asg2ServiceMeta">{meta}</span><span className="asg2ServiceArrow"><ArrowRight size={15}/></span></a>)}</div></section>
+
+      <section className="asg2PriceScene" id="cenik">
+        <div className="asg2PricePhoto"><img src="https://images.pexels.com/photos/8470688/pexels-photo-8470688.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Mechanik při opravě motoru běžného osobního auta"/><div className="asg2PriceCaption"><strong>Rozsah práce potvrzujeme před opravou.</strong><span>U nejasné závady začínáme diagnostikou.</span></div></div>
+        <div className="asg2PricePanel"><div className="asg2Kicker">ORIENTAČNÍ CENY</div><h2>Běžné servisní úkony.</h2><div className="asg2PriceList">{prices.map(([service,price])=><div className="asg2PriceRow" key={service}><span>{service}</span><strong>{price}</strong></div>)}</div><div className="asg2PriceNote"><Gauge size={24}/><div><strong>U závady nejdřív určíme rozsah opravy.</strong><p>Pokud není příčina zřejmá, začínáme diagnostikou. Po zjištění závady sdělíme cenu a další postup.</p></div></div><div className="asg2Fine">Ukázkové ceny fiktivního autoservisu. Nejde o skutečnou nabídku služby.</div></div>
       </section>
 
-      <section className="asgSection asgSectionWhite" id="servis">
-        <div className="asgWrap">
-          <div className="asgHead">
-            <div className="asgKicker">SERVIS A OPRAVY</div>
-            <div>
-              <h2>S čím k nám můžete přijet.</h2>
-              <p>Od pravidelné údržby po hledání závady. Rozsah práce vždy závisí na konkrétním vozu a jeho stavu.</p>
-            </div>
-          </div>
-          <div className="asgNeeds">
-            {needs.map((item) => (
-              <a className="asgNeed" href="#rezervace" key={item.no}>
-                <span className="asgNeedNo">{item.no}</span>
-                <span className="asgNeedArrow"><ChevronRight size={14} /></span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <div className="asgNeedTags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-              </a>
-            ))}
-          </div>
-        </div>
+      <section className="asg2Workshop">
+        <img src="https://images.pexels.com/photos/8985667/pexels-photo-8985667.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="Běžné osobní auto na zvedáku v nezávislé servisní dílně"/>
+        <div className="asg2Wrap asg2WorkshopInner"><div className="asg2WorkshopTop"><div><div className="asg2Kicker" style={{color:'#d9ff64'}}>DÍLNA</div><h2>Vybavení pro běžný servis i opravy.</h2></div><p className="asg2WorkshopLead">Čtyři servisní stání, diagnostika, zvedáky a pneuservis. Objednání na konkrétní termín.</p></div><div className="asg2WorkshopStats"><div className="asg2WorkshopStat"><strong>4 servisní stání</strong><span>běžný servis a opravy</span></div><div className="asg2WorkshopStat"><strong>Diagnostika vozů</strong><span>evropské a asijské značky</span></div><div className="asg2WorkshopStat"><strong>Pneuservis</strong><span>přezutí, vyvážení, defekty</span></div><div className="asg2WorkshopStat"><strong>Náhradní vůz</strong><span>u delších oprav po dohodě</span></div></div></div>
       </section>
 
-      <section className="asgSection" id="cenik">
-        <div className="asgWrap">
-          <div className="asgHead">
-            <div className="asgKicker">ORIENTAČNÍ CENY</div>
-            <div>
-              <h2>Orientační ceny běžných úkonů.</h2>
-              <p>Konečná cena závisí na konkrétním vozu a použitém materiálu. Před zahájením práce cenu potvrdíme.</p>
-            </div>
-          </div>
-          <div className="asgPricesLayout">
-            <div>
-              <div className="asgPriceList">
-                {prices.map(([service, price]) => (
-                  <div className="asgPriceRow" key={service}><span>{service}</span><strong>{price}</strong></div>
-                ))}
-              </div>
-              <div className="asgPriceFine">Ukázkové ceny fiktivního autoservisu. Nejde o skutečnou nabídku služby.</div>
-            </div>
-            <aside className="asgPriceNote">
-              <Gauge size={32} />
-              <div>
-                <h3>U závady nejdřív určíme rozsah opravy.</h3>
-                <p>Pokud není příčina zřejmá, začínáme diagnostikou. Po zjištění závady sdělíme cenu a další postup.</p>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
+      <section className="asg2Manifesto"><div className="asg2Wrap"><div className="asg2ManifestoHead"><div className="asg2Kicker" style={{color:'#0e1110'}}>JAK PRACUJEME</div><h2>Co platí při každé zakázce.</h2></div><div className="asg2Rules">{rules.map(([title,text])=><article className="asg2Rule" key={title}><strong>{title}</strong><p>{text}</p></article>)}</div></div></section>
 
-      <section className="asgWorkshop" aria-label="Prostředí ukázkového autoservisu">
-        <div className="asgWorkshopPhoto">
-          <img
-            src="https://images.pexels.com/photos/8985667/pexels-photo-8985667.jpeg?auto=compress&cs=tinysrgb&w=1800"
-            alt="Běžné osobní auto na zvedáku v nezávislé servisní dílně"
-          />
-        </div>
-        <div className="asgWorkshopCopy">
-          <div className="asgKicker">DÍLNA</div>
-          <h2>Dílna a vybavení.</h2>
-          <p>Čtyři servisní stání, diagnostika, zvedáky a vybavení pro běžný servis a opravy osobních aut.</p>
-          <div className="asgWorkshopFacts">
-            <div className="asgWorkshopFact">4 servisní stání<span>běžný servis a opravy</span></div>
-            <div className="asgWorkshopFact">Diagnostika vozů<span>většina evropských a asijských značek</span></div>
-            <div className="asgWorkshopFact">Pneuservis<span>přezutí, vyvážení, defekty</span></div>
-            <div className="asgWorkshopFact">Objednání na čas<span>příjem podle domluveného termínu</span></div>
-          </div>
-        </div>
-      </section>
+      <div className="asg2Brands"><div className="asg2Wrap asg2BrandsInner"><strong>Nejčastěji servisujeme</strong><div className="asg2BrandList">{brands.map(b=><span key={b}>{b}</span>)}</div></div></div>
 
-      <section className="asgSection asgSectionWhite">
-        <div className="asgWrap">
-          <div className="asgHead">
-            <div className="asgKicker">JAK PRACUJEME</div>
-            <div>
-              <h2 style={{fontSize:'clamp(30px,3.4vw,44px)'}}>Co platí při každé zakázce.</h2>
-            </div>
-          </div>
-          <div className="asgRules">
-            {rules.map(([no, title, text]) => (
-              <article className="asgRule" key={no}>
-                <div className="asgRuleNo">{no}</div>
-                <div><strong>{title}</strong><p>{text}</p></div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="asg2Journey" id="prubeh"><div className="asg2Wrap"><div className="asg2JourneyHead"><div><div className="asg2Kicker">PRŮBĚH ZAKÁZKY</div><h2>Od objednání po převzetí auta.</h2></div><p>U diagnostiky a větších oprav potvrzujeme rozsah práce předem. Zvýrazněný krok je moment, kdy se domlouvá samotná oprava.</p></div><div className="asg2Timeline">{steps.map(([no,title,text])=><article className="asg2Step" key={no}><span className="asg2StepDot"/><span className="asg2StepNo">{no}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
-      <div className="asgBrands">
-        <div className="asgWrap asgBrandsInner">
-          <strong>Nejčastěji servisujeme</strong>
-          <div className="asgBrandNames">
-            {['Škoda','Volkswagen','Seat','Ford','Toyota','Hyundai','Kia','Peugeot','Renault','BMW','Mercedes','další'].map((name) => <span key={name}>{name}</span>)}
-          </div>
-        </div>
-      </div>
+      <section className="asg2Reviews"><div className="asg2Wrap asg2ReviewsGrid"><div className="asg2Rating"><strong>4,9</strong><span>/ 5 · 286 hodnocení</span></div><div className="asg2ReviewsMain"><div className="asg2Kicker" style={{color:'#d9ff64',marginBottom:12}}>HODNOCENÍ ZÁKAZNÍKŮ</div><h2>Zkušenosti se servisem.</h2><p className="asg2ReviewFeature">{reviews[0][0]}<small>{reviews[0][1]} · GOOGLE RECENZE / DEMO</small></p><div className="asg2ReviewMini">{reviews.slice(1).map(([quote,name])=><article key={name}><p>{quote}</p><small>{name} · GOOGLE RECENZE / DEMO</small></article>)}</div><span className="asg2DemoLabel">Ukázková data fiktivního autoservisu.</span></div></div></section>
 
-      <section className="asgSection asgSectionSoft" id="jak-to-funguje">
-        <div className="asgWrap">
-          <div className="asgHead">
-            <div className="asgKicker">PRŮBĚH ZAKÁZKY</div>
-            <div>
-              <h2>Jak probíhá servis.</h2>
-              <p>Od objednání termínu po převzetí auta. U diagnostiky a větších oprav potvrzujeme rozsah práce předem.</p>
-            </div>
-          </div>
-          <div className="asgSteps">
-            {steps.map(([no,title,text]) => (
-              <article className="asgStep" key={no}><div className="asgStepNo">{no}</div><h3>{title}</h3><p>{text}</p></article>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="asg2Team" id="tym"><img src="https://images.pexels.com/photos/9112797/pexels-photo-9112797.jpeg?auto=compress&cs=tinysrgb&w=2200" alt="Mechanik při práci v menší české autodílně"/><div className="asg2Wrap asg2TeamInner"><div className="asg2TeamCard"><div className="asg2Kicker">TÝM AUTOSERVISU</div><h2>Lidé, kteří se starají o vaše auto.</h2><p>Servis vede David Horák. Marek se věnuje diagnostice a podvozku, Tomáš běžnému servisu a pneuservisu.</p><div className="asg2People"><div className="asg2Person"><strong>David Horák</strong><span>vedoucí servisu · 16 let praxe</span></div><div className="asg2Person"><strong>Marek Dvořák</strong><span>diagnostika · podvozek</span></div><div className="asg2Person"><strong>Tomáš Jelínek</strong><span>servis · pneuservis</span></div></div></div></div></section>
 
-      <section className="asgSection asgSectionDark">
-        <div className="asgWrap">
-          <div className="asgReviewsTop">
-            <div className="asgRating"><strong>4,9</strong><span>/ 5<br />286 hodnocení</span></div>
-            <div className="asgReviewIntro"><h2>Hodnocení zákazníků.</h2><p>Ukázková data fiktivního autoservisu.</p></div>
-          </div>
-          <div className="asgReviews">
-            {reviews.map(([quote,name]) => <article className="asgReview" key={name}><p>{quote}</p><small>{name} · GOOGLE RECENZE / DEMO</small></article>)}
-          </div>
-          <span className="asgDemoLabel">Hodnocení a recenze jsou součástí ukázkového konceptu, nejde o skutečná zákaznická data.</span>
-        </div>
-      </section>
+      <section className="asg2Location" id="kontakt"><div className="asg2Wrap asg2LocationGrid"><div className="asg2LocCopy"><div className="asg2Kicker">KDE NÁS NAJDETE</div><h2>Brno-Slatina.</h2><div className="asg2LocRows"><div className="asg2LocRow"><MapPin size={16}/><div><strong>Řípská 17, Brno</strong><span>vjezd z boční komunikace, parkování před dílnou</span></div></div><div className="asg2LocRow"><Clock3 size={16}/><div><strong>Po–Pá 7:30–17:00</strong><span>příjem vozů podle rezervovaného termínu</span></div></div><div className="asg2LocRow"><Phone size={16}/><div><strong>777 000 000</strong><span>v pracovní době</span></div></div><div className="asg2LocRow"><ShieldCheck size={16}/><div><strong>Pojištění odpovědnosti</strong><span>po dobu, kdy je vůz převzatý do servisu</span></div></div></div></div><div className="asg2Map" aria-label="Ilustrační mapa příjezdu"><div className="asg2Road"/><div className="asg2Road2"/><span className="asg2MapTag">ŘÍPSKÁ 17 · VJEZD DO SERVISU</span></div></div></section>
 
-      <section className="asgSection" id="o-nas">
-        <div className="asgWrap">
-          <div className="asgTeam">
-            <div className="asgTeamPhoto">
-              <img
-                src="https://images.pexels.com/photos/9112797/pexels-photo-9112797.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Mechanik při práci v menší české autodílně"
-              />
-            </div>
-            <div className="asgTeamCopy">
-              <div className="asgKicker">TÝM AUTOSERVISU</div>
-              <h2>Lidé, kteří se starají o vaše auto.</h2>
-              <p>Servis vede David Horák. Marek se věnuje diagnostice a podvozku, Tomáš běžnému servisu a pneuservisu.</p>
-              <div className="asgPeople">
-                <div className="asgPerson"><strong>David Horák</strong><span>vedoucí servisu · 16 let praxe</span></div>
-                <div className="asgPerson"><strong>Marek Dvořák</strong><span>diagnostika · podvozek</span></div>
-                <div className="asgPerson"><strong>Tomáš Jelínek</strong><span>servis · pneuservis</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="asg2Booking" id="rezervace"><div className="asg2Wrap asg2BookingGrid"><div className="asg2BookingCopy"><div className="asg2Kicker" style={{color:'#d9ff64'}}>OBJEDNÁNÍ</div><h2>Objednání do servisu.</h2><p>Vyberte službu, vůz a požadovaný den. Termín potvrdíme podle kapacity dílny a rozsahu práce.</p><div className="asg2BookingAlt"><Phone size={16}/><div><span>nebo zavolejte</span><br/><strong>777 000 000</strong></div></div></div><div className="asg2BookingPanel"><div className="asg2BookingTop"><strong>Rezervace servisu</strong><span>Ukázka rezervačního rozhraní. Formulář není aktivní.</span></div><div className="asg2Fields"><div className="asg2Field"><label>Služba</label><span>Vyberte službu</span></div><div className="asg2Field"><label>Preferovaný den</label><span>Vyberte termín</span></div><div className="asg2Field"><label>Vůz</label><span>Značka a model</span></div><div className="asg2Field"><label>Telefon</label><span>+420 ...</span></div><div className="asg2Field asg2FieldWide"><label>Poznámka</label><span>Popis závady nebo požadované práce</span></div></div><button className="asg2BookingBtn" type="button">Odeslat rezervaci <ArrowRight size={13}/></button><div className="asg2BookingNote">Tlačítko je v ukázkovém konceptu záměrně neaktivní. Nejde o skutečný autoservis.</div></div></div></section>
 
-      <section className="asgSection asgSectionSoft" id="kontakt">
-        <div className="asgWrap">
-          <div className="asgHead">
-            <div className="asgKicker">KDE NÁS NAJDETE</div>
-            <div><h2>Autoservis v Brně-Slatině.</h2><p>Na hotovém webu může být mapa, popis vjezdu, parkování i fotografie příjezdu k dílně.</p></div>
-          </div>
-          <div className="asgLocation">
-            <div className="asgLocCard">
-              <h3>Garáž 17 · Brno Slatina</h3>
-              <div className="asgLocData">
-                <div className="asgLocLine"><MapPin size={16}/><div><strong>Řípská 17, Brno</strong><span>vjezd z boční komunikace, parkování před dílnou</span></div></div>
-                <div className="asgLocLine"><Clock3 size={16}/><div><strong>Po–Pá 7:30–17:00</strong><span>příjem vozů podle rezervovaného termínu</span></div></div>
-                <div className="asgLocLine"><Phone size={16}/><div><strong>777 000 000</strong><span>v pracovní době</span></div></div>
-                <div className="asgLocLine"><ShieldCheck size={16}/><div><strong>Pojištění odpovědnosti</strong><span>po dobu, kdy je vůz převzatý do servisu</span></div></div>
-              </div>
-            </div>
-            <div className="asgMap" aria-label="Ilustrační mapa příjezdu">
-              <div className="asgMapRoad"/><div className="asgMapRoad2"/><span className="asgMapLabel">ŘÍPSKÁ 17 · VJEZD DO SERVISU</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="asgSection asgBooking" id="rezervace">
-        <div className="asgWrap asgBookingGrid">
-          <div className="asgBookingCopy">
-            <div className="asgKicker" style={{color:'#d9ff69'}}>OBJEDNÁNÍ</div>
-            <h2>Objednání do servisu.</h2>
-            <p>Vyberte službu, vůz a požadovaný den. Termín potvrdíme podle kapacity dílny a rozsahu práce.</p>
-            <div className="asgBookingAlt"><Phone size={16}/><div><span>nebo zavolejte</span><br/><strong>777 000 000</strong></div></div>
-          </div>
-          <div className="asgBookingPanel">
-            <div className="asgBookingPanelTop"><strong>Rezervace servisu</strong><span>Ukázka rezervačního rozhraní. Formulář není aktivní.</span></div>
-            <div className="asgFields">
-              <div className="asgField"><label>Služba</label><span>Vyberte službu</span></div>
-              <div className="asgField"><label>Preferovaný den</label><span>Vyberte termín</span></div>
-              <div className="asgField"><label>Vůz</label><span>Značka a model</span></div>
-              <div className="asgField"><label>Telefon</label><span>+420 ...</span></div>
-              <div className="asgField asgFieldWide"><label>Poznámka</label><span>Popis závady nebo požadované práce</span></div>
-            </div>
-            <button className="asgBookingBtn" type="button">Odeslat rezervaci <ArrowRight size={13}/></button>
-            <div className="asgBookingNote">Tlačítko je v ukázkovém konceptu záměrně neaktivní. Nejde o skutečný autoservis.</div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="asgFooter">
-        <div className="asgWrap asgFooterInner">
-          <div><strong>GARÁŽ 17 · AUTOSERVIS</strong><br/>Fiktivní firma vytvořená pouze jako ukázkový koncept.</div>
-          <div className="asgFooterRight">Tento koncept vytvořil <a href="/">SpustWeb.cz</a><a className="asgFooterCta" href="/#kontakt">Web pro moje podnikání</a></div>
-        </div>
-      </footer>
+      <footer className="asg2Footer"><div className="asg2Wrap asg2FooterInner"><div><strong>GARÁŽ 17 · AUTOSERVIS</strong><br/>Fiktivní firma vytvořená pouze jako ukázkový koncept.</div><div className="asg2FooterRight">Tento koncept vytvořil <a href="/">SpustWeb.cz</a><a className="asg2FooterCta" href="/#kontakt">Web pro moje podnikání</a></div></div></footer>
     </div>
   )
 }
