@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: 'Ukázkový web pro autoservis | SpustWeb.cz',
   description:
-    'Ukázka moderního webu pro autoservis: servisní úkony, diagnostika, pneuservis, orientační ceny, průběh zakázky, tým, lokalita a rezervace.',
+    'Ukázka webu pro autoservis: servisní úkony, diagnostika, pneuservis, orientační ceny, průběh zakázky, tým, lokalita a rezervace.',
   alternates: { canonical: 'https://spustweb.cz/ukazky/autoservis/' },
   robots: { index: true, follow: true },
 }
@@ -26,31 +26,31 @@ const needs = [
   {
     no: '01',
     title: 'Pravidelný servis',
-    text: 'Olej, filtry, servisní prohlídka a běžná údržba podle nájezdu.',
+    text: 'Výměna oleje a filtrů, servisní prohlídky a běžná údržba podle nájezdu a stáří vozu.',
     tags: ['olej a filtry', 'servisní prohlídka'],
   },
   {
     no: '02',
-    title: 'Něco není v pořádku',
-    text: 'Kontrolka, hluk, vibrace nebo ztráta výkonu. Nejdřív zjistíme příčinu.',
+    title: 'Diagnostika a závady',
+    text: 'Kontrolky, hluk, vibrace, ztráta výkonu a další závady. Zjistíme příčinu a navrhneme opravu.',
     tags: ['diagnostika', 'hledání závady'],
   },
   {
     no: '03',
     title: 'Brzdy a podvozek',
-    text: 'Brzdy, tlumiče, čepy, ložiska a geometrie. Kontrola i následná oprava.',
+    text: 'Brzdy, tlumiče, čepy, ložiska a geometrie. Kontrola, výměna opotřebených dílů a seřízení.',
     tags: ['brzdy', 'podvozek'],
   },
   {
     no: '04',
     title: 'Klimatizace',
-    text: 'Kontrola funkce, servis, plnění a dezinfekce klimatizace.',
+    text: 'Kontrola funkce, servis, doplnění chladiva a dezinfekce klimatizace.',
     tags: ['servis A/C', 'dezinfekce'],
   },
   {
     no: '05',
     title: 'Pneuservis',
-    text: 'Přezutí, vyvážení, kontrola pneumatik a opravy běžných defektů.',
+    text: 'Přezutí, vyvážení, kontrola stavu pneumatik a opravy běžných defektů.',
     tags: ['přezutí', 'vyvážení'],
   },
 ]
@@ -64,24 +64,24 @@ const prices = [
 ]
 
 const rules = [
-  ['01', 'Bez odsouhlasení cenu nenavyšujeme.', 'Když se rozsah opravy změní, nejdřív vám zavoláme a domluvíme další postup.'],
-  ['02', 'Nejdřív diagnostika. Potom rozhodnutí.', 'U nejasné závady nejprve zjistíme příčinu. Teprve pak navrhneme opravu a cenu.'],
-  ['03', 'Staré díly vám na požádání ukážeme.', 'Chceme, abyste věděli, co se na autě skutečně měnilo a proč.'],
-  ['04', 'Zapíšeme, co bylo provedeno.', 'Po převzetí víte, co se opravilo, jaký materiál se použil a co případně sledovat dál.'],
+  ['01', 'Změnu ceny řešíme předem.', 'Pokud se během práce ukáže další závada nebo větší rozsah opravy, před pokračováním zavoláme.'],
+  ['02', 'U nejasné závady začínáme diagnostikou.', 'Po zjištění příčiny sdělíme navrženou opravu, potřebné díly a cenu.'],
+  ['03', 'Vyměněné díly můžeme nechat k nahlédnutí.', 'Na požádání ukážeme, co se na autě měnilo.'],
+  ['04', 'Při převzetí dostanete přehled práce.', 'Uvedeme provedené úkony a použitý materiál.'],
 ]
 
 const steps = [
-  ['01', 'Objednáte termín', 'Vyberete službu a preferovaný den.'],
-  ['02', 'Auto převezmeme', 'Krátce projdeme zadání a stav vozu.'],
-  ['03', 'Zjistíme rozsah a cenu', 'U nejasné závady provedeme diagnostiku.'],
-  ['04', 'Opravu odsouhlasíte', 'Bez souhlasu další práce neděláme.'],
-  ['05', 'Převezmete hotové auto', 'Dostanete přehled provedených prací.'],
+  ['01', 'Objednání termínu', 'Vyberete službu a den, který vám vyhovuje.'],
+  ['02', 'Příjem vozu', 'Při převzetí projdeme, co má servis řešit.'],
+  ['03', 'Kontrola nebo diagnostika', 'Podle zakázky ověříme stav vozu a rozsah práce.'],
+  ['04', 'Potvrzení opravy', 'U větších nebo nejasných oprav potvrdíme cenu předem.'],
+  ['05', 'Převzetí auta', 'Předáme auto a přehled provedených prací.'],
 ]
 
 const reviews = [
-  ['„Domluvený termín platil a před výměnou brzd mi zavolali s přesnou cenou.“', 'Martin K.'],
-  ['„Přijela jsem kvůli kontrolce motoru. Nejdřív diagnostika, pak teprve oprava. Přesně tak to má být.“', 'Petra S.'],
-  ['„Normální komunikace, čistá dílna a žádné překvapení na faktuře.“', 'Jakub M.'],
+  ['„Objednaný termín seděl. Před výměnou brzd mi zavolali s cenou a auto bylo odpoledne hotové.“', 'Martin K.'],
+  ['„Přijela jsem s kontrolkou motoru. Po diagnostice mi zavolali, co našli a kolik bude oprava stát.“', 'Petra S.'],
+  ['„Na přezutí jsem byl objednaný na osmou a vzali mě hned. Za půl hodiny hotovo.“', 'Jakub M.'],
 ]
 
 export default function AutoserviceShowcase() {
@@ -145,10 +145,10 @@ export default function AutoserviceShowcase() {
           <div className="asgHeroGrid">
             <div className="asgHeroCopy">
               <div className="asgEyebrow">AUTOSERVIS · BRNO SLATINA</div>
-              <h1>Servis auta bez nejistoty kolem ceny a termínu.</h1>
+              <h1>Servis a opravy osobních aut v Brně-Slatině.</h1>
               <p className="asgHeroLead">
-                Servis většiny běžných značek. Údržba, diagnostika, brzdy, podvozek,
-                klimatizace a pneuservis. Před opravou víte, co budeme dělat a kolik to bude stát.
+                Pravidelný servis, diagnostika, brzdy, podvozek, klimatizace a pneuservis pro většinu běžných značek.
+                U větších oprav předem potvrdíme rozsah práce a cenu.
               </p>
               <div className="asgHeroActions">
                 <a className="asgBtn asgBtnBlue" href="#rezervace">Objednat termín <CalendarDays size={15} /></a>
@@ -166,7 +166,7 @@ export default function AutoserviceShowcase() {
                 alt="Mechanik při práci na voze v moderní autodílně"
               />
               <div className="asgPhotoCaption">
-                <div><strong>Servis, který vysvětlí co a proč.</strong><small>Nejdřív stav vozu. Potom rozsah práce a cena.</small></div>
+                <div><strong>Běžný servis i složitější opravy.</strong><small>Diagnostika, mechanické práce a pneuservis.</small></div>
                 <div className="asgPhotoBadge"><Wrench size={21} /></div>
               </div>
             </div>
@@ -178,7 +178,7 @@ export default function AutoserviceShowcase() {
         <div className="asgWrap">
           <div className="asgQuickGrid">
             <div className="asgQuickLeft">
-              <strong>Potřebujete jen rychlou odpověď?</strong>
+              <strong>Objednání a dotazy</strong>
               <div className="asgQuickMeta">
                 <span><Phone size={13} /> 777 000 000</span>
                 <span><Clock3 size={13} /> dnes do 17:00</span>
@@ -187,7 +187,7 @@ export default function AutoserviceShowcase() {
             </div>
             <div className="asgQuickRight">
               <strong>Náhradní vůz po dohodě</strong>
-              <span>U delších oprav se na možnosti náhradního auta domluvíme při potvrzení termínu.</span>
+              <span>U delších oprav lze po předchozí domluvě zajistit náhradní auto.</span>
             </div>
           </div>
         </div>
@@ -196,10 +196,10 @@ export default function AutoserviceShowcase() {
       <section className="asgSection asgSectionWhite" id="servis">
         <div className="asgWrap">
           <div className="asgHead">
-            <div className="asgKicker">CO POTŘEBUJE VAŠE AUTO?</div>
+            <div className="asgKicker">SERVIS A OPRAVY</div>
             <div>
-              <h2>Začněte problémem, ne technickým názvem opravy.</h2>
-              <p>Vyberte situaci, která se nejvíc podobá tomu, co řešíte. Přesný rozsah práce potvrdíme až podle auta.</p>
+              <h2>S čím k nám můžete přijet.</h2>
+              <p>Od pravidelné údržby po hledání závady. Rozsah práce vždy závisí na konkrétním vozu a jeho stavu.</p>
             </div>
           </div>
           <div className="asgNeeds">
@@ -221,8 +221,8 @@ export default function AutoserviceShowcase() {
           <div className="asgHead">
             <div className="asgKicker">ORIENTAČNÍ CENY</div>
             <div>
-              <h2>Běžné práce. Orientačně a předem.</h2>
-              <p>Cena se odvíjí od konkrétního vozu a použitého materiálu. U běžných úkonů ale můžete mít představu ještě před příjezdem.</p>
+              <h2>Orientační ceny běžných úkonů.</h2>
+              <p>Konečná cena závisí na konkrétním vozu a použitém materiálu. Před zahájením práce cenu potvrdíme.</p>
             </div>
           </div>
           <div className="asgPricesLayout">
@@ -237,8 +237,8 @@ export default function AutoserviceShowcase() {
             <aside className="asgPriceNote">
               <Gauge size={32} />
               <div>
-                <h3>U nejasné závady nejdřív zjistíme příčinu.</h3>
-                <p>Další práci provedeme až po odsouhlasení rozsahu a ceny. Pokud během opravy objevíme něco dalšího, nejdřív vám zavoláme.</p>
+                <h3>U závady nejdřív určíme rozsah opravy.</h3>
+                <p>Pokud není příčina zřejmá, začínáme diagnostikou. Po zjištění závady sdělíme cenu a další postup.</p>
               </div>
             </aside>
           </div>
@@ -254,13 +254,13 @@ export default function AutoserviceShowcase() {
         </div>
         <div className="asgWorkshopCopy">
           <div className="asgKicker">DÍLNA</div>
-          <h2>Dílna, do které můžete vidět.</h2>
-          <p>Čisté pracovní místo, diagnostika, zvedáky a vybavení pro běžný servis osobních aut. Žádné anonymní předání klíčů bez informace, co se s autem děje.</p>
+          <h2>Dílna a vybavení.</h2>
+          <p>Čtyři servisní stání, diagnostika, zvedáky a vybavení pro běžný servis a opravy osobních aut.</p>
           <div className="asgWorkshopFacts">
             <div className="asgWorkshopFact">4 servisní stání<span>běžný servis a opravy</span></div>
             <div className="asgWorkshopFact">Diagnostika vozů<span>většina evropských a asijských značek</span></div>
             <div className="asgWorkshopFact">Pneuservis<span>přezutí, vyvážení, defekty</span></div>
-            <div className="asgWorkshopFact">Objednání na čas<span>bez zbytečného čekání na příjmu</span></div>
+            <div className="asgWorkshopFact">Objednání na čas<span>příjem podle domluveného termínu</span></div>
           </div>
         </div>
       </section>
@@ -270,7 +270,7 @@ export default function AutoserviceShowcase() {
           <div className="asgHead">
             <div className="asgKicker">JAK PRACUJEME</div>
             <div>
-              <h2>Důvěra není slogan. Je to způsob, jak se zakázkou zacházíme.</h2>
+              <h2>Co platí při každé zakázce.</h2>
             </div>
           </div>
           <div className="asgRules">
@@ -298,8 +298,8 @@ export default function AutoserviceShowcase() {
           <div className="asgHead">
             <div className="asgKicker">PRŮBĚH ZAKÁZKY</div>
             <div>
-              <h2>Od termínu k hotovému autu.</h2>
-              <p>Klíčový moment je mezi diagnostikou a opravou. Právě tam dostáváte informaci o rozsahu a ceně.</p>
+              <h2>Jak probíhá servis.</h2>
+              <p>Od objednání termínu po převzetí auta. U diagnostiky a větších oprav potvrzujeme rozsah práce předem.</p>
             </div>
           </div>
           <div className="asgSteps">
@@ -314,7 +314,7 @@ export default function AutoserviceShowcase() {
         <div className="asgWrap">
           <div className="asgReviewsTop">
             <div className="asgRating"><strong>4,9</strong><span>/ 5<br />286 hodnocení</span></div>
-            <div className="asgReviewIntro"><h2>Co zákazníci oceňují nejvíc?</h2><p>Ukázkové recenze vytvořené pouze pro tento fiktivní koncept.</p></div>
+            <div className="asgReviewIntro"><h2>Ukázkové hodnocení servisu.</h2><p>Texty níže jsou součástí fiktivního konceptu a nepředstavují skutečné recenze.</p></div>
           </div>
           <div className="asgReviews">
             {reviews.map(([quote,name]) => <article className="asgReview" key={name}><p>{quote}</p><small>{name} · GOOGLE RECENZE / DEMO</small></article>)}
@@ -333,9 +333,9 @@ export default function AutoserviceShowcase() {
               />
             </div>
             <div className="asgTeamCopy">
-              <div className="asgKicker">KDO SE O AUTO STARÁ</div>
-              <h2>Mechanici, ne anonymní příjem zakázek.</h2>
-              <p>Garáž 17 je fiktivní lokální servis postavený jako ukázka webu pro skutečný autoservis. V reálném projektu by tady byly pravé fotografie týmu, zkušenosti a konkrétní specializace dílny.</p>
+              <div className="asgKicker">TÝM AUTOSERVISU</div>
+              <h2>Lidé, kteří se starají o vaše auto.</h2>
+              <p>U skutečného autoservisu by zde byly fotografie týmu, délka praxe a konkrétní specializace jednotlivých mechaniků.</p>
               <div className="asgPeople">
                 <div className="asgPerson"><strong>David Horák</strong><span>vedoucí servisu · 16 let praxe</span></div>
                 <div className="asgPerson"><strong>Marek Dvořák</strong><span>diagnostika · podvozek</span></div>
@@ -350,7 +350,7 @@ export default function AutoserviceShowcase() {
         <div className="asgWrap">
           <div className="asgHead">
             <div className="asgKicker">KDE NÁS NAJDETE</div>
-            <div><h2>Přijeďte rovnou k dílně.</h2><p>V reálném webu by tady byla skutečná mapa, navigace ke vjezdu, parkování a fotografie příjezdu.</p></div>
+            <div><h2>Autoservis v Brně-Slatině.</h2><p>Na hotovém webu může být mapa, popis vjezdu, parkování i fotografie příjezdu k dílně.</p></div>
           </div>
           <div className="asgLocation">
             <div className="asgLocCard">
@@ -359,7 +359,7 @@ export default function AutoserviceShowcase() {
                 <div className="asgLocLine"><MapPin size={16}/><div><strong>Řípská 17, Brno</strong><span>vjezd z boční komunikace, parkování před dílnou</span></div></div>
                 <div className="asgLocLine"><Clock3 size={16}/><div><strong>Po–Pá 7:30–17:00</strong><span>příjem vozů podle rezervovaného termínu</span></div></div>
                 <div className="asgLocLine"><Phone size={16}/><div><strong>777 000 000</strong><span>v pracovní době</span></div></div>
-                <div className="asgLocLine"><ShieldCheck size={16}/><div><strong>Pojištění odpovědnosti</strong><span>vozidlo je během zakázky v prostorách servisu</span></div></div>
+                <div className="asgLocLine"><ShieldCheck size={16}/><div><strong>Pojištění odpovědnosti</strong><span>po dobu, kdy je vůz převzatý do servisu</span></div></div>
               </div>
             </div>
             <div className="asgMap" aria-label="Ilustrační mapa příjezdu">
@@ -373,20 +373,20 @@ export default function AutoserviceShowcase() {
         <div className="asgWrap asgBookingGrid">
           <div className="asgBookingCopy">
             <div className="asgKicker" style={{color:'#d9ff69'}}>OBJEDNÁNÍ</div>
-            <h2>Potřebujete servis nebo zjistit závadu?</h2>
-            <p>Vyberte, co přibližně řešíte, a preferovaný den. Termín potvrdíme podle kapacity dílny a typu zakázky.</p>
+            <h2>Objednání do servisu.</h2>
+            <p>Vyberte službu, vůz a požadovaný den. Termín potvrdíme podle kapacity dílny a rozsahu práce.</p>
             <div className="asgBookingAlt"><Phone size={16}/><div><span>nebo zavolejte</span><br/><strong>777 000 000</strong></div></div>
           </div>
           <div className="asgBookingPanel">
             <div className="asgBookingPanelTop"><strong>Rezervace servisu</strong><span>Ukázka rezervačního rozhraní. Formulář není aktivní.</span></div>
             <div className="asgFields">
-              <div className="asgField"><label>Co potřebujete?</label><span>Vyberte službu</span></div>
+              <div className="asgField"><label>Služba</label><span>Vyberte službu</span></div>
               <div className="asgField"><label>Preferovaný den</label><span>Vyberte termín</span></div>
               <div className="asgField"><label>Vůz</label><span>Značka a model</span></div>
               <div className="asgField"><label>Telefon</label><span>+420 ...</span></div>
-              <div className="asgField asgFieldWide"><label>Poznámka</label><span>Co se s autem děje / co chcete udělat?</span></div>
+              <div className="asgField asgFieldWide"><label>Poznámka</label><span>Popis závady nebo požadované práce</span></div>
             </div>
-            <button className="asgBookingBtn" type="button">Odeslat nezávaznou rezervaci <ArrowRight size={13}/></button>
+            <button className="asgBookingBtn" type="button">Odeslat rezervaci <ArrowRight size={13}/></button>
             <div className="asgBookingNote">Tlačítko je v ukázkovém konceptu záměrně neaktivní. Nejde o skutečný autoservis.</div>
           </div>
         </div>
@@ -395,7 +395,7 @@ export default function AutoserviceShowcase() {
       <footer className="asgFooter">
         <div className="asgWrap asgFooterInner">
           <div><strong>GARÁŽ 17 · AUTOSERVIS</strong><br/>Fiktivní firma vytvořená pouze jako ukázkový koncept.</div>
-          <div className="asgFooterRight">Tento koncept vytvořil <a href="/">SpustWeb.cz</a><a className="asgFooterCta" href="/#kontakt">Chci web pro své podnikání</a></div>
+          <div className="asgFooterRight">Tento koncept vytvořil <a href="/">SpustWeb.cz</a><a className="asgFooterCta" href="/#kontakt">Web pro moje podnikání</a></div>
         </div>
       </footer>
     </div>
