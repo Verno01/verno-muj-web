@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="footer-brand">SpustWeb.cz<span aria-hidden="true" /></div>
         <div className="footer-contact">
           <a href="tel:+420705911941">+420 705 911 941</a>
-          <a href="mailto:info@spustweb.cz">info@spustweb.cz</a>
+          <a href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a>
         </div>
         <div className="footer-legal">
           <span>© {year} Rovino s.r.o. · IČO 235 26 629</span>
