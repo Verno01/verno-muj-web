@@ -50,7 +50,7 @@ export default function Home() {
 
         <div className="wrap hero-image-wrap">
           <img
-            src="/hero-verno-final.webp"
+            src="/spustweb-hero-final.webp"
             alt="Ukázka prezentačního webu SpustWeb.cz na notebooku"
             width="1983"
             height="793"
