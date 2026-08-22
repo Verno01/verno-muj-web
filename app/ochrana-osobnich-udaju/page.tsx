@@ -54,12 +54,9 @@ export default function OchranaOsobnichUdaju() {
         Provozní logy jsou uchovávány po dobu nezbytně nutnou, zpravidla nejvýše 30 dnů.
       </p>
 
-      <h3>2.2. Kontaktní formulář a e-mailová komunikace</h3>
+      <h3>2.2. E-mailová a telefonická komunikace</h3>
       <p>
-        Pokud nás kontaktujete prostřednictvím formuláře na webu, e-mailem nebo telefonicky, zpracováváme údaje, které nám sami sdělíte (zejména jméno, e-mail, telefon, obsah zprávy).
-      </p>
-      <p>
-        Odeslání kontaktního formuláře probíhá prostřednictvím služby <strong>Formspree</strong>, která data ze zařízení odesílatele předá Správci na e-mailovou adresu. Formspree v této roli vystupuje jako zpracovatel.
+        Pokud nás kontaktujete e-mailem nebo telefonicky, zpracováváme údaje, které nám sami sdělíte, zejména jméno, e-mail, telefon a obsah komunikace.
       </p>
       <ul>
         <li><strong>Účel:</strong> odpověď na váš dotaz, jednání o uzavření smlouvy, případně plnění smlouvy.</li>
@@ -119,11 +116,6 @@ export default function OchranaOsobnichUdaju() {
             <td>USA</td>
           </tr>
           <tr>
-            <td><strong>Formspree, Inc.</strong></td>
-            <td>technické odeslání kontaktního formuláře</td>
-            <td>USA</td>
-          </tr>
-          <tr>
             <td><strong>Wedos Internet, a.s.</strong></td>
             <td>správa domény</td>
             <td>ČR</td>
@@ -147,9 +139,6 @@ export default function OchranaOsobnichUdaju() {
       <h3>3.1. Předávání mimo EU/EHP</h3>
       <p>
         Společnosti Cloudflare, Inc., GitHub, Inc. a Google LLC mají sídlo ve Spojených státech. Předávání údajů těmto společnostem probíhá na základě rámce <strong>EU–U.S. Data Privacy Framework</strong>, jehož jsou tyto společnosti certifikovanými účastníky (rámec byl uznán Evropskou komisí jako odpovídající úroveň ochrany rozhodnutím z 10. července 2023), a doplňkově na základě <strong>standardních smluvních doložek</strong> schválených Evropskou komisí.
-      </p>
-      <p>
-        Společnost Formspree, Inc. má rovněž sídlo ve Spojených státech; předávání údajů této společnosti probíhá na základě <strong>standardních smluvních doložek</strong> schválených Evropskou komisí (rozhodnutí 2021/914) a doplňkových technických opatření v souladu se zásadami GDPR.
       </p>
       <p>
         Aktuální status certifikace v rámci DPF lze ověřit v seznamu na{' '}
