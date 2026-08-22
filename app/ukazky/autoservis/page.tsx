@@ -162,8 +162,8 @@ export default function AutoserviceShowcase() {
             </div>
             <div className="asgHeroPhoto">
               <img
-                src="https://images.unsplash.com/photo-1727893332539-95e491ba4d90?auto=format&fit=crop&fm=jpg&q=82&w=1800"
-                alt="Mechanik při práci na voze v moderní autodílně"
+                src="https://images.pexels.com/photos/8470688/pexels-photo-8470688.jpeg?auto=compress&cs=tinysrgb&w=1800"
+                alt="Mechanik opravuje motor osobního auta v menší servisní dílně"
               />
               <div className="asgPhotoCaption">
                 <div><strong>Běžný servis i složitější opravy.</strong><small>Diagnostika, mechanické práce a pneuservis.</small></div>
@@ -248,8 +248,8 @@ export default function AutoserviceShowcase() {
       <section className="asgWorkshop" aria-label="Prostředí ukázkového autoservisu">
         <div className="asgWorkshopPhoto">
           <img
-            src="https://images.unsplash.com/photo-1727893416750-0b0bd7561f7a?auto=format&fit=crop&fm=jpg&q=82&w=1800"
-            alt="Mechanik kontroluje vůz v servisní dílně"
+            src="https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&cs=tinysrgb&w=1800"
+            alt="Dva mechanici pracují na běžném osobním autě v menší autodílně"
           />
         </div>
         <div className="asgWorkshopCopy">
@@ -328,8 +328,8 @@ export default function AutoserviceShowcase() {
           <div className="asgTeam">
             <div className="asgTeamPhoto">
               <img
-                src="https://images.unsplash.com/photo-1711386689622-1cda23e10217?auto=format&fit=crop&fm=jpg&q=82&w=1600"
-                alt="Mechanik pracující na voze v běžné autodílně"
+                src="https://images.pexels.com/photos/9112797/pexels-photo-9112797.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Mechanik při práci v menší české autodílně"
               />
             </div>
             <div className="asgTeamCopy">
