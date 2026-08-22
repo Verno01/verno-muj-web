@@ -11,7 +11,7 @@ const references = [
   {
     name: '5class',
     url: 'https://5class.cz',
-    image: '/screens/5class-new.jpg',
+    image: '/screens/5class-new.webp',
     alt: 'Aktuální web 5class pro osobní dopravu s řidičem',
     description: 'Web pro osobní dopravu s řidičem.',
   },
