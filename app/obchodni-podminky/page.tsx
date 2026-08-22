@@ -152,7 +152,7 @@ export default function ObchodniPodminky() {
       <p className="clause"><span className="clause-num">10.6.</span> <strong>Dozorové orgány.</strong> Dozor nad dodržováním povinností Poskytovatele vykonávají Česká obchodní inspekce a příslušný živnostenský úřad.</p>
 
       <h2 id="cl-11">11. Ochrana osobních údajů</h2>
-      <p className="clause"><span className="clause-num">11.1.</span> Zpracování osobních údajů klienta i osob komunikujících přes kontaktní formulář se řídí samostatným dokumentem <a href="/ochrana-osobnich-udaju">Zásady zpracování osobních údajů</a>.</p>
+      <p className="clause"><span className="clause-num">11.1.</span> Zpracování osobních údajů klienta a osob komunikujících s Poskytovatelem e-mailem nebo telefonicky se řídí samostatným dokumentem <a href="/ochrana-osobnich-udaju">Zásady zpracování osobních údajů</a>.</p>
       <p className="clause"><span className="clause-num">11.2.</span> Pravidla použití cookies a obdobných technologií upravuje dokument <a href="/cookies">Zásady používání cookies</a>.</p>
 
       <h2 id="cl-12">12. Závěrečná ustanovení</h2>
