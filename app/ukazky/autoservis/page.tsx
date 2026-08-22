@@ -162,8 +162,8 @@ export default function AutoserviceShowcase() {
             </div>
             <div className="asgHeroPhoto">
               <img
-                src="https://images.pexels.com/photos/8470688/pexels-photo-8470688.jpeg?auto=compress&cs=tinysrgb&w=1800"
-                alt="Mechanik opravuje motor osobního auta v menší servisní dílně"
+                src="https://images.pexels.com/photos/6870298/pexels-photo-6870298.jpeg?auto=compress&cs=tinysrgb&w=1800"
+                alt="Mechanik kontroluje motor běžného osobního auta v servisní dílně"
               />
               <div className="asgPhotoCaption">
                 <div><strong>Běžný servis i složitější opravy.</strong><small>Diagnostika, mechanické práce a pneuservis.</small></div>
@@ -248,8 +248,8 @@ export default function AutoserviceShowcase() {
       <section className="asgWorkshop" aria-label="Prostředí ukázkového autoservisu">
         <div className="asgWorkshopPhoto">
           <img
-            src="https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&cs=tinysrgb&w=1800"
-            alt="Dva mechanici pracují na běžném osobním autě v menší autodílně"
+            src="https://images.pexels.com/photos/8985667/pexels-photo-8985667.jpeg?auto=compress&cs=tinysrgb&w=1800"
+            alt="Běžné osobní auto na zvedáku v nezávislé servisní dílně"
           />
         </div>
         <div className="asgWorkshopCopy">
@@ -270,7 +270,7 @@ export default function AutoserviceShowcase() {
           <div className="asgHead">
             <div className="asgKicker">JAK PRACUJEME</div>
             <div>
-              <h2>Co platí při každé zakázce.</h2>
+              <h2 style={{fontSize:'clamp(30px,3.4vw,44px)'}}>Co platí při každé zakázce.</h2>
             </div>
           </div>
           <div className="asgRules">
@@ -314,7 +314,7 @@ export default function AutoserviceShowcase() {
         <div className="asgWrap">
           <div className="asgReviewsTop">
             <div className="asgRating"><strong>4,9</strong><span>/ 5<br />286 hodnocení</span></div>
-            <div className="asgReviewIntro"><h2>Ukázkové hodnocení servisu.</h2><p>Texty níže jsou součástí fiktivního konceptu a nepředstavují skutečné recenze.</p></div>
+            <div className="asgReviewIntro"><h2>Hodnocení zákazníků.</h2><p>Ukázková data fiktivního autoservisu.</p></div>
           </div>
           <div className="asgReviews">
             {reviews.map(([quote,name]) => <article className="asgReview" key={name}><p>{quote}</p><small>{name} · GOOGLE RECENZE / DEMO</small></article>)}
@@ -335,7 +335,7 @@ export default function AutoserviceShowcase() {
             <div className="asgTeamCopy">
               <div className="asgKicker">TÝM AUTOSERVISU</div>
               <h2>Lidé, kteří se starají o vaše auto.</h2>
-              <p>U skutečného autoservisu by zde byly fotografie týmu, délka praxe a konkrétní specializace jednotlivých mechaniků.</p>
+              <p>Servis vede David Horák. Marek se věnuje diagnostice a podvozku, Tomáš běžnému servisu a pneuservisu.</p>
               <div className="asgPeople">
                 <div className="asgPerson"><strong>David Horák</strong><span>vedoucí servisu · 16 let praxe</span></div>
                 <div className="asgPerson"><strong>Marek Dvořák</strong><span>diagnostika · podvozek</span></div>
