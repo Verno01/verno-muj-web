@@ -24,7 +24,7 @@ export default function ObchodniPodminky() {
       </p>
       <p>
         <strong>Kontakt pro smluvní a reklamační záležitosti:</strong>{' '}
-        <a href="mailto:info@verno.cz">info@verno.cz</a>
+        <a href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a>
       </p>
       <p>
         Tyto obchodní podmínky upravují vztahy mezi Poskytovatelem a klientem při tvorbě webových stránek a souvisejících službách. Jsou veřejně dostupné na verno.cz a tvoří součást každého smluvního vztahu, ledaže byla mezi stranami písemně sjednána odchylná úprava.
@@ -96,7 +96,6 @@ export default function ObchodniPodminky() {
       <p className="clause"><span className="clause-num">6.4.</span> <strong>Provozní zázemí.</strong> Web je v průběhu projektu a následně po dobu, kdy se klient rozhodne využívat hosting Poskytovatele, provozován na infrastruktuře Poskytovatele (hosting Cloudflare, správa kódu GitHub). Klient bere tuto skutečnost na vědomí. Doménu si po celou dobu spolupráce i po jejím skončení zajišťuje a hradí klient přímo u příslušného registrátora; doména je v dispozici klienta a netvoří součást díla.</p>
       <p className="clause"><span className="clause-num">6.5.</span> Poskytovatel není poskytovatelem hostingových ani registračních služeb a v rozsahu povoleném zákonem nenese odpovědnost za výpadky, omezení nebo technické problémy služeb třetích osob (zejména Cloudflare, GitHub, registrátor domény).</p>
       <p className="clause"><span className="clause-num">6.6.</span> Poskytovatel je oprávněn uvést dokončený projekt ve svém portfoliu jako referenci, pokud si klient před zahájením prací písemně nevyhradí jinak.</p>
-
       <h2 id="cl-7">7. Pokračování spolupráce po předání díla</h2>
       <p className="clause"><span className="clause-num">7.1.</span> Po předání díla může klient pokračovat ve spolupráci s Poskytovatelem zejména v těchto formách:</p>
       <ul>
@@ -142,7 +141,7 @@ export default function ObchodniPodminky() {
 
       <h2 id="cl-10">10. Zvláštní ustanovení pro spotřebitele</h2>
       <p className="clause"><span className="clause-num">10.1.</span> Tento článek se uplatní v případě, že je klientem spotřebitel ve smyslu § 419 občanského zákoníku.</p>
-      <p className="clause"><span className="clause-num">10.2.</span> <strong>Právo na odstoupení od smlouvy.</strong> Spotřebitel má právo odstoupit od smlouvy uzavřené distančním způsobem (zejména prostřednictvím e-mailové komunikace) ve lhůtě 14 dnů ode dne jejího uzavření, a to bez udání důvodu. Odstoupení lze zaslat na adresu sídla Poskytovatele nebo na e-mail <a href="mailto:info@verno.cz">info@verno.cz</a>. Pro odstoupení může spotřebitel využít vzorový formulář, který je přílohou těchto podmínek.</p>
+      <p className="clause"><span className="clause-num">10.2.</span> <strong>Právo na odstoupení od smlouvy.</strong> Spotřebitel má právo odstoupit od smlouvy uzavřené distančním způsobem (zejména prostřednictvím e-mailové komunikace) ve lhůtě 14 dnů ode dne jejího uzavření, a to bez udání důvodu. Odstoupení lze zaslat na adresu sídla Poskytovatele nebo na e-mail <a href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a>. Pro odstoupení může spotřebitel využít vzorový formulář, který je přílohou těchto podmínek.</p>
       <p className="clause"><span className="clause-num">10.3.</span> <strong>Zánik práva na odstoupení.</strong> V souladu s § 1837 písm. l) občanského zákoníku právo na odstoupení zaniká, pokud spotřebitel <strong>(a)</strong> udělí Poskytovateli výslovný předchozí souhlas se zahájením plnění před uplynutím 14denní lhůty a zároveň <strong>(b)</strong> výslovně vezme na vědomí, že udělením tohoto souhlasu právo na odstoupení od smlouvy zaniká, jakmile bylo dílo úplně dokončeno. Tyto skutečnosti spotřebitel potvrzuje aktivním krokem před zahájením prací (zejména potvrzením v e-mailové komunikaci nebo zaškrtnutím odpovídajícího pole v objednávkovém procesu).</p>
       <p className="clause"><span className="clause-num">10.4.</span> <strong>Zákonná práva z vad.</strong> Vůči spotřebiteli platí zákonná odpovědnost za vady díla podle občanského zákoníku v plném rozsahu. Lhůty a omezení podle čl. 5, 6 a 7 se na spotřebitele uplatní pouze v rozsahu, v jakém nejsou v rozporu s kogentními ustanoveními zákona.</p>
       <p className="clause"><span className="clause-num">10.5.</span> <strong>Mimosoudní řešení sporů.</strong> K mimosoudnímu řešení spotřebitelských sporů z této smlouvy je příslušná Česká obchodní inspekce, se sídlem Štěpánská 567/15, 120 00 Praha 2, internetová adresa{' '}
@@ -163,7 +162,7 @@ export default function ObchodniPodminky() {
       <h2 id="priloha">Příloha — Vzorový formulář pro odstoupení od smlouvy</h2>
       <p><em>(určeno spotřebiteli)</em></p>
       <div className="annex">
-        <p><strong>Adresát:</strong> Rovino s.r.o., Na Blatech 637, 378 16 Lomnice nad Lužnicí, e-mail: info@verno.cz</p>
+        <p><strong>Adresát:</strong> Rovino s.r.o., Na Blatech 637, 378 16 Lomnice nad Lužnicí, e-mail: kontakt@spustweb.cz</p>
         <p>Oznamuji, že tímto odstupuji od smlouvy o tvorbě webových stránek uzavřené dne ____________.</p>
         <p>Jméno a příjmení spotřebitele: ____________</p>
         <p>Adresa spotřebitele: ____________</p>
