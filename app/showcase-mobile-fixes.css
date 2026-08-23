@@ -1,0 +1,115 @@
+@media (max-width: 680px) {
+  /* Manikura / pedikura: keep the editorial character, but stop the hero layers from colliding. */
+  .n5 .n5HeroGrid {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: auto;
+    max-height: none;
+    gap: 0;
+    padding: 24px 0 28px;
+  }
+
+  .n5 .n5HeroMeta {
+    position: static;
+    order: 1;
+    margin: 0 0 24px;
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  .n5 .n5HeroWord {
+    position: relative;
+    order: 2;
+    left: auto;
+    top: auto;
+    transform: none;
+    z-index: 4;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 -18px;
+    font-size: clamp(64px, 20vw, 90px);
+    line-height: .74;
+  }
+
+  .n5 .n5HeroA {
+    order: 3;
+    width: calc(100% - 34px);
+    height: 430px;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+  }
+
+  .n5 .n5HeroA img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+  }
+
+  .n5 .n5HeroB {
+    order: 4;
+    align-self: flex-start;
+    width: 42%;
+    height: 150px;
+    margin: -72px 0 0 14px;
+    border: 7px solid var(--cream);
+    z-index: 5;
+  }
+
+  .n5 .n5HeroCopy {
+    position: static;
+    order: 5;
+    width: 100%;
+    margin: 24px 0 0;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .n5 .n5HeroCopy p {
+    margin-bottom: 12px;
+  }
+
+  .n5 .n5HeroTag {
+    position: static;
+    order: 6;
+    align-self: flex-end;
+    margin: 18px 4px 0 0;
+    transform: rotate(-2deg);
+  }
+
+  /* Autoservis: the review block was visually oversized on a phone. */
+  .asg3 .asg3Reviews {
+    padding: 46px 0 50px;
+  }
+
+  .asg3 .asg3ReviewsGrid {
+    gap: 28px;
+  }
+
+  .asg3 .asg3Rating strong {
+    font-size: 76px;
+    line-height: .82;
+  }
+
+  .asg3 .asg3ReviewsMain h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .asg3 .asg3ReviewFeature {
+    font-size: 19px;
+    line-height: 1.42;
+    margin-bottom: 20px;
+  }
+
+  .asg3 .asg3ReviewMini article,
+  .asg3 .asg3ReviewMini article + article {
+    padding: 18px 0 0;
+    border-left: 0;
+  }
+
+  .asg3 .asg3ReviewMini article + article {
+    margin-top: 18px;
+    border-top: 1px solid #343a36;
+  }
+}
