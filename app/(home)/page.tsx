@@ -7,26 +7,26 @@ const references = [
     url: 'https://rovino.cz',
     image: '/screens/rovino-new.jpg',
     alt: 'Aktuální web Rovino pro zemní a stavební práce',
-    description: 'Firemní web pro zemní a stavební práce.',
+    description: 'Zemní práce. Přehled služeb a realizací pro rychlou poptávku.',
   },
   {
     name: '5class',
     url: 'https://5class.cz',
     image: '/screens/5class-new.webp',
     alt: 'Aktuální web 5class pro osobní dopravu s řidičem',
-    description: 'Web pro osobní dopravu s řidičem.',
+    description: 'Osobní doprava. Jasný výběr služeb a přímý kontakt.',
   },
   {
     name: 'Pětilistá',
     url: 'https://www.petilista.cz',
     image: '/screens/petilista-new.jpg',
     alt: 'Aktuální web Pětilistá pro péči o hrobová místa',
-    description: 'Web služby péče o hrobová místa s online objednávkou.',
+    description: 'Péče o hrobová místa. Služby, lokální obsah a online objednávka.',
   },
 ]
 
 const included = [
-  ['01', 'Návrh a zpracování', 'Struktura, vzhled a zpracování webu podle konkrétního podnikání.'],
+  ['01', 'Návrh a zpracování', 'Struktura a vzhled podle konkrétního podnikání, ne z hotové šablony.'],
   ['02', 'Mobilní verze', 'Plnohodnotné zobrazení na telefonu, tabletu i počítači.'],
   ['03', 'Kontaktní prvky', 'Kontaktní formulář, klikací telefon, e-mail a další prvky podle potřeb webu.'],
   ['04', 'Základní SEO a měření', 'Metadata, sitemap, nastavení pro vyhledávače, Search Console a základní měření návštěvnosti.'],
@@ -54,7 +54,10 @@ export default function Home() {
           <div className="hero-side">
             <p className="price">8 900 Kč <span>bez DPH</span></p>
             <p className="lead">Návrh, zpracování a spuštění v jedné ceně.</p>
-            <a className="cta" href="tel:+420705911941">Zavolat</a>
+            <div className="hero-actions">
+              <a className="cta" href="tel:+420705911941">Zavolat</a>
+              <a className="cta-secondary" href="#ukazky">Prohlédnout ukázky</a>
+            </div>
           </div>
         </div>
 
@@ -105,8 +108,8 @@ export default function Home() {
             <h2 id="fit-title">Web podle vašeho oboru.</h2>
           </div>
           <div className="fit-copy">
-            <p>Prezentační web připravuji pro živnostníky a malé firmy napříč obory. Může vzniknout úplně nový web nebo kompletní náhrada stávajícího.</p>
-            <p>Struktura se přizpůsobí konkrétní firmě a tomu, co má na webu být: služby, realizace, reference, ceník, kontakty nebo další základní informace.</p>
+            <p>Tvořím nové webové stránky i kompletní náhrady starších firemních webů. Nejčastěji pro živnostníky, řemeslníky a malé firmy, které potřebují jasně představit služby, ukázat práci a usnadnit zákazníkům první kontakt.</p>
+            <p>Struktura se přizpůsobí konkrétní firmě a tomu, co lidé při výběru skutečně hledají: služby, realizace, reference, ceník, oblast působnosti, kontakty nebo další důležité informace.</p>
           </div>
         </div>
 
@@ -126,7 +129,9 @@ export default function Home() {
         </div>
       </section>
 
-      <ShowcaseConcepts />
+      <div id="ukazky">
+        <ShowcaseConcepts />
+      </div>
 
       <section id="reference" className="section references-section">
         <div className="wrap">
@@ -238,7 +243,10 @@ export default function Home() {
         .price{margin:0 0 11px;font-size:clamp(1.6rem,2.5vw,2.2rem);line-height:1;color:var(--ink);letter-spacing:-.03em}
         .price span{display:block;margin-top:5px;font-size:11px;letter-spacing:.03em;color:var(--muted)}
         .lead{max-width:300px;margin:0 0 18px;font-size:14px;line-height:1.5;color:#3d3d39}
-        .cta{display:inline-flex;align-items:center;justify-content:center;min-height:37px;padding:0 18px;background:var(--acid);border:1px solid var(--acid);color:#111;text-decoration:none;font-size:12px;font-weight:700}
+        .hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+        .cta,.cta-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:37px;padding:0 18px;text-decoration:none;font-size:12px;font-weight:700}
+        .cta{background:var(--acid);border:1px solid var(--acid);color:#111}
+        .cta-secondary{padding-left:0;padding-right:0;border-bottom:1px solid #aaa;color:#4b4b47;font-weight:600}
         .hero-image-wrap{position:relative}
         .hero-image{display:block;width:100%;height:auto;aspect-ratio:2.5/1;object-fit:cover}
         .accent-line{height:8px;background:var(--acid);width:100%}
