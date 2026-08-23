@@ -105,7 +105,7 @@ export default function CookieBanner() {
           <>
             <div className="cookie-banner-text">
               <p id="cookie-banner-title" className="cookie-banner-title">
-                Cookies na verno.cz
+                Cookies na SpustWeb.cz
               </p>
               <p id="cookie-banner-desc" className="cookie-banner-desc">
                 Tento web používá technické cookies pro zajištění svého provozu. S vaším souhlasem využívám také analytické cookies pro měření návštěvnosti.{' '}
