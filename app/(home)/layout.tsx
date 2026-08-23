@@ -2,17 +2,17 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Tvorba webu pro živnostníky za 8 900 Kč | SpustWeb.cz',
+    absolute: 'Tvorba webových stránek za 8 900 Kč | SpustWeb.cz',
   },
   description:
-    'Prezentační web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Návrh, mobilní verze, kontaktní prvky, základní SEO a spuštění.',
+    'Prezentační web pro podnikatele a malé firmy za 8 900 Kč bez DPH. Návrh, mobilní verze, kontaktní prvky, základní SEO a spuštění.',
   alternates: {
     canonical: 'https://spustweb.cz/',
   },
   openGraph: {
-    title: 'Tvorba webu pro živnostníky za 8 900 Kč | SpustWeb.cz',
+    title: 'Tvorba webových stránek za 8 900 Kč | SpustWeb.cz',
     description:
-      'Prezentační web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO a spuštění.',
+      'Prezentační web pro podnikatele a malé firmy za 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO a spuštění.',
     url: 'https://spustweb.cz/',
     siteName: 'SpustWeb.cz',
     locale: 'cs_CZ',
@@ -22,15 +22,15 @@ export const metadata: Metadata = {
         url: '/og-verno-2.jpg',
         width: 1200,
         height: 630,
-        alt: 'SpustWeb.cz – tvorba webů pro živnostníky a malé firmy',
+        alt: 'SpustWeb.cz – tvorba webových stránek pro podnikatele a malé firmy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tvorba webu pro živnostníky za 8 900 Kč | SpustWeb.cz',
+    title: 'Tvorba webových stránek za 8 900 Kč | SpustWeb.cz',
     description:
-      'Prezentační web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO a spuštění.',
+      'Prezentační web pro podnikatele a malé firmy za 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO a spuštění.',
     images: ['/og-verno-2.jpg'],
   },
   robots: {
