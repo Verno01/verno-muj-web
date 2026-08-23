@@ -67,7 +67,7 @@ export default function ShowcaseConcepts() {
           {showcases.map((showcase) => (
             <a className="showcase-concept" href={showcase.href} key={showcase.href}>
               <div className="showcase-concept-visual">
-                <img src={showcase.image} alt={showcase.alt} width="1400" height="864" loading="lazy" decoding="async" />
+                <img src={showcase.image} alt={showcase.alt} width="1400" height="696" loading="lazy" decoding="async" />
                 <span>{showcase.eyebrow}</span>
               </div>
               <div className="showcase-concept-copy">
@@ -92,7 +92,7 @@ export default function ShowcaseConcepts() {
         .showcase-concepts-head>p{max-width:560px;margin:0;font-size:12px;line-height:1.62;color:var(--muted)}
         .showcase-concepts-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
         .showcase-concept{display:block;padding:18px 18px 20px;color:inherit;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
-        .showcase-concept-visual{position:relative;overflow:hidden;background:#ecece8;aspect-ratio:1.62/1}
+        .showcase-concept-visual{position:relative;overflow:hidden;background:#ecece8;aspect-ratio:1400/696}
         .showcase-concept-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(0,0,0,.46))}
         .showcase-concept-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .28s ease}
         .showcase-concept:hover .showcase-concept-visual img{transform:scale(1.012)}
