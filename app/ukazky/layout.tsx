@@ -40,7 +40,7 @@ export default function ShowcaseLayout({ children }: { children: ReactNode }) {
       <aside className="swShowcaseTop" aria-label="Informace k ukázkovému konceptu">
         <div className="swShowcaseTopInner">
           <div className="swShowcaseBrand"><strong>SPUSTWEB.CZ</strong><span>UKÁZKOVÝ KONCEPT</span></div>
-          <div className="swShowcaseExplain"><strong>Jedna z možností, jak může nový web vypadat.</strong> Nejde o šablonu ani skutečnou firmu. Váš web navrhneme podle vašeho podnikání, nabídky a toho, co potřebují vaši zákazníci.</div>
+          <div className="swShowcaseExplain"><strong>Jedna z možností, jak může nový web vypadat.</strong> Nejde o šablonu ani skutečnou firmu. Váš web navrhnu podle vašeho podnikání, nabídky a toho, co potřebují vaši zákazníci.</div>
           <div className="swShowcaseActions"><a href="/">Zpět na SpustWeb</a><a href="/#kontakt">Chci vlastní web</a></div>
         </div>
       </aside>
@@ -52,13 +52,13 @@ export default function ShowcaseLayout({ children }: { children: ReactNode }) {
           <div className="swShowcaseEndLabel">KONEC UKÁZKOVÉHO KONCEPTU · SPUSTWEB.CZ</div>
           <div className="swShowcaseEndHead">
             <h2>Váš web nebude kopie této stránky.</h2>
-            <p className="swShowcaseEndLead">Tato ukázka představuje <strong>jeden možný směr</strong>. U vašeho webu navrhneme obsah, strukturu, vzhled i způsob kontaktu podle konkrétní firmy — tak, aby návštěvník rychle našel to, kvůli čemu přišel, a věděl, co má udělat dál.</p>
+            <p className="swShowcaseEndLead">Tato ukázka představuje <strong>jeden možný směr</strong>. U vašeho webu navrhnu obsah, strukturu, vzhled i způsob kontaktu podle konkrétní firmy — tak, aby návštěvník rychle našel to, kvůli čemu přišel, a věděl, co má udělat dál.</p>
           </div>
 
           <div className="swShowcaseValues">
-            <div className="swShowcaseValue"><strong>Obsah podle vašeho podnikání</strong><p>Služby, ceny, lokalita, reference, důležité podmínky i odpovědi na otázky vybíráme podle toho, co skutečně nabízíte a co vaši zákazníci potřebují vědět.</p></div>
-            <div className="swShowcaseValue"><strong>Vzhled podle vás</strong><p>Barvy, typografie, fotografie, rozložení i celkový charakter webu nevycházejí z jedné univerzální šablony. Návrh přizpůsobíme oboru i tomu, jak chcete působit.</p></div>
-            <div className="swShowcaseValue"><strong>Jen funkce, které dávají smysl</strong><p>Kontakty, formulář, mapa, ceník nebo další prvky použijeme tam, kde mají pro váš web hodnotu a kde je můžeme v domluveném rozsahu spolehlivě dodat.</p></div>
+            <div className="swShowcaseValue"><strong>Obsah podle vašeho podnikání</strong><p>Služby, ceny, lokalitu, reference, důležité podmínky i odpovědi na otázky vybírám podle toho, co skutečně nabízíte a co vaši zákazníci potřebují vědět.</p></div>
+            <div className="swShowcaseValue"><strong>Vzhled podle vás</strong><p>Barvy, typografie, fotografie, rozložení ani celkový charakter webu nevycházejí z jedné univerzální šablony. Návrh přizpůsobím oboru i tomu, jak chcete působit.</p></div>
+            <div className="swShowcaseValue"><strong>Jen funkce, které dávají smysl</strong><p>Kontakty, formulář, mapa, ceník nebo další prvky použiji tam, kde mají pro váš web hodnotu a kde je mohu v domluveném rozsahu spolehlivě dodat.</p></div>
           </div>
 
           <div className="swShowcaseBottom">
