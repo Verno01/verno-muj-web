@@ -80,7 +80,7 @@ export function applyConsentToGtag(choice: ConsentChoice) {
 let gaLoaded = false
 function loadGoogleAnalytics() {
   if (gaLoaded || typeof window === 'undefined') return
-  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-T009ZW218B'
+  const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-JXQX45XH7R'
 
   const s = document.createElement('script')
   s.async = true
