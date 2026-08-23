@@ -11,12 +11,26 @@ import {
   Wrench,
 } from 'lucide-react'
 
+const metaDescription = 'Ukázkový návrh prezentačního webu pro autoservis od SpustWeb.cz. Příklad struktury se servisními úkony, orientačními cenami, průběhem zakázky, provozovnou a kontaktem.'
+
 export const metadata: Metadata = {
   title: 'Ukázkový web pro autoservis | SpustWeb.cz',
-  description:
-    'Ukázka webu pro autoservis: servisní úkony, diagnostika, pneuservis, orientační ceny, průběh zakázky, tým, lokalita a kontakt.',
+  description: metaDescription,
   alternates: { canonical: 'https://spustweb.cz/ukazky/autoservis/' },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://spustweb.cz/ukazky/autoservis/',
+    title: 'Ukázkový web pro autoservis | SpustWeb.cz',
+    description: metaDescription,
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – ukázkový web pro autoservis' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ukázkový web pro autoservis | SpustWeb.cz',
+    description: metaDescription,
+    images: ['/og-verno-2.jpg'],
+  },
 }
 
 const services = [
