@@ -1,11 +1,26 @@
 import type { Metadata } from 'next'
 import { Mail, MapPin, Phone } from 'lucide-react'
 
+const metaDescription = 'Ukázkový návrh prezentačního webu pro barber shop od SpustWeb.cz. Příklad struktury se službami, ceníkem, barbery, provozovnou a kontaktem.'
+
 export const metadata: Metadata = {
   title: 'Ukázkový web pro barber shop | SpustWeb.cz',
-  description: 'Ukázka webu pro barber shop: střihy, vousy, ceník, barbeři, práce, provozovna a kontakt.',
+  description: metaDescription,
   alternates: { canonical: 'https://spustweb.cz/ukazky/barber/' },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://spustweb.cz/ukazky/barber/',
+    title: 'Ukázkový web pro barber shop | SpustWeb.cz',
+    description: metaDescription,
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – ukázkový web pro barber shop' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ukázkový web pro barber shop | SpustWeb.cz',
+    description: metaDescription,
+    images: ['/og-verno-2.jpg'],
+  },
 }
 
 const services = [
