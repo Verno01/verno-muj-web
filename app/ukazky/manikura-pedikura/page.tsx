@@ -1,11 +1,26 @@
 import type { Metadata } from 'next'
 import { Mail, MapPin, Phone } from 'lucide-react'
 
+const metaDescription = 'Ukázkový návrh prezentačního webu pro manikúru a pedikúru od SpustWeb.cz. Příklad struktury s ceníkem, ukázkami práce, informacemi o studiu a kontaktem.'
+
 export const metadata: Metadata = {
   title: 'Ukázkový web pro manikúru a pedikúru | SpustWeb.cz',
-  description: 'Ukázka webu pro manikúru a pedikúru: ceník, hotové práce, hygiena, studio a kontakt.',
+  description: metaDescription,
   alternates: { canonical: 'https://spustweb.cz/ukazky/manikura-pedikura/' },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://spustweb.cz/ukazky/manikura-pedikura/',
+    title: 'Ukázkový web pro manikúru a pedikúru | SpustWeb.cz',
+    description: metaDescription,
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – ukázkový web pro manikúru a pedikúru' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ukázkový web pro manikúru a pedikúru | SpustWeb.cz',
+    description: metaDescription,
+    images: ['/og-verno-2.jpg'],
+  },
 }
 
 const manicure = [
