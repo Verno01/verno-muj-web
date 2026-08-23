@@ -8,13 +8,13 @@ import './type-scale.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://spustweb.cz'),
-  alternates: { canonical: 'https://spustweb.cz' },
+  alternates: { canonical: 'https://spustweb.cz/' },
   title: {
-    default: 'Prezentační web za 8 900 Kč bez DPH | SpustWeb.cz',
+    default: 'Tvorba webu pro živnostníky za 8 900 Kč | SpustWeb.cz',
     template: '%s | SpustWeb.cz',
   },
-  description: 'Tvorba prezentačních webů pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Plnohodnotný firemní web, mobilní verze, základní SEO a spuštění.',
-  authors: [{ name: 'SpustWeb.cz', url: 'https://spustweb.cz' }],
+  description: 'Prezentační web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Návrh, mobilní verze, kontaktní prvky, základní SEO a spuštění.',
+  authors: [{ name: 'SpustWeb.cz', url: 'https://spustweb.cz/' }],
   creator: 'SpustWeb.cz',
   publisher: 'SpustWeb.cz',
   icons: {
@@ -30,15 +30,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'cs_CZ',
-    url: 'https://spustweb.cz',
+    url: 'https://spustweb.cz/',
     siteName: 'SpustWeb.cz',
-    title: 'Prezentační web za 8 900 Kč bez DPH | SpustWeb.cz',
-    description: 'Plnohodnotný firemní web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH.',
+    title: 'Tvorba webu pro živnostníky za 8 900 Kč | SpustWeb.cz',
+    description: 'Prezentační web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO a spuštění.',
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – tvorba webů pro živnostníky a malé firmy' }],
   },
   twitter: {
-    card: 'summary',
-    title: 'Prezentační web za 8 900 Kč bez DPH | SpustWeb.cz',
-    description: 'Plnohodnotný firemní web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH.',
+    card: 'summary_large_image',
+    title: 'Tvorba webu pro živnostníky za 8 900 Kč | SpustWeb.cz',
+    description: 'Prezentační web pro živnostníky a malé firmy za pevnou cenu 8 900 Kč bez DPH. Návrh, mobilní verze, základní SEO a spuštění.',
+    images: ['/og-verno-2.jpg'],
   },
   robots: {
     index: true,
@@ -66,8 +68,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       url: 'https://spustweb.cz/',
       email: 'kontakt@spustweb.cz',
       telephone: '+420705911941',
-      description: 'Tvorba prezentačních webů pro živnostníky a malé firmy.',
-      serviceType: 'Tvorba prezentačních webových stránek',
+      description: 'Tvorba prezentačních webových stránek pro živnostníky a malé firmy v České republice.',
+      serviceType: 'Tvorba webových stránek pro živnostníky a malé firmy',
       areaServed: { '@type': 'Country', name: 'Česká republika' },
       priceRange: '8 900 Kč bez DPH',
       offers: {
@@ -76,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         price: '8900',
         priceCurrency: 'CZK',
         url: 'https://spustweb.cz/#sluzba',
-        description: 'Plnohodnotný prezentační web včetně návrhu, responzivního zobrazení, kontaktních prvků, základního SEO, měření a spuštění na doméně.',
+        description: 'Prezentační web včetně návrhu struktury a vzhledu, responzivního zobrazení, kontaktních prvků, základního SEO, měření a spuštění na doméně.',
       },
     },
   ]
