@@ -205,14 +205,22 @@ export default function Home() {
 
       <section id="kontakt" className="contact">
         <div className="wrap contact-grid">
-          <div>
+          <div className="contact-intro">
             <p className="label dark-label">Kontakt</p>
             <h2>Probereme váš web.</h2>
+            <p>Jmenuji se Hana Fraňková. Při krátkém telefonátu si ujasníme, co má váš web obsahovat, jaké podklady už máte a co bude potřeba dodat.</p>
           </div>
-          <div className="contact-side">
-            <p>Jmenuji se Hana Fraňková a při krátkém telefonátu si ujasníme, co má váš web obsahovat, jaké podklady už máte a co bude potřeba dodat.</p>
-            <a className="contact-main" href="tel:+420705911941">+420 705 911 941</a>
-            <a className="contact-mail" href="mailto:kontakt@spustweb.cz">kontakt@spustweb.cz</a>
+          <div className="contact-actions">
+            <a className="contact-call" href="tel:+420705911941">
+              <span>Zavolat</span>
+              <strong>+420 705 911 941</strong>
+              <i aria-hidden="true">→</i>
+            </a>
+            <a className="contact-email" href="mailto:kontakt@spustweb.cz">
+              <span>Napsat e-mail</span>
+              <strong>kontakt@spustweb.cz</strong>
+              <i aria-hidden="true">→</i>
+            </a>
           </div>
         </div>
       </section>
@@ -284,14 +292,21 @@ export default function Home() {
         .faq summary:after{content:'+';position:absolute;right:0;top:11px;font-size:16px;font-weight:400}
         .faq details[open] summary:after{content:'−'}
         .faq details p{margin:0;padding:0 28px 13px 0;font-size:11px;line-height:1.52;color:var(--muted)}
-        .contact{padding:62px 0;background:#171717;color:#fff}
-        .contact-grid{display:grid;grid-template-columns:1fr .72fr;gap:64px;align-items:end}
-        .contact h2{color:#fff}
-        .dark-label{color:#85857e}
-        .contact-side{display:flex;flex-direction:column;align-items:flex-start}
-        .contact-side p{max-width:350px;margin:0 0 17px;font-size:12px;line-height:1.52;color:#bcbcb5}
-        .contact-main{font-size:clamp(1.4rem,2.3vw,1.9rem);letter-spacing:-.025em;color:#fff;text-decoration:none;border-bottom:2px solid var(--acid);padding-bottom:3px}
-        .contact-mail{margin-top:10px;font-size:12px;color:#cecec8;text-decoration:none}
+        .contact{padding:88px 0 92px;background:#171717;color:#fff;border-top:8px solid var(--acid)}
+        .contact-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:76px;align-items:stretch}
+        .contact-intro{display:flex;flex-direction:column;justify-content:flex-end}
+        .contact h2{color:#fff;font-size:clamp(2.8rem,5vw,4.5rem);line-height:.9;max-width:480px}
+        .dark-label{color:#92928c}
+        .contact-intro>p:last-child{max-width:430px;margin:25px 0 0;font-size:13px;line-height:1.62;color:#bcbcb5}
+        .contact-actions{display:grid;border-top:1px solid #4a4a47}
+        .contact-call,.contact-email{position:relative;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:7px 22px;align-items:center;padding:24px 24px 23px;text-decoration:none;border-bottom:1px solid #4a4a47;transition:transform .18s ease,background .18s ease}
+        .contact-call{background:var(--acid);color:#111}
+        .contact-email{color:#fff}
+        .contact-call span,.contact-email span{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+        .contact-call strong,.contact-email strong{grid-column:1;font-size:clamp(1.45rem,2.5vw,2rem);line-height:1.05;letter-spacing:-.035em;font-weight:500}
+        .contact-call i,.contact-email i{grid-column:2;grid-row:1/3;align-self:center;font-style:normal;font-size:26px}
+        .contact-call:hover,.contact-email:hover{transform:translateX(4px)}
+        .contact-email:hover{background:#222220}
         @media(max-width:820px){
           .hero-top,.offer-grid,.fit-grid,.industries-head,.info-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
           .industry-grid{grid-template-columns:1fr 1fr}
@@ -302,6 +317,8 @@ export default function Home() {
           .section,.compact-section{padding:54px 0}
           .trust-strip{grid-template-columns:1fr 1fr}
           .industries{margin-top:30px}
+          .contact{padding:70px 0 74px}
+          .contact-intro>p:last-child{margin-top:20px}
         }
         @media(max-width:560px){
           .wrap{width:min(100% - 30px,1040px)}
@@ -316,7 +333,10 @@ export default function Home() {
           .projects{grid-template-columns:1fr}
           .section-head{display:block}
           .section-head>p{margin-top:10px}
-          .contact{padding:52px 0}
+          .contact{padding:58px 0 62px;border-top-width:7px}
+          .contact h2{font-size:clamp(2.55rem,12vw,3.6rem)}
+          .contact-call,.contact-email{padding:20px 17px 19px}
+          .contact-call strong,.contact-email strong{font-size:1.25rem}
         }
       `}</style>
     </>
