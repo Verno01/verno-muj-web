@@ -18,6 +18,7 @@ export default function Footer() {
         </div>
         <div className="footer-legal">
           <span>© {year} Rovino s.r.o. · IČO 235 26 629</span>
+          <Link href="/cena-webovych-stranek/">Cena webu</Link>
           <Link href="/obchodni-podminky">Obchodní podmínky</Link>
           <Link href="/ochrana-osobnich-udaju">Ochrana osobních údajů</Link>
           <Link href="/cookies">Cookies</Link>
