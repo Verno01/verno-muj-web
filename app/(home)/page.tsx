@@ -5,21 +5,27 @@ const references = [
   {
     name: 'Rovino',
     url: 'https://rovino.cz',
-    image: '/screens/rovino-new.jpg',
+    image: '/screens/reference-rovino.webp',
+    width: 1400,
+    height: 688,
     alt: 'Aktuální web Rovino pro zemní a stavební práce',
     description: 'Zemní práce. Přehled služeb a realizací pro rychlou poptávku.',
   },
   {
     name: '5class',
     url: 'https://5class.cz',
-    image: '/screens/5class-new.webp',
+    image: '/screens/reference-5class.webp',
+    width: 1400,
+    height: 688,
     alt: 'Aktuální web 5class pro osobní dopravu s řidičem',
     description: 'Osobní doprava. Jasný výběr služeb a přímý kontakt.',
   },
   {
     name: 'Pětilistá',
     url: 'https://www.petilista.cz',
-    image: '/screens/petilista-new.jpg',
+    image: '/screens/reference-petilista.webp',
+    width: 1400,
+    height: 696,
     alt: 'Aktuální web Pětilistá pro péči o hrobová místa',
     description: 'Péče o hrobová místa. Služby, lokální obsah a online objednávka.',
   },
@@ -147,11 +153,14 @@ export default function Home() {
             {references.map((reference) => (
               <a className="project" href={reference.url} target="_blank" rel="noreferrer" key={reference.name}>
                 <div className="project-image-wrap">
-                  {reference.image.startsWith('http') ? (
-                    <img src={reference.image} alt={reference.alt} loading="lazy" className="project-image" />
-                  ) : (
-                    <Image src={reference.image} alt={reference.alt} width={1200} height={760} sizes="(max-width: 760px) 100vw, 33vw" className="project-image" />
-                  )}
+                  <Image
+                    src={reference.image}
+                    alt={reference.alt}
+                    width={reference.width}
+                    height={reference.height}
+                    sizes="(max-width: 760px) 100vw, 33vw"
+                    className="project-image"
+                  />
                 </div>
                 <div className="project-meta">
                   <h3>{reference.name}</h3>
@@ -281,7 +290,7 @@ export default function Home() {
         .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
         .project{text-decoration:none;color:inherit}
         .project-image-wrap{overflow:hidden;background:#eee;border:1px solid #ecece8}
-        .project-image{display:block;width:100%;aspect-ratio:1.45/1;object-fit:cover;object-position:top;transition:transform .3s ease}
+        .project-image{display:block;width:100%;height:auto;object-fit:contain;transition:transform .3s ease}
         .project:hover .project-image{transform:scale(1.012)}
         .project-meta{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;padding-top:9px}
         .project-meta h3{margin:0;font-size:12px;font-weight:600;color:var(--ink)}
