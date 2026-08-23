@@ -1,4 +1,16 @@
+import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Ukázkové koncepty webů | SpustWeb.cz',
+    template: '%s',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 
 export default function ShowcaseLayout({ children }: { children: ReactNode }) {
   return (
