@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
+import AnalyticsEvents from '@/components/AnalyticsEvents'
 import './globals.css'
 import './hero-fix.css'
 import './type-scale.css'
@@ -92,6 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <CookieBanner />
+        <AnalyticsEvents />
       </body>
     </html>
   )
