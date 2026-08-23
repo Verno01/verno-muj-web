@@ -1,11 +1,26 @@
 import type { Metadata } from 'next'
 import { ArrowRight, Bath, Camera, Droplets, Flame, Mail, MapPin, Phone, Pipette, ShieldCheck, Wrench } from 'lucide-react'
 
+const metaDescription = 'Ukázkový návrh prezentačního webu pro instalatéra a topenáře od SpustWeb.cz. Příklad struktury se službami, oblastí výjezdu, realizacemi, častými dotazy a poptávkou.'
+
 export const metadata: Metadata = {
   title: 'Ukázkový web pro instalatéra a topenáře | SpustWeb.cz',
-  description: 'Ukázka webu pro instalatéra a topenáře: akutní opravy, plánované zakázky, voda, topení, koupelny, realizace a lokální působnost.',
+  description: metaDescription,
   alternates: { canonical: 'https://spustweb.cz/ukazky/instalater/' },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://spustweb.cz/ukazky/instalater/',
+    title: 'Ukázkový web pro instalatéra a topenáře | SpustWeb.cz',
+    description: metaDescription,
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – ukázkový web pro instalatéra a topenáře' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ukázkový web pro instalatéra a topenáře | SpustWeb.cz',
+    description: metaDescription,
+    images: ['/og-verno-2.jpg'],
+  },
 }
 
 const services = [
