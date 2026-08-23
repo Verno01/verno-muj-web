@@ -23,17 +23,17 @@ export const metadata: Metadata = {
 }
 
 const included = [
-  ['01', 'Návrh a struktura', 'Rozložení a obsah podle konkrétní firmy.'],
-  ['02', 'Zpracování webu', 'Hotový funkční web, ne pouze grafický návrh.'],
-  ['03', 'Mobilní verze', 'Plnohodnotné zobrazení na telefonu, tabletu i počítači.'],
-  ['04', 'SEO a měření', 'Metadata, sitemap, Search Console a základní analytika.'],
-  ['05', 'Spuštění', 'Nasazení na doménu a základní hosting.'],
+  ['01', 'Obsah a rozložení', 'Navrhnu, co má být na webu, v jakém pořadí a jak se v něm má zákazník orientovat.'],
+  ['02', 'Hotový web', 'Web celý vytvořím a připravím k používání. Neodevzdávám jen obrázek nebo grafický návrh.'],
+  ['03', 'Fungování na telefonu', 'Web bude čitelný a pohodlně ovladatelný na mobilu, tabletu i počítači.'],
+  ['04', 'Příprava pro Google', 'Nastavím základní věci, aby Google mohl web správně najít a přečíst. Přidám i měření návštěvnosti.'],
+  ['05', 'Spuštění', 'Web připojím k vaší webové adrese a zprovozním. Základní provoz webu je součástí ceny.'],
 ]
 
 const faqs = [
-  ['Kolik stojí vytvoření webových stránek?', 'Běžný prezentační web stojí 8 900 Kč bez DPH. Cena zahrnuje návrh, zpracování, mobilní verzi, základní SEO, měření a spuštění.'],
-  ['Je 8 900 Kč konečná cena?', 'Ano pro běžný prezentační web v domluveném rozsahu. Pokud zadání vyžaduje něco navíc, cenu znáte před zahájením práce.'],
-  ['Co se platí po spuštění?', 'Za správu webu není povinný měsíční paušál. Základní hosting je v ceně. Samostatně se hradí vlastní doména podle registrátora.'],
+  ['Kolik stojí vytvoření webových stránek?', 'Běžný prezentační web stojí 8 900 Kč bez DPH, tedy 10 769 Kč včetně DPH.'],
+  ['Musím vědět, co je SEO, hosting nebo doména?', 'Ne. Technické nastavení řeším já. Od vás potřebuji hlavně informace o firmě, službách a kontaktech, případně logo a vlastní fotografie.'],
+  ['Co budu platit po spuštění?', 'Za správu webu není povinný měsíční paušál a základní provoz webu je v ceně. Samostatně se hradí vlastní webová adresa, například vasefirma.cz, podle ceníku registrátora.'],
   ['Jak probíhá platba?', '50 % před zahájením práce a 50 % po dokončení před spuštěním webu.'],
 ]
 
@@ -93,11 +93,12 @@ export default function WebsitePricePage() {
         <div className="priceWrap priceHeroGrid">
           <div>
             <p className="priceLabel">SpustWeb.cz · cena webových stránek</p>
-            <h1 id="price-title">Prezentační web za 8 900 Kč.</h1>
-            <p className="priceLead">Pro živnostníka nebo malou firmu. Návrh, zpracování, mobilní verze, základní SEO a spuštění.</p>
+            <h1 id="price-title">Hotový prezentační web pro malou firmu.</h1>
+            <p className="priceLead">Navrhnu, vytvořím a spustím web, který srozumitelně představí vaši firmu a usnadní zákazníkům kontakt.</p>
           </div>
           <div className="priceHeroSide">
             <p className="priceAmount">8 900 Kč <span>bez DPH</span></p>
+            <p className="priceVat">10 769 Kč včetně DPH</p>
             <div className="priceActions">
               <a className="pricePrimary" href="tel:+420705911941">Zavolat</a>
               <a className="priceSecondary" href="mailto:kontakt@spustweb.cz">Napsat e-mail</a>
@@ -105,17 +106,17 @@ export default function WebsitePricePage() {
           </div>
         </div>
         <div className="priceWrap priceFacts">
-          <span><strong>1–2 týdny</strong> obvykle</span>
-          <span><strong>0 Kč / měsíc</strong> za správu</span>
-          <span><strong>Hosting</strong> v ceně</span>
-          <span><strong>50 / 50</strong> platba</span>
+          <span><strong>1–2 týdny</strong> obvyklá doba tvorby</span>
+          <span><strong>Bez paušálu</strong> žádný povinný měsíční poplatek za správu</span>
+          <span><strong>Základní provoz</strong> je součástí ceny</span>
+          <span><strong>50 / 50</strong> platba ve dvou částech</span>
         </div>
       </section>
 
       <section className="priceSection" id="v-cene">
         <div className="priceWrap priceHead">
           <p className="priceLabel">V ceně</p>
-          <h2>Co za 8 900 Kč dostanete.</h2>
+          <h2>Co za cenu dostanete.</h2>
         </div>
         <div className="priceWrap priceIncluded">
           {included.map(([num, title, text]) => (
@@ -135,10 +136,10 @@ export default function WebsitePricePage() {
             <h2>Bez povinného paušálu.</h2>
           </div>
           <div className="pricePlainList">
-            <div><strong>Správa webu</strong><span>0 Kč / měsíc</span></div>
-            <div><strong>Základní hosting</strong><span>v ceně</span></div>
-            <div><strong>Vlastní doména</strong><span>podle registrátora</span></div>
-            <div><strong>Další úpravy</strong><span>jen pokud je objednáte</span></div>
+            <div><strong>Pravidelná správa</strong><span>0 Kč / měsíc</span></div>
+            <div><strong>Základní provoz webu</strong><span>v ceně</span></div>
+            <div><strong>Vlastní webová adresa (doména)</strong><span>podle registrátora</span></div>
+            <div><strong>Budoucí změny</strong><span>platíte jen pokud je objednáte</span></div>
           </div>
         </div>
       </section>
@@ -150,8 +151,8 @@ export default function WebsitePricePage() {
             <h2>Kdy je potřeba jiná cena.</h2>
           </div>
           <div className="priceCopy">
-            <p>Pokud má web kromě prezentace firmy řešit například e-shop, rezervace, klientskou zónu nebo jinou webovou aplikaci, jde o jiný rozsah zakázky.</p>
-            <p><strong>Cenu vždy znáte předem.</strong></p>
+            <p>Jiný rozsah je potřeba například pro e-shop, online rezervace, přihlášení zákazníků nebo vlastní webovou aplikaci.</p>
+            <p><strong>Pokud se vás to týká, cenu znáte předem.</strong></p>
           </div>
         </div>
       </section>
@@ -159,12 +160,12 @@ export default function WebsitePricePage() {
       <section className="priceSection priceLinksSection">
         <div className="priceWrap priceSectionLinks">
           <a href="/#reference">
-            <span>Skutečné projekty</span>
+            <span>Hotové projekty</span>
             <strong>Ukázky realizací</strong>
             <i aria-hidden="true">→</i>
           </a>
           <a href="/#ukazky">
-            <span>Návrhové koncepty</span>
+            <span>Příklady vzhledu</span>
             <strong>Ukázkové weby</strong>
             <i aria-hidden="true">→</i>
           </a>
@@ -175,7 +176,7 @@ export default function WebsitePricePage() {
         <div className="priceWrap priceFaqGrid">
           <div>
             <p className="priceLabel">Časté otázky</p>
-            <h2>Jen to podstatné.</h2>
+            <h2>Bez technických znalostí.</h2>
           </div>
           <div className="priceFaq">
             {faqs.map(([question, answer], index) => (
@@ -204,9 +205,9 @@ export default function WebsitePricePage() {
       <style>{`
         .pricePage{--ink:#171717;--muted:#70706b;--line:#deded7;--soft:#f5f5f1;--acid:#efff63;--paper:#fff;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
         .pricePage *{box-sizing:border-box}.pricePage a{color:inherit;text-decoration:none}.priceWrap{width:min(1040px,calc(100% - 44px));margin:0 auto}
-        .priceHero{padding:112px 0 0}.priceHeroGrid{display:grid;grid-template-columns:1.15fr .65fr;gap:72px;align-items:end;padding-bottom:34px}.priceLabel{margin:0 0 14px;font-size:9px;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}.priceHero h1,.pricePage h2{margin:0;font-weight:500;letter-spacing:-.05em}.priceHero h1{max-width:650px;font-size:clamp(3rem,5.8vw,5.3rem);line-height:.92}.priceLead{max-width:560px;margin:20px 0 0;font-size:14px;line-height:1.6;color:#4f4f4a}.priceHeroSide{border-top:1px solid var(--ink);padding-top:17px}.priceAmount{margin:0 0 20px;font-size:clamp(2.2rem,4vw,3.7rem);letter-spacing:-.05em;line-height:.95}.priceAmount span{display:block;margin-top:8px;font-size:10px;letter-spacing:.04em;color:var(--muted)}.priceActions{display:flex;gap:8px;flex-wrap:wrap}.priceActions a{min-height:40px;padding:0 16px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border:1px solid var(--ink)}.pricePrimary{background:var(--acid)}.priceSecondary{background:#fff}.priceFacts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.priceFacts span{padding:16px 18px 16px 0;font-size:10px;color:var(--muted);border-right:1px solid var(--line)}.priceFacts span+span{padding-left:18px}.priceFacts span:last-child{border-right:0}.priceFacts strong{display:block;margin-bottom:4px;color:var(--ink);font-size:11px}
-        .priceSection{padding:76px 0}.priceHead{display:grid;grid-template-columns:170px 1fr;gap:28px;align-items:start;margin-bottom:26px}.priceHead h2,.priceTwoCol h2,.priceFaqGrid h2{font-size:clamp(2.5rem,4.5vw,4.2rem);line-height:.94;max-width:700px}.priceIncluded{border-top:1px solid var(--ink)}.priceIncludedRow{display:grid;grid-template-columns:50px minmax(180px,.72fr) 1.3fr;gap:20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line)}.priceIncludedRow>span{font-size:9px;color:var(--muted)}.priceIncludedRow h3{margin:0;font-size:14px;font-weight:600}.priceIncludedRow p{margin:0;font-size:12px;line-height:1.55;color:#55554f}.priceSoft,.priceLinksSection{background:var(--soft)}.priceTwoCol{display:grid;grid-template-columns:.8fr 1.2fr;gap:78px;align-items:start}.pricePlainList{border-top:1px solid var(--ink)}.pricePlainList div{display:grid;grid-template-columns:1fr auto;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);font-size:12px}.pricePlainList strong{font-weight:600}.pricePlainList span{color:#4f4f4a;text-align:right}.priceCopy{max-width:600px;padding-top:5px}.priceCopy p{margin:0 0 14px;font-size:14px;line-height:1.65;color:#4f4f4a}.priceCopy strong{color:var(--ink)}.priceSectionLinks{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.priceSectionLinks a{position:relative;min-height:132px;padding:26px 54px 26px 0;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--line)}.priceSectionLinks a+a{padding-left:30px;border-right:0}.priceSectionLinks span{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}.priceSectionLinks strong{font-size:clamp(1.65rem,3vw,2.5rem);font-weight:500;letter-spacing:-.04em}.priceSectionLinks i{position:absolute;right:20px;bottom:30px;font-style:normal;font-size:18px}.priceFaqGrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:78px}.priceFaq{border-top:1px solid var(--ink)}.priceFaq details{border-bottom:1px solid var(--line)}.priceFaq summary{list-style:none;cursor:pointer;padding:16px 28px 16px 0;font-size:12px;font-weight:600;position:relative}.priceFaq summary::-webkit-details-marker{display:none}.priceFaq summary:after{content:'+';position:absolute;right:2px;top:15px}.priceFaq details[open] summary:after{content:'−'}.priceFaq p{margin:0;padding:0 28px 16px 0;font-size:12px;line-height:1.6;color:#55554f;max-width:680px}.priceContact{background:#171717;color:#fff;padding:68px 0}.priceContactGrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}.priceLabelDark{color:#8f8f89}.priceContact h2{color:#fff;font-size:clamp(2.7rem,5vw,4.7rem);line-height:.93}.priceContactActions{border-top:1px solid #4a4a46}.priceContactActions a{display:grid;grid-template-columns:1fr auto;gap:20px;padding:17px 0;border-bottom:1px solid #353532;font-size:11px}.priceContactActions span{color:#a8a8a2}.priceContactActions strong{font-weight:600}
-        @media(max-width:760px){.priceWrap{width:min(100% - 30px,1040px)}.priceHero{padding-top:94px}.priceHeroGrid{grid-template-columns:1fr;gap:30px;padding-bottom:24px}.priceHero h1{font-size:clamp(3.1rem,15vw,4.6rem)}.priceHeroSide{max-width:none}.priceFacts{grid-template-columns:1fr 1fr}.priceFacts span:nth-child(2){border-right:0}.priceFacts span:nth-child(n+3){border-top:1px solid var(--line)}.priceFacts span:nth-child(3){padding-left:0}.priceSection{padding:54px 0}.priceHead,.priceTwoCol,.priceFaqGrid,.priceContactGrid{grid-template-columns:1fr;gap:24px}.priceHead{margin-bottom:22px}.priceHead h2,.priceTwoCol h2,.priceFaqGrid h2{font-size:clamp(2.6rem,12vw,3.8rem)}.priceIncludedRow{grid-template-columns:34px 1fr;gap:8px 14px}.priceIncludedRow p{grid-column:2}.priceSectionLinks{grid-template-columns:1fr}.priceSectionLinks a,.priceSectionLinks a+a{min-height:112px;padding:22px 48px 22px 0;border-right:0;border-bottom:1px solid var(--line)}.priceSectionLinks a:last-child{border-bottom:0}.priceSectionLinks i{right:8px;bottom:26px}.priceContactActions{margin-top:4px}.priceActions a{flex:1}.pricePlainList div{grid-template-columns:1fr auto}}
+        .priceHero{padding:112px 0 0}.priceHeroGrid{display:grid;grid-template-columns:1.15fr .65fr;gap:72px;align-items:end;padding-bottom:34px}.priceLabel{margin:0 0 14px;font-size:9px;line-height:1.2;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}.priceHero h1,.pricePage h2{margin:0;font-weight:500;letter-spacing:-.05em}.priceHero h1{max-width:650px;font-size:clamp(3rem,5.2vw,4.8rem);line-height:.94}.priceLead{max-width:590px;margin:20px 0 0;font-size:14px;line-height:1.6;color:#4f4f4a}.priceHeroSide{border-top:1px solid var(--ink);padding-top:17px}.priceAmount{margin:0;font-size:clamp(2rem,3.2vw,3rem);letter-spacing:-.045em;line-height:.98}.priceAmount span{display:block;margin-top:7px;font-size:10px;letter-spacing:.04em;color:var(--muted)}.priceVat{margin:8px 0 20px;font-size:12px;color:#4f4f4a}.priceActions{display:flex;gap:8px;flex-wrap:wrap}.priceActions a{min-height:40px;padding:0 16px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border:1px solid var(--ink)}.pricePrimary{background:var(--acid)}.priceSecondary{background:#fff}.priceFacts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.priceFacts span{padding:16px 18px 16px 0;font-size:10px;line-height:1.45;color:var(--muted);border-right:1px solid var(--line)}.priceFacts span+span{padding-left:18px}.priceFacts span:last-child{border-right:0}.priceFacts strong{display:block;margin-bottom:4px;color:var(--ink);font-size:11px}
+        .priceSection{padding:70px 0}.priceHead{display:grid;grid-template-columns:170px 1fr;gap:28px;align-items:start;margin-bottom:26px}.priceHead h2,.priceTwoCol h2,.priceFaqGrid h2{font-size:clamp(2.4rem,4.2vw,3.9rem);line-height:.96;max-width:700px}.priceIncluded{border-top:1px solid var(--ink)}.priceIncludedRow{display:grid;grid-template-columns:50px minmax(190px,.8fr) 1.25fr;gap:20px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line)}.priceIncludedRow>span{font-size:9px;color:var(--muted)}.priceIncludedRow h3{margin:0;font-size:14px;font-weight:600}.priceIncludedRow p{margin:0;font-size:12px;line-height:1.55;color:#55554f}.priceSoft,.priceLinksSection{background:var(--soft)}.priceTwoCol{display:grid;grid-template-columns:.8fr 1.2fr;gap:78px;align-items:start}.pricePlainList{border-top:1px solid var(--ink)}.pricePlainList div{display:grid;grid-template-columns:1fr auto;gap:22px;padding:16px 0;border-bottom:1px solid var(--line);font-size:12px}.pricePlainList strong{font-weight:600}.pricePlainList span{color:#4f4f4a;text-align:right}.priceCopy{max-width:600px;padding-top:5px}.priceCopy p{margin:0 0 14px;font-size:14px;line-height:1.65;color:#4f4f4a}.priceCopy strong{color:var(--ink)}.priceSectionLinks{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.priceSectionLinks a{position:relative;min-height:124px;padding:26px 54px 26px 0;display:flex;flex-direction:column;justify-content:flex-end;border-right:1px solid var(--line)}.priceSectionLinks a+a{padding-left:30px;border-right:0}.priceSectionLinks span{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.priceSectionLinks strong{font-size:24px;font-weight:500;letter-spacing:-.03em}.priceSectionLinks i{position:absolute;right:20px;bottom:27px;font-style:normal;font-size:16px}.priceFaqGrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:78px}.priceFaq{border-top:1px solid var(--ink)}.priceFaq details{border-bottom:1px solid var(--line)}.priceFaq summary{list-style:none;cursor:pointer;padding:16px 28px 16px 0;font-size:12px;font-weight:600;position:relative}.priceFaq summary::-webkit-details-marker{display:none}.priceFaq summary:after{content:'+';position:absolute;right:2px;top:15px}.priceFaq details[open] summary:after{content:'−'}.priceFaq p{margin:0;padding:0 28px 16px 0;font-size:12px;line-height:1.6;color:#55554f;max-width:680px}.priceContact{background:#171717;color:#fff;padding:68px 0}.priceContactGrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}.priceLabelDark{color:#8f8f89}.priceContact h2{color:#fff;font-size:clamp(2.7rem,5vw,4.7rem);line-height:.93}.priceContactActions{border-top:1px solid #4a4a46}.priceContactActions a{display:grid;grid-template-columns:1fr auto;gap:20px;padding:17px 0;border-bottom:1px solid #353532;font-size:11px}.priceContactActions span{color:#a8a8a2}.priceContactActions strong{font-weight:600}
+        @media(max-width:760px){.priceWrap{width:min(100% - 30px,1040px)}.priceHero{padding-top:94px}.priceHeroGrid{grid-template-columns:1fr;gap:28px;padding-bottom:24px}.priceHero h1{font-size:clamp(2.9rem,13vw,4.1rem)}.priceHeroSide{max-width:none}.priceFacts{grid-template-columns:1fr 1fr}.priceFacts span:nth-child(2){border-right:0}.priceFacts span:nth-child(n+3){border-top:1px solid var(--line)}.priceFacts span:nth-child(3){padding-left:0}.priceSection{padding:52px 0}.priceHead,.priceTwoCol,.priceFaqGrid,.priceContactGrid{grid-template-columns:1fr;gap:24px}.priceHead{margin-bottom:22px}.priceHead h2,.priceTwoCol h2,.priceFaqGrid h2{font-size:clamp(2.4rem,11vw,3.5rem)}.priceIncludedRow{grid-template-columns:34px 1fr;gap:8px 14px}.priceIncludedRow p{grid-column:2}.priceSectionLinks{grid-template-columns:1fr}.priceSectionLinks a,.priceSectionLinks a+a{min-height:108px;padding:22px 46px 22px 0;border-right:0;border-bottom:1px solid var(--line)}.priceSectionLinks a+a{padding-left:0;border-bottom:0}.priceSectionLinks i{right:2px;bottom:24px}.priceContactActions{margin-top:4px}.priceActions a{flex:1}.pricePlainList div{grid-template-columns:1fr;gap:5px}.pricePlainList span{text-align:left}.priceVat{margin-bottom:18px}}
       `}</style>
     </div>
   )
