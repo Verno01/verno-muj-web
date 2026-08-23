@@ -15,7 +15,7 @@ const rooms = [
     meta: '2 hosté · 24 m²',
     price: 'od 2 190 Kč / noc',
     text: 'Pokoj v přízemí s okny do zahrady. Vlastní koupelna, malá lednice a místo k posezení.',
-    image: 'https://images.pexels.com/photos/15699340/pexels-photo-13038494.jpeg?auto=compress&cs=tinysrgb&w=1800'.replace('13038494','15699340'),
+    image: 'https://images.pexels.com/photos/15699340/pexels-photo-15699340.jpeg?auto=compress&cs=tinysrgb&w=1800',
     alt: 'Dvoulůžkový pokoj s dřevěnými trámy, kamennou stěnou a modrými detaily',
   },
   {
