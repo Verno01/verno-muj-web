@@ -1,11 +1,26 @@
 import type { Metadata } from 'next'
 import { Bike, Car, Coffee, Mail, MapPin, PawPrint, Phone, Wifi } from 'lucide-react'
 
+const metaDescription = 'Ukázkový návrh prezentačního webu pro penzion od SpustWeb.cz. Příklad struktury s pokoji, vybavením, okolím, praktickými informacemi a poptávkou pobytu.'
+
 export const metadata: Metadata = {
   title: 'Ukázkový web pro penzion | SpustWeb.cz',
-  description: 'Ukázka webu pro menší penzion: pokoje, vybavení, snídaně, okolí, praktické informace a poptávka pobytu.',
+  description: metaDescription,
   alternates: { canonical: 'https://spustweb.cz/ukazky/penzion/' },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://spustweb.cz/ukazky/penzion/',
+    title: 'Ukázkový web pro penzion | SpustWeb.cz',
+    description: metaDescription,
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – ukázkový web pro penzion' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ukázkový web pro penzion | SpustWeb.cz',
+    description: metaDescription,
+    images: ['/og-verno-2.jpg'],
+  },
 }
 
 const rooms = [
