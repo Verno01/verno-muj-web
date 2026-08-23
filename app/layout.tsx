@@ -5,6 +5,7 @@ import CookieBanner from '@/components/CookieBanner'
 import './globals.css'
 import './hero-fix.css'
 import './type-scale.css'
+import './showcase-mobile-fixes.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://spustweb.cz'),
