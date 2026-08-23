@@ -1,11 +1,26 @@
 import type { Metadata } from 'next'
 import { Mail, MapPin, Phone } from 'lucide-react'
 
+const metaDescription = 'Ukázkový návrh prezentačního webu pro fitness trenérku od SpustWeb.cz. Příklad struktury s lekcemi, rozvrhem, cenami, informacemi pro první návštěvu a kontaktem.'
+
 export const metadata: Metadata = {
   title: 'Ukázkový web pro fitness trenérku | SpustWeb.cz',
-  description: 'Ukázka webu pro fitness trenérku: kruhový trénink, cardio dance, rozvrh lekcí, ceník, trenérka a kontakt.',
+  description: metaDescription,
   alternates: { canonical: 'https://spustweb.cz/ukazky/fitness-trenerka/' },
   robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    url: 'https://spustweb.cz/ukazky/fitness-trenerka/',
+    title: 'Ukázkový web pro fitness trenérku | SpustWeb.cz',
+    description: metaDescription,
+    images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – ukázkový web pro fitness trenérku' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ukázkový web pro fitness trenérku | SpustWeb.cz',
+    description: metaDescription,
+    images: ['/og-verno-2.jpg'],
+  },
 }
 
 const schedule = [
