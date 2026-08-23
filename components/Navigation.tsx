@@ -16,6 +16,7 @@ export default function Navigation() {
 
         <nav className="verno-desktop-nav" aria-label="Hlavní navigace">
           <a href="/#sluzba">Služba</a>
+          <Link href="/cena-webovych-stranek/">Cena</Link>
           <a href="/#reference">Reference</a>
           <a href="/#postup">Postup</a>
           <a href="/#faq">Informace</a>
@@ -40,6 +41,7 @@ export default function Navigation() {
       <div id="verno-mobile-menu" className={`verno-mobile-menu ${open ? 'is-open' : ''}`}>
         <div className="verno-mobile-menu-inner">
           <a href="/#sluzba" onClick={close}>Služba</a>
+          <Link href="/cena-webovych-stranek/" onClick={close}>Cena</Link>
           <a href="/#reference" onClick={close}>Reference</a>
           <a href="/#postup" onClick={close}>Postup</a>
           <a href="/#faq" onClick={close}>Informace</a>
@@ -51,7 +53,7 @@ export default function Navigation() {
         .verno-nav-inner{width:min(1040px,calc(100% - 44px));height:60px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:26px}
         .verno-brand{justify-self:start;display:inline-flex;align-items:center;gap:7px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:700;letter-spacing:.035em;color:#151515;text-decoration:none}
         .verno-brand span{width:8px;height:8px;background:#efff63;display:block}
-        .verno-desktop-nav{display:flex;gap:24px}
+        .verno-desktop-nav{display:flex;gap:22px}
         .verno-desktop-nav a{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:600;letter-spacing:.025em;color:#5e5e59;text-decoration:none}
         .verno-desktop-nav a:hover{color:#111}
         .verno-desktop-call{justify-self:end;display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 16px;background:#efff63;color:#111;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700}
@@ -64,7 +66,7 @@ export default function Navigation() {
           .verno-mobile-visible-call{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 13px;background:#efff63;color:#171717;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;line-height:1}
           .verno-mobile-trigger{display:inline-flex!important;align-items:center;justify-content:center;min-width:64px;height:36px;padding:0 13px;border:1px solid #d7d7d1;background:#fff;color:#171717;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;line-height:1;cursor:pointer}
           .verno-mobile-menu{display:block!important;max-height:0;overflow:hidden;background:#fff;border-top:0 solid #ecece7;transition:max-height .24s ease,border-top-width .24s ease}
-          .verno-mobile-menu.is-open{max-height:260px;border-top-width:1px}
+          .verno-mobile-menu.is-open{max-height:310px;border-top-width:1px}
           .verno-mobile-menu-inner{width:min(100% - 30px,1040px);margin:0 auto;padding:8px 0 14px;display:flex;flex-direction:column}
           .verno-mobile-menu-inner>a{display:flex;align-items:center;min-height:46px;border-bottom:1px solid #edede8;color:#171717;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:500}
         }
