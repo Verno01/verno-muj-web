@@ -7,8 +7,12 @@ export const metadata: Metadata = {
     template: '%s',
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
   },
 }
 
