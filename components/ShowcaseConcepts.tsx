@@ -4,7 +4,7 @@ const showcases = [
     eyebrow: 'Instalatér a topenář',
     title: 'Ukázkový web pro instalatéra a topenáře',
     description: 'Služby, oblast výjezdu, realizace, časté dotazy a poptávka.',
-    image: 'https://www.shk-profi.de/imgs/2/3/0/4/2/7/8/Baumgart_Bild1-0546af6053abd05d.jpg',
+    image: '/screens/showcase-instalater.webp',
     alt: 'Náhled ukázkového webu pro instalatéra a topenáře od SpustWeb.cz',
   },
   {
@@ -12,7 +12,7 @@ const showcases = [
     eyebrow: 'Autoservis',
     title: 'Ukázkový web pro autoservis',
     description: 'Servisní úkony, orientační ceny, průběh zakázky a kontakt.',
-    image: 'https://images.pexels.com/photos/6870298/pexels-photo-6870298.jpeg?auto=compress&cs=tinysrgb&w=1400',
+    image: '/screens/showcase-autoservis.webp',
     alt: 'Náhled ukázkového webu pro autoservis od SpustWeb.cz',
   },
   {
@@ -20,7 +20,7 @@ const showcases = [
     eyebrow: 'Penzion',
     title: 'Ukázkový web pro penzion',
     description: 'Pokoje, vybavení, okolí, praktické informace a poptávka pobytu.',
-    image: 'https://images.pexels.com/photos/15692771/pexels-photo-15692771.jpeg?auto=compress&cs=tinysrgb&w=1400',
+    image: '/screens/showcase-penzion.webp',
     alt: 'Náhled ukázkového webu pro penzion od SpustWeb.cz',
   },
   {
@@ -28,7 +28,7 @@ const showcases = [
     eyebrow: 'Manikúra a pedikúra',
     title: 'Ukázkový web pro manikúru a pedikúru',
     description: 'Ceník, ukázky práce, studio a kontakt.',
-    image: 'https://images.pexels.com/photos/13038494/pexels-photo-13038494.jpeg?auto=compress&cs=tinysrgb&w=1400',
+    image: '/screens/showcase-manikura-pedikura.webp',
     alt: 'Náhled ukázkového webu pro manikúru a pedikúru od SpustWeb.cz',
   },
   {
@@ -36,7 +36,7 @@ const showcases = [
     eyebrow: 'Barber shop',
     title: 'Ukázkový web pro barber shop',
     description: 'Služby, ceník, barbeři, provozovna a objednání přes kontakt.',
-    image: 'https://images.pexels.com/photos/7781848/pexels-photo-7781848.jpeg?auto=compress&cs=tinysrgb&w=1400',
+    image: '/screens/showcase-barber.webp',
     alt: 'Náhled ukázkového webu pro barber shop od SpustWeb.cz',
   },
   {
@@ -44,7 +44,7 @@ const showcases = [
     eyebrow: 'Fitness trenérka',
     title: 'Ukázkový web pro fitness trenérku',
     description: 'Lekce, rozvrh, ceny, informace pro první návštěvu a kontakt.',
-    image: 'https://images.pexels.com/photos/3768695/pexels-photo-3768695.jpeg?auto=compress&cs=tinysrgb&w=1400',
+    image: '/screens/showcase-fitness-trenerka.webp',
     alt: 'Náhled ukázkového webu pro fitness trenérku od SpustWeb.cz',
   },
 ]
@@ -67,7 +67,7 @@ export default function ShowcaseConcepts() {
           {showcases.map((showcase) => (
             <a className="showcase-concept" href={showcase.href} key={showcase.href}>
               <div className="showcase-concept-visual">
-                <img src={showcase.image} alt={showcase.alt} width="1400" height="900" loading="lazy" decoding="async" />
+                <img src={showcase.image} alt={showcase.alt} width="1400" height="864" loading="lazy" decoding="async" />
                 <span>{showcase.eyebrow}</span>
               </div>
               <div className="showcase-concept-copy">
@@ -94,7 +94,7 @@ export default function ShowcaseConcepts() {
         .showcase-concept{display:block;padding:18px 18px 20px;color:inherit;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
         .showcase-concept-visual{position:relative;overflow:hidden;background:#ecece8;aspect-ratio:1.62/1}
         .showcase-concept-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(0,0,0,.46))}
-        .showcase-concept-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.84);transition:transform .28s ease}
+        .showcase-concept-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .28s ease}
         .showcase-concept:hover .showcase-concept-visual img{transform:scale(1.012)}
         .showcase-concept-visual>span{position:absolute;left:12px;bottom:10px;z-index:1;color:#fff;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
         .showcase-concept-copy{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding-top:13px}
