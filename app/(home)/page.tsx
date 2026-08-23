@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import ShowcaseConcepts from '@/components/ShowcaseConcepts'
 
 const references = [
   {
@@ -124,6 +125,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ShowcaseConcepts />
 
       <section id="reference" className="section references-section">
         <div className="wrap">
