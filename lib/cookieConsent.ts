@@ -43,6 +43,7 @@ export function saveConsent(analytics: boolean): ConsentChoice {
     localStorage.setItem(CONSENT_KEY, JSON.stringify(choice))
   } catch {}
   applyConsentToGtag(choice)
+  applyConsentToClarity(choice)
   return choice
 }
 
@@ -77,6 +78,26 @@ export function applyConsentToGtag(choice: ConsentChoice) {
   if (choice.analytics) loadGoogleAnalytics()
 }
 
+export function applyConsentToClarity(choice: ConsentChoice) {
+  if (typeof window === 'undefined') return
+
+  if (choice.analytics) {
+    loadClarity()
+    ;(window as any).clarity?.('consentv2', {
+      ad_Storage: 'denied',
+      analytics_Storage: 'granted',
+    })
+    return
+  }
+
+  if (typeof (window as any).clarity === 'function') {
+    ;(window as any).clarity('consentv2', {
+      ad_Storage: 'denied',
+      analytics_Storage: 'denied',
+    })
+  }
+}
+
 let gaLoaded = false
 function loadGoogleAnalytics() {
   if (gaLoaded || typeof window === 'undefined') return
@@ -94,4 +115,21 @@ function loadGoogleAnalytics() {
     send_page_view: true,
   })
   gaLoaded = true
+}
+
+
+let clarityLoaded = false
+function loadClarity() {
+  if (clarityLoaded || typeof window === 'undefined') return
+
+  const w = window as any
+  w.clarity = w.clarity || function (...args: any[]) {
+    ;(w.clarity.q = w.clarity.q || []).push(args)
+  }
+
+  const s = document.createElement('script')
+  s.async = true
+  s.src = 'https://www.clarity.ms/tag/y7dvde2ssi'
+  document.head.appendChild(s)
+  clarityLoaded = true
 }
