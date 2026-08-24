@@ -7,6 +7,7 @@ import {
   saveConsent,
   initConsentMode,
   applyConsentToGtag,
+  applyConsentToClarity,
   type ConsentChoice,
 } from '@/lib/cookieConsent'
 
@@ -32,6 +33,7 @@ export default function CookieBanner() {
     if (existing) {
       // Uživatel už dříve zvolil — aplikujeme volbu a banner neukazujeme.
       applyConsentToGtag(existing)
+      applyConsentToClarity(existing)
       setAnalytics(existing.analytics)
     } else {
       // První návštěva nebo zastaralá verze — zobrazíme banner.
@@ -175,7 +177,7 @@ export default function CookieBanner() {
                   </label>
                 </div>
                 <p className="cookie-cat-desc">
-                  Google Analytics 4 — pseudonymizované měření návštěvnosti pro zlepšování webu. Cloudflare Web Analytics (bez cookies) běží i bez souhlasu.
+                  Google Analytics 4 a Microsoft Clarity slouží k měření návštěvnosti a chování na webu. Cloudflare Web Analytics (bez cookies) běží i bez souhlasu.
                 </p>
               </div>
             </div>
