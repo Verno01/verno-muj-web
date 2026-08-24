@@ -129,7 +129,7 @@ function loadClarity() {
 
   const s = document.createElement('script')
   s.async = true
-  s.src = 'https://www.clarity.ms/tag/y7dvde2ssi'
+  s.src = 'https://www.clarity.ms/tag/y7e3iax4hl'
   document.head.appendChild(s)
   clarityLoaded = true
 }
