@@ -72,7 +72,7 @@ export default function Cookies() {
         </button>
       </p>
       <p>
-        Dokud nedáte souhlas s analytickou kategorií, analytické nástroje (Google Analytics) se vůbec nespouštějí. Cloudflare Web Analytics pracuje bez cookies a souhlas nevyžaduje.
+        Dokud nedáte souhlas s analytickou kategorií, Google Analytics 4 ani Microsoft Clarity se nespustí. Cloudflare Web Analytics pracuje bez cookies a souhlas nevyžaduje.
       </p>
 
       <h2 id="c-3">3. Jaké cookies používáme</h2>
@@ -142,6 +142,18 @@ export default function Cookies() {
             <td>uchování stavu měření</td>
             <td>2 roky</td>
             <td>Google Ireland Limited</td>
+          </tr>
+          <tr>
+            <td><code>_clck</code></td>
+            <td>uchování pseudonymního identifikátoru návštěvníka a nastavení Clarity</td>
+            <td>dle nastavení služby</td>
+            <td>Microsoft Corporation</td>
+          </tr>
+          <tr>
+            <td><code>_clsk</code></td>
+            <td>spojení zobrazení stránek do jedné relace v Microsoft Clarity</td>
+            <td>dle nastavení služby</td>
+            <td>Microsoft Corporation</td>
           </tr>
         </tbody>
       </table>
