@@ -115,8 +115,8 @@ export default function Home() {
             <h2 id="hosting-title">Proč nebudete platit za hosting <span>(a přesto získáte špičkovou kvalitu)?</span></h2>
           </div>
           <div className="hosting-copy">
-            <p>Většina agentur a tvůrců staví weby na klasických redakčních systémech a využívá běžný placený webhosting. Já to dělám jinak.</p>
-            <p>Váš web připravím jako vlastní, lehké řešení bez šablon. Díky tomu je nejen originální, ale hlavně rychlý a úsporný a může běžet přímo na technologické platformě, kterou využívají známé firmy a internetové služby po celém světě. Ta nabízí provoz menších firemních webů zcela zdarma, s bleskovým načítáním a velmi spolehlivým zabezpečením.</p>
+            <p>Nepoužívám pomalé tuctové šablony ani klasická řešení typu WordPress. Web vytvářím od nuly jako vlastní, lehké řešení navržené pro konkrétní firmu.</p>
+            <p>Díky tomu je každý web nejen originální, ale hlavně rychlý a úsporný. Může tak běžet přímo na technologické platformě, kterou využívají známé firmy a internetové služby po celém světě. Ta umožňuje provoz menších firemních webů bez poplatku za hosting, s rychlým načítáním a velmi spolehlivým zabezpečením.</p>
           </div>
         </div>
       </section>
