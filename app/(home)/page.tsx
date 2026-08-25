@@ -108,6 +108,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="hosting-section" aria-labelledby="hosting-title">
+        <div className="wrap hosting-grid">
+          <div className="hosting-title-wrap">
+            <p className="label hosting-label">Hosting</p>
+            <h2 id="hosting-title">Proč nebudete platit za hosting <span>(a přesto získáte špičkovou kvalitu)?</span></h2>
+          </div>
+          <div className="hosting-copy">
+            <p>Většina agentur a tvůrců staví weby na klasických redakčních systémech a využívá běžný placený webhosting. Já to dělám jinak.</p>
+            <p>Váš web připravím jako vlastní, lehké řešení bez šablon. Díky tomu je nejen originální, ale hlavně rychlý a úsporný a může běžet přímo na technologické platformě, kterou využívají známé firmy a internetové služby po celém světě. Ta nabízí provoz menších firemních webů zcela zdarma, s bleskovým načítáním a velmi spolehlivým zabezpečením.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="section fit-section" aria-labelledby="fit-title">
         <div className="wrap fit-grid">
           <div className="fit-intro">
@@ -273,6 +286,14 @@ export default function Home() {
         .service-card>span{padding-top:2px;font-size:9px;color:#8c8c86}
         .service-card h3{margin:0 0 4px;font-size:13px;font-weight:600;color:var(--ink)}
         .service-card p{margin:0;font-size:12px;line-height:1.48;color:var(--muted)}
+        .hosting-section{padding:54px 0;background:#171717;color:#fff;border-top:8px solid var(--acid)}
+        .hosting-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:72px;align-items:start}
+        .hosting-label{color:#989891}
+        .hosting-section h2{margin:0;max-width:470px;font-family:Arial,Helvetica,sans-serif;font-size:clamp(2rem,3.25vw,3.05rem);line-height:.98;font-weight:500;letter-spacing:-.04em;color:#fff}
+        .hosting-section h2 span{display:block;margin-top:7px;font-size:.52em;line-height:1.15;letter-spacing:-.025em;color:#bdbdb6}
+        .hosting-copy{max-width:560px;padding-top:1px}
+        .hosting-copy p{margin:0;font-size:13px;line-height:1.62;color:#d1d1ca}
+        .hosting-copy p+p{margin-top:16px}
         .fit-section{background:#fafaf7}
         .fit-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
         .fit-copy{max-width:560px}
@@ -326,13 +347,14 @@ export default function Home() {
         .contact-call:hover,.contact-email:hover{transform:translateX(4px)}
         .contact-email:hover{background:#222220}
         @media(max-width:820px){
-          .hero-top,.offer-grid,.fit-grid,.industries-head,.info-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+          .hero-top,.offer-grid,.hosting-grid,.fit-grid,.industries-head,.info-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
           .industry-grid{grid-template-columns:1fr 1fr}
           .projects{grid-template-columns:1fr 1fr}
           .hero{padding:80px 0 48px}
           .hero h1{font-size:clamp(2.55rem,9.5vw,4rem)}
           .hero-side{max-width:420px}
           .section,.compact-section{padding:54px 0}
+          .hosting-section{padding:48px 0}
           .trust-strip{grid-template-columns:1fr 1fr}
           .industries{margin-top:30px}
           .contact{padding:70px 0 74px}
@@ -346,6 +368,9 @@ export default function Home() {
           .hero-image{aspect-ratio:1.55/1;object-position:36% center}
           .accent-line{height:7px}
           .trust-strip span{font-size:10.5px;padding:9px 6px 9px 0}
+          .hosting-section{padding:42px 0;border-top-width:7px}
+          .hosting-section h2{font-size:clamp(1.95rem,9vw,2.65rem)}
+          .hosting-copy p{font-size:12px}
           .industry-grid{grid-template-columns:1fr}
           .industry{padding:13px 14px}
           .projects{grid-template-columns:1fr}
