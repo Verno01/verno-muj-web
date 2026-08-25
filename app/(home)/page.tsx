@@ -36,7 +36,8 @@ const included = [
   ['02', 'Mobilní verze', 'Plnohodnotné zobrazení na telefonu, tabletu i počítači.'],
   ['03', 'Kontaktní prvky', 'Kontaktní formulář, klikací telefon, e-mail a další prvky podle potřeb webu.'],
   ['04', 'Základní SEO a měření', 'Metadata, sitemap, nastavení pro vyhledávače, Search Console a základní měření návštěvnosti.'],
-  ['05', 'Spuštění webu', 'Nasazení na doménu a základní hosting bez pravidelného poplatku za správu.'],
+  ['05', 'Spuštění a hosting', 'Nasazení na vlastní doménu a základní hosting webu bez pravidelného poplatku za správu.'],
+  ['06', 'Firemní e-mail', 'Nastavení e-mailu na vlastní doméně, například kontakt@vasefirma.cz.'],
 ]
 
 const industryGroups = [
@@ -206,7 +207,7 @@ export default function Home() {
               </details>
               <details>
                 <summary>Platí se za web každý měsíc?</summary>
-                <p>Za správu webu ne. Základní hosting je součástí služby. Samostatně se hradí vlastní doména podle ceníku registrátora.</p>
+                <p>Za správu ani základní hosting webu ne. Samostatně se hradí vlastní doména podle ceníku registrátora.</p>
               </details>
               <details>
                 <summary>Je cena pevná?</summary>
