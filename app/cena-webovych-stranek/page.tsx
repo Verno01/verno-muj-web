@@ -4,20 +4,20 @@ const canonical = 'https://spustweb.cz/cena-webovych-stranek/'
 
 export const metadata: Metadata = {
   title: 'Cena webových stránek: prezentační web za 8 900 Kč',
-  description: 'Cena prezentačního webu je 8 900 Kč bez DPH. Web je navržený na míru konkrétní firmě, připravený pro mobil i Google a spuštěný na doméně.',
+  description: 'Konečná cena prezentačního webu je 8 900 Kč včetně DPH. Web je navržený na míru konkrétní firmě, připravený pro mobil i Google a spuštěný na doméně.',
   alternates: { canonical },
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
     url: canonical,
     title: 'Cena webových stránek: prezentační web za 8 900 Kč | SpustWeb.cz',
-    description: 'Plnohodnotný prezentační web za 8 900 Kč bez DPH. Na míru konkrétní firmě, bez povinného měsíčního paušálu.',
+    description: 'Plnohodnotný prezentační web za konečných 8 900 Kč včetně DPH. Na míru konkrétní firmě, bez povinného měsíčního paušálu.',
     images: [{ url: '/og-verno-2.jpg', width: 1200, height: 630, alt: 'SpustWeb.cz – cena tvorby webových stránek' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cena webových stránek: prezentační web za 8 900 Kč | SpustWeb.cz',
-    description: 'Plnohodnotný prezentační web za 8 900 Kč bez DPH. Na míru konkrétní firmě, bez povinného měsíčního paušálu.',
+    description: 'Plnohodnotný prezentační web za konečných 8 900 Kč včetně DPH. Na míru konkrétní firmě, bez povinného měsíčního paušálu.',
     images: ['/og-verno-2.jpg'],
   },
 }
@@ -35,7 +35,7 @@ const faqs = [
   ['Musím mít připravené texty?', 'Nemusíte mít hotové texty ani vymyšlenou strukturu. Řeknu vám přesně, jaké informace potřebuji, a pomohu je na webu uspořádat tak, aby dávaly smysl.'],
   ['Je to opravdu plnohodnotný web?', 'Ano. Jde o hotový firemní prezentační web přizpůsobený konkrétnímu podnikání, s mobilní verzí, kontaktními prvky, přípravou pro vyhledávače a spuštěním na vaší doméně.'],
   ['Jak rychle může být hotový?', 'Obvykle za 1 až 2 týdny od chvíle, kdy mám potřebné podklady. Přesný termín potvrdím před zahájením.'],
-  ['Kolik stojí vytvoření webových stránek?', 'Běžný prezentační web stojí 8 900 Kč bez DPH, tedy 10 769 Kč včetně DPH.'],
+  ['Kolik stojí vytvoření webových stránek?', 'Běžný prezentační web stojí konečných 8 900 Kč včetně DPH.'],
   ['Co budu platit po spuštění?', 'Za správu webu není povinný měsíční paušál a základní provoz webu je v ceně. Samostatně se hradí vlastní webová adresa, například vasefirma.cz, podle ceníku registrátora.'],
   ['Jak probíhá platba?', '50 % před zahájením práce a 50 % po dokončení před spuštěním webu.'],
 ]
@@ -66,7 +66,13 @@ export default function WebsitePricePage() {
         price: '8900',
         priceCurrency: 'CZK',
         url: canonical,
-        description: 'Plnohodnotný prezentační web za 8 900 Kč bez DPH.',
+        description: 'Plnohodnotný prezentační web za konečných 8 900 Kč včetně DPH.',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '8900',
+          priceCurrency: 'CZK',
+          valueAddedTaxIncluded: true,
+        },
       },
     },
     {
@@ -100,8 +106,8 @@ export default function WebsitePricePage() {
             <p className="priceLead">Navrhnu, vytvořím a spustím web přímo podle vašeho podnikání. Promyšlený do detailu, snadno použitelný a připravený dělat přesně to, co od firemního webu potřebujete.</p>
           </div>
           <div className="priceHeroSide">
-            <p className="priceAmount">8 900 Kč <span>bez DPH</span></p>
-            <p className="priceVat">10 769 Kč včetně DPH</p>
+            <p className="priceAmount">8 900 Kč</p>
+            <p className="priceVat">Konečná cena včetně DPH</p>
             <div className="priceActions">
               <a className="pricePrimary" href="tel:+420705911941">Zavolat</a>
               <a className="priceSecondary" href="mailto:kontakt@spustweb.cz">Napsat e-mail</a>
