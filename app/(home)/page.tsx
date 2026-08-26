@@ -59,7 +59,7 @@ export default function Home() {
             <h1 id="hero-title">Prezentační web pro živnostníky a malé firmy.</h1>
           </div>
           <div className="hero-side">
-            <p className="price">8 900 Kč <span>bez DPH</span></p>
+            <p className="price">8 900 Kč <span>konečná cena včetně DPH</span></p>
             <p className="lead">Návrh, zpracování a spuštění v jedné ceně.</p>
             <div className="hero-actions">
               <a className="cta" href="tel:+420705911941">Zavolat</a>
@@ -224,7 +224,7 @@ export default function Home() {
               </details>
               <details>
                 <summary>Je cena pevná?</summary>
-                <p>Ano, pro běžný prezentační web v domluveném rozsahu je cena 8 900 Kč bez DPH. Pokud zadání vyžaduje něco navíc, řeknu to předem.</p>
+                <p>Ano, pro běžný prezentační web v domluveném rozsahu je konečná cena 8 900 Kč včetně DPH. Pokud zadání vyžaduje něco navíc, řeknu to předem.</p>
               </details>
             </div>
           </div>
