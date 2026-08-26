@@ -14,7 +14,7 @@ export default function ObchodniPodminky() {
       eyebrow="Právní informace"
       title={<>Obchodní<br />podmínky</>}
       intro="Pravidla pro tvorbu webových stránek a souvisejících služeb. Vztahy mezi klientem a Rovino s.r.o. v rámci služby SpustWeb.cz."
-      effectiveFrom="27. května 2026"
+      effectiveFrom="26. srpna 2026"
     >
       <p className="lead">
         <strong>Společnost:</strong> Rovino s.r.o., se sídlem Na Blatech 637, 378 16 Lomnice nad Lužnicí, IČO 235 26 629, DIČ CZ23526629, zapsaná v obchodním rejstříku vedeném Krajským soudem v Českých Budějovicích, oddíl C, vložka 35567 (dále jen <em>„Poskytovatel"</em>).
